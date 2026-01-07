@@ -1,13 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: '/kavalakat',
-  assetPrefix: '/kavalakat/',
-  images: {
-    unoptimized: true,
-  },
-  trailingSlash: true,
+  /* config options here */
 };
 
 export default nextConfig;
