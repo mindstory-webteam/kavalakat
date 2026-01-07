@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Disable trailing slashes for better compatibility
   trailingSlash: true,
 };
 
