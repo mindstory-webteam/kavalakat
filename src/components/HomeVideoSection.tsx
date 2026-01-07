@@ -34,7 +34,7 @@ const HomeVideoSection: React.FC = () => {
   }, []);
 
     return (
-        <div className="home3-video-area mb-120">
+        <div className="home3-video-area">
             <div className="video-area">
                 <video autoPlay loop muted playsInline src="assets/video/oil-and-gas.mp4" />
             </div>

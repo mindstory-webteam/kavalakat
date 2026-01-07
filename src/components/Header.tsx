@@ -115,12 +115,18 @@ const Header: React.FC = () => {
         dispatch({ type: "TOGGLE_SIDEBAR" });
     };
 
-    // Simplified path arrays for new navigation
+    // Path arrays for navigation
+    const aboutPaths: string[] = ['/about', '/OurStrengths', '/our-clients', '/gallery'];
+    const isAboutActive: boolean = aboutPaths.some((path: string) => pathname.startsWith(path));
+
     const productPaths: string[] = ['/product', '/product/details'];
     const isProductActive: boolean = productPaths.some((path: string) => pathname.startsWith(path));
 
     const blogPaths: string[] = ['/blog', '/blog/details'];
     const isBlogActive: boolean = blogPaths.some((path: string) => pathname.startsWith(path));
+
+    const contactPaths: string[] = ['/contact', '/career'];
+    const isContactActive: boolean = contactPaths.some((path: string) => pathname.startsWith(path));
 
     return (
         <>
@@ -235,17 +241,38 @@ const Header: React.FC = () => {
                         </div>
                         
                         <ul className="menu-list">
-                            {/* Home */}
+                            {/* Home - Single Menu */}
                             <li className={pathname === "/" ? "active" : ""}>
                                 <Link href="/">Home</Link>
                             </li>
 
-                            {/* About */}
-                            <li className={pathname === "/about" ? "active" : ""}>
-                                <Link href="/about">About</Link>
+                            {/* About - Dropdown with Our Strengths, Clients, Gallery */}
+                            <li className={`menu-item-has-children ${isAboutActive ? "active" : ""}`}>
+                                <Link href="#" className="drop-down">
+                                    About
+                                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
+                                        <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
+                                    </svg>
+                                </Link>
+                                <i onClick={() => toggleMenu("about")} className={`bi bi-${state.activeMenu === "about" ? "dash" : "plus"} dropdown-icon`} />
+                                <ul className={`sub-menu ${state.activeMenu === "about" ? "d-block" : ""}`}>
+                                    <li className={pathname === "/about" ? "active" : ""}>
+                                        <Link href="/about"><span>About</span></Link>
+                                    </li>
+                                    <li className={pathname === "/OurStrengths" ? "active" : ""}>
+                                        <Link href="/OurStrengths"><span>Our Strengths</span></Link>
+                                    </li>
+                                    <li className={pathname === "/our-clients" ? "active" : ""}>
+                                        <Link href="/our-clients"><span>Clients</span></Link>
+                                    </li>
+                                    <li className={pathname === "/gallery" ? "active" : ""}>
+                                        <Link href="/gallery"><span>Gallery</span></Link>
+                                    </li>
+                                </ul>
                             </li>
 
-                            {/* Products with Dropdown */}
+                            {/* Products - Dropdown */}
                             <li className={`menu-item-has-children ${isProductActive ? "active" : ""}`}>
                                 <Link href="/product" className="drop-down">
                                     Products
@@ -255,7 +282,7 @@ const Header: React.FC = () => {
                                     </svg>
                                 </Link>
                                 <i onClick={() => toggleMenu("products")} className={`bi bi-${state.activeMenu === "products" ? "dash" : "plus"} dropdown-icon`} />
-                                <ul className={`sub-menu ${state.activeMenu === "products" ? "d-block" : "none"}`}>
+                                <ul className={`sub-menu ${state.activeMenu === "products" ? "d-block" : ""}`}>
                                     <li className={pathname === "/product" ? "active" : ""}>
                                         <Link href="/product"><span>All Products</span></Link>
                                     </li>
@@ -265,22 +292,7 @@ const Header: React.FC = () => {
                                 </ul>
                             </li>
 
-                            {/* Our Strengths */}
-                            <li className={pathname === "/OurStrengths" ? "active" : ""}>
-                                <Link href="/OurStrengths">Our Strengths</Link>
-                            </li>
-
-                            {/* Clients */}
-                            <li className={pathname === "/our-clients" ? "active" : ""}>
-                                <Link href="/our-clients">Clients</Link>
-                            </li>
-
-                            {/* Contact */}
-                            <li className={pathname === "/contact" ? "active" : ""}>
-                                <Link href="/contact">Contact</Link>
-                            </li>
-
-                            {/* Blog with Dropdown */}
+                            {/* Blog - Dropdown */}
                             <li className={`menu-item-has-children ${isBlogActive ? "active" : ""}`}>
                                 <Link href="/blog" className="drop-down">
                                     Blog
@@ -290,7 +302,7 @@ const Header: React.FC = () => {
                                     </svg>
                                 </Link>
                                 <i onClick={() => toggleMenu("blog")} className={`bi bi-${state.activeMenu === "blog" ? "dash" : "plus"} dropdown-icon`} />
-                                <ul className={`sub-menu ${state.activeMenu === "blog" ? "d-block" : "none"}`}>
+                                <ul className={`sub-menu ${state.activeMenu === "blog" ? "d-block" : ""}`}>
                                     <li className={pathname === "/blog" ? "active" : ""}>
                                         <Link href="/blog"><span>Blog</span></Link>
                                     </li>
@@ -300,14 +312,28 @@ const Header: React.FC = () => {
                                 </ul>
                             </li>
 
-                            {/* Gallery */}
-                            <li className={pathname === "/gallery" ? "active" : ""}>
-                                <Link href="/gallery">Gallery</Link>
-                            </li>
-
-                            {/* Careers */}
-                            <li className={pathname === "/career" ? "active" : ""}>
-                                <Link href="/career">Careers</Link>
+                            {/* Contact - Dropdown with Careers */}
+                            <li className={`menu-item-has-children ${isContactActive ? "active" : ""}`}>
+                                <Link href="/contact" className="drop-down">
+                                    Contact
+                                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
+                                        <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
+                                    </svg>
+                                </Link>
+                                <i onClick={() => toggleMenu("contact")} className={`bi bi-${state.activeMenu === "contact" ? "dash" : "plus"} dropdown-icon`} />
+                                <ul className={`sub-menu ${state.activeMenu === "contact" ? "d-block" : ""}`}>
+                                    <li className={pathname === "/career" ? "active" : ""}>
+                                     <Link href="/contact"><span> Contact</span></Link>
+                                        
+                                        
+                                    </li>
+                                    <li className={pathname === "/career" ? "active" : ""}>
+                                     <Link href="/career"><span> Careers</span></Link>
+                                        
+                                        
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                         
