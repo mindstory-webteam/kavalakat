@@ -1,5 +1,3 @@
-// src/utils/getAssetPath.ts
-
 /**
  * Helper function to get the correct asset path for images and other assets
  * Automatically adds the basePath in production (GitHub Pages)
@@ -13,9 +11,4 @@ export const getAssetPath = (path: string): string => {
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   
   return `${basePath}${normalizedPath}`;
-};
-
-// Optional: You can also create a specific function for images
-export const getImagePath = (imagePath: string): string => {
-  return getAssetPath(imagePath);
 };
