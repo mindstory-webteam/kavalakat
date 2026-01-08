@@ -134,7 +134,7 @@ const Header: React.FC = () => {
                 <div className="right-sidebar-menu-wrap">
                     <div className="sidebar-logo-area d-flex justify-content-between align-items-center">
                         <div className="sidebar-logo-wrap">
-                           <Link href="/"><Image width={157} height={34} alt="image" src={getAssetPath("/assets/new-images/logo-1.png")} /></Link>
+                           <Link href="/"><Image width={157} height={34} alt="image" src="/assets/new-images/logo-1.png" /></Link>
                         </div>
                         <div className="right-sidebar-close-btn" onClick={toggleRightSidebar}>
                             <i className="bi bi-x" />
