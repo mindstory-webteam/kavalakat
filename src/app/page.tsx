@@ -21,11 +21,13 @@ export default function Home() {
     <HomeAboutSection />
     <HomeServiceSection />
     <HomePageFeatureSection />
-    <HomeVideoSection />
+   
     <HomePageProjectSection />
-    <HomeLogoSection />
+     <HomeVideoSection />
+    
     <HomeTestimonialSection />
     <HomeContactSection />
+    <HomeLogoSection />
     <Footer />
     
      <ChatbotWidget 

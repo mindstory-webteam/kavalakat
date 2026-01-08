@@ -11,16 +11,14 @@ const Footer = () => {
                         <div className="row g-4 align-items-center">
                             <div className="col-md-3">
                                 <Link href="/oil-gas" className="footer-logo">
-                                    <Image width={160} height={50} src="/assets/img/footer-logo-black.svg" alt="" />
+                                    <Image width={160} height={50} src="/assets/new-images/logo-1.png" alt="" />
                                 </Link>
                             </div>
                             <div className="col-md-5 d-flex justify-content-md-center">
                                 <p>Welcome to Matrik, where innovation meet our passion in a journey that started dream.</p>
                             </div>
                             <div className="col-md-4 d-flex justify-content-md-end">
-                                <div className="established">
-                                    <h2>EST . 2000</h2>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>

@@ -60,12 +60,12 @@ const HomePageProjectSection: React.FC = () => {
   }, []);
     return (
         <>
-            <div className="home1-project-section mb-120">
+            <div className="home1-project-section ">
                 <div className="container">
                     <div className="row justify-content-center mb-50">
                         <div className="col-xl-6 col-lg-7 col-md-8">
                             <div className="section-title white text-center wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                <span>Our Latest Project</span>
+                                
                                 <h2>Our Manufacturing Projects</h2>
                             </div>
                         </div>
