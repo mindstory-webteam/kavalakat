@@ -6,7 +6,7 @@ import Link from 'next/link'
 const HomeContactSection = () => {
     const [openAccordion, setOpenAccordion] = useState('collapseOne')
 
-    const toggleAccordion = (id) => {
+    const toggleAccordion = (id: string) => {
         setOpenAccordion(openAccordion === id ? '' : id)
     }
 
