@@ -1,7 +1,7 @@
 import React from 'react'
 import CircularText from '../components/common/CircularText'
 import Link from 'next/link'
-import Image from 'next/image';
+
 type BreadcrumbProps = {
     title: string;
     subtitle: string;
@@ -33,7 +33,7 @@ const Breadcrumb = ({ title, subtitle }: BreadcrumbProps) => {
                 </div>
 
                 <CircularText />
-                <Image
+                <img
                 width={92}
                 height={92}
                     src="/assets/img/innerpages/breadcrumb-section-vector.svg"
@@ -42,7 +42,7 @@ const Breadcrumb = ({ title, subtitle }: BreadcrumbProps) => {
                 />
             </div>
             <div className="breadcrumb-img">
-               <Image
+               <img
                 width={1920}
                 height={550}src="/assets/img/innerpages/breadcrumb-img1.jpg" alt="breadcrumb image" />
             </div>

@@ -80,7 +80,7 @@ const HomePageProjectSection: React.FC = () => {
                                         <div className="project-card-wrap">
                                             <div className="project-card">
                                                 <div className="project-img">
-                                                    <Image width={430} height={450} src="/assets/img/home1/project-img1.jpg" alt="" />
+                                                    <img width={430} height={450} src="/assets/img/home1/project-img1.jpg" alt="" />
                                                 </div>
                                                 <div className="project-content-wrap">
                                                     <div className="project-content">
@@ -99,7 +99,7 @@ const HomePageProjectSection: React.FC = () => {
                                         <div className="project-card-wrap">
                                             <div className="project-card">
                                                 <div className="project-img">
-                                                    <Image width={430} height={450} src="/assets/img/home1/project-img2.jpg" alt="" />
+                                                    <img width={430} height={450} src="/assets/img/home1/project-img2.jpg" alt="" />
                                                 </div>
                                                 <div className="project-content-wrap">
                                                     <div className="project-content">
@@ -118,7 +118,7 @@ const HomePageProjectSection: React.FC = () => {
                                         <div className="project-card-wrap">
                                             <div className="project-card">
                                                 <div className="project-img">
-                                                    <Image width={430} height={450} src="/assets/img/home1/project-img3.jpg" alt="" />
+                                                    <img width={430} height={450} src="/assets/img/home1/project-img3.jpg" alt="" />
                                                 </div>
                                                 <div className="project-content-wrap">
                                                     <div className="project-content">
@@ -137,7 +137,7 @@ const HomePageProjectSection: React.FC = () => {
                                         <div className="project-card-wrap">
                                             <div className="project-card">
                                                 <div className="project-img">
-                                                    <Image width={430} height={450} src="/assets/img/home1/project-img4.jpg" alt="" />
+                                                    <img width={430} height={450} src="/assets/img/home1/project-img4.jpg" alt="" />
                                                 </div>
                                                 <div className="project-content-wrap">
                                                     <div className="project-content">
@@ -156,7 +156,7 @@ const HomePageProjectSection: React.FC = () => {
                                         <div className="project-card-wrap">
                                             <div className="project-card">
                                                 <div className="project-img">
-                                                    <Image width={430} height={450} src="/assets/img/home1/project-img5.jpg" alt="" />
+                                                    <img width={430} height={450} src="/assets/img/home1/project-img5.jpg" alt="" />
                                                 </div>
                                                 <div className="project-content-wrap">
                                                     <div className="project-content">
@@ -175,7 +175,7 @@ const HomePageProjectSection: React.FC = () => {
                                         <div className="project-card-wrap">
                                             <div className="project-card">
                                                 <div className="project-img">
-                                                    <Image width={430} height={450} src="/assets/img/home1/project-img6.jpg" alt="" />
+                                                    <img width={430} height={450} src="/assets/img/home1/project-img6.jpg" alt="" />
                                                 </div>
                                                 <div className="project-content-wrap">
                                                     <div className="project-content">

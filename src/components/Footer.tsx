@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import Link from 'next/link'
 import React from 'react'
 
@@ -11,7 +11,7 @@ const Footer = () => {
                         <div className="row g-4 align-items-center">
                             <div className="col-md-3">
                                 <Link href="/oil-gas" className="footer-logo">
-                                    <Image width={160} height={50} src="/assets/new-images/logo-1.png" alt="" />
+                                    <img width={160} height={50} src="/assets/new-images/logo-1.png" alt="" />
                                 </Link>
                             </div>
                             <div className="col-md-5 d-flex justify-content-md-center">

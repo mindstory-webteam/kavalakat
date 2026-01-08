@@ -21,7 +21,7 @@ const HomePageTeamSection: React.FC = () => {
                                 <h4>Olivern James</h4>
                             </div>
                             <div className="team-img">
-                                <Image width={100} height={100} src="/assets/img/home1/team-img1.png" alt="" />
+                                <img width={100} height={100} src="/assets/img/home1/team-img1.png" alt="" />
                             </div>
                             <a href="https://www.facebook.com/" className="social-area">
                                 <div className="icon">
@@ -36,7 +36,7 @@ const HomePageTeamSection: React.FC = () => {
                                 <h4>Michael Daniel</h4>
                             </div>
                             <div className="team-img">
-                                <Image width={100} height={100} src="/assets/img/home1/team-img2.png" alt="" />
+                                <img width={100} height={100} src="/assets/img/home1/team-img2.png" alt="" />
                             </div>
                             <a href="https://www.linkedin.com/" className="social-area">
                                 <div className="icon">
@@ -51,7 +51,7 @@ const HomePageTeamSection: React.FC = () => {
                                 <h4>Matthew Julian</h4>
                             </div>
                             <div className="team-img">
-                                <Image width={100} height={100} src="/assets/img/home1/team-img3.png" alt="" />
+                                <img width={100} height={100} src="/assets/img/home1/team-img3.png" alt="" />
                             </div>
                             <a href="https://x.com/" className="social-area">
                                 <div className="icon">
@@ -66,7 +66,7 @@ const HomePageTeamSection: React.FC = () => {
                                 <h4>Anthony Wyatt</h4>
                             </div>
                             <div className="team-img">
-                                <Image width={100} height={100} src="/assets/img/home1/team-img4.png" alt="" />
+                                <img width={100} height={100} src="/assets/img/home1/team-img4.png" alt="" />
                             </div>
                             <a href="https://www.linkedin.com/" className="social-area">
                                 <div className="icon">
@@ -81,7 +81,7 @@ const HomePageTeamSection: React.FC = () => {
                                 <h4>Cooper Josiah</h4>
                             </div>
                             <div className="team-img">
-                                <Image width={100} height={100} src="/assets/img/home1/team-img5.png" alt="" />
+                                <img width={100} height={100} src="/assets/img/home1/team-img5.png" alt="" />
                             </div>
                             <a href="https://www.instagram.com/" className="social-area">
                                 <div className="icon">

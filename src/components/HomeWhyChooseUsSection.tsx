@@ -1,5 +1,5 @@
 "use client";
-import Image from 'next/image'
+
 import Link from 'next/link'
 import React from 'react'
 import { Accordion } from 'react-bootstrap'
@@ -48,7 +48,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                 <span>01.</span> Solutions Expert
               </Accordion.Header>
               <Accordion.Body>
-                <Image
+                <img
                   width={283}
                   height={171}
                   src="/assets/img/home2/why-choose-img1.jpg"
@@ -75,7 +75,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                 <span>02.</span> Trusted Partner
               </Accordion.Header>
               <Accordion.Body>
-                <Image
+                <img
                   width={283}
                   height={171}
                   src="/assets/img/home2/why-choose-img2.jpg"
@@ -102,7 +102,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                 <span>03.</span> Driving Innovation
               </Accordion.Header>
               <Accordion.Body>
-                <Image
+                <img
                   width={283}
                   height={171}
                   src="/assets/img/home2/why-choose-img3.jpg"
@@ -128,7 +128,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                 <span>04.</span> Pushing The Boundaries of Material Science
               </Accordion.Header>
               <Accordion.Body>
-                <Image
+                <img
                   width={283}
                   height={171}
                   src="/assets/img/home2/why-choose-img4.jpg"
@@ -155,7 +155,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                 <span>05.</span> Aerospace Quality as Standard
               </Accordion.Header>
               <Accordion.Body>
-                <Image
+                <img
                   width={283}
                   height={171}
                   src="/assets/img/home2/why-choose-img5.jpg"

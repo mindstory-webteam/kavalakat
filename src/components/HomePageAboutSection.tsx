@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import ModalVideo from "react-modal-video";
 import "react-modal-video/css/modal-video.css";
 import Link from 'next/link'
-import Image from 'next/image';
+
 
 
 interface HomePageAboutSectionProps {
@@ -79,7 +79,7 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                         </div>
                         <div className="col-lg-7 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="about-img magnetic-item">
-                                <Image width={750} height={580} src="/assets/img/home1/about-img.jpg" alt="" />
+                                <img width={750} height={580} src="/assets/img/home1/about-img.jpg" alt="" />
                             </div>
                         </div>
                     </div>

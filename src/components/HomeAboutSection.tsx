@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import Link from 'next/link'
 import React from 'react'
 
@@ -38,7 +38,7 @@ const HomeAboutSection = () => {
                     <div className="col-lg-6 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="about-img-wrap">
                             <div className="about-img">
-                                <Image width={560} height={620} src="/assets/img/home3/about-img.jpg" alt="" />
+                                <img width={560} height={620} src="/assets/img/home3/about-img.jpg" alt="" />
                             </div>
                             <div className="about-btn">
                                 <Link className="primary-btn3" href="/about">

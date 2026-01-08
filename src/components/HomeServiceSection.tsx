@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
 import React, { useEffect } from "react";
 
@@ -73,7 +73,7 @@ const HomeServiceSection: React.FC = () => {
                             </div>
                         </div>
                         <div className="services-img">
-                            <Image width={250} height={250} src="/assets/img/home3/service-img1.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/img/home3/service-img1.jpg" alt="" />
                         </div>
                         <div className="content">
                             <p>Refinery Maintenance &amp; Upgrades</p>
@@ -104,7 +104,7 @@ const HomeServiceSection: React.FC = () => {
                             </div>
                         </div>
                         <div className="services-img">
-                            <Image width={250} height={250} src="/assets/img/home3/service-img2.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/img/home3/service-img2.jpg" alt="" />
                         </div>
                         <div className="content">
                             <p>Petroleum Product Distribution</p>
@@ -131,7 +131,7 @@ const HomeServiceSection: React.FC = () => {
                             </div>
                         </div>
                         <div className="services-img">
-                            <Image width={250} height={250} src="/assets/img/home3/service-img3.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/img/home3/service-img3.jpg" alt="" />
                         </div>
                         <div className="content">
                             <p>Pipeline Inspection &amp; Maintenance</p>
@@ -160,7 +160,7 @@ const HomeServiceSection: React.FC = () => {
                             </div>
                         </div>
                         <div className="services-img">
-                            <Image width={250} height={250} src="/assets/img/home3/service-img4.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/img/home3/service-img4.jpg" alt="" />
                         </div>
                         <div className="content">
                             <p>Environmental Impact Assessments</p>
@@ -189,7 +189,7 @@ const HomeServiceSection: React.FC = () => {
                             </div>
                         </div>
                         <div className="services-img">
-                            <Image width={250} height={250} src="/assets/img/home3/service-img5.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/img/home3/service-img5.jpg" alt="" />
                         </div>
                         <div className="content">
                             <p>Pipeline Design &amp; Engineering</p>

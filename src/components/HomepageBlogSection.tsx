@@ -84,7 +84,7 @@ const HomepageBlogSection: React.FC = () => {
                                         <div className="blog-card">
                                             <div className="blog-img-wrap">
                                                 <Link className="blog-img" href="/blog/details">
-                                                    <Image width={416} height={320} src="/assets/img/home1/blog-img1.jpg" alt="" />
+                                                    <img width={416} height={320} src="/assets/img/home1/blog-img1.jpg" alt="" />
                                                 </Link>
                                                 <div className="blog-meta">
                                                     <ul>
@@ -111,7 +111,7 @@ const HomepageBlogSection: React.FC = () => {
                                         <div className="blog-card">
                                             <div className="blog-img-wrap">
                                                 <Link className="blog-img" href="/blog/details">
-                                                    <Image width={416} height={320} src="/assets/img/home1/blog-img2.jpg" alt="" />
+                                                    <img width={416} height={320} src="/assets/img/home1/blog-img2.jpg" alt="" />
                                                 </Link>
                                                 <div className="blog-meta">
                                                     <ul>
@@ -138,7 +138,7 @@ const HomepageBlogSection: React.FC = () => {
                                         <div className="blog-card">
                                             <div className="blog-img-wrap">
                                                 <Link className="blog-img" href="/blog/details">
-                                                    <Image width={416} height={320} src="/assets/img/home1/blog-img3.jpg" alt="" />
+                                                    <img width={416} height={320} src="/assets/img/home1/blog-img3.jpg" alt="" />
                                                 </Link>
                                                 <div className="blog-meta">
                                                     <ul>
@@ -165,7 +165,7 @@ const HomepageBlogSection: React.FC = () => {
                                         <div className="blog-card">
                                             <div className="blog-img-wrap">
                                                 <Link className="blog-img" href="/blog/details">
-                                                    <Image width={416} height={320} src="/assets/img/home1/blog-img4.jpg" alt="" />
+                                                    <img width={416} height={320} src="/assets/img/home1/blog-img4.jpg" alt="" />
                                                 </Link>
                                                 <div className="blog-meta">
                                                     <ul>
@@ -192,7 +192,7 @@ const HomepageBlogSection: React.FC = () => {
                                         <div className="blog-card">
                                             <div className="blog-img-wrap">
                                                 <Link className="blog-img" href="/blog/details">
-                                                    <Image width={416} height={320} src="/assets/img/home1/blog-img5.jpg" alt="" />
+                                                    <img width={416} height={320} src="/assets/img/home1/blog-img5.jpg" alt="" />
                                                 </Link>
                                                 <div className="blog-meta">
                                                     <ul>
@@ -219,7 +219,7 @@ const HomepageBlogSection: React.FC = () => {
                                         <div className="blog-card">
                                             <div className="blog-img-wrap">
                                                 <Link className="blog-img" href="/blog/details">
-                                                    <Image width={416} height={320} src="/assets/img/home1/blog-img6.jpg" alt="" />
+                                                    <img width={416} height={320} src="/assets/img/home1/blog-img6.jpg" alt="" />
                                                 </Link>
                                                 <div className="blog-meta">
                                                     <ul>
