@@ -13502,7 +13502,7 @@ header.style-4 .mobile-logo-area .menu-close-btn:hover i {
   24. Home2 Why Choose Us Section CSS
 ========================================*/
 .home2-why-choose-us-section {
-  background-image: url(../img/home2/home2-why-choose-us-bg.png), linear-gradient(180deg, #C5CEB3 0%, #C5CEB3 100%);
+  background-image: url(../img/home2/home2-why-choose-us-bg.png), linear-gradient(180deg, #c8e5ff 0%, #c8e5ff 100%);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 90px 0;

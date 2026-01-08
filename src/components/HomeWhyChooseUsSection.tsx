@@ -12,22 +12,24 @@ const HomeWhyChooseUsSection: React.FC = () => {
                     <div className="row g-4 align-items-center justify-content-between mb-60">
                         <div className="col-xl-6 col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="section-title two">
-                                <span>Why Work With Us</span>
+                                
                                 <h2>Why We’re the Right Choice Industry</h2>
                             </div>
                         </div>
                         <div className="col-lg-3 d-flex justify-content-lg-end btn_wrapper">
-                            <Link href="/contact" className="contact-btn">
-                                <div className="primary-btn2 two">
-                                    <span>Contact Now</span>
+                          <Link className="primary-btn3" href="/about">
+                                    <span>About Us More
+                                    </span>
+                                    <span>About Us More
+                                    </span>
                                     <svg className="arrow" width={23} height={23} viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
                                         <g>
                                             <path d="M0.113861 0H22.9999V4.28425L4.32671 22.9997L0 18.7154L12.7524 6.08815L0.113861 6.20089V0Z" />
                                             <path d="M23 22.9996V8.56848L16.8516 14.6566V22.9996H23Z" />
                                         </g>
                                     </svg>
-                                </div>
-                            </Link>
+                                </Link>
+                            
                         </div>
                     </div>
                     <div className="row justify-content-xl-end">

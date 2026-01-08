@@ -9,7 +9,7 @@ const HomePageTeamSection: React.FC = () => {
                     <div className="row justify-content-center mb-70 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="col-xl-4 col-lg-5 col-md-8">
                             <div className="section-title text-center">
-                                <span>Our Factory People</span>
+                                
                                 <h2>Meet Our Factory Team</h2>
                             </div>
                         </div>

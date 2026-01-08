@@ -67,7 +67,7 @@ const HomePageFeatureSection: React.FC<HomePageFeatureSectionProps> = ({
                     <div className="row g-4 align-items-center justify-content-between mb-70">
                         <div className="col-lg-6 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="section-title">
-                                <span>{name} Quality</span>
+                               
                                 <h2>{name} Product at Every Step</h2>
                             </div>
                         </div>

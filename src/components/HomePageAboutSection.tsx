@@ -13,14 +13,14 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
     const [isOpen, setOpen] = useState<boolean>(false);
     return (
         <>
-            <div className={`home1-about-section mb-120 ${pt}`} id="scroll-section">
+            <div className={`home1-about-section mb-120 mt-50 ${pt}`} id="scroll-section">
                 <div className="container">
                     <div className="about-top-area mb-50">
                         <div className="row g-4 align-items-center justify-content-between">
                             <div className="col-xl-8 col-lg-9 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                                 <div className="about-title-area">
                                     <div className="section-title">
-                                        <span>About Our Story</span>
+                                        
                                         <h2>Our Story of Manufacturing Excellence Built on.</h2>
                                     </div>
                                     <div className="video-and-content">
