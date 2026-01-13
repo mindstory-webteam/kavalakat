@@ -2,8 +2,14 @@ import type { NextConfig } from "next";
 
 const config: NextConfig = {
   reactStrictMode: true,
-  turbopack: {
-    root: process.cwd(),
+  output: 'standalone',
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cornflowerblue-eland-784005.hostingersite.com',
+      },
+    ],
   },
 };
 
