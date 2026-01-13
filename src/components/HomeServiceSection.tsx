@@ -41,7 +41,7 @@ const HomeServiceSection: React.FC = () => {
                 <div className="row gy-md-5 gy-4 align-items-center justify-content-between mb-70">
                     <div className="col-lg-6 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="section-title two white">
-                            <h2>News Trends &amp; Solutions.</h2>
+                            <h2>Our Products</h2>
                         </div>
                     </div>
                     <div className="col-lg-3 d-flex justify-content-lg-end btn_wrapper">
@@ -76,7 +76,7 @@ const HomeServiceSection: React.FC = () => {
                             <img width={250} height={250} src="/assets/img/home3/service-img1.jpg" alt="" />
                         </div>
                         <div className="content">
-                            <p>Refinery Maintenance &amp; Upgrades</p>
+                            <p>Cement</p>
                         </div>
                         <Link href="/service/details" className="details-btn">
                             <span>View Details</span>
@@ -107,7 +107,7 @@ const HomeServiceSection: React.FC = () => {
                             <img width={250} height={250} src="/assets/img/home3/service-img2.jpg" alt="" />
                         </div>
                         <div className="content">
-                            <p>Petroleum Product Distribution</p>
+                            <p>Steel</p>
                         </div>
                         <Link href="/service/details" className="details-btn">
                             <span>View Details</span>
@@ -134,7 +134,7 @@ const HomeServiceSection: React.FC = () => {
                             <img width={250} height={250} src="/assets/img/home3/service-img3.jpg" alt="" />
                         </div>
                         <div className="content">
-                            <p>Pipeline Inspection &amp; Maintenance</p>
+                            <p>White Cement & Paint</p>
                         </div>
                         <Link href="/service/details" className="details-btn">
                             <span>View Details</span>
@@ -163,7 +163,7 @@ const HomeServiceSection: React.FC = () => {
                             <img width={250} height={250} src="/assets/img/home3/service-img4.jpg" alt="" />
                         </div>
                         <div className="content">
-                            <p>Environmental Impact Assessments</p>
+                            <p>Sheet & Pipe</p>
                         </div>
                         <Link href="/service/details" className="details-btn">
                             <span>View Details</span>
@@ -192,7 +192,36 @@ const HomeServiceSection: React.FC = () => {
                             <img width={250} height={250} src="/assets/img/home3/service-img5.jpg" alt="" />
                         </div>
                         <div className="content">
-                            <p>Pipeline Design &amp; Engineering</p>
+                            <p>Abrasives & Construction Chemicals</p>
+                        </div>
+                        <Link href="/service/details" className="details-btn">
+                            <span>View Details</span>
+                            <div className="icon">
+                                <svg width={24} height={23} viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path d="M12.056 0.0560084L23.3137 11.3137L21.2063 13.4211L2.81473 13.4419L2.79385 9.20615L15.2782 9.26771L9.00578 3.10624L12.056 0.0560084Z" />
+                                        <path d="M11.9999 22.6272L19.0987 15.5285L13.0794 15.4988L8.9755 19.6027L11.9999 22.6272Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </Link>
+                    </li>
+                    <li className="single-services wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
+                        <div className="number-and-icon-area">
+                            <span>05</span>
+                            <div className="icon">
+                                <svg width={39} height={39} viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7969 22.5468C18.5092 22.5468 23.1562 17.8997 23.1562 12.1874C22.5871 -1.55582 3.00422 -1.55155 2.4375 12.1874C2.4375 17.8997 7.08459 22.5468 12.7969 22.5468ZM12.7969 3.04679C17.837 3.04679 21.9375 7.14728 21.9375 12.1874C21.4354 24.314 4.15594 24.3103 3.65625 12.1874C3.65625 7.14728 7.75673 3.04679 12.7969 3.04679Z" />
+                                    <path d="M12.7969 18.2812C15.4848 18.2812 17.6719 16.0941 17.6719 13.4062C17.6719 11.4245 15.2094 8.08997 13.7414 6.27891C13.2783 5.70488 12.3155 5.70488 11.8523 6.27891C10.3838 8.08997 7.92188 11.4245 7.92188 13.4062C7.92188 16.0941 10.1089 18.2812 12.7969 18.2812ZM12.7944 7.04551C15.0516 9.83096 16.4531 12.2685 16.4531 13.4062C16.4531 15.4226 14.8133 17.0624 12.7969 17.0624C10.7805 17.0624 9.14062 15.4226 9.14062 13.4062C9.14062 12.2678 10.5422 9.83035 12.7944 7.04551Z" />
+                                    <path d="M35.3438 1.21875H26.8125C25.4682 1.21875 24.375 2.31197 24.375 3.65625V6.09375C24.375 7.22597 25.155 8.17172 26.2031 8.44472V15.3209C25.155 15.5933 24.375 16.5397 24.375 17.6719V20.1094C24.375 21.2416 25.155 22.1873 26.2031 22.4603V24.9844C26.2031 25.6565 25.6565 26.2031 24.9844 26.2031H22.4603C22.188 25.155 21.2416 24.375 20.1094 24.375H17.6719C16.539 24.375 15.5939 25.155 15.3209 26.2031H8.44472C8.17233 25.155 7.22597 24.375 6.09375 24.375H3.65625C2.31197 24.375 1.21875 25.4682 1.21875 26.8125V35.3438C1.21875 36.688 2.31197 37.7812 3.65625 37.7812H6.09375C7.22658 37.7812 8.17172 37.0013 8.44472 35.9531H15.3209C15.5933 37.0013 16.5397 37.7812 17.6719 37.7812H20.1094C21.2422 37.7812 22.1873 37.0013 22.4603 35.9531H29.25C32.9459 35.9531 35.9531 32.9459 35.9531 29.25V22.4603C37.0013 22.188 37.7812 21.2416 37.7812 20.1094V17.6719C37.7812 16.5397 37.0013 15.5939 35.9531 15.3209V8.44472C37.0013 8.17233 37.7812 7.22597 37.7812 6.09375V3.65625C37.7812 2.31197 36.688 1.21875 35.3438 1.21875ZM7.3125 35.3438C7.3125 36.0159 6.76589 36.5625 6.09375 36.5625H3.65625C2.98411 36.5625 2.4375 36.0159 2.4375 35.3438V26.8125C2.4375 26.1404 2.98411 25.5938 3.65625 25.5938H6.09375C6.76589 25.5938 7.3125 26.1404 7.3125 26.8125V35.3438ZM15.2344 34.7344H8.53125V27.4219H15.2344V34.7344ZM21.3281 35.3438C21.3281 36.0159 20.7815 36.5625 20.1094 36.5625H17.6719C16.9997 36.5625 16.4531 36.0159 16.4531 35.3438V26.8125C16.4531 26.1404 16.9997 25.5938 17.6719 25.5938H20.1094C20.7815 25.5938 21.3281 26.1404 21.3281 26.8125V35.3438ZM34.7344 29.25C34.7344 32.2737 32.2743 34.7344 29.25 34.7344H22.5469V27.4219H24.9844C26.3287 27.4219 27.4219 26.3287 27.4219 24.9844V22.5469H34.7344V29.25ZM36.5625 17.6719V20.1094C36.5625 20.7815 36.0159 21.3281 35.3438 21.3281H26.8125C26.1404 21.3281 25.5938 20.7815 25.5938 20.1094V17.6719C25.5938 16.9997 26.1404 16.4531 26.8125 16.4531H35.3438C36.0159 16.4531 36.5625 16.9997 36.5625 17.6719ZM27.4219 15.2344V8.53125H34.7344V15.2344H27.4219ZM36.5625 6.09375C36.5625 6.76589 36.0159 7.3125 35.3438 7.3125H26.8125C26.1404 7.3125 25.5938 6.76589 25.5938 6.09375V3.65625C25.5938 2.98411 26.1404 2.4375 26.8125 2.4375H35.3438C36.0159 2.4375 36.5625 2.98411 36.5625 3.65625V6.09375Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="services-img">
+                            <img width={250} height={250} src="/assets/img/home3/service-img5.jpg" alt="" />
+                        </div>
+                        <div className="content">
+                            <p>Logistics</p>
                         </div>
                         <Link href="/service/details" className="details-btn">
                             <span>View Details</span>

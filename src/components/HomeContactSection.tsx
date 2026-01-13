@@ -30,7 +30,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseOne'}
                                             aria-controls="collapseOne"
                                         >
-                                            01. Do you provide design and Textile services?
+                                            01. Are your steel and cement products certified?
                                         </button>
                                     </h2>
                                     <div 
@@ -39,7 +39,7 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingOne"
                                     >
                                         <div className="accordion-body">
-                                            Yes, we provide comprehensive design and textile services tailored to meet your needs.
+                                            Yes, all our steel and cement products are ISI-certified and sourced from reputed Indian brands, meeting industry and quality standards.
                                         </div>
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseTwo'}
                                             aria-controls="collapseTwo"
                                         >
-                                            02. Is Matrik suitable for my business?
+                                            2. Do you provide logistics and on-time delivery?
                                         </button>
                                     </h2>
                                     <div 
@@ -61,7 +61,7 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingTwo"
                                     >
                                         <div className="accordion-body">
-                                            Discover if Matrik is the right fit for your business by exploring its tailored solutions for various industries and unique needs.
+                                            Yes, we offer efficient logistics with crane-assisted loading and just-in-time delivery directly to your project site.
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseThree'}
                                             aria-controls="collapseThree"
                                         >
-                                            03. What is your typical project timeline?
+                                            3. Can I get multiple construction materials from one place?
                                         </button>
                                     </h2>
                                     <div 
@@ -83,7 +83,7 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingThree"
                                     >
                                         <div className="accordion-body">
-                                            Discover the typical project timeline for our construction services, outlining each phase from planning to completion, ensuring timely and efficient project delivery.
+                                            Absolutely. Kavalakat Agencies is a one-stop solution for steel, cement, white cement, sheets, pipes, abrasives, and construction chemicals.
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseFour'}
                                             aria-controls="collapseFour"
                                         >
-                                            04. How do you handle permits and inspections?
+                                           4. Why should I choose Kavalakat Agencies?
                                         </button>
                                     </h2>
                                     <div 
@@ -105,7 +105,7 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingFour"
                                     >
                                         <div className="accordion-body">
-                                            We handle all necessary permits and inspections for your project, ensuring full compliance with local regulations and smooth progress throughout the construction process.
+                                            With over four decades of industry experience, certified products, transparent pricing, and dependable service, we are a trusted construction material supplier in Kerala.
                                         </div>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseFive'}
                                             aria-controls="collapseFive"
                                         >
-                                            05. How do you handle waste disposal and recycling?
+                                            5. How can I place an order with Kavalakat Agencies?
                                         </button>
                                     </h2>
                                     <div 
@@ -127,8 +127,7 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingFive"
                                     >
                                         <div className="accordion-body">
-                                            At our construction sites, we prioritize responsible waste disposal and recycling by adhering to local regulations, implementing sustainable practices, and partnering with certified waste management services to minimize environmental impact.
-                                        </div>
+You can place orders by contacting our team directly or visiting our nearest office for product consultation and quick processing.                                        </div>
                                     </div>
                                 </div>
                             </div>

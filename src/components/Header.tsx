@@ -115,7 +115,7 @@ const Header: React.FC = () => {
     };
 
     // Path arrays for navigation
-    const aboutPaths: string[] = ['/about', '/OurStrengths', '/our-clients', '/gallery'];
+    const aboutPaths: string[] = ['/about', '/ourstrengths', '/our-clients', '/gallery'];
     const isAboutActive: boolean = aboutPaths.some((path: string) => pathname.startsWith(path));
 
     const productPaths: string[] = ['/product', '/product/details'];
@@ -259,8 +259,8 @@ const Header: React.FC = () => {
                                     <li className={pathname === "/about" ? "active" : ""}>
                                         <Link href="/about"><span>About</span></Link>
                                     </li>
-                                    <li className={pathname === "/OurStrengths" ? "active" : ""}>
-                                        <Link href="/OurStrengths"><span>Our Strengths</span></Link>
+                                    <li className={pathname === "/ourstrengths" ? "active" : ""}>
+                                        <Link href="/ourstrengths"><span>Our Strengths</span></Link>
                                     </li>
                                     <li className={pathname === "/our-clients" ? "active" : ""}>
                                         <Link href="/our-clients"><span>Clients</span></Link>

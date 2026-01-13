@@ -126,7 +126,7 @@ Version: 1.0
 :root {
   --font-manrope: "Manrope", sans-serif;
   --font-dmsans: "DM Sans", sans-serif;
-  --white-color: #fff;
+  --white-color: #ffffff;
   --black-color: #000000;
   --black-color-opc: 0, 0, 0;
   --dark-title-color: #1C1A1E;
@@ -1055,7 +1055,7 @@ body.tt-magic-cursor #magic-cursor {
   color: var(--title-color);
 }
 .primary-btn1.white-bg .arrow {
-  fill: rgba(var(--primary-color1-opc), 0.15);
+  fill: #0160b2;
 }
 .primary-btn1.white-bg::after {
   background-color: var(--primary-color1);
@@ -1132,7 +1132,7 @@ body.tt-magic-cursor #magic-cursor {
   color: var(--primary-color1);
 }
 .primary-btn2:hover svg {
-  fill: rgba(var(--primary-color1-opc), 0.15);
+  fill: #0160b2;
 }
 .primary-btn2:hover span {
   background-size: 0 1px;
@@ -1273,7 +1273,7 @@ body.tt-magic-cursor #magic-cursor {
   color: var(--title-color);
 }
 .primary-btn3.white-bg .arrow {
-  fill: rgba(var(--primary-color2-opc), 0.15);
+  fill: #0160b2;
 }
 .primary-btn3.white-bg::after {
   background-color: var(--primary-color2);
@@ -12508,7 +12508,7 @@ header.style-4 .mobile-logo-area .menu-close-btn:hover i {
   color: var(--white-color);
 }
 .home2-about-section .about-btn-area:hover .primary-btn2 svg {
-  fill: rgba(var(--black-color-opc), 0.15);
+  fill: #0160b2;
 }
 .home2-about-section .about-btn-area:hover .primary-btn2 span {
   background-size: 0 1px;
@@ -15200,7 +15200,7 @@ header.style-4 .mobile-logo-area .menu-close-btn:hover i {
   left: 0;
   width: 2px;
   height: 80px;
-  background-color: rgba(249, 72, 52, 0.7);
+  background-color: #0160b2;
 }
 .home3-about-section .about-content-wrap ul {
   padding: 0;

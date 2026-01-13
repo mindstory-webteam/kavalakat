@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect, useReducer, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -65,14 +65,14 @@ const InnerPageHeader: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const pathname = usePathname();
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     dispatch({ type: "setScrollY", payload: window.scrollY });
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   const toggleMenu = (menu: string) => dispatch({ type: "TOGGLE_MENU", menu });
   const toggleRightSidebar = () => dispatch({ type: "TOGGLE_RIGHTSIDEBAR" });
@@ -83,7 +83,7 @@ const InnerPageHeader: React.FC = () => {
   };
 
   // Path arrays for navigation
-  const aboutPaths: string[] = ['/about', '/OurStrengths', '/our-clients', '/gallery'];
+  const aboutPaths: string[] = ['/about', '/ourstrengths', '/our-clients', '/gallery'];
   const isAboutActive: boolean = aboutPaths.some((path: string) => pathname.startsWith(path));
 
   const productPaths: string[] = ['/product', '/product/details'];
@@ -101,6 +101,7 @@ const InnerPageHeader: React.FC = () => {
         <div className="right-sidebar-menu-wrap">
           <div className="sidebar-logo-area d-flex justify-content-between align-items-center">
             <div className="sidebar-logo-wrap">
+              {/* FIXED: Absolute path from root */}
               <Link href="/"><img width={157} height={34} alt="image" src="/assets/new-images/logo-1.png" /></Link>
             </div>
             <div className="right-sidebar-close-btn" onClick={toggleRightSidebar}>
@@ -192,14 +193,16 @@ const InnerPageHeader: React.FC = () => {
         </div>
       </div>
       
-      <header className={`${state.scrollY > 20 ? "sticky" : ""}header-area style-1 inner-page`}>
+      <header className={`${state.scrollY > 20 ? "sticky" : ""} header-area style-1 inner-page`}>
         <div className="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
           <div className="company-logo">
+            {/* FIXED: Absolute path from root */}
             <Link href="/"><img width={157} height={34} alt="image" className="img-fluid" src="/assets/new-images/logo-1.png" /></Link>
           </div>
           <div className={`main-menu ${state.isSidebarOpen ? "show-menu" : ""}`}>
             <div className="mobile-logo-area d-lg-none d-flex align-items-center justify-content-between">
               <Link href="/" className="mobile-logo-wrap">
+                {/* FIXED: Absolute path from root */}
                 <img width={157} height={34} alt="image" className="img-fluid" src="/assets/new-images/logo-1.png" />
               </Link>
               <div className="menu-close-btn" onClick={toggleSidebar}>
@@ -228,8 +231,8 @@ const InnerPageHeader: React.FC = () => {
                    <li className={pathname === "/about" ? "active" : ""}>
                     <Link href="/about"><span>About</span></Link>
                   </li>
-                  <li className={pathname === "/OurStrengths" ? "active" : ""}>
-                    <Link href="/OurStrengths"><span>Our Strengths</span></Link>
+                  <li className={pathname === "/ourstrengths" ? "active" : ""}>
+                    <Link href="/ourstrengths"><span>Our Strengths</span></Link>
                   </li>
                   <li className={pathname === "/our-clients" ? "active" : ""}>
                     <Link href="/our-clients"><span>Clients</span></Link>
