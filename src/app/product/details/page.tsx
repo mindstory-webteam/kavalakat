@@ -1,4 +1,4 @@
-
+"use client"
 import FooterTop from '@/components/FooterTop'
 import InnerPageHeader from '@/components/InnerPageHeader'
 import Link from 'next/link'
