@@ -1,9 +1,16 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-}
+import type { NextConfig } from "next";
 
-module.exports = nextConfig
+const config: NextConfig = {
+  reactStrictMode: true,
+  output: 'standalone',
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cornflowerblue-eland-784005.hostingersite.com',
+      },
+    ],
+  },
+};
+
+export default config;
