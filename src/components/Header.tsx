@@ -115,7 +115,7 @@ const Header: React.FC = () => {
     };
 
     // Path arrays for navigation
-    const aboutPaths: string[] = ['/about', '/ourstrengths', '/our-clients', '/gallery'];
+    const aboutPaths: string[] = ['/about', '/our-process', '/our-clients', '/gallery'];
     const isAboutActive: boolean = aboutPaths.some((path: string) => pathname.startsWith(path));
 
     const productPaths: string[] = ['/product', '/product/details'];
