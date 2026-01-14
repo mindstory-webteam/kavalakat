@@ -260,7 +260,7 @@ const Header: React.FC = () => {
                                         <Link href="/about"><span>About</span></Link>
                                     </li>
                                     <li className={pathname === "/our-process" ? "active" : ""}>
-                                        <Link href="/our-process"><span>Our Strengths</span></Link>
+                                        <Link href="/our-process"><span>Our Process</span></Link>
                                     </li>
                                     <li className={pathname === "/our-clients" ? "active" : ""}>
                                         <Link href="/our-clients"><span>Clients</span></Link>
