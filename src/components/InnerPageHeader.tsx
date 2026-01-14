@@ -83,7 +83,7 @@ const InnerPageHeader: React.FC = () => {
   };
 
   // Path arrays for navigation
-  const aboutPaths: string[] = ['/about', '/ourstrengths', '/our-clients', '/gallery'];
+  const aboutPaths: string[] = ['/about', '/our-process', '/our-clients', '/gallery'];
   const isAboutActive: boolean = aboutPaths.some((path: string) => pathname.startsWith(path));
 
   const productPaths: string[] = ['/product', '/product/details'];
@@ -231,8 +231,8 @@ const InnerPageHeader: React.FC = () => {
                    <li className={pathname === "/about" ? "active" : ""}>
                     <Link href="/about"><span>About</span></Link>
                   </li>
-                  <li className={pathname === "/ourstrengths" ? "active" : ""}>
-                    <Link href="/ourstrengths"><span>Our Strengths</span></Link>
+                  <li className={pathname === "/our-process" ? "active" : ""}>
+                    <Link href="/our-process"><span>Our Strengths</span></Link>
                   </li>
                   <li className={pathname === "/our-clients" ? "active" : ""}>
                     <Link href="/our-clients"><span>Clients</span></Link>
