@@ -259,8 +259,8 @@ const Header: React.FC = () => {
                                     <li className={pathname === "/about" ? "active" : ""}>
                                         <Link href="/about"><span>About</span></Link>
                                     </li>
-                                    <li className={pathname === "/ourstrengths" ? "active" : ""}>
-                                        <Link href="/ourstrengths"><span>Our Strengths</span></Link>
+                                    <li className={pathname === "/our-process" ? "active" : ""}>
+                                        <Link href="/our-process"><span>Our Strengths</span></Link>
                                     </li>
                                     <li className={pathname === "/our-clients" ? "active" : ""}>
                                         <Link href="/our-clients"><span>Clients</span></Link>
