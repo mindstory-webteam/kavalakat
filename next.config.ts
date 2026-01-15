@@ -2,12 +2,9 @@ import type { NextConfig } from "next";
 
 const config: NextConfig = {
   reactStrictMode: true,
-  output: 'export',  // CRITICAL: Change to export mode
-
-  trailingSlash: true, // Helps with routing on static hosts
+  // Remove output: 'export' temporarily
   
   images: {
-    unoptimized: true,  // Required for static export
     remotePatterns: [
       {
         protocol: 'https',
