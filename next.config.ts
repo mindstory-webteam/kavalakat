@@ -2,9 +2,11 @@ import type { NextConfig } from "next";
 
 const config: NextConfig = {
   reactStrictMode: true,
-  // Remove output: 'export' temporarily
+  output: 'export',
+  distDir: 'out',  // Force output to 'out' directory
   
   images: {
+    unoptimized: true,  // Required for export
     remotePatterns: [
       {
         protocol: 'https',
