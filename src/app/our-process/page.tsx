@@ -25,7 +25,7 @@ const OurProcessPage:React.FC = () => {
                             <div className="row g-0">
                                 <div className="col-lg-6">
                                     <div className="process-img">
-                                        <Image width={650} height={650} src="/assets/img/innerpages/process-img1.jpg" alt="" />
+                                        <Image width={650} height={650} src="/assets/new-images/our-pross/image-1.jpg" alt="" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -54,7 +54,7 @@ const OurProcessPage:React.FC = () => {
                             <div className="row g-0">
                                 <div className="col-lg-6">
                                     <div className="process-img">
-                                        <Image width={650} height={650} src="/assets/img/innerpages/process-img2.jpg" alt="" />
+                                        <Image width={650} height={650} src="/assets/new-images/our-pross/image-2.jpg" alt="" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -85,7 +85,7 @@ const OurProcessPage:React.FC = () => {
                             <div className="row g-0">
                                 <div className="col-lg-6">
                                     <div className="process-img">
-                                        <Image width={650} height={650} src="/assets/img/innerpages/process-img3.jpg" alt="" />
+                                        <Image width={650} height={650} src="/assets/new-images/our-pross/image-3.jpg" alt="" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">

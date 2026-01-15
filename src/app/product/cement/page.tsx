@@ -14,7 +14,7 @@ const ProductPage = () => {
         <>
             <InnerPageHeader />
           
-            <Breadcrumb title="Product Details" subtitle="Products Power Progress Explore Our Offer." />
+            <Breadcrumb title="Product Cement" subtitle="Products Power Progress Explore Our Offer." />
             <div className="product-details-top-area pt-120 mb-120" id="scroll-section">
                 <div className="container">
                     <div className="row gy-md-5 gy-4 align-items-lg-end">

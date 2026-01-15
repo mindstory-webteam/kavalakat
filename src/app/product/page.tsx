@@ -21,8 +21,8 @@ const ProductPage = () => {
                             <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                                 <div className="product-card">
                                     <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/img/home4/product-img1.jpg" alt="" />
-                                        <Link href="/product/details" className="arrow">
+                                        <Image width={340} height={270} src="/assets/new-images/products/p-1.jpeg" alt="" />
+                                        <Link href="/product/cement" className="arrow">
                                             <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
                                                 <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
@@ -30,16 +30,16 @@ const ProductPage = () => {
                                         </Link>
                                     </div>
                                     <div className="product-content">
-                                        <h4><Link href="/product/details">Steel Sheets &amp; Plates</Link></h4>
-                                        <p>Sed nisl eros, condimentum nec risusit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
+                                        <h4><Link href="/product/cement">Cement</Link></h4>
+                                        <p>Supplied from trusted brands with efficient handling and timely dispatch to support strong and consistent construction timelines.</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                                 <div className="product-card">
                                     <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/img/home4/product-img2.jpg" alt="" />
-                                        <Link href="/product/details" className="arrow">
+                                        <Image width={340} height={270} src="/assets/new-images/products/p-2.jpeg" alt="" />
+                                        <Link href="/product/steel" className="arrow">
                                             <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
                                                 <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
@@ -47,16 +47,16 @@ const ProductPage = () => {
                                         </Link>
                                     </div>
                                     <div className="product-content">
-                                        <h4><Link href="/product/details">Copper Pipes &amp; Tubes</Link></h4>
-                                        <p>Sed nisl eros, condimentum nec risusit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
+                                        <h4><Link href="/product/steel">Steel</Link></h4>
+                                        <p>High-quality, certified steel processed and delivered through streamlined operations for structural reliability and project efficiency.</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
                                 <div className="product-card">
                                     <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/img/home4/product-img3.jpg" alt="" />
-                                        <Link href="/product/details" className="arrow">
+                                        <Image width={340} height={270} src="/assets/new-images/products/p-3.jpeg" alt="" />
+                                        <Link href="/product/white-cement-paint" className="arrow">
                                             <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
                                                 <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
@@ -64,16 +64,16 @@ const ProductPage = () => {
                                         </Link>
                                     </div>
                                     <div className="product-content">
-                                        <h4><Link href="/product/details">Stainless Steel Coils</Link></h4>
-                                        <p>Sed nisl eros, condimentum nec risusit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
+                                        <h4><Link href="/product/white-cement-paint">White Cement & Paint</Link></h4>
+                                        <p>Carefully stored and managed to maintain quality, ensuring smooth supply for finishing and aesthetic construction needs.</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
                                 <div className="product-card">
                                     <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/img/home4/product-img4.jpg" alt="" />
-                                        <Link href="/product/details" className="arrow">
+                                        <Image width={340} height={270} src="/assets/new-images/products/p-4.jpeg" alt="" />
+                                        <Link href="/product/sheet-pipe" className="arrow">
                                             <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
                                                 <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
@@ -81,16 +81,16 @@ const ProductPage = () => {
                                         </Link>
                                     </div>
                                     <div className="product-content">
-                                        <h4><Link href="/product/details">Brass Rods &amp; Sheets</Link></h4>
-                                        <p>Sed nisl eros, condimentum nec risusit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
+                                        <h4><Link href="/product/sheet-pipe">Sheet & Pipe</Link></h4>
+                                        <p>Handled with precision and organized dispatch systems to ensure damage-free delivery and site-ready usage.</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
                                 <div className="product-card">
                                     <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/img/innerpages/product-img1.jpg" alt="" />
-                                        <Link href="/product/details" className="arrow">
+                                        <Image width={340} height={270} src="/assets/new-images/products/p-5.jpeg" alt="" />
+                                        <Link href="/product/abrasives-construction-chemicals" className="arrow">
                                             <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
                                                 <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
@@ -98,16 +98,16 @@ const ProductPage = () => {
                                         </Link>
                                     </div>
                                     <div className="product-content">
-                                        <h4><Link href="/product/details">High-Strength Rebar</Link></h4>
-                                        <p>Sed nisl eros, condimentum nec risusit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
+                                        <h4><Link href="/product/abrasives-construction-chemicals">Abrasives & Construction Chemicals</Link></h4>
+                                        <p>Specialty products managed through controlled workflows to ensure safety, accuracy, and performance consistency.</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
                                 <div className="product-card">
                                     <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/img/innerpages/product-img2.jpg" alt="" />
-                                        <Link href="/product/details" className="arrow">
+                                        <Image width={340} height={270} src="/assets/new-images/products/p-6.jpeg" alt="" />
+                                        <Link href="/product/logistics" className="arrow">
                                             <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
                                                 <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
@@ -115,79 +115,17 @@ const ProductPage = () => {
                                         </Link>
                                     </div>
                                     <div className="product-content">
-                                        <h4><Link href="/product/details">Precision Metal</Link></h4>
-                                        <p>Sed nisl eros, condimentum nec risusit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
+                                        <h4><Link href="/product/logistics">Logistics</Link></h4>
+                                        <p>Integrated logistics support with planned routing and on-time delivery, ensuring uninterrupted material flow to project sites.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                                <div className="product-card">
-                                    <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/img/innerpages/product-img3.jpg" alt="" />
-                                        <Link href="/product/details" className="arrow">
-                                            <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
-                                                <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
-                                            </svg>
-                                        </Link>
-                                    </div>
-                                    <div className="product-content">
-                                        <h4><Link href="/product/details">Factory Aluminum</Link></h4>
-                                        <p>Sed nisl eros, condimentum nec risusit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                <div className="product-card">
-                                    <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/img/innerpages/product-img4.jpg" alt="" />
-                                        <Link href="/product/details" className="arrow">
-                                            <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
-                                                <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
-                                            </svg>
-                                        </Link>
-                                    </div>
-                                    <div className="product-content">
-                                        <h4><Link href="/product/details">Pre-Stress Steel Beam</Link></h4>
-                                        <p>Sed nisl eros, condimentum nec risusit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                <div className="product-card">
-                                    <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/img/innerpages/product-img5.jpg" alt="" />
-                                        <Link href="/product/details" className="arrow">
-                                            <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
-                                                <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
-                                            </svg>
-                                        </Link>
-                                    </div>
-                                    <div className="product-content">
-                                        <h4><Link href="/product/details">Reinforced Concrete</Link></h4>
-                                        <p>Sed nisl eros, condimentum nec risusit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
-                                    </div>
-                                </div>
-                            </div>
+                           
+                           
                         </div>
                     </div>
                     <div className="row bounce_up">
-                        <div className="col-lg-12 d-flex justify-content-center">
-                            <a className="primary-btn1 black-bg" href="#">
-                                <span>Load More
-                                </span>
-                                <span>Load More
-                                </span>
-                                <svg className="arrow" width={23} height={23} viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path d="M0.113861 0H22.9999V4.28425L4.32671 22.9997L0 18.7154L12.7524 6.08815L0.113861 6.20089V0Z" />
-                                        <path d="M23 22.9996V8.56848L16.8516 14.6566V22.9996H23Z" />
-                                    </g>
-                                </svg>
-                            </a>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
