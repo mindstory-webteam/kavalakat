@@ -16,8 +16,11 @@ const config: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Add webpack configuration for chunk loading
-  webpack: (config, { isServer, webpack }) => {
+  // Add empty turbopack config to acknowledge the migration
+  turbopack: {},
+
+  // Keep webpack configuration for when webpack is explicitly used
+  webpack: (config, { isServer }) => {
     if (!isServer) {
       // Help prevent chunk loading errors
       config.output = {
