@@ -94,7 +94,7 @@ const HomeServiceSection: React.FC = () => {
 </div>
                         </div>
                         <div className="services-img">
-                            <img width={250} height={250} src="/assets/img/home3/service-img1.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/new-images/products/p-1.jpeg" alt="" />
                         </div>
                         <div className="content">
                             <p>Cement</p>
@@ -145,7 +145,7 @@ const HomeServiceSection: React.FC = () => {
 </div>
                         </div>
                         <div className="services-img">
-                            <img width={250} height={250} src="/assets/img/home3/service-img2.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/new-images/products/p-2.jpeg" alt="" />
                         </div>
                         <div className="content">
                             <p>Steel</p>
@@ -210,7 +210,7 @@ const HomeServiceSection: React.FC = () => {
 </div>
                         </div>
                         <div className="services-img">
-                            <img width={250} height={250} src="/assets/img/home3/service-img3.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/new-images/products/p-3.jpeg" alt="" />
                         </div>
                         <div className="content">
                             <p>White Cement & Paint</p>
@@ -289,7 +289,7 @@ const HomeServiceSection: React.FC = () => {
 </div>
                         </div>
                         <div className="services-img">
-                            <img width={250} height={250} src="/assets/img/home3/service-img4.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/new-images/products/p-4.jpeg" alt="" />
                         </div>
                         <div className="content">
                             <p>Sheet & Pipe</p>
@@ -344,7 +344,7 @@ const HomeServiceSection: React.FC = () => {
 </div>
                         </div>
                         <div className="services-img">
-                            <img width={250} height={250} src="/assets/img/home3/service-img5.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/new-images/products/p-5.jpeg" alt="" />
                         </div>
                         <div className="content">
                             <p>Abrasives & Construction Chemicals</p>
@@ -413,7 +413,7 @@ const HomeServiceSection: React.FC = () => {
 </div>
                         </div>
                         <div className="services-img">
-                            <img width={250} height={250} src="/assets/img/home3/service-img5.jpg" alt="" />
+                            <img width={250} height={250} src="/assets/new-images/products/p-6.jpeg" alt="" />
                         </div>
                         <div className="content">
                             <p>Logistics</p>
