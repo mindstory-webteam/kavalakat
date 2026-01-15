@@ -1,19 +1,12 @@
-"use client";
-import ScrollCircleProgress from "@/utils/ScrollCircleProgess";
-import useButtonHoverEffect from "@/customHooks/useButtonHoverEffect";
-import useMagneticHover from "@/customHooks/useMagneticHover";
-import { useMagicCursor } from "@/customHooks/useMagicCursor";
-import { useEffect } from "react";
-import handleAnimation from "@/utils/handleAnimation";
-import { usePathname } from "next/navigation";
+'use client';
 
-export default function ClientRoot({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
-  useButtonHoverEffect();
-  useMagneticHover();
-  useMagicCursor();
+import { useEffect, ReactNode } from 'react';
 
-  // Chunk error handler - Add this useEffect
+interface ChunkErrorBoundaryProps {
+  children: ReactNode;
+}
+
+export default function ChunkErrorBoundary({ children }: ChunkErrorBoundaryProps) {
   useEffect(() => {
     const handleError = (event: ErrorEvent) => {
       const errorMessage = event.message || '';
@@ -27,16 +20,19 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
         console.warn('Chunk load error detected, reloading page...');
         event.preventDefault();
         
+        // Reload the page once
         if (!sessionStorage.getItem('chunk-error-reload')) {
           sessionStorage.setItem('chunk-error-reload', 'true');
           window.location.reload();
         } else {
+          // If already reloaded once, clear storage and show error
           sessionStorage.removeItem('chunk-error-reload');
           alert('Unable to load the application. Please clear your browser cache and try again.');
         }
       }
     };
 
+    // Handle Promise rejections (for dynamic imports)
     const handleRejection = (event: PromiseRejectionEvent) => {
       const reason = event.reason?.message || event.reason || '';
       const isChunkError = 
@@ -57,7 +53,7 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
 
     // Clear reload flag on successful load
     sessionStorage.removeItem('chunk-error-reload');
-    
+
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', handleRejection);
 
@@ -67,32 +63,5 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
     };
   }, []);
 
-  useEffect(() => {
-    // Wait for GSAP scripts to load before running animations
-    const checkGSAPLoaded = setInterval(() => {
-      if (window.gsap && window.SplitText && window.ScrollTrigger) {
-        clearInterval(checkGSAPLoaded);
-        handleAnimation(); // Call animation when GSAP is loaded
-      }
-    }, 100); // Check every 100ms
-
-    return () => clearInterval(checkGSAPLoaded);
-  }, [pathname]);
-
-  useEffect(() => {
-    require("../../public/assets/js/confetti.browser.min");
-  }, []);
-
-  useEffect(() => {
-    if (pathname === "/textile") {
-      document.body.classList.add("textile-home");
-    } 
-  }, [pathname]);
-
-  return (
-    <>
-      {children}
-      <ScrollCircleProgress />
-    </>
-  );
+  return <>{children}</>;
 }
