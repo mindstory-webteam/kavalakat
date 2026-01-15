@@ -2,13 +2,18 @@ import type { NextConfig } from "next";
 
 const config: NextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
+  output: 'export',  // Changed from 'standalone' to 'export'
   
   images: {
+    unoptimized: true,  // Required for static export
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'cornflowerblue-eland-784005.hostingersite.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lightsalmon-horse-915757.hostingersite.com',
       },
     ],
     dangerouslyAllowSVG: true,
@@ -16,21 +21,19 @@ const config: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Add empty turbopack config to acknowledge the migration
-  turbopack: {},
+  // Remove turbopack config for static export
+  // turbopack: {},
 
-  // Keep webpack configuration for when webpack is explicitly used
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      // Help prevent chunk loading errors
-      config.output = {
-        ...config.output,
-        chunkLoadingGlobal: 'webpackChunkload',
-      };
-    }
-    
-    return config;
-  },
+  // Remove webpack config - not needed for static export
+  // webpack: (config, { isServer }) => {
+  //   if (!isServer) {
+  //     config.output = {
+  //       ...config.output,
+  //       chunkLoadingGlobal: 'webpackChunkload',
+  //     };
+  //   }
+  //   return config;
+  // },
 
   // Optimize headers for better caching
   async headers() {
