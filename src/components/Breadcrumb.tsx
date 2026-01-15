@@ -32,19 +32,19 @@ const Breadcrumb = ({ title, subtitle }: BreadcrumbProps) => {
                     </div>
                 </div>
 
-                <CircularText />
-                <img
+                {/* <CircularText /> */}
+                {/* <img
                 width={92}
                 height={92}
                     src="/assets/img/innerpages/breadcrumb-section-vector.svg"
                     alt="breadcrumb vector"
                     className="vector"
-                />
+                /> */}
             </div>
             <div className="breadcrumb-img">
                <img
                 width={1920}
-                height={550}src="/assets/img/innerpages/breadcrumb-img1.jpg" alt="breadcrumb image" />
+                height={550}src="/assets/new-images/about-page/banner/b-1.jpeg" alt="breadcrumb image" />
             </div>
         </div>
     )

@@ -79,7 +79,7 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                         </div>
                         <div className="col-lg-7 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="about-img magnetic-item">
-                                <img width={750} height={580} src="/assets/img/home1/about-img.jpg" alt="" />
+                                <img width={750} height={580} src="/assets/new-images/about-page/banner/b-2.jpeg" alt="" />
                             </div>
                         </div>
                     </div>
