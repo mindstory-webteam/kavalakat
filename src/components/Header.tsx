@@ -118,7 +118,7 @@ const Header: React.FC = () => {
     const aboutPaths: string[] = ['/about', '/our-process', '/our-clients', '/gallery'];
     const isAboutActive: boolean = aboutPaths.some((path: string) => pathname.startsWith(path));
 
-    const productPaths: string[] = ['/product', '/product/details'];
+    const productPaths: string[] = ['/product', '/product/cement', '/product/steel','/product/steel-pipe', '/product/white-cement-paint', '/product/logistics', '/product/abrasives-construction-chemicals'];
     const isProductActive: boolean = productPaths.some((path: string) => pathname.startsWith(path));
 
     const blogPaths: string[] = ['/blog', '/blog/details'];
@@ -285,8 +285,33 @@ const Header: React.FC = () => {
                                     <li className={pathname === "/product" ? "active" : ""}>
                                         <Link href="/product"><span>All Products</span></Link>
                                     </li>
-                                    <li className={pathname === "/product/details" ? "active" : ""}>
-                                        <Link href="/product/details"><span>Product Details</span></Link>
+                                    <li className={pathname === "/product/steel" ? "active" : ""}>
+                                        <Link href="/product/steel"><span>Steels</span></Link>
+                                     
+                                    </li>
+                                    <li className={pathname === "/product/cement" ? "active" : ""}>
+                                    <Link href="/product/cement" > <span>Cement</span></Link>
+                                    
+                                    </li>
+                                    <li className={pathname === "/product/steel-pipe" ? "active" : ""}>
+                                        
+                                        <Link href="/product/steel-pipe" > <span>Steel Pipe</span></Link>
+                                        
+                                    </li>
+                                    <li className={pathname === "/product/white-cement-paint" ? "active" : ""}>
+                                        
+                                        <Link href="/product/white-cement-paint" > <span>White Cement Paint</span></Link>
+                                        
+                                    </li>
+                                    <li className={pathname === "/product/logistics" ? "active" : ""}>
+                                       
+                                        <Link href="/product/logistics" > <span>Logistics</span></Link>
+                                        
+                                    </li>
+                                    <li className={pathname === "/product/abrasives-construction-chemicals" ? "active" : ""}>
+                                       
+                                     
+                                        <Link href="/product/abrasives-construction-chemicals" > <span>Abrasive Construction Chemicals</span></Link>
                                     </li>
                                 </ul>
                             </li>

@@ -43,8 +43,8 @@ const OurProcessPage:React.FC = () => {
                                         <svg className="arrow" width={8} height={204} viewBox="0 0 8 204" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.33333 3C1.33333 4.47276 2.52724 5.66667 4 5.66667C5.47276 5.66667 6.66667 4.47276 6.66667 3C6.66667 1.52724 5.47276 0.333333 4 0.333333C2.52724 0.333333 1.33333 1.52724 1.33333 3ZM3.64645 203.354C3.84171 203.549 4.15829 203.549 4.35355 203.354L7.53553 200.172C7.7308 199.976 7.7308 199.66 7.53553 199.464C7.34027 199.269 7.02369 199.269 6.82843 199.464L4 202.293L1.17157 199.464C0.976311 199.269 0.659728 199.269 0.464466 199.464C0.269204 199.66 0.269204 199.976 0.464466 200.172L3.64645 203.354ZM3.5 3V203H4.5V3H3.5Z" />
                                         </svg>
-                                        <h2>Industry Concept &amp; Planning</h2>
-                                        <p>Conduct a thoroug need effortless assessment the understand your current marketing. Discover thousand of easy to customize themes, templates &amp; CMS products.</p>
+                                        <h2>Strategic Sourcing & Planning</h2>
+                                        <p>Materials are sourced from trusted brands and planned based on project requirements to ensure consistent availability and quality.</p>
                                         <Image width={140} height={650} src="/assets/img/innerpages/process-vector.svg" alt="" className="vector" />
                                     </div>
                                 </div>
@@ -74,8 +74,8 @@ const OurProcessPage:React.FC = () => {
                                         <svg className="arrow" width={8} height={204} viewBox="0 0 8 204" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.33333 3C1.33333 4.47276 2.52724 5.66667 4 5.66667C5.47276 5.66667 6.66667 4.47276 6.66667 3C6.66667 1.52724 5.47276 0.333333 4 0.333333C2.52724 0.333333 1.33333 1.52724 1.33333 3ZM3.64645 203.354C3.84171 203.549 4.15829 203.549 4.35355 203.354L7.53553 200.172C7.7308 199.976 7.7308 199.66 7.53553 199.464C7.34027 199.269 7.02369 199.269 6.82843 199.464L4 202.293L1.17157 199.464C0.976311 199.269 0.659728 199.269 0.464466 199.464C0.269204 199.66 0.269204 199.976 0.464466 200.172L3.64645 203.354ZM3.5 3V203H4.5V3H3.5Z" />
                                         </svg>
-                                        <h2>Research &amp; Development</h2>
-                                        <p>Conduct a thoroug need effortless assessment the understand your current marketing. Discover thousand of easy to customize themes, templates &amp; CMS products.</p>
+                                        <h2>Quality Handling & Dispatch</h2>
+                                        <p>Products undergo proper handling, verification, and crane-assisted loading to ensure safe, accurate, and fast dispatch.</p>
                                         <Image width={140} height={650} src="/assets/img/innerpages/process-vector.svg" alt="" className="vector" />
                                     </div>
                                 </div>
@@ -107,8 +107,8 @@ const OurProcessPage:React.FC = () => {
                                         <svg className="arrow" width={8} height={204} viewBox="0 0 8 204" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.33333 3C1.33333 4.47276 2.52724 5.66667 4 5.66667C5.47276 5.66667 6.66667 4.47276 6.66667 3C6.66667 1.52724 5.47276 0.333333 4 0.333333C2.52724 0.333333 1.33333 1.52724 1.33333 3ZM3.64645 203.354C3.84171 203.549 4.15829 203.549 4.35355 203.354L7.53553 200.172C7.7308 199.976 7.7308 199.66 7.53553 199.464C7.34027 199.269 7.02369 199.269 6.82843 199.464L4 202.293L1.17157 199.464C0.976311 199.269 0.659728 199.269 0.464466 199.464C0.269204 199.66 0.269204 199.976 0.464466 200.172L3.64645 203.354ZM3.5 3V203H4.5V3H3.5Z" />
                                         </svg>
-                                        <h2>Sourcing &amp; Procurement</h2>
-                                        <p>Conduct a thoroug need effortless assessment the understand your current marketing. Discover thousand of easy to customize themes, templates &amp; CMS products.</p>
+                                        <h2>Coordinated Logistics & Delivery</h2>
+                                        <p>A well-managed logistics system ensures on-time delivery to project sites, supporting smooth and uninterrupted construction activities.</p>
                                         <Image width={140} height={650} src="/assets/img/innerpages/process-vector.svg" alt="" className="vector" />
                                     </div>
                                 </div>

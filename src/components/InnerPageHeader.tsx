@@ -244,24 +244,49 @@ const InnerPageHeader: React.FC = () => {
               </li>
 
               {/* Products - Dropdown */}
-              <li className={`menu-item-has-children ${isProductActive ? "active" : ""}`}>
-                <Link href="/product" className="drop-down">
-                  Products
-                  <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
-                    <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
-                  </svg>
-                </Link>
-                <i onClick={() => toggleMenu("products")} className={`bi bi-${state.activeMenu === "products" ? "dash" : "plus"} dropdown-icon`} />
-                <ul className={`sub-menu ${state.activeMenu === "products" ? "d-block" : ""}`}>
-                  <li className={pathname === "/product" ? "active" : ""}>
-                    <Link href="/product"><span>All Products</span></Link>
-                  </li>
-                  <li className={pathname === "/product/details" ? "active" : ""}>
-                    <Link href="/product/details"><span>Product Details</span></Link>
-                  </li>
-                </ul>
-              </li>
+               <li className={`menu-item-has-children ${isProductActive ? "active" : ""}`}>
+                                <Link href="/product" className="drop-down">
+                                    Products
+                                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
+                                        <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
+                                    </svg>
+                                </Link>
+                                <i onClick={() => toggleMenu("products")} className={`bi bi-${state.activeMenu === "products" ? "dash" : "plus"} dropdown-icon`} />
+                                <ul className={`sub-menu ${state.activeMenu === "products" ? "d-block" : ""}`}>
+                                    <li className={pathname === "/product" ? "active" : ""}>
+                                        <Link href="/product"><span>All Products</span></Link>
+                                    </li>
+                                    <li className={pathname === "/product/steel" ? "active" : ""}>
+                                        <Link href="/product/steel"><span>Steels</span></Link>
+                                     
+                                    </li>
+                                    <li className={pathname === "/product/cement" ? "active" : ""}>
+                                    <Link href="/product/cement" > <span>Cement</span></Link>
+                                    
+                                    </li>
+                                    <li className={pathname === "/product/steel-pipe" ? "active" : ""}>
+                                        
+                                        <Link href="/product/steel-pipe" > <span>Steel Pipe</span></Link>
+                                        
+                                    </li>
+                                    <li className={pathname === "/product/white-cement-paint" ? "active" : ""}>
+                                        
+                                        <Link href="/product/white-cement-paint" > <span>White Cement Paint</span></Link>
+                                        
+                                    </li>
+                                    <li className={pathname === "/product/logistics" ? "active" : ""}>
+                                       
+                                        <Link href="/product/logistics" > <span>Logistics</span></Link>
+                                        
+                                    </li>
+                                    <li className={pathname === "/product/abrasives-construction-chemicals" ? "active" : ""}>
+                                       
+                                     
+                                        <Link href="/product/abrasives-construction-chemicals" > <span>Abrasive Construction Chemicals</span></Link>
+                                    </li>
+                                </ul>
+                            </li>
 
               {/* Blog - Dropdown */}
               <li className={`menu-item-has-children ${isBlogActive ? "active" : ""}`}>

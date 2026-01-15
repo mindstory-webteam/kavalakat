@@ -16,7 +16,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                                 <h2>Why We’re the Right Choice Industry</h2>
                             </div>
                         </div>
-                        <div className="col-lg-3 d-flex justify-content-lg-end btn_wrapper">
+                        {/* <div className="col-lg-3 d-flex justify-content-lg-end btn_wrapper">
                           <Link className="primary-btn3" href="/about">
                                     <span>About Us More
                                     </span>
@@ -30,7 +30,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                                     </svg>
                                 </Link>
                             
-                        </div>
+                        </div> */}
                     </div>
                     <div className="row justify-content-xl-end">
                         <div className="col-xl-11">
@@ -47,7 +47,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
               data-wow-duration="1500ms"
             >
               <Accordion.Header>
-                <span>01.</span> Solutions Expert
+                <span>01.</span> Proven Operational Expertise
               </Accordion.Header>
               <Accordion.Body>
                 <img
@@ -56,13 +56,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                   src="/assets/img/home2/why-choose-img1.jpg"
                   alt="choose-img1"
                 />
-                Spanish mackerel yellow weaver sigils. Sunporch flying fish
-                yellowfin cutthroat trout grouper whitebait oneamt horsefish
-                bullhead shark California smoothtongue, striped burrfish
-                threadtail saber-toothed blenny Red Seden ut perspiciatis unde
-                omnis iste natus ut perspic iatis unde omnis iste perspiciatis
-                ut perspiciatis unde omnison iste natus we are work industry
-                very fast and worked smoothly.
+                Decades of hands-on experience enable us to manage large volumes efficiently without compromising speed or accuracy.
               </Accordion.Body>
             </Accordion.Item>
 
@@ -74,7 +68,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
               data-wow-duration="1500ms"
             >
               <Accordion.Header>
-                <span>02.</span> Trusted Partner
+                <span>02.</span> Structured Workflow Systems
               </Accordion.Header>
               <Accordion.Body>
                 <img
@@ -83,13 +77,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                   src="/assets/img/home2/why-choose-img2.jpg"
                   alt="choose-img2"
                 />
-                A trusted partner is a reliable and dependable collaborator who
-                consistently delivers quality, integrity, and support in a
-                professional relationship. They prioritize transparency,
-                effective communication, and shared goals, ensuring long-term
-                success and mutual growth. Whether in business or personal
-                relationships, a trusted partner fosters confidence,
-                accountability, and a strong foundation for collaboration.
+                Our clearly defined processes ensure smooth coordination from material sourcing to final site delivery.
               </Accordion.Body>
             </Accordion.Item>
 
@@ -101,7 +89,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
               data-wow-duration="1500ms"
             >
               <Accordion.Header>
-                <span>03.</span> Driving Innovation
+                <span>03.</span> Quality-First Execution
               </Accordion.Header>
               <Accordion.Body>
                 <img
@@ -110,12 +98,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                   src="/assets/img/home2/why-choose-img3.jpg"
                   alt="choose-img3"
                 />
-                Driving Innovation means continuously exploring new ideas,
-                technologies, and strategies to improve products, services, and
-                processes. It involves creativity, problem-solving, and adapting
-                to changing market needs to stay ahead of the competition. By
-                fostering a culture of innovation, businesses can enhance
-                efficiency, meet customer demands, and drive long-term success.
+              Every stage of our workflow follows strict quality checks, ensuring only certified and reliable materials reach your project.
               </Accordion.Body>
             </Accordion.Item>
 
@@ -127,7 +110,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
               data-wow-duration="1500ms"
             >
               <Accordion.Header>
-                <span>04.</span> Pushing The Boundaries of Material Science
+                <span>04.</span> Logistics-Driven Efficiency
               </Accordion.Header>
               <Accordion.Body>
                 <img
@@ -136,13 +119,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                   src="/assets/img/home2/why-choose-img4.jpg"
                   alt="choose-img4"
                 />
-                Exploring new materials and technologies to improve strength,
-                durability, and sustainability. It involves innovative research,
-                advanced manufacturing techniques, and the development of
-                smarter, more efficient materials for various industries. This
-                progress drives breakthroughs in aerospace, healthcare,
-                construction, and more, shaping the future with stronger,
-                lighter, and more eco-friendly solutions.
+                Integrated logistics planning and crane-assisted operations help reduce delays and keep construction schedules on track.
               </Accordion.Body>
             </Accordion.Item>
 
@@ -154,7 +131,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
               data-wow-duration="1500ms"
             >
               <Accordion.Header>
-                <span>05.</span> Aerospace Quality as Standard
+                <span>05.</span> Reliability at Scale
               </Accordion.Header>
               <Accordion.Body>
                 <img
@@ -163,12 +140,7 @@ const HomeWhyChooseUsSection: React.FC = () => {
                   src="/assets/img/home2/why-choose-img5.jpg"
                   alt="choose-img5"
                 />
-                Aerospace quality as standard means that products or services
-                meet the high safety, precision, and reliability standards
-                required in the aerospace industry. These standards ensure
-                exceptional performance and compliance with strict regulations,
-                guaranteeing top-notch quality, durability, and safety for
-                critical applications in aviation and aerospace systems.
+               Whether for small orders or large projects, our workflow is built to deliver consistent performance and dependable supply.
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>

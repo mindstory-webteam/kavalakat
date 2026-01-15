@@ -64,15 +64,15 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                     <div className="row gy-md-5 gy-4">
                         <div className="col-lg-5 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="about-content">
-                                <p>Sed nisl eros, condimentum nec risus sit amet, finibus conguese. Fusen fringilla est libero, sed tempus urna feugiat eu. Curabitur eu feugiat ligu Suspendisse nectoraba porttitor velit go this week and more about. Garden Studios is a proud B Corp™ certified company - only the second sound stage campus in the world to achieve.</p>
+                                <p>Kavalakat Francis Jose was born on 24th August 1964 Kandassankadavu, as the 3rd generation business man from Kavalakat family, Thrissur. As on date his business is spread over various verticals covering Thrissur, Palakkad, Ernakulam and Idukki Districts with a Turnover of Rs.275 Crores and giving jobs to 250 plus employees directly. Now he is concentrated on further expanding territory in to entire Kerala with his high energy caliber and cool smiling nature.</p>
                                 <ul>
                                     <li>
                                         <h6>WHO WE ARE</h6>
-                                        <p>Sed nisl eros, condimentum nec risussit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
+                                        <p>We aspire to be the most preferred service provider of construction industry in India.</p>
                                     </li>
                                     <li>
                                         <h6>OUR MISSION</h6>
-                                        <p>Sed nisl eros, condimentum nec risussit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
+                                        <p>To achieve customer satisfaction through quality products, on-time delivery and competitive prices.</p>
                                     </li>
                                 </ul>
                             </div>

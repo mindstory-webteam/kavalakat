@@ -28,8 +28,8 @@ const notfound = () => {
           </div>
         </div>
       </div>
-      <img src="assets/img/innerpages/breadcrumb-section-vector.svg" alt="" className="vector" />
-      <img src="assets/img/innerpages/breadcrumb-section-vector2.svg" alt="" className="vector2" />
+     <img src="/assets/img/innerpages/breadcrumb-section-vector.svg" alt="" className="vector" />
+<img src="/assets/img/innerpages/breadcrumb-section-vector2.svg" alt="" className="vector2" />
     </div>
   </div>
   {/* Breadcrumb Section End*/}
@@ -38,7 +38,7 @@ const notfound = () => {
       <div className="row justify-content-center">
         <div className="col-xl-8 col-lg-10">
           <div className="error-content text-center">
-            <img src="assets/img/innerpages/error-img.png" alt="" />
+           <img src="/assets/img/innerpages/error-img.png" alt="" />
             <h2>Sorry! Page Not Found.</h2>
             <p>The page you are looking for was moved, removed, renamed or never existed. we are open for this constructions &amp; architecture.</p>
             <Link className="primary-btn1" href="/">
