@@ -120,7 +120,7 @@ const Page = () => {
     }));
 
     // Handle page change
-    const handlePageChange = (pageNumber) => {
+    const handlePageChange = (pageNumber: number) => {
         setCurrentPage(pageNumber);
         // Scroll to top of gallery
         document.getElementById('scroll-section')?.scrollIntoView({ behavior: 'smooth' });
