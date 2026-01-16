@@ -11,7 +11,7 @@ const ProductPage = () => {
     return (
         <>
             <InnerPageHeader />
-            <Breadcrumb title="Our Product" subtitle="Products Power Progress Explore Our Offer." />
+            <Breadcrumb title="Our Product" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-2.jpeg' />
          
 
             <div className="product-page pt-120 mb-120" id="scroll-section">
