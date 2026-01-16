@@ -2,7 +2,7 @@
   "name": "matrik-typescript",
   "version": "0.1.7",
   "private": true,
-  "scripts": {
+   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p ${PORT:-3000}",
