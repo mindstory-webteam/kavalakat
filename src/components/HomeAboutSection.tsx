@@ -20,7 +20,7 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                             <div className="col-xl-8 col-lg-9 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                                 <div className="about-title-area">
                                     <div className="section-title">
-                                        <span>About Our Story</span>
+                                        {/* <span>About Our Story</span> */}
                                         <h2>Our Story of Manufacturing Excellence Built on.</h2>
                                     </div>
                                     <div className="video-and-content">
@@ -38,7 +38,7 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                                             </div>
                                         </a>
                                         <div className="content">
-                                            <p>Sed nisl eros, condimentum nec risus sit amet, finibus conguese.Fusen fringilla est libero, sed tempus urna feugiat eu. Curabitur eu feugiat ligu Suspendisse nectoraba porttitor velit go this week and more about.</p>
+                                            <p>Kavalakat group of companies is a leading supplier of construction materials in the state of Kerala. Established in 1975, we have over 40 years of experience servicing the construction industry and are the preferred channel partners for major Indian brands of steel and cement with offices in Thrissur, Palakkad and Ernakulum districts. Over the years the groups’ portfolio has been expanded to incorporate construction materials like white cement, putty, sheet, pipe and paint. With our un-paralleled service, on-time delivery and competitive prices we have established ourselves as an ideal ally for major builders and contractors across the state.</p>
                                         </div>
                                     </div>
                                 </div>
