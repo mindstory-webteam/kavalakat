@@ -6,7 +6,7 @@ import Image from 'next/image'
 type BreadcrumbProps = {
     title: string;
     subtitle: string;
-    image: string;
+    image?: string;  // ✅ Made optional
     imageAlt?: string;
     showCircularText?: boolean;
     showVector?: boolean;
@@ -18,7 +18,7 @@ const Breadcrumb = ({
     image,
     imageAlt = "breadcrumb image",
     showCircularText = false,
-    showVector = false
+    showVector = false 
 }: BreadcrumbProps) => {
     return (
         <div className="breadcrumb-section">
@@ -56,14 +56,16 @@ const Breadcrumb = ({
                     />
                 )}
             </div>
-            <div className="breadcrumb-img">
-                <Image
-                    width={1920}
-                    height={550}
-                    src={image}
-                    alt={imageAlt}
-                />
-            </div>
+            {image && (  // ✅ Only render if image is provided
+                <div className="breadcrumb-img">
+                    <Image
+                        width={1920}
+                        height={550}
+                        src={image}
+                        alt={imageAlt}
+                    />
+                </div>
+            )}
         </div>
     )
 }
