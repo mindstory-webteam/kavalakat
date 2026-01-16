@@ -38,7 +38,7 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                                             </div>
                                         </a>
                                         <div className="content">
-                                            <p>Kavalakat group of companies is a leading supplier of construction materials in the state of Kerala. Established in 1975, we have over 40 years of experience servicing the construction industry and are the preferred channel partners for major Indian brands of steel and cement with offices in Thrissur, Palakkad and Ernakulum districts. Over the years the groups’ portfolio has been expanded to incorporate construction materials like white cement, putty, sheet, pipe and paint. With our un-paralleled service, on-time delivery and competitive prices we have established ourselves as an ideal ally for major builders and contractors across the state.</p>
+                                            <p>Sed nisl eros, condimentum nec risus sit amet, finibus conguese.Fusen fringilla est libero, sed tempus urna feugiat eu. Curabitur eu feugiat ligu Suspendisse nectoraba porttitor velit go this week and more about.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -64,8 +64,8 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                     <div className="row gy-md-5 gy-4">
                         <div className="col-lg-5 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="about-content">
-                                <p>Sed nisl eros, condimentum nec risus sit amet, finibus conguese. Fusen fringilla est libero, sed tempus urna feugiat eu. Curabitur eu feugiat ligu Suspendisse nectoraba porttitor velit go this week and more about. Garden Studios is a proud B Corp™ certified company - only the second sound stage campus in the world to achieve.</p>
-                                <ul>
+                                <p>Kavalakat group of companies is a leading supplier of construction materials in the state of Kerala. Established in 1975, we have over 40 years of experience servicing the construction industry and are the preferred channel partners for major Indian brands of steel and cement with offices in Thrissur, Palakkad and Ernakulum districts. Over the years the groups’ portfolio has been expanded to incorporate construction materials like white cement, putty, sheet, pipe and paint. With our un-paralleled service, on-time delivery and competitive prices we have established ourselves as an ideal ally for major builders and contractors across the state.</p>
+                                {/* <ul>
                                     <li>
                                         <h6>WHO WE ARE</h6>
                                         <p>Sed nisl eros, condimentum nec risussit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
@@ -74,12 +74,12 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                                         <h6>OUR MISSION</h6>
                                         <p>Sed nisl eros, condimentum nec risussit amet finibus cons sem fusce. Advantage of thes limited-time offers &amp; start.</p>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div>
                         <div className="col-lg-7 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="about-img magnetic-item">
-                                <Image width={750} height={580} src="/assets/img/home1/about-img.jpg" alt="" />
+                                <Image width={750} height={580} src="/assets/new-images/about-page/banner/b-2.jpeg" alt="" />
                             </div>
                         </div>
                     </div>

@@ -10,7 +10,7 @@ const page = () => {
     return (
         <>
             <InnerPageHeader />
-            <Breadcrumb title="Our Clients" subtitle="Trusted By Leading Industry Partners Relationships." />
+            <Breadcrumb title="Our Clients" subtitle="Trusted By Leading Industry Partners Relationships."  image='/assets/new-images/bm/bm-2.jpeg'/>
 
             <div className="our-client-page pt-120 mb-120" id="scroll-section">
                 <div className="container-fluid">

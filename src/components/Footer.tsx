@@ -15,7 +15,7 @@ const Footer = () => {
                                 </Link>
                             </div>
                             <div className="col-md-5 d-flex justify-content-md-center">
-                                <p>Welcome to Matrik, where innovation meet our passion in a journey that started dream.</p>
+                                <p>Welcome to Kavalakat where innovation meet our passion in a journey that started dream.</p>
                             </div>
                             <div className="col-md-4 d-flex justify-content-md-end">
                                
@@ -29,12 +29,13 @@ const Footer = () => {
                                     <div className="address-area">
                                         <ul className="address-list">
                                             <li className="single-address">
-                                                <span>NEW YORK</span>
-                                                <a href="https://www.google.com/maps">8204 Glen Ridge DriveEndicott, NY 13760</a>
+                                                <span>Thrissur</span>
+                                                <a href="https://www.google.com/maps">H.O. IX/413/4, T.B. Road, S. T. Nagar, Thrissur, Kerala - 680 001</a>
                                             </li>
+                                            
                                             <li className="single-address">
-                                                <span>WASHINGTON DC</span>
-                                                <a href="https://www.google.com/maps">8204 Glen Ridge DriveEndicott, NY 13760</a>
+                                                <span>Ernakulam</span>
+                                                <a href="https://www.google.com/maps">DOOR No.V/679-C3(IV 652), K.V.Varkey Memorial Bldg.First Floor(Near KSRTC), Angamaly-683572, Ernakulam</a>
                                             </li>
                                         </ul>
                                         <Link href="/contact" className="location-btn">View All Factory Location</Link>
@@ -47,7 +48,7 @@ const Footer = () => {
                                         <div className="col-md-4 col-sm-6 d-flex justify-content-lg-center">
                                             <div className="footer-widget">
                                                 <div className="widget-title">
-                                                    <h5>COMPANY</h5>
+                                                    <h5>Link's</h5>
                                                 </div>
                                                 <div className="menu-container">
                                                     <ul className="widget-list">
@@ -61,8 +62,8 @@ const Footer = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/our-team">
-                                                                Meet Our Team
+                                                            <Link href="/our-process">
+                                                                Our Strengths
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -70,8 +71,17 @@ const Footer = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/project">
-                                                                Our Project
+                                                            <Link href="/our-clients">
+                                                                Our Clients
+                                                                <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
+                                                                    <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
+                                                                </svg>
+                                                            </Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/gallery">
+                                                               Gallery
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -80,7 +90,7 @@ const Footer = () => {
                                                         </li>
                                                         <li>
                                                             <Link href="/blog">
-                                                                Blog &amp; Article
+                                                                Blog
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -88,8 +98,17 @@ const Footer = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/service">
-                                                                Solutions
+                                                            <Link href="/contact">
+                                                                Contact
+                                                                <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
+                                                                    <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
+                                                                </svg>
+                                                            </Link>
+                                                        </li>
+                                                         <li>
+                                                            <Link href="/career">
+                                                                Career's
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -103,13 +122,13 @@ const Footer = () => {
                                         <div className="col-md-4 col-sm-6 d-flex justify-content-lg-center">
                                             <div className="footer-widget">
                                                 <div className="widget-title">
-                                                    <h5>CAREER</h5>
+                                                    <h5>Products</h5>
                                                 </div>
                                                 <div className="menu-container">
                                                     <ul className="widget-list">
                                                         <li>
-                                                            <Link href="/career">
-                                                                Open Positions
+                                                            <Link href="/product/cement">
+                                                                Cement
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -117,8 +136,8 @@ const Footer = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/career">
-                                                                Students
+                                                            <Link href="/product/steel">
+                                                                Steel
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -126,8 +145,8 @@ const Footer = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/career">
-                                                                Diversity &amp; Inclusion
+                                                            <Link href="/product/steel-pipe">
+                                                                Steel Pipe
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -135,8 +154,26 @@ const Footer = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/career">
-                                                                Factory Employ
+                                                            <Link href="/product/white-cement-paint">
+                                                                White Cement Paint
+                                                                <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
+                                                                    <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
+                                                                </svg>
+                                                            </Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/product/logistics">
+                                                                Logistics
+                                                                <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
+                                                                    <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
+                                                                </svg>
+                                                            </Link>
+                                                        </li>
+                                                         <li>
+                                                            <Link href="/product/abrasives-construction-chemicals">
+                                                                Abrasives & Construction Chemicals
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -177,7 +214,7 @@ const Footer = () => {
                                                         </div>
                                                         <div className="content">
                                                             <span>ADDRESS</span>
-                                                            <h6><a href="#">Dhaka, Bangladesh</a></h6>
+                                                            <h6><a href="/contact"> S. T. Nagar, Thrissur, Kerala</a></h6>
                                                         </div>
                                                     </div>
                                                     <svg className="arrow" width={8} height={29} viewBox="0 0 8 29" xmlns="http://www.w3.org/2000/svg">
@@ -193,7 +230,7 @@ const Footer = () => {
                                                         </div>
                                                         <div className="content">
                                                             <span>SAY HELLO</span>
-                                                            <h6><a href="mailto:info@example.com">info@example.com</a></h6>
+                                                            <h6><a href="mailto:info@example.com">info@kavalakat.com</a></h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -210,7 +247,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-bottom">
                         <div className="copyright-area">
-                            <p>Copyright 2025 <Link href="/oil-gas">Matrik</Link> | Design By <a href="https://www.egenslab.com/">Egens Lab</a></p>
+                            <p>Copyright 2025 <Link href="/oil-gas">Kavalakat</Link> | Design By <a href="https://mindstory.in/" >Mindstory</a></p>
                         </div>
                         <ul className="social-area">
                             <li>

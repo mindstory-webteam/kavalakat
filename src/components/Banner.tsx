@@ -127,7 +127,7 @@ const Banner = () => {
                                 ))}
                             </div>
 
-                            <CircularText />
+                            {/* <CircularText /> */}
                         </div>
 
                         {/* Navigation Lines at Bottom */}

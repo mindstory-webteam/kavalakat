@@ -145,7 +145,7 @@ const Page = () => {
     return (
         <>
             <InnerPageHeader />
-            <Breadcrumb title="Gallery" subtitle="Explore Our Collection of Industrial & Manufacturing Excellence." />
+            <Breadcrumb title="Gallery" subtitle="Explore Our Collection of Industrial & Manufacturing Excellence." image='/assets/new-images/bm/bm-3.jpeg' />
             <div className="gallery-page pt-120 mb-120" id="scroll-section">
                 <div className="container">
                     <div className="row gy-5 mb-70">

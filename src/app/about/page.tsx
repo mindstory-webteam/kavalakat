@@ -1,7 +1,7 @@
 // about/page.tsx
 import React from "react";
 import InnerPageHeader from "@/components/InnerPageHeader";
-import Breadcrumb from "@/components/Breadcrumb";
+import Breadcrumb from "@/components/common/Breadcrumb";
 import HomePageAboutSection from "@/components/HomePageAboutSection";
 import HomeWhyChooseUsSection from "@/components/HomeWhyChooseUsSection";
 import HomePageAboutFeatureSection from "@/components/HomePageAboutFeatureSection";
@@ -18,7 +18,7 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <InnerPageHeader />
-            <Breadcrumb title="About Us" subtitle="Our Story of Manufacturing Excellence Built on." />
+            <Breadcrumb title="About Us" subtitle="Our Story of Manufacturing Excellence Built on."  image="/assets/new-images/about-page/banner/b-1.jpeg"  />
             <HomePageAboutSection />
             <HomeWhyChooseUsSection />
             <HomePageAboutFeatureSection />

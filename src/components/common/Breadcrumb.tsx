@@ -1,13 +1,25 @@
 import React from 'react'
 import CircularText from './CircularText'
 import Link from 'next/link'
+import Image from 'next/image'
 
 type BreadcrumbProps = {
     title: string;
     subtitle: string;
+    image: string;
+    imageAlt?: string;
+    showCircularText?: boolean;
+    showVector?: boolean;
 };
 
-const Breadcrumb = ({ title, subtitle }: BreadcrumbProps) => {
+const Breadcrumb = ({ 
+    title, 
+    subtitle, 
+    image,
+    imageAlt = "breadcrumb image",
+    showCircularText = false,
+    showVector = false
+}: BreadcrumbProps) => {
     return (
         <div className="breadcrumb-section">
             <div className="breadcrumb-content-wrap">
@@ -33,21 +45,23 @@ const Breadcrumb = ({ title, subtitle }: BreadcrumbProps) => {
                     </div>
                 </div>
 
-                {/* <CircularText /> */}
-                {/* <img
-                    width={92}
-                    height={92}
-                    src="/assets/img/innerpages/breadcrumb-section-vector.svg"
-                    alt="breadcrumb vector"
-                    className="vector"
-                /> */}
+                {showCircularText && <CircularText />}
+                {showVector && (
+                    <Image
+                        width={92}
+                        height={92}
+                        src="/assets/img/innerpages/breadcrumb-section-vector.svg"
+                        alt="breadcrumb vector"
+                        className="vector"
+                    />
+                )}
             </div>
             <div className="breadcrumb-img">
-                <img
+                <Image
                     width={1920}
                     height={550}
-                    src="/assets/new-images/about-page/banner/b-1.jpeg"
-                    alt="breadcrumb image"
+                    src={image}
+                    alt={imageAlt}
                 />
             </div>
         </div>
