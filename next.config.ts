@@ -3,10 +3,11 @@ import type { NextConfig } from "next";
 const config: NextConfig = {
   reactStrictMode: true,
   output: 'export',
-  distDir: 'out',  // Force output to 'out' directory
+  distDir: 'out',
+  trailingSlash: true,  // Important for static hosting
   
   images: {
-    unoptimized: true,  // Required for export
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

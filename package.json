@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node -e \"const fs = require('fs'); if (fs.existsSync('.next')) { console.log('✓ .next exists'); fs.readdirSync('.next').forEach(f => console.log('  -', f)); } if (fs.existsSync('out')) { console.log('✓ out exists'); }\"",
+  "build": "next build && node post-build.js",
     "start": "next start",
     "lint": "next lint"
   },
