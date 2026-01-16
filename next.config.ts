@@ -2,12 +2,11 @@ import type { NextConfig } from "next";
 
 const config: NextConfig = {
   reactStrictMode: true,
-  output: 'export',
-  distDir: 'out',
-  trailingSlash: true,  // Important for static hosting
+  // Remove 'output: export' to enable full Next.js features
+  // Remove 'distDir: out' to use default .next directory
   
   images: {
-    unoptimized: true,
+    // Enable image optimization
     remotePatterns: [
       {
         protocol: 'https',

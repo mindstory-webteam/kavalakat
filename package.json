@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-  "build": "next build && node post-build.js",
-    "start": "next start",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
     "lint": "next lint"
   },
-  
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "dependencies": {
     "@headlessui/react": "^2.2.7",
     "apexcharts": "^4.7.0",
