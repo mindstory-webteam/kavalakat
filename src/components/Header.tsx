@@ -118,7 +118,7 @@ const Header: React.FC = () => {
     const aboutPaths: string[] = ['/about', '/our-process', '/our-clients', '/gallery'];
     const isAboutActive: boolean = aboutPaths.some((path: string) => pathname.startsWith(path));
 
-    const productPaths: string[] = ['/product', '/product/cement', '/product/steel','/product/steel-pipe', '/product/white-cement-paint', '/product/logistics', '/product/abrasives-construction-chemicals'];
+    const productPaths: string[] = ['/product', '/product/cement', '/product/steel','/product/sheet-pipes', '/product/white-cement-paint', '/product/logistics', '/product/abrasives-construction-chemicals'];
     const isProductActive: boolean = productPaths.some((path: string) => pathname.startsWith(path));
 
     const blogPaths: string[] = ['/blog', '/blog/details'];
@@ -293,9 +293,9 @@ const Header: React.FC = () => {
                                     <Link href="/product/cement" > <span>Cement</span></Link>
                                     
                                     </li>
-                                    <li className={pathname === "/product/steel-pipe" ? "active" : ""}>
+                                    <li className={pathname === "/product/sheet-pipes" ? "active" : ""}>
                                         
-                                        <Link href="/product/steel-pipe" > <span>Steel Pipe</span></Link>
+                                        <Link href="/product/sheet-pipes" > <span>Sheet Pipes</span></Link>
                                         
                                     </li>
                                     <li className={pathname === "/product/white-cement-paint" ? "active" : ""}>
