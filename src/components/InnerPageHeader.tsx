@@ -86,7 +86,7 @@ const InnerPageHeader: React.FC = () => {
   const aboutPaths: string[] = ['/about', '/our-process', '/our-clients', '/gallery'];
   const isAboutActive: boolean = aboutPaths.some((path: string) => pathname.startsWith(path));
 
-  const productPaths: string[] = ['/product', '/product/details'];
+  const productPaths: string[] = ['/product', '/product/cement', '/product/steel','/product/steel-pipe', '/product/white-cement-paint', '/product/logistics', '/product/abrasives-construction-chemicals'];
   const isProductActive: boolean = productPaths.some((path: string) => pathname.startsWith(path));
 
   const blogPaths: string[] = ['/blog', '/blog/details'];
