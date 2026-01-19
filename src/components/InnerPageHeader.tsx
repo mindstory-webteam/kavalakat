@@ -111,7 +111,7 @@ const InnerPageHeader: React.FC = () => {
           <div className="sidebar-content-wrap">
             <div className="title-area">
               <span>Get In Touch With Us</span>
-              <h2>Connect with Matrik</h2>
+              <h2>Connect with Kavalakat</h2>
               <p>Ready to take the first step towards unlocking opportunity realizing goals, and embracing innovation?</p>
             </div>
             <ul className="contact-area">
@@ -126,7 +126,7 @@ const InnerPageHeader: React.FC = () => {
                   </div>
                   <div className="content">
                     <span>CALL ANY TIME</span>
-                    <h6><a href="tel:29658718617">2-965-871-8617</a></h6>
+                    <h6><a href="tel:0487 244 0380">0487 244 0380</a></h6>
                   </div>
                 </div>
                 <svg className="arrow" width={8} height={29} viewBox="0 0 8 29" xmlns="http://www.w3.org/2000/svg">
@@ -154,7 +154,7 @@ const InnerPageHeader: React.FC = () => {
                   </div>
                   <div className="content">
                     <span>Follow Us</span>
-                    <h6><a href="https://www.facebook.com/">Facebook,</a> <a href="https://www.linkedin.com/">LinkedIn,</a> <a href="https://www.instagram.com/">Instagram,</a></h6>
+                    <h6><a href="https://www.facebook.com/kavalakatindia/">Facebook,</a> <a href="https://www.linkedin.com/">LinkedIn,</a> <a href="https://www.instagram.com/">Instagram,</a></h6>
                   </div>
                 </div>
                 <svg className="arrow" width={8} height={29} viewBox="0 0 8 29" xmlns="http://www.w3.org/2000/svg">
@@ -170,25 +170,25 @@ const InnerPageHeader: React.FC = () => {
                   </div>
                   <div className="content">
                     <span>SAY HELLO</span>
-                    <h6><a href="mailto:info@example.com">info@example.com</a></h6>
+                    <h6><a href="mailto:info@kavalakat.com">info@kavalakat.com</a></h6>
                   </div>
                 </div>
               </li>
             </ul>
             <ul className="address-area">
               <li className="single-address">
-                <span>NEW YORK</span>
-                <a href="#">8204 Glen Ridge DriveEndicott, NY 13760</a>
+                <span>Thrissur</span>
+                <a href="#">H.O. IX/413/4, T.B. Road, S. T. Nagar, Thrissur, Kerala - 680 001</a>
               </li>
               <li className="single-address">
-                <span>WASHINGTON DC</span>
-                <a href="#">8204 Glen Ridge DriveEndicott, NY 13760</a>
+                <span>Ernakulam</span>
+                <a href="#">DOOR No.V/679-C3(IV 652), K.V.Varkey Memorial Bldg.First Floor(Near KSRTC), Angamaly-683572, Ernakulam</a>
               </li>
             </ul>
             <Link href="/contact" className="all-location-btn">View All Factory Location</Link>
           </div>
           <div className="sidebar-bottom-area">
-            <p>Copyright 2025 <Link href="/">Matrik</Link> | Design By <a href="https://www.egenslab.com/">Egens Lab</a></p>
+            <p>Copyright 2025 <Link href="/">Kavalakat</Link> | Powered By <a href="https://www.egenslab.com/">MindStory</a></p>
           </div>
         </div>
       </div>
@@ -339,7 +339,7 @@ const InnerPageHeader: React.FC = () => {
               </div>
               <div className="content">
                 <span>Any Question</span>
-                <a href="tel:990737621432">+990-737 621 432</a>
+                <a href="tel:0487 244 0380">0487 244 0380</a>
               </div>
             </div>
           </div>
@@ -355,7 +355,7 @@ const InnerPageHeader: React.FC = () => {
               </div>
               <div className="content">
                 <span>Any Question</span>
-                <a href="tel:990737621432">+990-737 621 432</a>
+                <a href="tel:0487 244 0380">0487 244 0380</a>
               </div>
             </div>
             <div className="right-sidebar-button" onClick={toggleRightSidebar}>
