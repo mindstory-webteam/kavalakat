@@ -12,6 +12,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { useState } from 'react'
+import CompanyCard from '@/components/CompanyCard'
 
 const ProductPage = () => {
    
@@ -46,6 +47,28 @@ const ProductPage = () => {
       img: '/assets/img/home1/testimonial-author-img3.png',
     },
   ]
+
+
+
+   const companies = [
+    {
+      logo: '/assets/new-images/products/white-cement-partens/whitecementpaint11.jpg',
+      logoAlt: 'BIRLA White Logo',
+      companyName: 'BIRLA',
+      description:
+        'Birla White cement has carved a niche for itself in the prestigious Aditya Birla conglomerate, which dwells in a many business areas. Since debut, it played a lead role in the country’s constructional and infrastructural growth story.Birla White is a unit of UltraTech Cement Ltd., flagship of the US $43 bn Aditya Birla Group.',
+    },
+    {
+      logo: '/assets/new-images/products/white-cement-partens/whitecementpaint22.jpg',
+      logoAlt: 'AKZONOBEL Logo',
+      companyName: 'AKZONOBEL',
+      description:
+        "AkzoNobel has a passion for paint. We're experts in the proud craft of making paints and coatings, setting the standard in color and protection since 1792. Our world class portfolio of brands - including Dulux, International, Sikkens and Interpon - is trusted by customers around the globe.",
+    },
+   
+    
+  ];
+
 
   /* ---------------- AUTO SLIDER ---------------- */
 
@@ -212,7 +235,7 @@ const ProductPage = () => {
             </div>
 
             {/* Section 2: Why Choose Us */}
-<div className="home2-why-choose-us-section two mb-120">
+{/* <div className="home2-why-choose-us-section two mb-120">
   <div className="container">
     <div className="row g-4 align-items-center justify-content-between mb-60">
       <div className="col-xl-6 col-lg-8">
@@ -324,7 +347,146 @@ const ProductPage = () => {
     </div>
   </div>
 </div>
+ */}
 
+    {/* Steel Partners Section with Proper Heading Structure */}
+<div className="steel-partners-section mb-120">
+  <div className="container">
+    {/* Section Header - Matching Screenshot Style */}
+    <div className="row mb-50">
+      <div className="col-12">
+        <div className="section-title-wrapper">
+         
+          <h2 className="section-main-title">Trusted Steel Brands We Supply</h2>
+        </div>
+      </div>
+    </div>
+    
+    {/* Cards Grid - Smaller Cards */}
+    <div className="row g-4 justify-content-center">
+      {companies.map((company, index) => (
+        <div key={index} className="col-lg-4 col-md-6 col-sm-12">
+          <div className="card-wrapper-small">
+            <CompanyCard
+              logo={company.logo}
+              logoAlt={company.logoAlt}
+              companyName={company.companyName}
+              description={company.description}
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <style jsx>{`
+    .steel-partners-section {
+      background: #ffffff;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    /* Section Title Wrapper */
+    .section-title-wrapper {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    /* Section Subtitle - Blue uppercase text */
+    .section-subtitle {
+      color: #3c35ff;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.875rem;
+      display: block;
+      margin-bottom: 12px;
+      font-family: var(--font-manrope);
+      position: relative;
+    }
+
+    .section-subtitle::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 60px;
+      height: 3px;
+      background: #3c35ff;
+    }
+
+    /* Section Main Title - Large black text */
+    .section-main-title {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #000000;
+      margin: 0;
+      line-height: 1.2;
+      font-family: var(--font-manrope);
+      letter-spacing: -0.5px;
+    }
+
+    /* Card Wrapper - Smaller size */
+    .card-wrapper-small {
+      height: 420px;
+      width: 100%;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .card-wrapper-small {
+        height: 400px;
+      }
+
+      .section-main-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card-wrapper-small {
+        height: 380px;
+      }
+
+      .steel-partners-section {
+        padding: 60px 0;
+      }
+
+      .section-main-title {
+        font-size: 2rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+      }
+
+      .section-title-wrapper {
+        text-align: center;
+      }
+
+      .section-subtitle::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .card-wrapper-small {
+        height: auto;
+        min-height: 360px;
+      }
+
+      .section-main-title {
+        font-size: 1.75rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.75rem;
+      }
+    }
+  `}</style>
+</div>
 
           {/* Section 3: Testimonials */}
             <div className="home1-testimonial-section ">

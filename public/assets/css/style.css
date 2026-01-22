@@ -28502,33 +28502,33 @@ header.style-4 .mobile-logo-area .menu-close-btn:hover i {
   }
 }
 .product-dt-faq-section .faq-content-area {
-  padding: 80px 35px 90px 90px;
+  padding: 80px 35px 150px 90px;
   background-color: #F7F7F7;
   height: 100%;
 }
 @media (max-width: 1399px) {
   .product-dt-faq-section .faq-content-area {
-    padding: 80px 35px 90px 70px;
+    padding: 80px 35px 150px 70px;
   }
 }
 @media (max-width: 1199px) {
   .product-dt-faq-section .faq-content-area {
-    padding: 80px 35px 90px 40px;
+    padding: 80px 35px 150px 40px;
   }
 }
 @media (max-width: 991px) {
   .product-dt-faq-section .faq-content-area {
-    padding: 50px 30px 160px 30px;
+    padding: 50px 30px 50px 30px;
   }
 }
 @media (max-width: 767px) {
   .product-dt-faq-section .faq-content-area {
-    padding: 40px 20px 140px 20px;
+    padding: 40px 20px 40px 20px;
   }
 }
 @media (max-width: 576px) {
   .product-dt-faq-section .faq-content-area {
-    padding: 40px 15px 140px 15px;
+    padding: 40px 15px 40px 15px;
   }
 }
 .product-dt-faq-section .faq-content-area > h2 {
@@ -28584,21 +28584,25 @@ header.style-4 .mobile-logo-area .menu-close-btn:hover i {
 }
 @media (max-width: 991px) {
   .product-dt-faq-section .product-dt-faq-wrapper .primary-btn1 {
-    left: 30px;
+    position: relative;
+    left: 0;
     transform: unset;
-    bottom: 50px;
-    margin-top: -124px;
+    bottom: auto;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 @media (max-width: 767px) {
   .product-dt-faq-section .product-dt-faq-wrapper .primary-btn1 {
-    left: 20px;
-    bottom: 40px;
     padding: 22px 52px 22px 26px;
     min-width: unset;
     font-size: 13px;
+    margin-top: 25px;
   }
 }
+
 
 /*=====================================
   92. Project Single Slider Page CSS

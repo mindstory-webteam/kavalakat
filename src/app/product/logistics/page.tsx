@@ -12,6 +12,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { useState } from 'react'
+import CompanyCard from '@/components/CompanyCard'
 
 const ProductPage = () => {
    
@@ -48,6 +49,54 @@ const ProductPage = () => {
         },
        
     ]
+
+
+       const companies = [
+    {
+      logo: '/assets/new-images/products/log-vec/3wheeler.jpg',
+      logoAlt: '3 Wheeler Logo',
+      companyName: '3 Wheeler',
+      description:
+        'The company has a consolidated capacity* of 102.75 Million Tonnes Per Annum (MTPA) of grey cement. UltraTech Cement has 20 integrated plants, 1 clinkerisation plant, 26 grinding units and 7 bulk terminals. Its operations span across India, UAE, Bahrain, Bangladesh and Sri Lanka.',
+    },
+    {
+      logo: '/assets/new-images/products/log-vec/crane.jpg',
+      logoAlt: 'Crane Logo',
+      companyName: 'Crane',
+      description:
+        "As one of the foremost companies in the Indian cement and concrete industry, we at ACC are driven by the inherent need of providing products and solutions that will create the new economic,",
+    },
+    {
+      logo: '/assets/new-images/products/log-vec/hgv.jpg',
+      logoAlt: 'HGV Logo',
+      companyName: 'HGV',
+      description:
+        "Anjani Cement is a popular brand in south India for its quality and commitment to service. Starting with initial production capacity of 0.3 million tonnes per annum in 1999, the Company has now achieved a quantum shift in its production capacity to 1.2 million tonnes .",
+    },
+    {
+      logo: '/assets/new-images/products/log-vec/lgv.jpg',
+      logoAlt: 'LGV (16) Logo',
+      companyName: 'LGV (16)',
+      description:
+        "Vicat is a pioneer in cement manufacturing since its invention by Louis Vicat in 1817. Vicat Group, France is a global cement organisation with offices in 11 countries. It’s main business interests are Cement, Ready-Mixed Concrete, Concrete Product (Precast) and Aggregates.",
+    },
+    {
+      logo: '/assets/new-images/products/log-vec/taurus.jpg',
+      logoAlt: 'Taurus Logo',
+      companyName: 'Taurus',
+      description:
+        "Launched as a corollary to the magnificent success of Orient Gold 53 Grade Cement, Birla A1 Premium Cement has carved a niche in the market and is already among the best known brands in south-west India.",
+    },
+    {
+      logo: '/assets/new-images/products/log-vec/Trailer.jpg',
+      logoAlt: 'Trailer Logo',
+      companyName: 'Dalmia',
+      description:
+        "Apart from world-class cement manufacturing plants in India, what makes us unique as a cement manufacturer is our constant ability to innovate. On the key efficiency parameters, we rank right up there with the best of cement companies in the industry.",
+    },
+   
+    
+  ];
 
     /* ---------------- AUTO SLIDER ---------------- */
    
@@ -213,7 +262,7 @@ const ProductPage = () => {
             </div>
 
             {/* Section 2: Why Choose Us */}
-<div className="home2-why-choose-us-section two mb-120">
+{/* <div className="home2-why-choose-us-section two mb-120">
   <div className="container">
     <div className="row g-4 align-items-center justify-content-between mb-60">
       <div className="col-xl-6 col-lg-8">
@@ -324,6 +373,144 @@ const ProductPage = () => {
       </div>
     </div>
   </div>
+</div> */}
+{/* Steel Partners Section with Proper Heading Structure */}
+<div className="steel-partners-section mb-120">
+  <div className="container">
+    {/* Section Header - Matching Screenshot Style */}
+    <div className="row mb-50">
+      <div className="col-12">
+        <div className="section-title-wrapper">
+         
+          <h2 className="section-main-title">Trusted Steel Brands We Supply</h2>
+        </div>
+      </div>
+    </div>
+    
+    {/* Cards Grid - Smaller Cards */}
+    <div className="row g-4 justify-content-center">
+      {companies.map((company, index) => (
+        <div key={index} className="col-lg-4 col-md-6 col-sm-12">
+          <div className="card-wrapper-small">
+            <CompanyCard
+              logo={company.logo}
+              logoAlt={company.logoAlt}
+              companyName={company.companyName}
+              description={company.description}
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <style jsx>{`
+    .steel-partners-section {
+      background: #ffffff;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    /* Section Title Wrapper */
+    .section-title-wrapper {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    /* Section Subtitle - Blue uppercase text */
+    .section-subtitle {
+      color: #3c35ff;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.875rem;
+      display: block;
+      margin-bottom: 12px;
+      font-family: var(--font-manrope);
+      position: relative;
+    }
+
+    .section-subtitle::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 60px;
+      height: 3px;
+      background: #3c35ff;
+    }
+
+    /* Section Main Title - Large black text */
+    .section-main-title {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #000000;
+      margin: 0;
+      line-height: 1.2;
+      font-family: var(--font-manrope);
+      letter-spacing: -0.5px;
+    }
+
+    /* Card Wrapper - Smaller size */
+    .card-wrapper-small {
+      height: 420px;
+      width: 100%;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .card-wrapper-small {
+        height: 400px;
+      }
+
+      .section-main-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card-wrapper-small {
+        height: 380px;
+      }
+
+      .steel-partners-section {
+        padding: 60px 0;
+      }
+
+      .section-main-title {
+        font-size: 2rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+      }
+
+      .section-title-wrapper {
+        text-align: center;
+      }
+
+      .section-subtitle::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .card-wrapper-small {
+        height: auto;
+        min-height: 360px;
+      }
+
+      .section-main-title {
+        font-size: 1.75rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.75rem;
+      }
+    }
+  `}</style>
 </div>
 
 
