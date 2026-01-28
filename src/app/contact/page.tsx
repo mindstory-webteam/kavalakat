@@ -10,7 +10,7 @@ const page = () => {
     return (
         <>
             <InnerPageHeader />
-            <Breadcrumb title="Contact" subtitle="Contact Us Stay Connected How Can We Assist You" />
+            <Breadcrumb title="Contact" subtitle="Contact Us Stay Connected How Can We Assist You" image='/assets/new-images/bm/bm-2.jpeg' />
        
             <div className="inner-contact-section two pt-120 mb-120" id="scroll-section">
                 <div className="container">
@@ -41,7 +41,7 @@ const page = () => {
                                             </div>
                                             <div className="content">
                                                 <span>To More Inquiry</span>
-                                                <h6><a href="tel:+990737621432">+990-737 621 432</a></h6>
+                                                <h6><a href="tel:0487 244 0380">   0487 244 0380</a></h6>
                                             </div>
                                         </li>
                                         <li className="single-contact">
@@ -56,7 +56,7 @@ const page = () => {
                                             </div>
                                             <div className="content">
                                                 <span>To Send Mail</span>
-                                                <h6><a href="mailto:info@gmail.com">info@gmail.com</a></h6>
+                                                <h6><a href="mailto:info@kavalakat.com">info@kavalakat.com</a></h6>
                                             </div>
                                         </li>
                                     </ul>
@@ -129,27 +129,36 @@ const page = () => {
                     <h6><Link href="/contact">View All Factory Location</Link></h6>
                     <ul className="address-list">
                         <li className="single-address">
-                            <span>NEW YORK</span>
-                            <a href="https://www.google.com/maps">8204 Glen Ridge DriveEndicott, NY 13760</a>
+                            <span>THRISSUR</span>
+                            <a href="https://maps.app.goo.gl/1cosSuNMFq8UM1Vw9">H.O. IX/413/4, T.B. Road, S. T. Nagar, Thrissur, Kerala - 680 001</a>
                         </li>
                         <li className="single-address">
-                            <span>WASHINGTON DC</span>
-                            <a href="https://www.google.com/maps">8204 Glen Ridge DriveEndicott, NY 13760</a>
+                            <span>PALAKKAD</span>
+                            <a href="https://maps.app.goo.gl/Vyd1NL61Q1cgMTvY7">N. H. by-pass Road, Manapullikavu, Palakkad, Kerala - 678 013</a>
                         </li>
                         <li className="single-address">
-                            <span>WASHINGTON DC</span>
-                            <a href="https://www.google.com/maps">8204 Glen Ridge DriveEndicott, NY 13760</a>
+                            <span>  ERNAKULAM</span>
+                            <a href="https://www.google.com/maps"> First Floor(Near KSRTC), Angamaly-683572, Ernakulam</a>
                         </li>
                         <li className="single-address">
-                            <span>WASHINGTON DC</span>
-                            <a href="https://www.google.com/maps">8204 Glen Ridge DriveEndicott, NY 13760</a>
+                            <span>THRISSUR</span>
+                            <a href="https://maps.app.goo.gl/1cosSuNMFq8UM1Vw9">H.O. IX/376-2, T.B.Road, S. T. Nagar, Thrissur, Kerala - 680 001</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div className="contact-map-section mb-120">
                 <div className="container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5647631857846!2d90.36311167605992!3d23.83407118555764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14c8682a473%3A0xa6c74743d52adb88!2sEgens%20Lab!5e0!3m2!1sen!2sbd!4v1700138349574!5m2!1sen!2sbd" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                   <iframe
+  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3922.830700183443!2d76.2148531!3d10.5139973!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ee36ef4b256d%3A0x9af36b6f91bda239!2sKavalakat%20Agencies!5e0!3m2!1sen!2sin!4v1769580269548!5m2!1sen!2sin"
+  width="600"
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+></iframe>
+
                 </div>
             </div>
 
