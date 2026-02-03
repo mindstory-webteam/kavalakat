@@ -178,7 +178,7 @@ const ProductPage = () => {
                                     <Image 
                                         width={650} 
                                         height={650} 
-                                        src="/assets/new-images/about-page/logistics/log.png" 
+                                        src="/assets/new-images/about-page/Logistics/log.png" 
                                         alt="FAQ" 
                                     />
                                 </div>
