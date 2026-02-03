@@ -30,21 +30,21 @@ const ProductPage = () => {
       text: 'Prices were competitive compared to other steel dealers nearby. Material quality was consistent, and there were no issues during fabrication or bending.',
       author: 'Steve Mathew',
       role: 'Founder, Egenslab',
-      img: '/assets/img/home1/testimonial-author-img1.png',
+      img: '/assets/new-images/icon-person/5856.jpg',
     },
     {
       quote: 'Best communication & deliver',
       text: 'They were very transparent about steel specifications and weights. No confusion or hidden charges at all.',
       author: 'Ram Mohan',
       role: 'Founder, Triprex',
-      img: '/assets/img/home1/testimonial-author-img2.png',
+      img: '/assets/new-images/icon-person/5856.jpg',
     },
     {
       quote: 'Outstanding material quality!',
       text: 'Delivery updates were timely and accurate. Overall experience felt honest, local, and dependable.',
       author: 'Akash Menon',
       role: 'Founder, Axleo',
-      img: '/assets/img/home1/testimonial-author-img3.png',
+      img: '/assets/new-images/icon-person/5856.jpg',
     },
   ]
 
@@ -177,7 +177,7 @@ const ProductPage = () => {
                                     <Image 
                                         width={650} 
                                         height={650} 
-                                        src="/assets/img/innerpages/product-dt-faq-img.jpg" 
+                                        src="/assets/new-images/about-page/steel/steel-prodect-page.png" 
                                         alt="FAQ" 
                                     />
                                 </div>

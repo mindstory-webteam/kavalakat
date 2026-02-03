@@ -31,21 +31,21 @@ const ProductPage = () => {
             text: "I ordered cement for my home build and the team made everything easy — clear pricing, friendly service, and delivery was right on schedule. Great overall experience.",
             author: "Raj Kumar",
             role: "Founder, Egenslab",
-            img: "/assets/img/home1/testimonial-author-img1.png"
+            img: "/assets/new-images/icon-person/5856.jpg"
         },
         {
             quote: "Best communication & deliver",
             text: "Bought bulk cement bags here for our contractor. Staff were patient answering questions and helped me choose the right grade. Timely delivery and quality product.",
             author: "David Thomas",
             role: "Founder, Triprex",
-            img: "/assets/img/home1/testimonial-author-img2.png"
+            img: "/assets/new-images/icon-person/5856.jpg"
         },
         {
             quote: "Outstanding material quality!",
             text: "Pleasant experience! The team at this supplier was professional and courteous. Cement quality was solid and consistent, just what we needed for our foundation work.",
             author: "Swaraj banu",
             role: "Founder, Axleo",
-            img: "/assets/img/home1/testimonial-author-img3.png"
+            img: "/assets/new-images/icon-person/5856.jpg"
         },
        
     ]
@@ -205,7 +205,7 @@ const ProductPage = () => {
                                     <Image 
                                         width={650} 
                                         height={650} 
-                                        src="/assets/img/innerpages/product-dt-faq-img.jpg" 
+                                        src="/assets/new-images/about-page/cement/cement-prodect-page.png" 
                                         alt="FAQ" 
                                     />
                                 </div>

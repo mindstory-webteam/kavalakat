@@ -31,21 +31,21 @@ const ProductPage = () => {
             text: "Very satisfied with Kavalakat Agencies’ logistics service. They kept me updated on truck arrivals and unloaded materials carefully at the site. Communication was clear throughout delivery.",
             author: "Ramesh",
             role: "Founder, Egenslab",
-            img: "/assets/img/home1/testimonial-author-img1.png"
+            img: "/assets/new-images/icon-person/5856.jpg"
         },
         {
             quote: "Best communication & deliver",
             text: "Reliable logistics partner for transporting construction supplies across Kerala. Delivery team reached on time, managed loading efficiently, and ensured no breakage. Great service for busy contractors.",
             author: "Joseph",
             role: "Founder, Triprex",
-            img: "/assets/img/home1/testimonial-author-img2.png"
+            img: "/assets/new-images/icon-person/5856.jpg"
         },
         {
             quote: "Outstanding material quality!",
             text: "We used their logistics for heavy materials delivery. Staff arranged transport quickly and handled site delivery professionally. Very responsive team and stress-free coordination overall. ",
             author: "Aswin Raj",
             role: "Founder, Axleo",
-            img: "/assets/img/home1/testimonial-author-img3.png"
+            img: "/assets/new-images/icon-person/5856.jpg"
         },
        
     ]
@@ -178,7 +178,7 @@ const ProductPage = () => {
                                     <Image 
                                         width={650} 
                                         height={650} 
-                                        src="/assets/img/innerpages/product-dt-faq-img.jpg" 
+                                        src="/assets/new-images/about-page/logistics/log.png" 
                                         alt="FAQ" 
                                     />
                                 </div>

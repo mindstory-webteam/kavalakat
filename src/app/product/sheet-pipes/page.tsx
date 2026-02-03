@@ -30,21 +30,21 @@ const ProductPage = () => {
       text: 'Very helpful team. They suggested suitable sheet thickness and pipe types based on our usage. Honest advice without pushing unnecessary products.',
       author: 'Rakesh',
       role: 'Founder, Egenslab',
-      img: '/assets/img/home1/testimonial-author-img1.png',
+      img: '/assets/new-images/icon-person/5856.jpg',
     },
     {
       quote: 'Best communication & deliver',
       text: 'Delivery arrived exactly as scheduled, which helped our site work stay on track. Sheets had good finish and pipes were of proper standard.',
       author: 'Ravi Kumar',
       role: 'Founder, Triprex',
-      img: '/assets/img/home1/testimonial-author-img2.png',
+      img: '/assets/new-images/icon-person/5856.jpg',
     },
     {
       quote: 'Outstanding material quality!',
       text: 'Ordered long pipes and specific gauge sheets. Staff double-checked sizes before dispatch, ensuring everything matched our requirement. Appreciated the attention to detail.',
       author: 'Basil',
       role: 'Founder, Axleo',
-      img: '/assets/img/home1/testimonial-author-img3.png',
+      img: '/assets/new-images/icon-person/5856.jpg',
     },
   ]
 
@@ -177,7 +177,7 @@ const ProductPage = () => {
                                     <Image 
                                         width={650} 
                                         height={650} 
-                                        src="/assets/img/innerpages/product-dt-faq-img.jpg" 
+                                        src="/assets/new-images/about-page/sheetandpipes/sheetandpipes.png" 
                                         alt="FAQ" 
                                     />
                                 </div>

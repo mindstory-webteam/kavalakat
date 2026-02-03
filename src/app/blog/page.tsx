@@ -20,7 +20,7 @@ const page = () => {
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
                                     <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/img/home1/blog-img1.jpg" alt="" />
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-1.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>
@@ -47,7 +47,7 @@ const page = () => {
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
                                     <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/img/home1/blog-img2.jpg" alt="" />
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-2.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>
@@ -74,7 +74,7 @@ const page = () => {
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
                                     <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/img/home1/blog-img3.jpg" alt="" />
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-3.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>
@@ -101,7 +101,7 @@ const page = () => {
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
                                     <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/img/home1/blog-img4.jpg" alt="" />
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-1.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>
@@ -128,7 +128,7 @@ const page = () => {
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
                                     <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/img/home1/blog-img5.jpg" alt="" />
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-2.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>
@@ -155,7 +155,7 @@ const page = () => {
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
                                     <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/img/home1/blog-img6.jpg" alt="" />
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-3.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>
@@ -182,7 +182,7 @@ const page = () => {
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
                                     <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/img/innerpages/blog-img1.jpg" alt="" />
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-2.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>
@@ -209,7 +209,7 @@ const page = () => {
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
                                     <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/img/innerpages/blog-img2.jpg" alt="" />
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-3.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>
@@ -236,7 +236,7 @@ const page = () => {
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
                                     <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/img/innerpages/blog-img3.jpg" alt="" />
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-1.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>

@@ -30,21 +30,21 @@ const ProductPage = () => {
       text: 'Purchased grinding discs and waterproofing chemicals for our site. Quality was excellent and long-lasting. Staff explained proper usage clearly and delivery was prompt, helping our work progress smoothly.',
       author: 'Suguthan',
       role: 'Founder, Egenslab',
-      img: '/assets/img/home1/testimonial-author-img1.png',
+      img: '/assets/new-images/icon-person/5856.jpg',
     },
     {
       quote: 'Best communication & deliver',
       text: 'Bought construction chemicals like tile adhesive and curing compound. Products worked exactly as expected. Team guided us patiently on application methods and quantities, which avoided mistakes at site.',
       author: 'William George',
       role: 'Founder, Triprex',
-      img: '/assets/img/home1/testimonial-author-img2.png',
+      img: '/assets/new-images/icon-person/5856.jpg',
     },
     {
       quote: 'Outstanding material quality!',
       text: 'Very reliable supplier for abrasives and chemicals. Cutting wheels were durable and chemical performance was strong. Pricing was reasonable and service felt honest and professional throughout the purchase.',
       author: 'Ramesh Nambiar',
       role: 'Founder, Axleo',
-      img: '/assets/img/home1/testimonial-author-img3.png',
+      img: '/assets/new-images/icon-person/5856.jpg',
     },
   ]
 
@@ -125,7 +125,7 @@ const ProductPage = () => {
         <>
             <InnerPageHeader />
           
-            <Breadcrumb title="Product White Cement & Paint" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-3.jpeg' />
+            <Breadcrumb title="Abrasives & Construction Chemicals Supplier" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-3.jpeg' />
             
             <div className="product-details-top-area pt-120 mb-120" id="scroll-section">
                 <div className="container">
@@ -156,7 +156,7 @@ const ProductPage = () => {
                                     <Image 
                                         width={650} 
                                         height={650} 
-                                        src="/assets/img/innerpages/product-dt-faq-img.jpg" 
+                                        src="/assets/new-images/about-page/abrasives-construction-chemicals-supplier/chem.png" 
                                         alt="FAQ" 
                                     />
                                 </div>

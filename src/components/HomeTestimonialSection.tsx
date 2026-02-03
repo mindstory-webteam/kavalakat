@@ -62,7 +62,7 @@ const HomeTestimonialSection:React.FC = () => {
                                         <div className="row gy-md-5 gy-4 align-items-center justify-content-between">
                                             <div className="col-lg-5">
                                                 <div className="testimonial-img">
-                                                    <img width={450} height={470} src="/assets/img/home3/testimonial-img1.jpg" alt="" />
+                                                    <img width={450} height={470} src="/assets/new-images/reviews-logo/sobha-mall.jfif" alt="" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-7">
@@ -76,7 +76,7 @@ const HomeTestimonialSection:React.FC = () => {
                                                     <div className="author-and-social-area">
                                                         <div className="author-area">
                                                             <div className="author-img">
-                                                                 <img width={450} height={470} src="/assets/img/home1/testimonial-author-img1.png" alt="" />
+                                                                 <img width={450} height={470} src="/assets/new-images/reviews-logo/sobha.png" alt="" />
                                                             </div>
                                                             <div className="author-content">
                                                                 <h5>Sobha Mall</h5>
@@ -95,7 +95,7 @@ const HomeTestimonialSection:React.FC = () => {
                                         <div className="row gy-md-5 gy-4 align-items-center justify-content-between">
                                             <div className="col-lg-5">
                                                 <div className="testimonial-img">
-                                                     <img width={450} height={470} src="/assets/img/home3/testimonial-img2.jpg" alt="" />
+                                                     <img width={450} height={470} src="/assets/new-images/reviews-logo/central-buliding.jfif" alt="" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-7">
@@ -109,7 +109,7 @@ const HomeTestimonialSection:React.FC = () => {
                                                     <div className="author-and-social-area">
                                                         <div className="author-area">
                                                             <div className="author-img">
-                                                                 <img width={450} height={470} src="/assets/img/home1/testimonial-author-img2.png" alt="" />
+                                                                 <img width={450} height={470} src="/assets/new-images/reviews-logo/central-logo.jfif" alt="" />
                                                             </div>
                                                             <div className="author-content">
                                                                 <h5>Central Builders</h5>
@@ -128,7 +128,7 @@ const HomeTestimonialSection:React.FC = () => {
                                         <div className="row gy-md-5 gy-4 align-items-center justify-content-between">
                                             <div className="col-lg-5">
                                                 <div className="testimonial-img">
-                                                     <img width={450} height={470} src="/assets/img/home3/testimonial-img3.jpg" alt="" />
+                                                     <img width={450} height={470} src="/assets/new-images/reviews-logo/tbpl-buildings.jfif" alt="" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-7">
@@ -142,7 +142,7 @@ const HomeTestimonialSection:React.FC = () => {
                                                     <div className="author-and-social-area">
                                                         <div className="author-area">
                                                             <div className="author-img">
-                                                                 <img width={450} height={470} src="/assets/img/home1/testimonial-author-img3.png" alt="" />
+                                                                 <img width={450} height={470} src="/assets/new-images/reviews-logo/tbpl-logo.png" alt="" />
                                                             </div>
                                                             <div className="author-content">
                                                                 <h5>TBPL</h5>
