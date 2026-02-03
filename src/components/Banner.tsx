@@ -16,7 +16,7 @@ const Banner = () => {
             id: 1,
             title: "Quality and reliability you can trust",
             button1Text: "Start A Project",
-            button1Link: "/project",
+            button1Link: "/product",
             button2Text: "Let's Discuss",
             button2Link: "/contact",
             image: "/assets/new-images/home-banner/banner-1.jpeg" // Add your image path

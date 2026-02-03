@@ -245,7 +245,7 @@ const ProductPage = () => {
                                 </div>
                             </div>
                         </div>
-                         <Link className="primary-btn1 black-bg" href="/project">
+                         <Link className="primary-btn1 black-bg" href="/contact">
                             <span>Contact With Us
                             </span>
                             <span>Contact With Us
