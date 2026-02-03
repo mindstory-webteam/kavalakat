@@ -12,7 +12,7 @@ const FooterTop = () => {
                             <h2>Let's Build Dream Something Amazing.</h2>
                         </div>
                         <div className="btn-grp wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <Link className="primary-btn1 white-bg" href="/service">
+                            <Link className="primary-btn1 white-bg" href="/product">
                                 <span>Start Journey
                                 </span>
                                 <span>Start Journey
