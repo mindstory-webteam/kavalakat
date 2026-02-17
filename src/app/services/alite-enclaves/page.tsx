@@ -146,18 +146,26 @@ const ProductPage = () => {
         <>
             <InnerPageHeader />
           
-            <Breadcrumb title="Product Steel" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-3.jpeg' />
+            <Breadcrumb title="Alite Enclaves" subtitle="Empowering Hospitality Projects With Trusted Materials" image='/assets/new-images/bm/bm-3.jpeg' />
             
             <div className="product-details-top-area pt-120 mb-120" id="scroll-section">
                 <div className="container">
                     <div className="row gy-md-5 gy-4 align-items-lg-end">
-                        <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div className="details-content">
-                                <h2>Kavalakat Agencies – Reliable Steel Supplier in Kerala</h2>
-                                <p>Supplying high-quality steel products to builders, contractors, and construction professionals across Kerala, Kavalakat Agencies offers a strong portfolio of trusted steel brands suited for residential, commercial, and infrastructure projects. As highlighted on their steel page, the company deals with leading manufacturers such as Vizag, Tulsyan, Tata, SAIL, Kairali TMT, and JSW, ensuring strength, durability, and compliance with industry standards. </p>
-                                <p>With decades of experience in the building materials sector, Kavalakat Agencies is known for reliable supply, timely delivery, competitive pricing, and customer-focused service. Their commitment to quality steel solutions helps ensure long-lasting and structurally sound construction outcomes for projects of all scales.</p>
-                            </div>
-                        </div>
+                       <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+  <div className="details-content">
+    <h2>Alite Enclaves – Premium Service Apartments in Thrissur</h2>
+
+    <p>
+      Alite Enclaves is a hospitality venture in Thrissur, Kerala, operated by the Kavalakat Group.
+      It offers Service Apartments, Premium Rooms, Villas, and a Mini Meeting Hall.
+      Ideal for families, pilgrims, and business travelers, the property is strategically located
+      near Thrissur Railway Station and Sakthan Thampuran Bus Stand,
+      with easy access to Vadakkumnathan Temple.
+    </p>
+
+  </div>
+</div>
+
                         <div className="col-lg-4 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="product-img">
                                 <Image width={340} height={270} src="/assets/new-images/products/p-2.jpeg" alt="" />
@@ -191,23 +199,23 @@ const ProductPage = () => {
                                             {[
                                                 {
                                                     id: 'collapseOne',
-                                                    title: 'Trusted Steel Supplier',
-                                                    content: 'A reliable name in the building materials industry, delivering certified steel products that meet structural strength and quality standards.'
+                                                    title: 'Accommodation Options',
+                                                    content: 'Fully furnished 1 BHK, 2 BHK, and expansive 4 BHK villas and apartments.'
                                                 },
                                                 {
                                                     id: 'collapseTwo',
-                                                    title: 'Association with Leading Brands',
-                                                    content: 'Partnered with top-rated steel manufacturers to provide high-performance TMT bars and steel products for all construction requirements.'
+                                                    title: 'Comfortable In-Room Amenities',
+                                                    content: ' Air-conditioned units with private kitchenettes, washing machines, satellite TV, and balconies with city views.'
                                                 },
                                                 {
                                                     id: 'collapseThree',
-                                                    title: 'Quality Assurance & Durability',
-                                                    content: 'Every steel product supplied is selected for durability, load-bearing capacity, and long-term performance in residential and commercial projects.'
+                                                    title: 'Convenience at Your Service',
+                                                    content: '24/7 front desk support, daily housekeeping, express check-in/out, and high-speed Wi-Fi.'
                                                 },
                                                 {
                                                     id: 'collapseFour',
-                                                    title: 'Competitive Pricing Advantage',
-                                                    content: 'Offers premium steel materials at competitive market prices, ensuring value without compromising on quality.'
+                                                    title: 'Secure & Easily Accessible',
+                                                    content: '24-hour security, CCTV surveillance, elevator access, and dedicated private parking.'
                                                 },
                                                 
                                                      
@@ -265,144 +273,7 @@ const ProductPage = () => {
 
  
         
-          {/* Steel Partners Section with Proper Heading Structure */}
-<div className="steel-partners-section mb-120">
-  <div className="container">
-    {/* Section Header - Matching Screenshot Style */}
-    <div className="row mb-50">
-      <div className="col-12">
-        <div className="section-title-wrapper">
-         
-          <h2 className="section-main-title">Trusted Steel Brands We Supply</h2>
-        </div>
-      </div>
-    </div>
-    
-    {/* Cards Grid - Smaller Cards */}
-    <div className="row g-4 justify-content-center">
-      {companies.map((company, index) => (
-        <div key={index} className="col-lg-4 col-md-6 col-sm-12">
-          <div className="card-wrapper-small">
-            <CompanyCard
-              logo={company.logo}
-              logoAlt={company.logoAlt}
-              companyName={company.companyName}
-              description={company.description}
-            />
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-
-  <style jsx>{`
-    .steel-partners-section {
-      background: #ffffff;
-      padding: 80px 0;
-      position: relative;
-    }
-
-    /* Section Title Wrapper */
-    .section-title-wrapper {
-      text-align: left;
-      margin-bottom: 40px;
-    }
-
-    /* Section Subtitle - Blue uppercase text */
-    .section-subtitle {
-      color: #3c35ff;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.875rem;
-      display: block;
-      margin-bottom: 12px;
-      font-family: var(--font-manrope);
-      position: relative;
-    }
-
-    .section-subtitle::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 60px;
-      height: 3px;
-      background: #3c35ff;
-    }
-
-    /* Section Main Title - Large black text */
-    .section-main-title {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #000000;
-      margin: 0;
-      line-height: 1.2;
-      font-family: var(--font-manrope);
-      letter-spacing: -0.5px;
-    }
-
-    /* Card Wrapper - Smaller size */
-    .card-wrapper-small {
-      height: 420px;
-      width: 100%;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 992px) {
-      .card-wrapper-small {
-        height: 400px;
-      }
-
-      .section-main-title {
-        font-size: 2.5rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .card-wrapper-small {
-        height: 380px;
-      }
-
-      .steel-partners-section {
-        padding: 60px 0;
-      }
-
-      .section-main-title {
-        font-size: 2rem;
-      }
-
-      .section-subtitle {
-        font-size: 0.8rem;
-        letter-spacing: 1.5px;
-      }
-
-      .section-title-wrapper {
-        text-align: center;
-      }
-
-      .section-subtitle::before {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-
-    @media (max-width: 576px) {
-      .card-wrapper-small {
-        height: auto;
-        min-height: 360px;
-      }
-
-      .section-main-title {
-        font-size: 1.75rem;
-      }
-
-      .section-subtitle {
-        font-size: 0.75rem;
-      }
-    }
-  `}</style>
-</div>
+  
        
             {/* Section 2: Why Choose Us */}
 {/* <div className="home2-why-choose-us-section two mb-120">
@@ -528,7 +399,6 @@ const ProductPage = () => {
                                 <div className="section-title">
                                     <span>Our Client Testimonial</span>
                                     <h2>Trusted by Our Partners.</h2>
-                                    <p>Sed nisl eros, condimentum nec risus sitamet, finibus congu. Fusen fringilla est libero, sed tempus urna feugiat eu. Curabit eu feugiat ligu Suspendisse nectoraba.</p>
                                 </div>
                                 <ul className="rating-list mt-4">
                                     <li className="mb-3">

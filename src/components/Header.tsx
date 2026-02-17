@@ -297,14 +297,14 @@ const Header: React.FC = () => {
                                             <li className={pathname === "/product/steel" ? "active" : ""}>
                                                 <Link href="/product/steel"><span>Steels</span></Link>
                                             </li>
-                                            <li className={pathname === "/product/sheet-pipes" ? "active" : ""}>
-                                                <Link href="/product/sheet-pipes"><span>Sheet Pipes</span></Link>
+                                            <li className={pathname === "/product/roofing-solutions" ? "active" : ""}>
+                                                <Link href="/product/roofing-solutions"><span>Roofing Solutions</span></Link>
                                             </li>
                                             <li className={pathname === "/product/white-cement-paint" ? "active" : ""}>
                                                 <Link href="/product/white-cement-paint"><span>White Cement Paint</span></Link>
                                             </li>
-                                            <li className={pathname === "/product/abrasives-construction-chemicals" ? "active" : ""}>
-                                                <Link href="/product/abrasives-construction-chemicals"><span>Abrasive Construction Chemicals</span></Link>
+                                            <li className={pathname === "/product/construction-chemicals" ? "active" : ""}>
+                                                <Link href="/product/construction-chemicals"><span> Construction Chemicals</span></Link>
                                             </li>
                                         </ul>
                                     </li>

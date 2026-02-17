@@ -154,9 +154,9 @@ const ProductPage = () => {
                     <div className="row gy-md-5 gy-4 align-items-lg-end">
                         <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="details-content">
-                                <h2>Kavalakat Agencies – Logistics in Kerala</h2>
-                                <p>Kavalakat Agencies offers comprehensive logistics support as part of its building materials supply chain, backed by a dedicated fleet of vehicles that ensure timely delivery and efficient transport of construction products across central Kerala. Their logistics services include a variety of transport solutions — from trailers, heavy goods vehicles (HGV), light goods vehicles (LGV), cranes, to specialized transport formats — designed to meet the varied needs of contractors and builders.</p>
-                                <p>With decades of industry experience and strong coordination between logistics and supply operations, Kavalakat Agencies ensures smooth material movement, reduced delays, and reliable last-mile delivery, enhancing overall project execution for customers.</p>
+                                <h2>Kavalakat  Logistics in Kerala</h2>
+                                <p>Kavalakat  offers comprehensive logistics support as part of its building materials supply chain, backed by a dedicated fleet of vehicles that ensure timely delivery and efficient transport of construction products across central Kerala. Their logistics services include a variety of transport solutions — from trailers, heavy goods vehicles (HGV), light goods vehicles (LGV), cranes, to specialized transport formats — designed to meet the varied needs of contractors and builders.</p>
+                                <p>With decades of industry experience and strong coordination between logistics and supply operations, Kavalakat  ensures smooth material movement, reduced delays, and reliable last-mile delivery, enhancing overall project execution for customers.</p>
                             </div>
                         </div>
                         <div className="col-lg-4 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -523,7 +523,6 @@ const ProductPage = () => {
                                 <div className="section-title">
                                     <span>Our Client Testimonial</span>
                                     <h2>Trusted by Our Partners.</h2>
-                                    <p>Sed nisl eros, condimentum nec risus sitamet, finibus congu. Fusen fringilla est libero, sed tempus urna feugiat eu. Curabit eu feugiat ligu Suspendisse nectoraba.</p>
                                 </div>
                                 <ul className="rating-list mt-4">
                                     <li className="mb-3">

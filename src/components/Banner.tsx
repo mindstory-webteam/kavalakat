@@ -19,7 +19,7 @@ const Banner = () => {
             button1Link: "/product",
             button2Text: "Let's Discuss",
             button2Link: "/contact",
-            image: "/assets/new-images/home-banner/banner-1.jpeg" // Add your image path
+            image: "/assets/new-images/home-banner/banner-4.jpeg" // Add your image path
         },
         {
             id: 2,
@@ -28,7 +28,7 @@ const Banner = () => {
             button1Link: "/product",
             button2Text: "Get Quote",
             button2Link: "/contact",
-            image: "/assets/new-images/home-banner/banner-2.jpeg" // Add your image path
+            image: "/assets/new-images/home-banner/banner-5.jpeg" // Add your image path
         },
         {
             id: 3,

@@ -268,7 +268,7 @@ const page = () => {
           display: grid;
           grid-template-columns: 1.15fr 1fr;
           background: #fff;
-          border-radius: 16px;
+         
           overflow: hidden;
           box-shadow: 0 6px 32px rgba(1,96,178,0.12);
           transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), box-shadow 0.38s;
@@ -324,7 +324,7 @@ const page = () => {
         /* Regular cards */
         .psc-card {
           background: #fff;
-          border-radius: 14px;
+         
           overflow: hidden;
           box-shadow: 0 4px 24px rgba(1,96,178,0.1), 0 1px 4px rgba(0,0,0,0.04);
           transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), box-shadow 0.38s;

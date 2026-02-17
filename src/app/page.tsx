@@ -27,7 +27,7 @@ export default function Home() {
     
     <HomeTestimonialSection />
     <HomeContactSection />
-    <HomeLogoSection />
+    {/* <HomeLogoSection /> */}
     <Footer />
     
      <ChatbotWidget 

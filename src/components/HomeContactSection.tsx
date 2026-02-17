@@ -83,7 +83,7 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingThree"
                                     >
                                         <div className="accordion-body">
-                                            Absolutely. Kavalakat Agencies is a one-stop solution for steel, cement, white cement, sheets, pipes, abrasives, and construction chemicals.
+                                            Absolutely. Kavalakat  is a one-stop solution for steel, cement, white cement, sheets, pipes, abrasives, and construction chemicals.
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseFour'}
                                             aria-controls="collapseFour"
                                         >
-                                           4. Why should I choose Kavalakat Agencies?
+                                           4. Why should I choose Kavalakat ?
                                         </button>
                                     </h2>
                                     <div 
@@ -118,7 +118,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseFive'}
                                             aria-controls="collapseFive"
                                         >
-                                            5. How can I place an order with Kavalakat Agencies?
+                                            5. How can I place an order with Kavalakat ?
                                         </button>
                                     </h2>
                                     <div 

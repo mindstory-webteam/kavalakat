@@ -126,8 +126,8 @@ const ProductPage = () => {
                     <div className="row gy-md-5 gy-4 align-items-lg-end">
                         <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="details-content">
-                                <h2>Kavalakat Agencies – White Cement & Paint Supplier in Kerala</h2>
-                                <p>Supplying premium white cement and paints, Kavalakat Agencies offers superior finishing materials trusted by builders and contractors across Kerala. Their White Cement & Paint range includes renowned products such as Birla White Cement — part of the UltraTech Cement family, known for strength, brightness, and aesthetic appeal — ideal for smooth, high-quality surfaces in interior and exterior applications. </p>
+                                <h2>Kavalakat White Cement & Paint Supplier in Kerala</h2>
+                                <p>Supplying premium white cement and paints, Kavalakat  offers superior finishing materials trusted by builders and contractors across Kerala. Their White Cement & Paint range includes renowned products such as Birla White Cement — part of the UltraTech Cement family, known for strength, brightness, and aesthetic appeal — ideal for smooth, high-quality surfaces in interior and exterior applications. </p>
                                 <p>For paint solutions, they feature AkzoNobel brands like Dulux, International, and Sikkens, recognized globally for rich colors, excellent coverage, durability, and protective coatings that enhance and protect walls.</p>
                             </div>
                         </div>
@@ -497,7 +497,6 @@ const ProductPage = () => {
                                 <div className="section-title">
                                     <span>Our Client Testimonial</span>
                                     <h2>Trusted by Our Partners.</h2>
-                                    <p>Sed nisl eros, condimentum nec risus sitamet, finibus congu. Fusen fringilla est libero, sed tempus urna feugiat eu. Curabit eu feugiat ligu Suspendisse nectoraba.</p>
                                 </div>
                                 <ul className="rating-list mt-4">
                                     <li className="mb-3">

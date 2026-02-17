@@ -21,7 +21,7 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                                 <div className="about-title-area">
                                     <div className="section-title">
                                         {/* <span>About Our Story</span> */}
-                                        <h2>Our Story of Manufacturing Excellence Built on.</h2>
+                                        <h2>Empowering Construction With Trusted Products</h2>
                                     </div>
                                     <div className="video-and-content">
                                         <a data-fancybox="video-player" style={{ cursor: "pointer" }}
@@ -38,7 +38,8 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                                             </div>
                                         </a>
                                         <div className="content">
-                                            <p>Sed nisl eros, condimentum nec risus sit amet, finibus conguese.Fusen fringilla est libero, sed tempus urna feugiat eu. Curabitur eu feugiat ligu Suspendisse nectoraba porttitor velit go this week and more about.</p>
+                                            <p>
+For over 40 years, Kavalakat has been powering Kerala’s construction industry with premium materials, reliable delivery, and unwavering commitment to quality. We don’t just supply materials — we build lasting partnerships and stronger foundations for every project.</p>
                                         </div>
                                     </div>
                                 </div>

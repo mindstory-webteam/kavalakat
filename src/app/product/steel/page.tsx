@@ -153,9 +153,9 @@ const ProductPage = () => {
                     <div className="row gy-md-5 gy-4 align-items-lg-end">
                         <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="details-content">
-                                <h2>Kavalakat Agencies – Reliable Steel Supplier in Kerala</h2>
-                                <p>Supplying high-quality steel products to builders, contractors, and construction professionals across Kerala, Kavalakat Agencies offers a strong portfolio of trusted steel brands suited for residential, commercial, and infrastructure projects. As highlighted on their steel page, the company deals with leading manufacturers such as Vizag, Tulsyan, Tata, SAIL, Kairali TMT, and JSW, ensuring strength, durability, and compliance with industry standards. </p>
-                                <p>With decades of experience in the building materials sector, Kavalakat Agencies is known for reliable supply, timely delivery, competitive pricing, and customer-focused service. Their commitment to quality steel solutions helps ensure long-lasting and structurally sound construction outcomes for projects of all scales.</p>
+                                <h2>Kavalakat Reliable Steel Supplier in Kerala</h2>
+                                <p>Supplying high-quality steel products to builders, contractors, and construction professionals across Kerala, Kavalakat offers a strong portfolio of trusted steel brands suited for residential, commercial, and infrastructure projects. As highlighted on their steel page, the company deals with leading manufacturers such as Vizag, Tulsyan, Tata, SAIL, Kairali TMT, and JSW, ensuring strength, durability, and compliance with industry standards. </p>
+                                <p>With decades of experience in the building materials sector, Kavalakat is known for reliable supply, timely delivery, competitive pricing, and customer-focused service. Their commitment to quality steel solutions helps ensure long-lasting and structurally sound construction outcomes for projects of all scales.</p>
                             </div>
                         </div>
                         <div className="col-lg-4 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -528,7 +528,6 @@ const ProductPage = () => {
                                 <div className="section-title">
                                     <span>Our Client Testimonial</span>
                                     <h2>Trusted by Our Partners.</h2>
-                                    <p>Sed nisl eros, condimentum nec risus sitamet, finibus congu. Fusen fringilla est libero, sed tempus urna feugiat eu. Curabit eu feugiat ligu Suspendisse nectoraba.</p>
                                 </div>
                                 <ul className="rating-list mt-4">
                                     <li className="mb-3">

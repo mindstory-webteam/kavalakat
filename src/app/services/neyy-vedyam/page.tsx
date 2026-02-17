@@ -146,18 +146,34 @@ const ProductPage = () => {
         <>
             <InnerPageHeader />
           
-            <Breadcrumb title="Product Steel" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-3.jpeg' />
+            <Breadcrumb title="Neyy Vedhyam" subtitle="Premium Vegetarian Cuisine by the Kavalakat Group" image='/assets/new-images/bm/bm-3.jpeg' />
             
             <div className="product-details-top-area pt-120 mb-120" id="scroll-section">
                 <div className="container">
                     <div className="row gy-md-5 gy-4 align-items-lg-end">
                         <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div className="details-content">
-                                <h2>Kavalakat Agencies – Reliable Steel Supplier in Kerala</h2>
-                                <p>Supplying high-quality steel products to builders, contractors, and construction professionals across Kerala, Kavalakat Agencies offers a strong portfolio of trusted steel brands suited for residential, commercial, and infrastructure projects. As highlighted on their steel page, the company deals with leading manufacturers such as Vizag, Tulsyan, Tata, SAIL, Kairali TMT, and JSW, ensuring strength, durability, and compliance with industry standards. </p>
-                                <p>With decades of experience in the building materials sector, Kavalakat Agencies is known for reliable supply, timely delivery, competitive pricing, and customer-focused service. Their commitment to quality steel solutions helps ensure long-lasting and structurally sound construction outcomes for projects of all scales.</p>
-                            </div>
-                        </div>
+  <div className="details-content">
+    <h2>Neyy Vedyam – Premium Vegetarian Restaurant in Thrissur</h2>
+
+    <p>
+      Neyy Vedyam is a culinary venture under the Kavalakat Group, located in Thrissur, Kerala.
+      It houses a 72-seater premium vegetarian restaurant spread across two floors,
+      offering a refined and comfortable dining experience. Building on the group’s strong reputation in construction and hospitality,
+      Neyy Vedyam focuses on delivering authentic, high-quality vegetarian cuisine.
+      The restaurant blends traditional flavors with modern presentation,
+      ensuring exceptional taste, hygiene, and customer satisfaction.
+    </p>
+
+
+    <p>
+      Designed to provide a warm and welcoming ambiance, Neyy Vedyam is ideal
+      for families, business gatherings, and special occasions, making it
+      a preferred destination for premium vegetarian dining in Thrissur.
+    </p>
+
+  </div>
+</div>
+
                         <div className="col-lg-4 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="product-img">
                                 <Image width={340} height={270} src="/assets/new-images/products/p-2.jpeg" alt="" />
@@ -191,23 +207,23 @@ const ProductPage = () => {
                                             {[
                                                 {
                                                     id: 'collapseOne',
-                                                    title: 'Trusted Steel Supplier',
-                                                    content: 'A reliable name in the building materials industry, delivering certified steel products that meet structural strength and quality standards.'
+                                                    title: 'Discover Neyy Vedyam',
+                                                    content: 'Neyy Vedyam is a culinary venture by the Kavalakat Group, located in the heart of Thrissur. It offers an authentic, premium vegetarian dining experience rooted in tradition and quality.'
                                                 },
                                                 {
                                                     id: 'collapseTwo',
-                                                    title: 'Association with Leading Brands',
-                                                    content: 'Partnered with top-rated steel manufacturers to provide high-performance TMT bars and steel products for all construction requirements.'
+                                                    title: 'Dining Capacity & Ambience',
+                                                    content: 'The restaurant features a beautifully designed two-floor setup with a total seating capacity of 72, offering a calm and refined environment suitable for families, groups, and corporate diners.'
                                                 },
                                                 {
                                                     id: 'collapseThree',
-                                                    title: 'Quality Assurance & Durability',
-                                                    content: 'Every steel product supplied is selected for durability, load-bearing capacity, and long-term performance in residential and commercial projects.'
+                                                    title: 'Cuisine & Speciality',
+                                                    content: 'Neyy Vedyam focuses on serving high-quality, authentic vegetarian cuisine with an emphasis on purity, taste, and traditional Kerala flavours.'
                                                 },
                                                 {
                                                     id: 'collapseFour',
-                                                    title: 'Competitive Pricing Advantage',
-                                                    content: 'Offers premium steel materials at competitive market prices, ensuring value without compromising on quality.'
+                                                    title: 'Brand Legacy & Trust',
+                                                    content: 'Backed by the long-standing reputation of the Kavalakat Group in construction and hospitality, Neyy Vedyam reflects the same commitment to excellence, comfort, and customer satisfaction.'
                                                 },
                                                 
                                                      
@@ -265,144 +281,7 @@ const ProductPage = () => {
 
  
         
-          {/* Steel Partners Section with Proper Heading Structure */}
-<div className="steel-partners-section mb-120">
-  <div className="container">
-    {/* Section Header - Matching Screenshot Style */}
-    <div className="row mb-50">
-      <div className="col-12">
-        <div className="section-title-wrapper">
-         
-          <h2 className="section-main-title">Trusted Steel Brands We Supply</h2>
-        </div>
-      </div>
-    </div>
-    
-    {/* Cards Grid - Smaller Cards */}
-    <div className="row g-4 justify-content-center">
-      {companies.map((company, index) => (
-        <div key={index} className="col-lg-4 col-md-6 col-sm-12">
-          <div className="card-wrapper-small">
-            <CompanyCard
-              logo={company.logo}
-              logoAlt={company.logoAlt}
-              companyName={company.companyName}
-              description={company.description}
-            />
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
 
-  <style jsx>{`
-    .steel-partners-section {
-      background: #ffffff;
-      padding: 80px 0;
-      position: relative;
-    }
-
-    /* Section Title Wrapper */
-    .section-title-wrapper {
-      text-align: left;
-      margin-bottom: 40px;
-    }
-
-    /* Section Subtitle - Blue uppercase text */
-    .section-subtitle {
-      color: #3c35ff;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.875rem;
-      display: block;
-      margin-bottom: 12px;
-      font-family: var(--font-manrope);
-      position: relative;
-    }
-
-    .section-subtitle::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 60px;
-      height: 3px;
-      background: #3c35ff;
-    }
-
-    /* Section Main Title - Large black text */
-    .section-main-title {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #000000;
-      margin: 0;
-      line-height: 1.2;
-      font-family: var(--font-manrope);
-      letter-spacing: -0.5px;
-    }
-
-    /* Card Wrapper - Smaller size */
-    .card-wrapper-small {
-      height: 420px;
-      width: 100%;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 992px) {
-      .card-wrapper-small {
-        height: 400px;
-      }
-
-      .section-main-title {
-        font-size: 2.5rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .card-wrapper-small {
-        height: 380px;
-      }
-
-      .steel-partners-section {
-        padding: 60px 0;
-      }
-
-      .section-main-title {
-        font-size: 2rem;
-      }
-
-      .section-subtitle {
-        font-size: 0.8rem;
-        letter-spacing: 1.5px;
-      }
-
-      .section-title-wrapper {
-        text-align: center;
-      }
-
-      .section-subtitle::before {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-
-    @media (max-width: 576px) {
-      .card-wrapper-small {
-        height: auto;
-        min-height: 360px;
-      }
-
-      .section-main-title {
-        font-size: 1.75rem;
-      }
-
-      .section-subtitle {
-        font-size: 0.75rem;
-      }
-    }
-  `}</style>
-</div>
        
             {/* Section 2: Why Choose Us */}
 {/* <div className="home2-why-choose-us-section two mb-120">

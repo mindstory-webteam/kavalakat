@@ -125,16 +125,16 @@ const ProductPage = () => {
         <>
             <InnerPageHeader />
           
-            <Breadcrumb title="Abrasives & Construction Chemicals Supplier" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-3.jpeg' />
+            <Breadcrumb title="Construction Chemicals Supplier" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-3.jpeg' />
             
             <div className="product-details-top-area pt-120 mb-120" id="scroll-section">
                 <div className="container">
                     <div className="row gy-md-5 gy-4 align-items-lg-end">
                         <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="details-content">
-                                <h2>Kavalakat Agencies – Abrasives & Construction Chemicals Supplier in Kerala</h2>
-                                <p>Supplying a comprehensive range of abrasives and construction chemical products, Kavalakat Agencies caters to the needs of builders, contractors, and industrial users across Kerala. Their construction chemical lineup includes specialty products from reputed manufacturers like Sika and LANXESS, known for solutions that bond, seal, reinforce, and protect structural elements in concrete and masonry work.</p>
-                                <p>Alongside this, the abrasives segment supports material finishing, surface preparation, and cutting/grinding applications essential in fabrication and construction tasks. With decades of experience in building materials supply and strong partnerships with industry partners, Kavalakat Agencies delivers quality abrasives and construction chemicals with competitive pricing, dependable availability, and professional service.</p>
+                                <h2>Kavalakat Construction Chemicals Supplier in Kerala</h2>
+                                <p>Supplying a comprehensive range of abrasives and construction chemical products, Kavalakat  caters to the needs of builders, contractors, and industrial users across Kerala. Their construction chemical lineup includes specialty products from reputed manufacturers like Sika and LANXESS, known for solutions that bond, seal, reinforce, and protect structural elements in concrete and masonry work.</p>
+                                <p>Alongside this, the abrasives segment supports material finishing, surface preparation, and cutting/grinding applications essential in fabrication and construction tasks. With decades of experience in building materials supply and strong partnerships with industry partners, Kavalakat  delivers quality  construction chemicals with competitive pricing, dependable availability, and professional service.</p>
                             </div>
                         </div>
                         <div className="col-lg-4 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -163,7 +163,7 @@ const ProductPage = () => {
                             </div>
                             <div className="col-lg-6">
                                 <div className="faq-content-area p-4">
-                                    <h2 className="mb-4">Abrasives & Construction Chemicals Products</h2>
+                                    <h2 className="mb-4">Construction Chemicals Products</h2>
                                     <div className="faq-wrap">
                                         <div className="accordion" id="accordionExample">
                                             {[
@@ -502,7 +502,7 @@ const ProductPage = () => {
                                 <div className="section-title">
                                     <span>Our Client Testimonial</span>
                                     <h2>Trusted by Our Partners.</h2>
-                                    <p>Sed nisl eros, condimentum nec risus sitamet, finibus congu. Fusen fringilla est libero, sed tempus urna feugiat eu. Curabit eu feugiat ligu Suspendisse nectoraba.</p>
+                                   
                                 </div>
                                 <ul className="rating-list mt-4">
                                     <li className="mb-3">

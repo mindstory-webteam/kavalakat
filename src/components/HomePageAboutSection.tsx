@@ -21,7 +21,7 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                                 <div className="about-title-area">
                                     <div className="section-title">
                                         
-                                        <h2>Our Story of Manufacturing Excellence Built on.</h2>
+                                        <h2>The Story Behind Our Strength</h2>
                                     </div>
                                     <div className="video-and-content">
                                         {/* <a data-fancybox="video-player" style={{ cursor: "pointer" }}

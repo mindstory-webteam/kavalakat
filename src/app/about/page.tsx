@@ -19,13 +19,13 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <InnerPageHeader />
-            <Breadcrumb title="About Us" subtitle="Our Story of Manufacturing Excellence Built on."  image="/assets/new-images/about-page/banner/b-1.jpeg"  />
+            <Breadcrumb title="About Us" subtitle="Our Story of Excellence Built on."  image="/assets/new-images/about-page/banner/b-1.jpeg"  />
             <HomePageAboutSection />
             <HomeWhyChooseUsSection />
             <HomePageAboutFeatureSection />
              <HomaPageVideoSection />
       <HomePageCounterSection />
-      <MilestoneSection />
+     
       <HomePageTeamSection />
       <HomepageBlogSection />
       <FooterTop />

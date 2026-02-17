@@ -10,7 +10,7 @@ const HomePageTeamSection: React.FC = () => {
                         <div className="col-xl-4 col-lg-5 col-md-8">
                             <div className="section-title text-center">
                                 
-                                <h2>Meet Our Factory Team</h2>
+                                <h2>Meet Our Team</h2>
                             </div>
                         </div>
                     </div>

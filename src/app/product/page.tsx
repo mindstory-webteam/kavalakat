@@ -107,7 +107,7 @@ const ProductPage = () => {
                                 <div className="product-card">
                                     <div className="product-img">
                                         <Image width={340} height={270} src="/assets/new-images/products/p-6.jpeg" alt="" />
-                                        <Link href="/product/logistics" className="arrow">
+                                        <Link href="/services/kavalakat-group" className="arrow">
                                             <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
                                                 <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
@@ -115,11 +115,52 @@ const ProductPage = () => {
                                         </Link>
                                     </div>
                                     <div className="product-content">
-                                        <h4><Link href="/product/logistics">Logistics</Link></h4>
+                                        <h4><Link href="/services/kavalakat-group">Kavalakat Group</Link></h4>
                                         <p>Integrated logistics support with planned routing and on-time delivery, ensuring uninterrupted material flow to project sites.</p>
                                     </div>
                                 </div>
                             </div>
+                            
+
+
+                             <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                <div className="product-card">
+                                    <div className="product-img">
+                                        <Image width={340} height={270} src="/assets/new-images/products/p-6.jpeg" alt="" />
+                                        <Link href="/services/alite-enclaves" className="arrow">
+                                            <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
+                                                <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
+                                            </svg>
+                                        </Link>
+                                    </div>
+                                    <div className="product-content">
+                                        <h4><Link href="/services/alite-enclaves">Alite Enclaves</Link></h4>
+                                        <p>Integrated logistics support with planned routing and on-time delivery, ensuring uninterrupted material flow to project sites.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                             <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                <div className="product-card">
+                                    <div className="product-img">
+                                        <Image width={340} height={270} src="/assets/new-images/products/p-6.jpeg" alt="" />
+                                        <Link href="/services/neyy-vedyam" className="arrow">
+                                            <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
+                                                <path d="M18.0004 18.0543V6.76025L13.1885 11.5249V18.0543H18.0004Z" />
+                                            </svg>
+                                        </Link>
+                                    </div>
+                                    <div className="product-content">
+                                        <h4><Link href="/services/neyy-vedyam">Neyy Vedyam</Link></h4>
+                                        <p>Integrated logistics support with planned routing and on-time delivery, ensuring uninterrupted material flow to project sites.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                             
                            
                            
                         </div>

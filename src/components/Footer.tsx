@@ -1,4 +1,3 @@
-
 import Link from 'next/link'
 import React from 'react'
 
@@ -18,12 +17,14 @@ const Footer = () => {
                                 <p>Welcome to Kavalakat where innovation meet our passion in a journey that started dream.</p>
                             </div>
                             <div className="col-md-4 d-flex justify-content-md-end">
-                               
+
                             </div>
                         </div>
                     </div>
                     <div className="footer-menu-and-address-wrap">
-                        <div className="row align-items-center">
+                        <div className="row align-items-start">
+
+                            {/* ── Address ── */}
                             <div className="col-lg-3">
                                 <div className="footer-widget">
                                     <div className="address-area">
@@ -32,7 +33,6 @@ const Footer = () => {
                                                 <span>Thrissur</span>
                                                 <a href="https://www.google.com/maps">H.O. IX/413/4, T.B. Road, S. T. Nagar, Thrissur, Kerala - 680 001</a>
                                             </li>
-                                            
                                             <li className="single-address">
                                                 <span>Ernakulam</span>
                                                 <a href="https://www.google.com/maps">DOOR No.V/679-C3(IV 652), K.V.Varkey Memorial Bldg.First Floor(Near KSRTC), Angamaly-683572, Ernakulam</a>
@@ -42,13 +42,17 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-9">
+
+                            {/* ── Nav Menus ── */}
+                            <div className="col-lg-9" style={{paddingTop:'50px'}}>
                                 <div className="footer-menu">
                                     <div className="row gy-5">
-                                        <div className="col-md-4 col-sm-6 d-flex justify-content-lg-center">
+
+                                        {/* ── Column 1: About ── */}
+                                        <div className="col-md-3 col-sm-6 d-flex justify-content-lg-center">
                                             <div className="footer-widget">
                                                 <div className="widget-title">
-                                                    <h5>Link's</h5>
+                                                    <h5>Links</h5>
                                                 </div>
                                                 <div className="menu-container">
                                                     <ul className="widget-list">
@@ -71,8 +75,17 @@ const Footer = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/our-clients">
-                                                                Our Clients
+                                                            <Link href="/milestone">
+                                                                Milestones
+                                                                <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
+                                                                    <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
+                                                                </svg>
+                                                            </Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/projects">
+                                                                Projects
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -81,7 +94,7 @@ const Footer = () => {
                                                         </li>
                                                         <li>
                                                             <Link href="/gallery">
-                                                               Gallery
+                                                                Gallery
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -106,7 +119,7 @@ const Footer = () => {
                                                                 </svg>
                                                             </Link>
                                                         </li>
-                                                         <li>
+                                                        <li>
                                                             <Link href="/career">
                                                                 Career's
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -119,7 +132,9 @@ const Footer = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-md-4 col-sm-6 d-flex justify-content-lg-center">
+
+                                        {/* ── Column 2: All Products ── */}
+                                        <div className="col-md-3 col-sm-6 d-flex justify-content-lg-center">
                                             <div className="footer-widget">
                                                 <div className="widget-title">
                                                     <h5>Products</h5>
@@ -137,7 +152,7 @@ const Footer = () => {
                                                         </li>
                                                         <li>
                                                             <Link href="/product/steel">
-                                                                Steel
+                                                                Steels
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -163,17 +178,8 @@ const Footer = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/product/logistics">
-                                                                Logistics
-                                                                <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
-                                                                    <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
-                                                                </svg>
-                                                            </Link>
-                                                        </li>
-                                                         <li>
                                                             <Link href="/product/abrasives-construction-chemicals">
-                                                                Abrasives & Construction Chemicals
+                                                                Abrasive Construction Chemicals
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -184,6 +190,55 @@ const Footer = () => {
                                                 </div>
                                             </div>
                                         </div>
+
+                                        {/* ── Column 3: Hospitality + Logistics ── */}
+                                        <div className="col-md-2 col-sm-6 d-flex justify-content-lg-center">
+                                            <div className="footer-widget">
+                                                <div className="widget-title">
+                                                    <h5>Hospitality</h5>
+                                                </div>
+                                                <div className="menu-container">
+                                                    <ul className="widget-list">
+                                                        <li>
+                                                            <Link href="/services/alite-enclaves">
+                                                                Alite Enclaves
+                                                                <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
+                                                                    <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
+                                                                </svg>
+                                                            </Link>
+                                                        </li>
+                                                        <li>
+                                                            <Link href="/services/neyy-vedyam">
+                                                                Neey Vedhyam
+                                                                <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
+                                                                    <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
+                                                                </svg>
+                                                            </Link>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div className="widget-title" style={{ marginTop: '24px' }}>
+                                                    <h5>Logistics</h5>
+                                                </div>
+                                                <div className="menu-container">
+                                                    <ul className="widget-list">
+                                                        <li>
+                                                            <Link href="/services/kavalakat-group">
+                                                                Kavalakat Group
+                                                                <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
+                                                                    <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
+                                                                </svg>
+                                                            </Link>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* ── Column 4: Contact ── */}
                                         <div className="col-md-4 col-sm-6 d-flex justify-content-lg-end">
                                             <ul className="contact-area">
                                                 <li>
@@ -214,7 +269,7 @@ const Footer = () => {
                                                         </div>
                                                         <div className="content">
                                                             <span>ADDRESS</span>
-                                                            <h6><a href="/contact"> S. T. Nagar, Thrissur, Kerala</a></h6>
+                                                            <h6><a href="/contact">S. T. Nagar, Thrissur, Kerala</a></h6>
                                                         </div>
                                                     </div>
                                                     <svg className="arrow" width={8} height={29} viewBox="0 0 8 29" xmlns="http://www.w3.org/2000/svg">
@@ -230,15 +285,17 @@ const Footer = () => {
                                                         </div>
                                                         <div className="content">
                                                             <span>SAY HELLO</span>
-                                                            <h6><a href="mailto:info@example.com">info@kavalakat.com</a></h6>
+                                                            <h6><a href="mailto:info@kavalakat.com">info@kavalakat.com</a></h6>
                                                         </div>
                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -247,7 +304,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-bottom">
                         <div className="copyright-area">
-                            <p>Copyright 2025 <Link href="/">Kavalakat</Link> | Design By <a href="https://mindstory.in/" >Mindstory</a></p>
+                            <p>Copyright 2025 <Link href="/">Kavalakat</Link> | Design By <a href="https://mindstory.in/">Mindstory</a></p>
                         </div>
                         <ul className="social-area">
                             <li>
@@ -273,7 +330,6 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-
     )
 }
 
