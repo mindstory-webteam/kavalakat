@@ -86,7 +86,7 @@ const InnerPageHeader: React.FC = () => {
   const aboutPaths: string[] = ['/about', '/our-process', '/our-clients', '/gallery'];
   const isAboutActive: boolean = aboutPaths.some((path: string) => pathname.startsWith(path));
 
-  const productPaths: string[] = ['/product', '/product/cement', '/product/steel','/product/sheet-pipes', '/product/white-cement-paint', '/product/logistics', '/product/abrasives-construction-chemicals'];
+  const productPaths: string[] = ['/product', '/product/cement', '/product/steel', '/product/sheet-pipes', '/product/white-cement-paint', '/product/logistics', '/product/abrasives-construction-chemicals'];
   const isProductActive: boolean = productPaths.some((path: string) => pathname.startsWith(path));
 
   const blogPaths: string[] = ['/blog', '/blog/details'];
@@ -101,7 +101,6 @@ const InnerPageHeader: React.FC = () => {
         <div className="right-sidebar-menu-wrap">
           <div className="sidebar-logo-area d-flex justify-content-between align-items-center">
             <div className="sidebar-logo-wrap">
-              {/* FIXED: Absolute path from root */}
               <Link href="/"><img width={157} height={34} alt="image" src="/assets/new-images/logo-1.png" /></Link>
             </div>
             <div className="right-sidebar-close-btn" onClick={toggleRightSidebar}>
@@ -192,31 +191,29 @@ const InnerPageHeader: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       <header className={`${state.scrollY > 20 ? "sticky" : ""} header-area style-1 inner-page`}>
         <div className="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
           <div className="company-logo">
-            {/* FIXED: Absolute path from root */}
             <Link href="/"><img width={157} height={34} alt="image" className="img-fluid" src="/assets/new-images/logo-1.png" /></Link>
           </div>
           <div className={`main-menu ${state.isSidebarOpen ? "show-menu" : ""}`}>
             <div className="mobile-logo-area d-lg-none d-flex align-items-center justify-content-between">
               <Link href="/" className="mobile-logo-wrap">
-                {/* FIXED: Absolute path from root */}
                 <img width={157} height={34} alt="image" className="img-fluid" src="/assets/new-images/logo-1.png" />
               </Link>
               <div className="menu-close-btn" onClick={toggleSidebar}>
                 <i className="bi bi-x" />
               </div>
             </div>
-            
+
             <ul className="menu-list">
               {/* Home - Single Menu */}
               <li className={pathname === "/" ? "active" : ""}>
                 <Link href="/">Home</Link>
               </li>
 
-              {/* About - Dropdown with Our Strengths, Clients, Gallery */}
+              {/* About - Dropdown with Our Strengths, Projects, Gallery */}
               <li className={`menu-item-has-children ${isAboutActive ? "active" : ""}`}>
                 <Link href="#" className="drop-down">
                   About
@@ -226,16 +223,18 @@ const InnerPageHeader: React.FC = () => {
                   </svg>
                 </Link>
                 <i onClick={() => toggleMenu("about")} className={`bi bi-${state.activeMenu === "about" ? "dash" : "plus"} dropdown-icon`} />
-
                 <ul className={`sub-menu ${state.activeMenu === "about" ? "d-block" : ""}`}>
-                   <li className={pathname === "/about" ? "active" : ""}>
+                  <li className={pathname === "/about" ? "active" : ""}>
                     <Link href="/about"><span>About</span></Link>
                   </li>
                   <li className={pathname === "/our-process" ? "active" : ""}>
                     <Link href="/our-process"><span>Our Strengths</span></Link>
                   </li>
-                  <li className={pathname === "/our-clients" ? "active" : ""}>
-                    <Link href="/our-clients"><span>Clients</span></Link>
+                   <li className={pathname === "/milestone" ? "active" : ""}>
+                    <Link href="/milestone"><span>Milestones</span></Link>
+                  </li>
+                  <li className={pathname === "/projects" ? "active" : ""}>
+                    <Link href="/projects"><span>Projects</span></Link>
                   </li>
                   <li className={pathname === "/gallery" ? "active" : ""}>
                     <Link href="/gallery"><span>Gallery</span></Link>
@@ -243,50 +242,63 @@ const InnerPageHeader: React.FC = () => {
                 </ul>
               </li>
 
-              {/* Products - Dropdown */}
-               <li className={`menu-item-has-children ${isProductActive ? "active" : ""}`}>
-                                <Link href="/product" className="drop-down">
-                                    Products
-                                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
-                                        <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
-                                    </svg>
-                                </Link>
-                                <i onClick={() => toggleMenu("products")} className={`bi bi-${state.activeMenu === "products" ? "dash" : "plus"} dropdown-icon`} />
-                                <ul className={`sub-menu ${state.activeMenu === "products" ? "d-block" : ""}`}>
-                                    <li className={pathname === "/product" ? "active" : ""}>
-                                        <Link href="/product"><span>All Products</span></Link>
-                                    </li>
-                                    <li className={pathname === "/product/steel" ? "active" : ""}>
-                                        <Link href="/product/steel"><span>Steels</span></Link>
-                                     
-                                    </li>
-                                    <li className={pathname === "/product/cement" ? "active" : ""}>
-                                    <Link href="/product/cement" > <span>Cement</span></Link>
-                                    
-                                    </li>
-                                    <li className={pathname === "/product/sheet-pipes" ? "active" : ""}>
-                                        
-                                        <Link href="/product/sheet-pipes" > <span>Sheet Pipes</span></Link>
-                                        
-                                    </li>
-                                    <li className={pathname === "/product/white-cement-paint" ? "active" : ""}>
-                                        
-                                        <Link href="/product/white-cement-paint" > <span>White Cement Paint</span></Link>
-                                        
-                                    </li>
-                                    <li className={pathname === "/product/logistics" ? "active" : ""}>
-                                       
-                                        <Link href="/product/logistics" > <span>Logistics</span></Link>
-                                        
-                                    </li>
-                                    <li className={pathname === "/product/abrasives-construction-chemicals" ? "active" : ""}>
-                                       
-                                     
-                                        <Link href="/product/abrasives-construction-chemicals" > <span>Abrasive Construction Chemicals</span></Link>
-                                    </li>
-                                </ul>
-                            </li>
+              {/* Products - Dropdown with Three Column Mega Menu */}
+              <li className={`menu-item-has-children ${isProductActive ? "active" : ""}`}>
+                <Link href="/product" className="drop-down">
+                  Products
+                  <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
+                    <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
+                  </svg>
+                </Link>
+                <i onClick={() => toggleMenu("products")} className={`bi bi-${state.activeMenu === "products" ? "dash" : "plus"} dropdown-icon`} />
+                <ul className={`sub-menu product-mega-submenu ${state.activeMenu === "products" ? "d-block" : ""}`}>
+                  {/* Column 1: All Products */}
+                  <li className="product-column">
+                    <div className="column-title">ALL PRODUCTS</div>
+                    <ul className="column-items">
+                      <li className={pathname === "/product/cement" ? "active" : ""}>
+                        <Link href="/product/cement"><span>Cement</span></Link>
+                      </li>
+                      <li className={pathname === "/product/steel" ? "active" : ""}>
+                        <Link href="/product/steel"><span>Steels</span></Link>
+                      </li>
+                      <li className={pathname === "/product/sheet-pipes" ? "active" : ""}>
+                        <Link href="/product/sheet-pipes"><span>Sheet Pipes</span></Link>
+                      </li>
+                      <li className={pathname === "/product/white-cement-paint" ? "active" : ""}>
+                        <Link href="/product/white-cement-paint"><span>White Cement Paint</span></Link>
+                      </li>
+                      <li className={pathname === "/product/abrasives-construction-chemicals" ? "active" : ""}>
+                        <Link href="/product/abrasives-construction-chemicals"><span>Abrasive Construction Chemicals</span></Link>
+                      </li>
+                    </ul>
+                  </li>
+
+                  {/* Column 2: Hospitality Products */}
+                  <li className="product-column">
+                    <div className="column-title">HOSPITALITY PRODUCTS</div>
+                    <ul className="column-items">
+                      <li className={pathname === "/services/alite-enclaves" ? "active" : ""}>
+                        <Link href="/services/alite-enclaves"><span>Alite Enclaves</span></Link>
+                      </li>
+                      <li className={pathname === "/services/neyy-vedyam" ? "active" : ""}>
+                        <Link href="/services/neyy-vedyam"><span>Neey Vedhyam</span></Link>
+                      </li>
+                    </ul>
+                  </li>
+
+                  {/* Column 3: Logistics */}
+                  <li className="product-column">
+                    <div className="column-title">LOGISTICS</div>
+                    <ul className="column-items">
+                      <li className={pathname === "/services/kavalakat-group" ? "active" : ""}>
+                        <Link href="/services/kavalakat-group"><span>Kavalakat Group</span></Link>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
               {/* Blog - Dropdown */}
               <li className={`menu-item-has-children ${isBlogActive ? "active" : ""}`}>
@@ -328,7 +340,7 @@ const InnerPageHeader: React.FC = () => {
                 </ul>
               </li>
             </ul>
-            
+
             <div className="contact-area d-lg-none d-flex">
               <div className="icon">
                 <svg width={22} height={22} viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
@@ -343,7 +355,7 @@ const InnerPageHeader: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="nav-right">
             <div className="contact-area d-lg-flex d-none">
               <div className="icon">
@@ -378,7 +390,7 @@ const InnerPageHeader: React.FC = () => {
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default InnerPageHeader
+export default InnerPageHeader;

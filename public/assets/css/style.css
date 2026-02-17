@@ -3395,6 +3395,264 @@ header.style-1.inner-page.sticky {
   animation: unset;
 }
 
+/* Product Mega Submenu - Three Column Layout */
+
+/* Make the product submenu wider to accommodate three columns */
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu {
+  min-width: 900px;
+  display: none; /* Hide by default */
+  flex-direction: row;
+  gap: 0;
+  padding: 20px 0;
+}
+
+/* Show on hover - Desktop only */
+@media (min-width: 992px) {
+  header.style-1 .main-menu > ul > li:hover > ul.sub-menu.product-mega-submenu {
+    display: flex;
+    animation: fade-down 0.3s linear;
+  }
+}
+
+@media (max-width: 1399px) {
+  header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu {
+    min-width: 750px;
+  }
+}
+
+/* Product Column Styling */
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu > li.product-column {
+  flex: 1;
+  padding: 0 25px;
+  border-right: 1px solid rgba(13, 23, 32, 0.08);
+  display: block;
+  position: relative;
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu > li.product-column:last-child {
+  border-right: none;
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu > li.product-column::after {
+  display: none;
+}
+
+/* Column Title Styling */
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-title {
+  color: var(--title-color);
+  font-family: var(--font-manrope);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--primary-color1);
+}
+
+/* Column Items List */
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li::after {
+  display: none;
+}
+
+/* Column Item Links - Same styling as existing submenu */
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a {
+  display: block;
+  padding: 0 10px;
+  font-family: var(--font-dmsans);
+  color: var(--title-color);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  transition: all 0.4s ease-out 0s;
+  position: relative;
+  border-radius: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid rgba(13, 23, 32, 0.08);
+  padding: 14px 0px 14px 10px;
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a span::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background: linear-gradient(90deg, #fff, var(--primary-color1), #fff);
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.4s ease-in;
+  z-index: 1;
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a svg {
+  fill: var(--title-color);
+  transition: all 0.4s ease-out 0s;
+  display: none;
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a:hover {
+  color: var(--primary-color1);
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a:hover svg {
+  fill: var(--primary-color1);
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a:hover span::before {
+  transform: scale(1);
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a.active {
+  color: var(--primary-color1);
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a.active svg {
+  fill: var(--primary-color1);
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a.active span::before {
+  transform: scale(1);
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li:last-child a span {
+  border-bottom: none;
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li:last-child a span::before {
+  display: none;
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li.active > a {
+  color: var(--primary-color1);
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li.active > a svg {
+  fill: var(--primary-color1);
+}
+
+header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li.active > a span::before {
+  transform: scale(1);
+}
+
+/* Engineering Header Variant */
+header.style-1.engineering-header .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-title {
+  border-bottom-color: var(--primary-color5);
+}
+
+header.style-1.engineering-header .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a span::before {
+  background: linear-gradient(90deg, #fff, var(--primary-color5), #fff);
+}
+
+header.style-1.engineering-header .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a:hover {
+  color: var(--primary-color5);
+}
+
+header.style-1.engineering-header .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a:hover svg {
+  fill: var(--primary-color5);
+}
+
+header.style-1.engineering-header .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a.active {
+  color: var(--primary-color5);
+}
+
+header.style-1.engineering-header .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a.active svg {
+  fill: var(--primary-color5);
+}
+
+header.style-1.engineering-header .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li.active > a {
+  color: var(--primary-color5);
+}
+
+header.style-1.engineering-header .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li.active > a svg {
+  fill: var(--primary-color5);
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 991px) {
+  /* Show when toggled on mobile */
+  header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu.d-block {
+    display: flex;
+  }
+  
+  header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu {
+    flex-direction: column;
+    min-width: 200px;
+    padding: 0;
+    padding-left: 10px;
+  }
+  
+  header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu > li.product-column {
+    border-right: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-title {
+    font-size: 13px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    border-bottom-width: 1px;
+  }
+  
+  header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a {
+    padding: 12px 0px;
+    font-size: 13px;
+  }
+  
+  header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a span {
+    padding: 0;
+    border-bottom: 1px solid rgba(13, 23, 32, 0.08);
+  }
+  
+  header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a span::before {
+    display: none;
+  }
+  
+  header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a:hover {
+    margin-left: 10px;
+  }
+  
+  header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li.active > a {
+    color: var(--primary-color1);
+  }
+  
+  header.style-1.engineering-header .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li > a:hover {
+    color: var(--primary-color5);
+  }
+  
+  header.style-1.engineering-header .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-items > li.active > a {
+    color: var(--primary-color5);
+  }
+}
+
 header.style-2 {
   position: absolute;
   width: 100%;

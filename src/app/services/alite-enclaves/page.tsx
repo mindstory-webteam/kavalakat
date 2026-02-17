@@ -16,152 +16,151 @@ import CompanyCard from '@/components/CompanyCard'
 
 const ProductPage = () => {
    
-  const [currentSlide, setCurrentSlide] = useState<number>(0)
-  
-    const [activeAccordion1, setActiveAccordion1] = useState<string | null>(null)
-    const [activeAccordion2, setActiveAccordion2] = useState<string | null>(null)
-  
-    // ✅ Correct ref type for setInterval
-    const autoSlideRef = useRef<NodeJS.Timeout | null>(null)
+   const [currentSlide, setCurrentSlide] = useState<number>(0)
+
+  const [activeAccordion1, setActiveAccordion1] = useState<string | null>(null)
+  const [activeAccordion2, setActiveAccordion2] = useState<string | null>(null)
+
+  // ✅ Correct ref type for setInterval
+  const autoSlideRef = useRef<NodeJS.Timeout | null>(null)
+
+  const testimonials = [
+    {
+      quote: 'Excellent quality production!',
+      text: 'Prices were competitive compared to other steel dealers nearby. Material quality was consistent, and there were no issues during fabrication or bending.',
+      author: 'Steve Mathew',
+      role: 'Founder, Egenslab',
+      img: '/assets/new-images/icon-person/5856.jpg',
+    },
+    {
+      quote: 'Best communication & deliver',
+      text: 'They were very transparent about steel specifications and weights. No confusion or hidden charges at all.',
+      author: 'Ram Mohan',
+      role: 'Founder, Triprex',
+      img: '/assets/new-images/icon-person/5856.jpg',
+    },
+    {
+      quote: 'Outstanding material quality!',
+      text: 'Delivery updates were timely and accurate. Overall experience felt honest, local, and dependable.',
+      author: 'Akash Menon',
+      role: 'Founder, Axleo',
+      img: '/assets/new-images/icon-person/5856.jpg',
+    },
+  ]
 
 
-    const testimonials = [
-        {
-            quote: "Excellent quality production!",
-            text: "Very satisfied with Kavalakat Agencies’ logistics service. They kept me updated on truck arrivals and unloaded materials carefully at the site. Communication was clear throughout delivery.",
-            author: "Ramesh",
-            role: "Founder, Egenslab",
-            img: "/assets/new-images/icon-person/5856.jpg"
-        },
-        {
-            quote: "Best communication & deliver",
-            text: "Reliable logistics partner for transporting construction supplies across Kerala. Delivery team reached on time, managed loading efficiently, and ensured no breakage. Great service for busy contractors.",
-            author: "Joseph",
-            role: "Founder, Triprex",
-            img: "/assets/new-images/icon-person/5856.jpg"
-        },
-        {
-            quote: "Outstanding material quality!",
-            text: "We used their logistics for heavy materials delivery. Staff arranged transport quickly and handled site delivery professionally. Very responsive team and stress-free coordination overall. ",
-            author: "Aswin Raj",
-            role: "Founder, Axleo",
-            img: "/assets/new-images/icon-person/5856.jpg"
-        },
-       
-    ]
 
-
-       const companies = [
+  const companies = [
     {
-      logo: '/assets/new-images/products/log-vec/3wheeler.jpg',
-      logoAlt: '3 Wheeler Logo',
-      companyName: '3 Wheeler',
+      logo: '/assets/new-images/products/steel-partens/steel1.jpg',
+      logoAlt: 'Vizag Steel Logo',
+      companyName: 'VIZAG',
       description:
-        'The company has a consolidated capacity* of 102.75 Million Tonnes Per Annum (MTPA) of grey cement. UltraTech Cement has 20 integrated plants, 1 clinkerisation plant, 26 grinding units and 7 bulk terminals. Its operations span across India, UAE, Bahrain, Bangladesh and Sri Lanka.',
+        'RINL, VSP has been a forerunner in the exploring new technologies in steel making and stands tall in its stature being the pioneer of various new techniques in the field. Be it the use of Pulverised Coal Injection in Blast Furnace or the circular coolers in Sinter Plant, VSP ...',
     },
     {
-      logo: '/assets/new-images/products/log-vec/crane.jpg',
-      logoAlt: 'Crane Logo',
-      companyName: 'Crane',
+      logo: '/assets/new-images/products/steel-partens/steel2.jpg',
+      logoAlt: 'Tulsyan NEC Steel Logo',
+      companyName: 'TULSYAN',
       description:
-        "As one of the foremost companies in the Indian cement and concrete industry, we at ACC are driven by the inherent need of providing products and solutions that will create the new economic,",
+        "Tulsyan NEC Steel is one of India's leading manufacturers of Thermo Mechanically Treated (TMT) Bars. The company was initially known as the National Engineering Company until the early 90s, when it was renamed Tulsyan NEC. Today, Tulsyan is listed on the Indian stock exchange.",
     },
     {
-      logo: '/assets/new-images/products/log-vec/hgv.jpg',
-      logoAlt: 'HGV Logo',
-      companyName: 'HGV',
+     logo: '/assets/new-images/products/steel-partens/steel3.jpg',
+      logoAlt: 'Tata Tiscon Logo',
+      companyName: 'TATA',
       description:
-        "Anjani Cement is a popular brand in south India for its quality and commitment to service. Starting with initial production capacity of 0.3 million tonnes per annum in 1999, the Company has now achieved a quantum shift in its production capacity to 1.2 million tonnes .",
+        'The Tata group comprises over 100 operating companies in seven business sectors: communications and information technology, engineering, materials, services, energy, consumer products and chemicals.',
     },
     {
-      logo: '/assets/new-images/products/log-vec/lgv.jpg',
-      logoAlt: 'LGV (16) Logo',
-      companyName: 'LGV (16)',
+     logo: '/assets/new-images/products/steel-partens/steel4.jpg',
+      logoAlt: 'Tata Tiscon Logo',
+      companyName: 'SAIL',
       description:
-        "Vicat is a pioneer in cement manufacturing since its invention by Louis Vicat in 1817. Vicat Group, France is a global cement organisation with offices in 11 countries. It’s main business interests are Cement, Ready-Mixed Concrete, Concrete Product (Precast) and Aggregates.",
+        'Steel Authority of India Limited (SAIL) is the largest steel-making company in India and one of the seven Maharatna’s of the country’s Central Public Sector Enterprises.',
     },
     {
-      logo: '/assets/new-images/products/log-vec/taurus.jpg',
-      logoAlt: 'Taurus Logo',
-      companyName: 'Taurus',
+     logo: '/assets/new-images/products/steel-partens/steel5.jpg',
+      logoAlt: 'Tata Tiscon Logo',
+      companyName: 'KAIRALI TMT',
       description:
-        "Launched as a corollary to the magnificent success of Orient Gold 53 Grade Cement, Birla A1 Premium Cement has carved a niche in the market and is already among the best known brands in south-west India.",
+        'Kairali TMT Steel Bars is the flagship division of Kairali Ventures. Our legacy of over 125 years in the Steel Industry has secured us a top most spot as a leading producer of quality TMT Steel Bars in South India',
     },
+    
     {
-      logo: '/assets/new-images/products/log-vec/Trailer.jpg',
-      logoAlt: 'Trailer Logo',
-      companyName: 'Dalmia',
+     logo: '/assets/new-images/products/steel-partens/steel6.jpg',
+      logoAlt: 'Tata Tiscon Logo',
+      companyName: 'JSW',
       description:
-        "Apart from world-class cement manufacturing plants in India, what makes us unique as a cement manufacturer is our constant ability to innovate. On the key efficiency parameters, we rank right up there with the best of cement companies in the industry.",
-    },
-   
+        'The JSW Group is known across the country as “strategic first mover”. It is a $13 billion leading conglomerate, with a presence across all the vital sectors of the Indian economy. ',
+    }
     
   ];
 
-    /* ---------------- AUTO SLIDER ---------------- */
-   
-     useEffect(() => {
-       startAutoSlide()
-       return () => stopAutoSlide()
-     }, [])
-   
-     const startAutoSlide = () => {
-       stopAutoSlide()
-       autoSlideRef.current = setInterval(() => {
-         setCurrentSlide((prev) => (prev + 1) % testimonials.length)
-       }, 4000)
-     }
-   
-     const stopAutoSlide = () => {
-       if (autoSlideRef.current) {
-         clearInterval(autoSlideRef.current)
-       }
-     }
-   
-     const nextSlide = () => {
-       stopAutoSlide()
-       setCurrentSlide((prev) => (prev + 1) % testimonials.length)
-       startAutoSlide()
-     }
-   
-     const prevSlide = () => {
-       stopAutoSlide()
-       setCurrentSlide(
-         (prev) => (prev - 1 + testimonials.length) % testimonials.length
-       )
-       startAutoSlide()
-     }
-   
-     /* ---------------- ACCORDION ---------------- */
-   
-     const toggleAccordion1 = (id: string) => {
-       setActiveAccordion1(activeAccordion1 === id ? null : id)
-     }
-   
-     const toggleAccordion2 = (id: string) => {
-       setActiveAccordion2(activeAccordion2 === id ? null : id)
-     }
-   
+  /* ---------------- AUTO SLIDER ---------------- */
+
+  useEffect(() => {
+    startAutoSlide()
+    return () => stopAutoSlide()
+  }, [])
+
+  const startAutoSlide = () => {
+    stopAutoSlide()
+    autoSlideRef.current = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % testimonials.length)
+    }, 4000)
+  }
+
+  const stopAutoSlide = () => {
+    if (autoSlideRef.current) {
+      clearInterval(autoSlideRef.current)
+    }
+  }
+
+  const nextSlide = () => {
+    stopAutoSlide()
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length)
+    startAutoSlide()
+  }
+
+  const prevSlide = () => {
+    stopAutoSlide()
+    setCurrentSlide(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    )
+    startAutoSlide()
+  }
+
+  /* ---------------- ACCORDION ---------------- */
+
+  const toggleAccordion1 = (id: string) => {
+    setActiveAccordion1(activeAccordion1 === id ? null : id)
+  }
+
+  const toggleAccordion2 = (id: string) => {
+    setActiveAccordion2(activeAccordion2 === id ? null : id)
+  }
+
 
     return (
         <>
             <InnerPageHeader />
           
-            <Breadcrumb title="Product Cement" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-3.jpeg' />
+            <Breadcrumb title="Product Steel" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-3.jpeg' />
             
             <div className="product-details-top-area pt-120 mb-120" id="scroll-section">
                 <div className="container">
                     <div className="row gy-md-5 gy-4 align-items-lg-end">
                         <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="details-content">
-                                <h2>Kavalakat Agencies – Logistics in Kerala</h2>
-                                <p>Kavalakat Agencies offers comprehensive logistics support as part of its building materials supply chain, backed by a dedicated fleet of vehicles that ensure timely delivery and efficient transport of construction products across central Kerala. Their logistics services include a variety of transport solutions — from trailers, heavy goods vehicles (HGV), light goods vehicles (LGV), cranes, to specialized transport formats — designed to meet the varied needs of contractors and builders.</p>
-                                <p>With decades of industry experience and strong coordination between logistics and supply operations, Kavalakat Agencies ensures smooth material movement, reduced delays, and reliable last-mile delivery, enhancing overall project execution for customers.</p>
+                                <h2>Kavalakat Agencies – Reliable Steel Supplier in Kerala</h2>
+                                <p>Supplying high-quality steel products to builders, contractors, and construction professionals across Kerala, Kavalakat Agencies offers a strong portfolio of trusted steel brands suited for residential, commercial, and infrastructure projects. As highlighted on their steel page, the company deals with leading manufacturers such as Vizag, Tulsyan, Tata, SAIL, Kairali TMT, and JSW, ensuring strength, durability, and compliance with industry standards. </p>
+                                <p>With decades of experience in the building materials sector, Kavalakat Agencies is known for reliable supply, timely delivery, competitive pricing, and customer-focused service. Their commitment to quality steel solutions helps ensure long-lasting and structurally sound construction outcomes for projects of all scales.</p>
                             </div>
                         </div>
                         <div className="col-lg-4 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="product-img">
-                                <Image width={340} height={270} src="/assets/new-images/products/p-6.jpeg" alt="" />
+                                <Image width={340} height={270} src="/assets/new-images/products/p-2.jpeg" alt="" />
                             </div>
                         </div>
                     </div>
@@ -178,42 +177,40 @@ const ProductPage = () => {
                                     <Image 
                                         width={650} 
                                         height={650} 
-                                        src="/assets/new-images/about-page/Logistics/log.png" 
+                                        src="/assets/new-images/about-page/steel/steel-prodect-page.png" 
                                         alt="FAQ" 
                                     />
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="faq-content-area p-4">
-                                    <h2 className="mb-4">Logistics Products</h2>
+                                    <h2 className="mb-4">Steel Products</h2>
+                                    
                                     <div className="faq-wrap">
                                         <div className="accordion" id="accordionExample">
                                             {[
                                                 {
                                                     id: 'collapseOne',
-                                                    title: 'Dedicated Logistics Infrastructure',
-                                                    content: 'Operates a well-maintained fleet of vehicles to handle safe and efficient transportation of building materials of all sizes and volumes.'
+                                                    title: 'Trusted Steel Supplier',
+                                                    content: 'A reliable name in the building materials industry, delivering certified steel products that meet structural strength and quality standards.'
                                                 },
                                                 {
                                                     id: 'collapseTwo',
-                                                    title: 'Timely & Reliable Delivery',
-                                                    content: 'Ensures on-time delivery to project sites, helping customers maintain construction schedules without delays.'
+                                                    title: 'Association with Leading Brands',
+                                                    content: 'Partnered with top-rated steel manufacturers to provide high-performance TMT bars and steel products for all construction requirements.'
                                                 },
                                                 {
                                                     id: 'collapseThree',
-                                                    title: 'Versatile Transport Solutions',
-                                                    content: 'Provides multiple logistics options including heavy vehicles, light vehicles, cranes, and specialized carriers to meet diverse project requirements.'
+                                                    title: 'Quality Assurance & Durability',
+                                                    content: 'Every steel product supplied is selected for durability, load-bearing capacity, and long-term performance in residential and commercial projects.'
                                                 },
                                                 {
                                                     id: 'collapseFour',
-                                                    title: 'Safe Handling & Material Protection',
-                                                    content: 'Implements proper loading, handling, and transit practices to protect materials from damage during transportation.'
+                                                    title: 'Competitive Pricing Advantage',
+                                                    content: 'Offers premium steel materials at competitive market prices, ensuring value without compromising on quality.'
                                                 },
-                                                {
-                                                    id: 'collapseFive',
-                                                    title: 'End-to-End Supply Coordination',
-                                                    content: 'Integrates logistics seamlessly with material supply operations, offering smooth coordination, real-time support, and dependable service.'
-                                                }
+                                                
+                                                     
                                             ].map((item, index) => (
                                                 <div className="accordion-item mb-3 animated-accordion" key={item.id}>
                                                     <h2 className="accordion-header">
@@ -244,6 +241,7 @@ const ProductPage = () => {
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                          <Link className="primary-btn1 black-bg" href="/contact">
                             <span>Contact With Us
@@ -258,123 +256,16 @@ const ProductPage = () => {
                             </svg>
                         </Link>
                     </div>
+                    
                 </div>
+                
             </div>
 
-            {/* Section 2: Why Choose Us */}
-{/* <div className="home2-why-choose-us-section two mb-120">
-  <div className="container">
-    <div className="row g-4 align-items-center justify-content-between mb-60">
-      <div className="col-xl-6 col-lg-8">
-        <div className="section-title">
-          <span>Product Features</span>
-          <h2>Cold-Rolled Coil Products</h2>
-        </div>
-      </div>
-    </div>
 
-    <div className="row justify-content-xl-end">
-      <div className="col-xl-11">
-        <div className="faq-content">
-          <div className="accordion" id="accordionTravel">
 
-            {[
-              {
-                id: 'travelcollapseOne',
-                num: '01',
-                title: 'Solutions Expert',
-                img: '/assets/img/home2/why-choose-img1.jpg',
-                content:
-                  'We provide expert solutions tailored to industry needs, ensuring efficiency, reliability, and high-performance materials for every application.'
-              },
-              {
-                id: 'travelcollapseTwo',
-                num: '02',
-                title: 'Trusted Partner',
-                img: '/assets/img/home2/why-choose-img2.jpg',
-                content:
-                  'As a trusted partner, we prioritize transparency, consistency, and long-term relationships built on quality and trust.'
-              },
-              {
-                id: 'travelcollapseThree',
-                num: '03',
-                title: 'Driving Innovation',
-                img: '/assets/img/home2/why-choose-img3.jpg',
-                content:
-                  'We continuously innovate through advanced processes and modern technology to deliver superior product performance.'
-              },
-              {
-                id: 'travelcollapseFour',
-                num: '04',
-                title: 'Material Science Excellence',
-                img: '/assets/img/home2/why-choose-img4.jpg',
-                content:
-                  'Our focus on material science enhances durability, strength, and sustainability across all product lines.'
-              },
-              {
-                id: 'travelcollapseFive',
-                num: '05',
-                title: 'Quality as Standard',
-                img: '/assets/img/home2/why-choose-img5.jpg',
-                content:
-                  'Every product meets strict quality standards, ensuring consistent performance and long-term reliability.'
-              }
-            ].map((item) => (
-              <div className="accordion-item mb-3 animated-accordion" key={item.id}>
-                <h2 className="accordion-header">
-                  <button
-                    className={`accordion-button ${
-                      activeAccordion2 === item.id ? '' : 'collapsed'
-                    }`}
-                    type="button"
-                    onClick={() => toggleAccordion2(item.id)}
-                  >
-                    <span className="accordion-number">{item.num}.</span>
-                    {item.title}
-                  </button>
-                </h2>
-
-                <div
-                  className={`accordion-collapse ${
-                    activeAccordion2 === item.id ? 'show' : ''
-                  }`}
-                  style={{
-                    maxHeight: activeAccordion2 === item.id ? '600px' : '0',
-                    opacity: activeAccordion2 === item.id ? 1 : 0,
-                    transform:
-                      activeAccordion2 === item.id
-                        ? 'translateY(0)'
-                        : 'translateY(-10px)',
-                    overflow: 'hidden',
-                    transition: 'all 0.45s ease'
-                  }}
-                >
-                  <div className="accordion-body">
-                    <div className="content-wrapper">
-                      <Image
-                        src={item.img}
-                        alt={item.title}
-                        width={283}
-                        height={170}
-                        className="feature-img"
-                      />
-
-                      <div className="text-content">
-                        <p>{item.content}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> */}
-{/* Steel Partners Section with Proper Heading Structure */}
+ 
+        
+          {/* Steel Partners Section with Proper Heading Structure */}
 <div className="steel-partners-section mb-120">
   <div className="container">
     {/* Section Header - Matching Screenshot Style */}
@@ -512,6 +403,120 @@ const ProductPage = () => {
     }
   `}</style>
 </div>
+       
+            {/* Section 2: Why Choose Us */}
+{/* <div className="home2-why-choose-us-section two mb-120">
+  <div className="container">
+    <div className="row g-4 align-items-center justify-content-between mb-60">
+      <div className="col-xl-6 col-lg-8">
+        <div className="section-title">
+          <span>Product Features</span>
+          <h2>Cold-Rolled Coil Products</h2>
+        </div>
+      </div>
+    </div>
+
+    <div className="row justify-content-xl-end">
+      <div className="col-xl-11">
+        <div className="faq-content">
+          <div className="accordion" id="accordionTravel">
+
+            {[
+              {
+                id: 'travelcollapseOne',
+                num: '01',
+                title: 'Solutions Expert',
+                img: '/assets/new-images/products/steel-partens/steel1.jpg',
+                content:
+                  'We provide expert solutions tailored to industry needs, ensuring efficiency, reliability, and high-performance materials for every application.'
+              },
+              {
+                id: 'travelcollapseTwo',
+                num: '02',
+                title: 'Trusted Partner',
+                img: '/assets/new-images/products/steel-partens/steel2.jpg',
+                content:
+                  'As a trusted partner, we prioritize transparency, consistency, and long-term relationships built on quality and trust.'
+              },
+              {
+                id: 'travelcollapseThree',
+                num: '03',
+                title: 'Driving Innovation',
+                img: '/assets/new-images/products/steel-partens/steel3.jpg',
+                content:
+                  'We continuously innovate through advanced processes and modern technology to deliver superior product performance.'
+              },
+              {
+                id: 'travelcollapseFour',
+                num: '04',
+                title: 'Material Science Excellence',
+                img: '/assets/new-images/products/steel-partens/steel4.jpg',
+                content:
+                  'Our focus on material science enhances durability, strength, and sustainability across all product lines.'
+              },
+              {
+                id: 'travelcollapseFive',
+                num: '05',
+                title: 'Quality as Standard',
+                img: '/assets/new-images/products/steel-partens/steel5.jpg',
+                content:
+                  'Every product meets strict quality standards, ensuring consistent performance and long-term reliability.'
+              }
+            ].map((item) => (
+              <div className="accordion-item mb-3 animated-accordion" key={item.id}>
+                <h2 className="accordion-header">
+                  <button
+                    className={`accordion-button ${
+                      activeAccordion2 === item.id ? '' : 'collapsed'
+                    }`}
+                    type="button"
+                    onClick={() => toggleAccordion2(item.id)}
+                  >
+                    <span className="accordion-number">{item.num}.</span>
+                    {item.title}
+                  </button>
+                </h2>
+
+                <div
+                  className={`accordion-collapse ${
+                    activeAccordion2 === item.id ? 'show' : ''
+                  }`}
+                  style={{
+                    maxHeight: activeAccordion2 === item.id ? '600px' : '0',
+                    opacity: activeAccordion2 === item.id ? 1 : 0,
+                    transform:
+                      activeAccordion2 === item.id
+                        ? 'translateY(0)'
+                        : 'translateY(-10px)',
+                    overflow: 'hidden',
+                    transition: 'all 0.45s ease'
+                  }}
+                >
+                  <div className="accordion-body">
+                    <div className="content-wrapper">
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        width={283}
+                        height={170}
+                        className="feature-img"
+                      />
+
+                      <div className="text-content">
+                        <p>{item.content}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> */}
 
 
           {/* Section 3: Testimonials */}

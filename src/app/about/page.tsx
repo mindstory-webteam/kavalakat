@@ -11,6 +11,7 @@ import HomePageTeamSection from "@/components/HomePageTeamSection";
 import HomepageBlogSection from "@/components/HomepageBlogSection";
 import FooterTop from "@/components/FooterTop";
 import Footer from "@/components/Footer";
+import MilestoneSection from "@/components/Milestonesection";
 
 
 
@@ -24,6 +25,7 @@ const AboutPage: React.FC = () => {
             <HomePageAboutFeatureSection />
              <HomaPageVideoSection />
       <HomePageCounterSection />
+      <MilestoneSection />
       <HomePageTeamSection />
       <HomepageBlogSection />
       <FooterTop />

@@ -262,8 +262,11 @@ const Header: React.FC = () => {
                                     <li className={pathname === "/our-process" ? "active" : ""}>
                                         <Link href="/our-process"><span>Our Strengths</span></Link>
                                     </li>
-                                    <li className={pathname === "/our-clients" ? "active" : ""}>
-                                        <Link href="/our-clients"><span>Clients</span></Link>
+                                    <li className={pathname === "/milestone" ? "active" : ""}>
+                                        <Link href="/milestone"><span>Milestones</span></Link>
+                                    </li>
+                                    <li className={pathname === "/projects" ? "active" : ""}>
+                                        <Link href="/projects"><span>Projects</span></Link>
                                     </li>
                                     <li className={pathname === "/gallery" ? "active" : ""}>
                                         <Link href="/gallery"><span>Gallery</span></Link>
@@ -271,7 +274,7 @@ const Header: React.FC = () => {
                                 </ul>
                             </li>
 
-                            {/* Products - Dropdown */}
+                            {/* Products - Dropdown with Three Column Layout - REORDERED */}
                             <li className={`menu-item-has-children ${isProductActive ? "active" : ""}`}>
                                 <Link href="/product" className="drop-down">
                                     Products
@@ -281,37 +284,53 @@ const Header: React.FC = () => {
                                     </svg>
                                 </Link>
                                 <i onClick={() => toggleMenu("products")} className={`bi bi-${state.activeMenu === "products" ? "dash" : "plus"} dropdown-icon`} />
-                                <ul className={`sub-menu ${state.activeMenu === "products" ? "d-block" : ""}`}>
-                                    <li className={pathname === "/product" ? "active" : ""}>
-                                        <Link href="/product"><span>All Products</span></Link>
+                                <ul className={`sub-menu product-mega-submenu ${state.activeMenu === "products" ? "d-block" : ""}`}>
+                                    {/* Column 1: All Products - FIRST */}
+                                    <li className="product-column">
+                                        <div className="column-title">ALL PRODUCTS</div>
+                                        <ul className="column-items">
+                                           
+
+                                                                                        <li className={pathname === "/product/cement" ? "active" : ""}>
+                                                <Link href="/product/cement"><span>Cement</span></Link>
+                                            </li>
+                                            <li className={pathname === "/product/steel" ? "active" : ""}>
+                                                <Link href="/product/steel"><span>Steels</span></Link>
+                                            </li>
+                                            <li className={pathname === "/product/sheet-pipes" ? "active" : ""}>
+                                                <Link href="/product/sheet-pipes"><span>Sheet Pipes</span></Link>
+                                            </li>
+                                            <li className={pathname === "/product/white-cement-paint" ? "active" : ""}>
+                                                <Link href="/product/white-cement-paint"><span>White Cement Paint</span></Link>
+                                            </li>
+                                            <li className={pathname === "/product/abrasives-construction-chemicals" ? "active" : ""}>
+                                                <Link href="/product/abrasives-construction-chemicals"><span>Abrasive Construction Chemicals</span></Link>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li className={pathname === "/product/steel" ? "active" : ""}>
-                                        <Link href="/product/steel"><span>Steels</span></Link>
-                                     
-                                    </li>
-                                    <li className={pathname === "/product/cement" ? "active" : ""}>
-                                    <Link href="/product/cement" > <span>Cement</span></Link>
                                     
+                                    {/* Column 2: Hospitality Products - SECOND */}
+                                    <li className="product-column">
+                                        <div className="column-title">HOSPITALITY PRODUCTS</div>
+                                        <ul className="column-items">
+                                             <li className={pathname === "/services/alite-enclaves" ? "active" : ""}>
+                                                <Link href="/services/alite-enclaves"><span>Alite Enclaves</span></Link>
+                                            </li>
+                                            <li className={pathname === "/services/neyy-vedyam" ? "active" : ""}>
+                                                <Link href="/services/neyy-vedyam"><span>Neey Vedhyam</span></Link>
+                                            </li>
+
+                                        </ul>
                                     </li>
-                                    <li className={pathname === "/product/sheet-pipes" ? "active" : ""}>
-                                        
-                                        <Link href="/product/sheet-pipes" > <span>Sheet Pipes</span></Link>
-                                        
-                                    </li>
-                                    <li className={pathname === "/product/white-cement-paint" ? "active" : ""}>
-                                        
-                                        <Link href="/product/white-cement-paint" > <span>White Cement Paint</span></Link>
-                                        
-                                    </li>
-                                    <li className={pathname === "/product/logistics" ? "active" : ""}>
-                                       
-                                        <Link href="/product/logistics" > <span>Logistics</span></Link>
-                                        
-                                    </li>
-                                    <li className={pathname === "/product/abrasives-construction-chemicals" ? "active" : ""}>
-                                       
-                                     
-                                        <Link href="/product/abrasives-construction-chemicals" > <span>Abrasive Construction Chemicals</span></Link>
+                                    
+                                    {/* Column 3: Logistics - THIRD */}
+                                    <li className="product-column">
+                                        <div className="column-title">LOGISTICS</div>
+                                        <ul className="column-items">
+                                            <li className={pathname === "/services/kavalakat-group" ? "active" : ""}>
+                                                <Link href="/services/kavalakat-group"><span>Kavalakat Group</span></Link>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
@@ -347,15 +366,11 @@ const Header: React.FC = () => {
                                 </Link>
                                 <i onClick={() => toggleMenu("contact")} className={`bi bi-${state.activeMenu === "contact" ? "dash" : "plus"} dropdown-icon`} />
                                 <ul className={`sub-menu ${state.activeMenu === "contact" ? "d-block" : ""}`}>
-                                    <li className={pathname === "/career" ? "active" : ""}>
+                                    <li className={pathname === "/contact" ? "active" : ""}>
                                      <Link href="/contact"><span> Contact</span></Link>
-                                        
-                                        
                                     </li>
                                     <li className={pathname === "/career" ? "active" : ""}>
                                      <Link href="/career"><span> Careers</span></Link>
-                                        
-                                        
                                     </li>
                                 </ul>
                             </li>
