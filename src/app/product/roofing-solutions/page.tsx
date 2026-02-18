@@ -79,13 +79,14 @@ const companies = [
     description:
       'JSW Pragathi is a high-quality color-coated steel roofing solution from JSW Steel. Engineered for strength and durability, it provides excellent corrosion resistance and aesthetic finish for industrial and residential structures.',
   },
+   {
+    logo: '/assets/new-images/products/sheet-pipies-partens/sheetpipe33.jpg',
+    logoAlt: 'APL APOLLO Logo',
+    companyName: 'APL APOLLO',
+    description:
+      'APL Apollo Tubes Limited is one of India’s leading manufacturers of structural steel tubes and pipes. The company is known for its innovative product range, high-quality standards, and advanced manufacturing technology. ',
+  },
   
-  
-  
- 
- 
- 
-
 ]
   /* ---------------- AUTO SLIDER ---------------- */
 

@@ -52,8 +52,45 @@ const ProductPage = () => {
 
 
       const companies = [
+    {
+      logo: '/assets/new-images/products/cement-parterns/cement100.jpg',
+      logoAlt: 'ULTRATECH Logo',
+      companyName: 'ULTRATECH',
+      description:
+        'The company has a consolidated capacity* of 102.75 Million Tonnes Per Annum (MTPA) of grey cement. UltraTech Cement has 20 integrated plants, 1 clinkerisation plant, 26 grinding units and 7 bulk terminals. Its operations span across India, UAE, Bahrain, Bangladesh and Sri Lanka.',
+    },
+    {
+      logo: '/assets/new-images/products/cement-parterns/cement11.jpg',
+      logoAlt: 'ACC Logo',
+      companyName: 'ACC',
+      description:
+        "As one of the foremost companies in the Indian cement and concrete industry, we at ACC are driven by the inherent need of providing products and solutions that will create the new economic,",
+    },
    
-     {
+    {
+      logo: '/assets/new-images/products/cement-parterns/cement22.jpg',
+      logoAlt: 'Bharathi Logo',
+      companyName: 'Bharathi',
+      description:
+        "Vicat is a pioneer in cement manufacturing since its invention by Louis Vicat in 1817. Vicat Group, France is a global cement organisation with offices in 11 countries. It’s main business interests are Cement, Ready-Mixed Concrete, Concrete Product (Precast) and Aggregates.",
+    },
+   
+    {
+      logo: '/assets/new-images/products/cement-parterns/cement55.jpg',
+      logoAlt: 'Dalmia Logo',
+      companyName: 'Dalmia',
+      description:
+        "Apart from world-class cement manufacturing plants in India, what makes us unique as a cement manufacturer is our constant ability to innovate. On the key efficiency parameters, we rank right up there with the best of cement companies in the industry.",
+    },{
+      logo: '/assets/new-images/products/cement-parterns/cement66.jpg',
+      logoAlt: 'JSW Logo',
+      companyName: 'JSW',
+      description:
+        "JSW Cement’s flagship plant in Nandyal uses world-class technology (including the advanced Combi Finish Mode Roller Press Circuit and automated loading system) to manufacture cement. It also won prestigious awards for its energy-saving processes.",
+    },
+    
+    
+    {
       logo: '/assets/new-images/products/cement-parterns/AMBUJA-CEMENT-1.jfif',
       logoAlt: 'AMBUJA CEMENT Logo',
       companyName: 'AMBUJA CEMENT',

@@ -262,69 +262,9 @@ const page = () => {
           gap: 28px;
         }
 
-        /* Hero card — spans full width */
-        .psc-card-hero {
-          grid-column: 1 / -1;
-          display: grid;
-          grid-template-columns: 1.15fr 1fr;
-          background: #fff;
-         
-          overflow: hidden;
-          box-shadow: 0 6px 32px rgba(1,96,178,0.12);
-          transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), box-shadow 0.38s;
-        }
-        .psc-card-hero:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 18px 56px rgba(1,96,178,0.18);
-        }
-        .psc-card-hero .psc-img-wrap {
-          position: relative;
-          overflow: hidden;
-          min-height: 340px;
-        }
-        .psc-card-hero .psc-img-wrap img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-          transition: transform 0.7s ease;
-        }
-        .psc-card-hero:hover .psc-img-wrap img { transform: scale(1.05); }
-        .psc-card-hero .psc-img-wrap::after {
-          content: '';
-          position: absolute; inset: 0;
-          background: linear-gradient(135deg, rgba(1,96,178,0.55) 0%, transparent 65%);
-          opacity: 0.6;
-          transition: opacity 0.38s;
-        }
-        .psc-card-hero:hover .psc-img-wrap::after { opacity: 0.8; }
-
-        .psc-card-hero .psc-body {
-          padding: 44px 40px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        .psc-card-hero .psc-body h3 {
-          font-family: var(--font-manrope);
-          font-size: clamp(22px, 2.4vw, 30px);
-          font-weight: 800;
-          color: var(--dark-title-color);
-          line-height: 1.2;
-          margin: 0 0 12px;
-          letter-spacing: -0.02em;
-        }
-        .psc-card-hero .psc-body p {
-          font-size: 15px;
-          line-height: 1.76;
-          color: var(--text-color);
-          margin: 0 0 24px;
-        }
-
         /* Regular cards */
         .psc-card {
           background: #fff;
-         
           overflow: hidden;
           box-shadow: 0 4px 24px rgba(1,96,178,0.1), 0 1px 4px rgba(0,0,0,0.04);
           transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), box-shadow 0.38s;
@@ -389,8 +329,7 @@ const page = () => {
           transition: opacity 0.28s, transform 0.28s;
           box-shadow: 0 4px 14px rgba(0,0,0,0.15);
         }
-        .psc-card:hover .psc-arr,
-        .psc-card-hero:hover .psc-arr { opacity: 1; transform: translateY(0) scale(1); }
+        .psc-card:hover .psc-arr { opacity: 1; transform: translateY(0) scale(1); }
         .psc-arr svg { fill: var(--primary-color1); }
 
         /* Card body */
@@ -462,88 +401,12 @@ const page = () => {
         .psc-link svg { fill: var(--primary-color1); transition: transform 0.2s; }
         .psc-link:hover svg { transform: translate(2px,-2px); }
 
-        /* ── CTA banner ── */
-        .psc-cta {
-          background: var(--primary-color1);
-          border-radius: 16px;
-          padding: 60px 52px;
-          margin-top: 72px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 32px;
-          position: relative;
-          overflow: hidden;
-        }
-        .psc-cta::before {
-          content: '';
-          position: absolute;
-          top: -80px; right: -80px;
-          width: 280px; height: 280px;
-          border-radius: 50%;
-          background: rgba(255,255,255,0.06);
-          pointer-events: none;
-        }
-        .psc-cta::after {
-          content: '';
-          position: absolute;
-          bottom: -60px; left: 35%;
-          width: 200px; height: 200px;
-          border-radius: 50%;
-          background: rgba(255,255,255,0.04);
-          pointer-events: none;
-        }
-        .psc-cta h3 {
-          font-family: var(--font-manrope);
-          font-size: clamp(22px, 2.8vw, 34px);
-          font-weight: 800;
-          color: #fff;
-          margin: 0 0 10px;
-          letter-spacing: -0.02em;
-          line-height: 1.2;
-        }
-        .psc-cta p {
-          font-size: 15px;
-          color: rgba(255,255,255,0.72);
-          margin: 0;
-          line-height: 1.65;
-          max-width: 500px;
-        }
-        .psc-cta-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          font-family: var(--font-manrope);
-          font-size: 12px;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--primary-color1);
-          background: #fff;
-          padding: 16px 30px;
-          border-radius: 100px;
-          text-decoration: none;
-          flex-shrink: 0;
-          transition: transform 0.22s, box-shadow 0.22s;
-          box-shadow: 0 6px 24px rgba(0,0,0,0.15);
-          position: relative; z-index: 1;
-        }
-        .psc-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(0,0,0,0.2); }
-        .psc-cta-btn svg { fill: var(--primary-color1); }
-
         /* ── Responsive ── */
         @media (max-width: 1100px) {
           .psc-grid { grid-template-columns: repeat(2,1fr); }
-          .psc-card-hero { grid-column: 1 / -1; }
-        }
-        @media (max-width: 820px) {
-          .psc-card-hero { grid-template-columns: 1fr; }
-          .psc-card-hero .psc-img-wrap { min-height: 240px; aspect-ratio: 16/9; }
         }
         @media (max-width: 640px) {
           .psc-grid { grid-template-columns: 1fr; }
-          .psc-cta { flex-direction: column; text-align: center; padding: 44px 28px; }
-          .psc-cta p { max-width: 100%; }
         }
         @media (max-width: 580px) {
           .psc-section { padding: 70px 0 80px; }
@@ -571,8 +434,8 @@ const page = () => {
 
           {/* Header */}
           <div className="psc-hdr wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-            <div className="psc-eyebrow">Major Projects</div>
-            <h2>Projects That <span>Define</span> Us</h2>
+            
+            <h2>Projects That Define Us</h2>
             <p>
               From metro rail corridors to government hospitals — Kavalakat has
               been the trusted material supply partner for Kerala's most
@@ -580,51 +443,9 @@ const page = () => {
             </p>
           </div>
 
-          {/* Grid */}
+          {/* Grid — all cards uniform */}
           <div className="psc-grid">
-
-            {/* Hero card — Kochi Metro Phase 1 */}
-            <div className="psc-card-hero wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-              <div className="psc-img-wrap">
-                <Image width={900} height={560} src={projects[0].image} alt={projects[0].name}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                <span className="psc-badge">{projects[0].tag}</span>
-                <div className="psc-arr">
-                  <svg width={13} height={13} viewBox="0 0 35 35">
-                    <path d="M0.173267 0H34.9999V6.51953L6.58414 34.9996L0 28.4801L19.4059 9.2646L0.173267 9.43616V0Z"/>
-                    <path d="M34.999 34.9996V13.0391L25.6426 22.3037V34.9996H34.999Z"/>
-                  </svg>
-                </div>
-              </div>
-              <div className="psc-body">
-                <div className="psc-client">
-                  <div className="psc-logo">
-                    <Image width={42} height={42} src={projects[0].logo} alt={projects[0].name}/>
-                  </div>
-                  <div className="psc-client-info">
-                    <h5>{projects[0].name}</h5>
-                    <span>
-                      <svg width={11} height={11} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                      </svg>
-                      {projects[0].location}
-                    </span>
-                  </div>
-                </div>
-                <h3>{projects[0].name} — {projects[0].tag}</h3>
-                <p>{projects[0].description}</p>
-                <Link href="/contact" className="psc-link">
-                  Get In Touch
-                  <svg width={12} height={12} viewBox="0 0 35 35">
-                    <path d="M0.173267 0H34.9999V6.51953L6.58414 34.9996L0 28.4801L19.4059 9.2646L0.173267 9.43616V0Z"/>
-                    <path d="M34.999 34.9996V13.0391L25.6426 22.3037V34.9996H34.999Z"/>
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
-            {/* Remaining cards */}
-            {projects.slice(1).map((p, i) => (
+            {projects.map((p, i) => (
               <div
                 className="psc-card wow animate fadeInUp"
                 data-wow-delay={`${200 + (i % 3) * 100}ms`}
@@ -668,26 +489,7 @@ const page = () => {
                 </div>
               </div>
             ))}
-
           </div>
-
-          {/* CTA Banner */}
-          {/* <div className="psc-cta wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-            <div>
-              <h3>Have a Project in Mind?</h3>
-              <p>
-                Get competitive pricing, fast crane-assisted delivery and ISI-certified
-                construction materials — directly to your project site.
-              </p>
-            </div>
-            <Link href="/contact" className="psc-cta-btn">
-              Contact Us
-              <svg width={13} height={13} viewBox="0 0 35 35">
-                <path d="M0.173267 0H34.9999V6.51953L6.58414 34.9996L0 28.4801L19.4059 9.2646L0.173267 9.43616V0Z"/>
-                <path d="M34.999 34.9996V13.0391L25.6426 22.3037V34.9996H34.999Z"/>
-              </svg>
-            </Link>
-          </div> */}
 
         </div>
       </section>
