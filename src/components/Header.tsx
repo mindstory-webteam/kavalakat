@@ -277,7 +277,7 @@ const Header: React.FC = () => {
                             {/* Products - Dropdown with Three Column Layout - REORDERED */}
                             <li className={`menu-item-has-children ${isProductActive ? "active" : ""}`}>
                                 <Link href="/product" className="drop-down">
-                                    Products
+                                    Solutions
                                     <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
                                         <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
@@ -311,7 +311,7 @@ const Header: React.FC = () => {
                                     
                                     {/* Column 2: Hospitality Products - SECOND */}
                                     <li className="product-column">
-                                        <div className="column-title">HOSPITALITY PRODUCTS</div>
+                                        <div className="column-title">HOSPITALITY</div>
                                         <ul className="column-items">
                                              <li className={pathname === "/services/alite-enclaves" ? "active" : ""}>
                                                 <Link href="/services/alite-enclaves"><span>Alite Enclaves</span></Link>
