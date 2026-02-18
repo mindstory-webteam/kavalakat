@@ -33,7 +33,7 @@ const HomepageBlogSection: React.FC = () => {
                     <div className="row g-4 align-items-end justify-content-between mb-70 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="col-lg-5">
                             <div className="section-title">
-                                <h2>Factory Trends &amp; Updates</h2>
+                                <h2>Expert Insights for Builders</h2>
                             </div>
                         </div>
                         <div className="col-lg-3 d-flex justify-content-lg-end">

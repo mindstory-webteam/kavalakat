@@ -9,7 +9,7 @@ const FooterTop = () => {
                     <div className="footer-top-banner-wrap">
                         <div className="section-title white wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <span>Building Your Vision</span>
-                            <h2>Let's Build Dream Something Amazing.</h2>
+                            <h2>Strength Backed by Decades of Experience</h2>
                         </div>
                         <div className="btn-grp wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <Link className="primary-btn1 white-bg" href="/product">

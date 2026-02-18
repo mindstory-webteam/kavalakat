@@ -53,14 +53,14 @@ const ProductPage = () => {
 
       const companies = [
     {
-      logo: '/assets/new-images/products/cement-parterns/cement100.jpg',
+      logo: '/assets/new-images/products/cement-parterns/download (1).png',
       logoAlt: 'ULTRATECH Logo',
       companyName: 'ULTRATECH',
       description:
         'The company has a consolidated capacity* of 102.75 Million Tonnes Per Annum (MTPA) of grey cement. UltraTech Cement has 20 integrated plants, 1 clinkerisation plant, 26 grinding units and 7 bulk terminals. Its operations span across India, UAE, Bahrain, Bangladesh and Sri Lanka.',
     },
     {
-      logo: '/assets/new-images/products/cement-parterns/cement11.jpg',
+      logo: '/assets/new-images/products/cement-parterns/ACC.jfif',
       logoAlt: 'ACC Logo',
       companyName: 'ACC',
       description:
@@ -68,7 +68,7 @@ const ProductPage = () => {
     },
    
     {
-      logo: '/assets/new-images/products/cement-parterns/cement22.jpg',
+      logo: '/assets/new-images/products/cement-parterns/Bharathi.png',
       logoAlt: 'Bharathi Logo',
       companyName: 'Bharathi',
       description:
@@ -76,13 +76,13 @@ const ProductPage = () => {
     },
    
     {
-      logo: '/assets/new-images/products/cement-parterns/cement55.jpg',
+      logo: '/assets/new-images/products/cement-parterns/Dalmia.jfif',
       logoAlt: 'Dalmia Logo',
       companyName: 'Dalmia',
       description:
         "Apart from world-class cement manufacturing plants in India, what makes us unique as a cement manufacturer is our constant ability to innovate. On the key efficiency parameters, we rank right up there with the best of cement companies in the industry.",
     },{
-      logo: '/assets/new-images/products/cement-parterns/cement66.jpg',
+      logo: '/assets/new-images/products/cement-parterns/Jws-logo.png',
       logoAlt: 'JSW Logo',
       companyName: 'JSW',
       description:
