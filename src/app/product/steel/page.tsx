@@ -52,48 +52,18 @@ const ProductPage = () => {
 
   const companies = [
     {
-      logo: '/assets/new-images/products/steel-partens/steel1.jpg',
-      logoAlt: 'Vizag Steel Logo',
-      companyName: 'VIZAG',
+      logo: '/assets/new-images/products/steel-partens/SHYAM-STEEL.jfif',
+      logoAlt: 'SHYAM STEEL Logo',
+      companyName: 'SHYAM ',
       description:
-        'RINL, VSP has been a forerunner in the exploring new technologies in steel making and stands tall in its stature being the pioneer of various new techniques in the field. Be it the use of Pulverised Coal Injection in Blast Furnace or the circular coolers in Sinter Plant, VSP ...',
-    },
-    {
-      logo: '/assets/new-images/products/steel-partens/steel2.jpg',
-      logoAlt: 'Tulsyan NEC Steel Logo',
-      companyName: 'TULSYAN',
-      description:
-        "Tulsyan NEC Steel is one of India's leading manufacturers of Thermo Mechanically Treated (TMT) Bars. The company was initially known as the National Engineering Company until the early 90s, when it was renamed Tulsyan NEC. Today, Tulsyan is listed on the Indian stock exchange.",
-    },
-    {
-     logo: '/assets/new-images/products/steel-partens/steel3.jpg',
-      logoAlt: 'Tata Tiscon Logo',
-      companyName: 'TATA',
-      description:
-        'The Tata group comprises over 100 operating companies in seven business sectors: communications and information technology, engineering, materials, services, energy, consumer products and chemicals.',
-    },
-    {
-     logo: '/assets/new-images/products/steel-partens/steel4.jpg',
-      logoAlt: 'Tata Tiscon Logo',
-      companyName: 'SAIL',
-      description:
-        'Steel Authority of India Limited (SAIL) is the largest steel-making company in India and one of the seven Maharatna’s of the country’s Central Public Sector Enterprises.',
-    },
-    {
-     logo: '/assets/new-images/products/steel-partens/steel5.jpg',
-      logoAlt: 'Tata Tiscon Logo',
-      companyName: 'KAIRALI TMT',
-      description:
-        'Kairali TMT Steel Bars is the flagship division of Kairali Ventures. Our legacy of over 125 years in the Steel Industry has secured us a top most spot as a leading producer of quality TMT Steel Bars in South India',
+        'Shyam Steel is a leading TMT bar manufacturer in India, known for high-strength, corrosion-resistant steel. With advanced manufacturing technology and strict quality control, it ensures durability and safety for modern construction projects.',
     },
     
-    {
-     logo: '/assets/new-images/products/steel-partens/steel6.jpg',
-      logoAlt: 'Tata Tiscon Logo',
-      companyName: 'JSW',
-      description:
-        'The JSW Group is known across the country as “strategic first mover”. It is a $13 billion leading conglomerate, with a presence across all the vital sectors of the Indian economy. ',
-    }
+    
+    
+    
+    
+   
     
   ];
 

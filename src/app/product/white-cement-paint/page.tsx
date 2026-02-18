@@ -59,11 +59,11 @@ const ProductPage = () => {
         'Birla White cement has carved a niche for itself in the prestigious Aditya Birla conglomerate, which dwells in a many business areas. Since debut, it played a lead role in the country’s constructional and infrastructural growth story.Birla White is a unit of UltraTech Cement Ltd., flagship of the US $43 bn Aditya Birla Group.',
     },
     {
-      logo: '/assets/new-images/products/white-cement-partens/whitecementpaint22.jpg',
-      logoAlt: 'AKZONOBEL Logo',
-      companyName: 'AKZONOBEL',
+      logo: '/assets/new-images/products/white-cement-partens/DULUX-PAINTS.jfif',
+      logoAlt: 'DULUX PAINTS Logo',
+      companyName: 'DULUX PAINTS',
       description:
-        "AkzoNobel has a passion for paint. We're experts in the proud craft of making paints and coatings, setting the standard in color and protection since 1792. Our world class portfolio of brands - including Dulux, International, Sikkens and Interpon - is trusted by customers around the globe.",
+        "Dulux Paints is a globally trusted brand known for premium quality paints and innovative colour solutions. Offering superior finish, durability, and weather resistance, Dulux enhances and protects homes and commercial spaces alike.",
     },
    
     

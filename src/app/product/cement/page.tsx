@@ -52,74 +52,20 @@ const ProductPage = () => {
 
 
       const companies = [
-    {
-      logo: '/assets/new-images/products/cement-parterns/cement100.jpg',
-      logoAlt: 'ULTRATECH Logo',
-      companyName: 'ULTRATECH',
-      description:
-        'The company has a consolidated capacity* of 102.75 Million Tonnes Per Annum (MTPA) of grey cement. UltraTech Cement has 20 integrated plants, 1 clinkerisation plant, 26 grinding units and 7 bulk terminals. Its operations span across India, UAE, Bahrain, Bangladesh and Sri Lanka.',
-    },
-    {
-      logo: '/assets/new-images/products/cement-parterns/cement11.jpg',
-      logoAlt: 'ACC Logo',
-      companyName: 'ACC',
-      description:
-        "As one of the foremost companies in the Indian cement and concrete industry, we at ACC are driven by the inherent need of providing products and solutions that will create the new economic,",
-    },
-    {
-      logo: '/assets/new-images/products/cement-parterns/cement11a.jpg',
-      logoAlt: 'Anjani Cement Logo',
-      companyName: 'Anjani Cement',
-      description:
-        "Anjani Cement is a popular brand in south India for its quality and commitment to service. Starting with initial production capacity of 0.3 million tonnes per annum in 1999, the Company has now achieved a quantum shift in its production capacity to 1.2 million tonnes .",
-    },
-    {
-      logo: '/assets/new-images/products/cement-parterns/cement22.jpg',
-      logoAlt: 'Bharathi Logo',
-      companyName: 'Bharathi',
-      description:
-        "Vicat is a pioneer in cement manufacturing since its invention by Louis Vicat in 1817. Vicat Group, France is a global cement organisation with offices in 11 countries. It’s main business interests are Cement, Ready-Mixed Concrete, Concrete Product (Precast) and Aggregates.",
-    },
-    {
-      logo: '/assets/new-images/products/cement-parterns/cement33.jpg',
-      logoAlt: 'Birla A1 Logo',
-      companyName: 'Birla A1',
-      description:
-        "Launched as a corollary to the magnificent success of Orient Gold 53 Grade Cement, Birla A1 Premium Cement has carved a niche in the market and is already among the best known brands in south-west India.",
-    },
-    {
-      logo: '/assets/new-images/products/cement-parterns/cement55.jpg',
-      logoAlt: 'Dalmia Logo',
-      companyName: 'Dalmia',
-      description:
-        "Apart from world-class cement manufacturing plants in India, what makes us unique as a cement manufacturer is our constant ability to innovate. On the key efficiency parameters, we rank right up there with the best of cement companies in the industry.",
-    },{
-      logo: '/assets/new-images/products/cement-parterns/cement66.jpg',
-      logoAlt: 'JSW Logo',
-      companyName: 'JSW',
-      description:
-        "JSW Cement’s flagship plant in Nandyal uses world-class technology (including the advanced Combi Finish Mode Roller Press Circuit and automated loading system) to manufacture cement. It also won prestigious awards for its energy-saving processes.",
-    },
-    {
-      logo: '/assets/new-images/products/cement-parterns/cement77.jpg',
-      logoAlt: 'MYCEM Logo',
-      companyName: 'MYCEM',
-      description:
-        "HeidelbergCement India Limited is is a subsidiary of HeidelbergCement Group, Germany. The Company has its operations in Central India at Damoh (Madhya Pradesh), Jhansi (Uttar Pradesh) and in Southern India at Ammasandra (Karnataka).",
-    },
+   
      {
-      logo: '/assets/new-images/products/cement-parterns/cement88.jpg',
-      logoAlt: 'PENNA CEMENT Logo',
-      companyName: 'PENNA CEMENT',
+      logo: '/assets/new-images/products/cement-parterns/AMBUJA-CEMENT-1.jfif',
+      logoAlt: 'AMBUJA CEMENT Logo',
+      companyName: 'AMBUJA CEMENT',
       description:
-        "Founded in 1991, Penna Cement has established itself as one of the most trusted cement brands, with significant footprints in southern and western India.",
+        " Ambuja Cement is one of India’s most trusted cement brands, recognized for strength, durability, and sustainability. Backed by advanced technology and a strong nationwide presence, it delivers reliable solutions for all construction needs.",
     },
     {
-      logo: '/assets/new-images/products/cement-parterns/cement99.jpg',
-      logoAlt: 'SAGAR Logo',
-      companyName: 'SAGAR',
+      logo: '/assets/new-images/products/cement-parterns/CHETTINAD-CEMENT.png',
+      logoAlt: 'CHETTINAD CEMENT Logo',
+      companyName: 'CHETTINAD CEMENT',
       description:
-        "Sagar Cements is a prominent player in the field of cement in Andhra Pradesh for over 3 decades adopting progressive manufacturing practices, whether it relates to maintaining high standards of quality of its products or development of its highly valued human resources.",
+        "Chettinad Cement is a leading cement manufacturer in South India, known for consistent quality and strong performance. With modern plants and a wide distribution network, it supports residential, commercial, and infrastructure projects.",
     },
    
     

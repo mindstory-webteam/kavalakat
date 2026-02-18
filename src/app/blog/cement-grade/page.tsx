@@ -10,7 +10,7 @@ const page = () => {
     return (
         <>
             <InnerPageHeader />
-             <Breadcrumb title="Blog Details" subtitle="Market Trend & Analyst Behind The Scene Of Industry." />
+             <Breadcrumb title="Cement Grade Blog" subtitle="Market Trend & Analyst Behind The Scene Of Industry." />
             <div className="blog-details-page pt-120 mb-120" id="scroll-section">
                 <div className="container">
                     <div className="row gy-5 mb-120">
@@ -41,19 +41,19 @@ const page = () => {
                                         </a>
                                     </li>
                                 </ul>
-                                <h2>Our Begin Now To Beingonl What Are Yourmoi Will Be own.</h2>
+                                <h2>How to Choose the Right Cement Grade for Your Construction Project</h2>
                                 <div className="author-area">
                                     <div className="author-img">
-                                        <Image width={30} height={30} src="/assets/img/innerpages/blog-meta-author-img.png" alt="" />
+                                        <Image width={30} height={30} src="/assets/new-images/fav-1.png" alt="" />
                                     </div>
                                     <div className="author-content">
-                                        <h6>By, <Link href="/blog">Cooper Jogan</Link></h6>
+                                        <h6>By, <Link href="/blog">Kavalakat Agencies</Link></h6>
                                     </div>
                                 </div>
                             </div>
                             <div className="details-content-wrapper mb-80">
-                                <p className="first-para">MSuspendisse bibendum efficitur orci, a pretium erat mattis nec. Vestibulum ante ypsumi primis inaetahsjanl faucibus orci luctus etenjot ultrices posuere cubilia curae; Curabitur.</p>
-                                <p>Urna Aenean onewaryzo eleifend vitae tellus a facilisis. Nunc posuere at augue eget porta. Inei odio tellus, dignissim fermentumara purus nec, consequat dapibus metus.Vivamus urna worlda mauris, faucibus at egestas quis, fermentum egetonav neque. Duis pharetra lectus nec risusonl pellentesque, vitae aliquet nisi dapibus. Sed volutpat mi velit, ateng maximus est eleifend accui Fusce porttitor ex arcu. Phasellus viverra lorem a nibh placerat tincidunt.bolgotai Aliquam andit rutrum elementum urna, vel fringilla tellus varius ut. Morbi non velit odio.</p>
+                                <p className="first-para">Choosing the right cement grade is essential for ensuring strength, durability, and safety in any construction project. Whether you are building a house or a commercial structure, selecting the correct cement grade helps maintain structural integrity and cost efficiency.</p>
+                                
                                 <span className="line-break" />
                                 <span className="line-break" />
                                 <span className="line-break" />
@@ -63,68 +63,68 @@ const page = () => {
                                             <path d="M3.37356 27.3785C1.17851 25.0589 0 22.4572 0 18.2398C0 10.8186 5.23616 4.16708 12.8507 0.878418L14.7537 3.80026C7.64646 7.62537 6.25697 12.5891 5.70288 15.7187C6.84729 15.1293 8.34547 14.9236 9.81381 15.0593C13.6583 15.4134 16.6888 18.5536 16.6888 22.4572C16.6888 24.4254 15.903 26.313 14.5041 27.7048C13.1053 29.0965 11.2081 29.8784 9.22988 29.8784C6.94319 29.8784 4.75666 28.8394 3.37356 27.3785ZM24.6848 27.3785C22.4897 25.0589 21.3112 22.4572 21.3112 18.2398C21.3112 10.8186 26.5474 4.16708 34.1619 0.878418L36.0649 3.80026C28.9577 7.62537 27.5682 12.5891 27.0141 15.7187C28.1585 15.1293 29.6567 14.9236 31.125 15.0593C34.9695 15.4134 38 18.5536 38 22.4572C38 24.4254 37.2142 26.313 35.8153 27.7048C34.4165 29.0965 32.5193 29.8784 30.5411 29.8784C28.2544 29.8784 26.0679 28.8394 24.6848 27.3785Z" />
                                         </g>
                                     </svg>
-                                    <p>"I work with Alguneb Johnl on many projects, he always toldagona exceeds my expectations with his quality work and fastestopa tope service, very smooth and simple communication of our blog story and we develop."</p>
-                                    <h4>Leslie Alexander</h4>
+                                    <p>"The strength of your building depends on the strength of the cement you choose"</p>
+                                    <h4>Construction Expert</h4>
                                 </blockquote>
                                 <span className="line-break" />
                                 <span className="line-break" />
-                                <p>urna Aenean onewaryzo eleifend vitae tellus a facilisis. Nunc posuere at augue eget porta. Inei odio tellus, dignissim fermentumara purus nec, consequat dapibus metus.Vivamus urna worlda mauris, faucibus at egestas quis, fermentum egetonav neque. Duis pharetra lectus nec risusonl pellentesque, vitae aliquet nisi dapibus. Sed volutpat mi velit, ateng maximus est eleifend accui Fusce porttitor ex arcu. Phasellus viverra lorem a nibh placerat tincidunt.bolgotai Aliquam andit rutrum elementum urna, vel fringilla tellus varius ut. Morbi non velit odio.</p>
+                                <p>Cement in India is mainly available in 33, 43, and 53 grades, classified based on compressive strength after 28 days. Each grade serves a specific construction purpose. Understanding where and how to use them ensures better performance and long-term reliability.</p>
                                 <span className="line-break" />
                                 <span className="line-break" />
                                 <span className="line-break" />
                                 <div className="blog-details-img-grp">
                                     <div className="row g-4">
                                         <div className="col-md-6">
-                                            <Image width={1076} height={416} src="/assets/img/innerpages/blog-details-img1.jpg" alt="" />
+                                            <Image width={1076} height={416} src="/assets/new-images/blog/cement-grade/b-3.png" alt="" />
                                         </div>
                                         <div className="col-md-6">
-                                            <Image width={1076} height={416} src="/assets/img/innerpages/blog-details-img2.jpg" alt="" />
+                                            <Image width={1076} height={416} src="/assets/new-images/blog/cement-grade/b-2.png" alt="" />
                                         </div>
                                     </div>
                                 </div>
                                 <span className="line-break" />
                                 <span className="line-break" />
                                 <span className="line-break" />
-                                <h3>Our Begin Now To Beingonl.</h3>
+                                <h3>Choosing the Right Grade for Your Project</h3>
                                 <span className="line-break" />
-                                <p>urna Aenean onewaryzo eleifend vitae tellus a facilisis. Nunc posuere at augue eget porta. Ineiod tellus, dignissim fermentumara purus nec, consequat dapibus metus.Vivamus urna worlda mauri, faucibus at egestas quis, fermentum egetonav neque Duis pharetra lectus nec.</p>
+                                <p>Selecting the correct cement grade depends on the type of construction, load requirements, and project timeline. Proper guidance helps avoid overuse or underuse of high-strength cement.</p>
                                 <span className="line-break" />
                                 <ul>
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" width={15} height={15} viewBox="0 0 15 15">
                                             <path d="M0.376831 8.16821C-0.247095 8.54593 -0.0579659 9.49862 0.662688 9.60837C1.24211 9.69666 1.52052 10.3701 1.17304 10.8431C0.740845 11.4312 1.27942 12.2389 1.98713 12.0639C2.55609 11.9231 3.07065 12.4387 2.9302 13.0088C2.75556 13.718 3.56158 14.2577 4.14855 13.8246C4.62054 13.4764 5.29275 13.7554 5.38073 14.336C5.49024 15.0581 6.44099 15.2476 6.81798 14.6224C7.12107 14.1198 7.84864 14.1198 8.15171 14.6224C8.52867 15.2476 9.47943 15.0581 9.58896 14.336C9.67707 13.7554 10.3492 13.4764 10.8211 13.8246C11.4081 14.2577 12.2142 13.718 12.0395 13.0088C11.899 12.4387 12.4136 11.9231 12.9826 12.0639C13.6903 12.2389 14.2289 11.4312 13.7967 10.8431C13.4492 10.3701 13.7276 9.69653 14.307 9.60837C15.0276 9.49864 15.2168 8.54597 14.5929 8.16821C14.0912 7.86452 14.0912 7.13547 14.5929 6.83178C15.2168 6.45407 15.0277 5.50138 14.307 5.39162C13.7276 5.30334 13.4492 4.62989 13.7967 4.15695C14.2289 3.56879 13.6903 2.76112 12.9826 2.93613C12.4136 3.07687 11.8991 2.5613 12.0395 1.99115C12.2141 1.28199 11.4081 0.742345 10.8211 1.17541C10.3492 1.52356 9.67695 1.2446 9.58896 0.664029C9.47945 -0.0580599 8.5287 -0.247606 8.15171 0.377594C7.84863 0.880237 7.12106 0.880237 6.81798 0.377594C6.44103 -0.247596 5.49027 -0.0580833 5.38073 0.664029C5.29263 1.24462 4.62054 1.5236 4.14855 1.17541C3.56158 0.742345 2.75554 1.28201 2.9302 1.99115C3.07065 2.56126 2.55612 3.07686 1.98713 2.93613C1.2794 2.76113 0.740845 3.56879 1.17304 4.15695C1.52049 4.62989 1.24209 5.30346 0.662688 5.39162C-0.0579425 5.50136 -0.247105 6.45403 0.376831 6.83178C0.878459 7.13548 0.878459 7.86453 0.376831 8.16821Z" />
                                         </svg>
-                                        Nulla vestibulum vestibulum varius told this.
+                                        33 Grade – Suitable for plastering and minor works
                                     </li>
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" width={15} height={15} viewBox="0 0 15 15">
                                             <path d="M0.376831 8.16821C-0.247095 8.54593 -0.0579659 9.49862 0.662688 9.60837C1.24211 9.69666 1.52052 10.3701 1.17304 10.8431C0.740845 11.4312 1.27942 12.2389 1.98713 12.0639C2.55609 11.9231 3.07065 12.4387 2.9302 13.0088C2.75556 13.718 3.56158 14.2577 4.14855 13.8246C4.62054 13.4764 5.29275 13.7554 5.38073 14.336C5.49024 15.0581 6.44099 15.2476 6.81798 14.6224C7.12107 14.1198 7.84864 14.1198 8.15171 14.6224C8.52867 15.2476 9.47943 15.0581 9.58896 14.336C9.67707 13.7554 10.3492 13.4764 10.8211 13.8246C11.4081 14.2577 12.2142 13.718 12.0395 13.0088C11.899 12.4387 12.4136 11.9231 12.9826 12.0639C13.6903 12.2389 14.2289 11.4312 13.7967 10.8431C13.4492 10.3701 13.7276 9.69653 14.307 9.60837C15.0276 9.49864 15.2168 8.54597 14.5929 8.16821C14.0912 7.86452 14.0912 7.13547 14.5929 6.83178C15.2168 6.45407 15.0277 5.50138 14.307 5.39162C13.7276 5.30334 13.4492 4.62989 13.7967 4.15695C14.2289 3.56879 13.6903 2.76112 12.9826 2.93613C12.4136 3.07687 11.8991 2.5613 12.0395 1.99115C12.2141 1.28199 11.4081 0.742345 10.8211 1.17541C10.3492 1.52356 9.67695 1.2446 9.58896 0.664029C9.47945 -0.0580599 8.5287 -0.247606 8.15171 0.377594C7.84863 0.880237 7.12106 0.880237 6.81798 0.377594C6.44103 -0.247596 5.49027 -0.0580833 5.38073 0.664029C5.29263 1.24462 4.62054 1.5236 4.14855 1.17541C3.56158 0.742345 2.75554 1.28201 2.9302 1.99115C3.07065 2.56126 2.55612 3.07686 1.98713 2.93613C1.2794 2.76113 0.740845 3.56879 1.17304 4.15695C1.52049 4.62989 1.24209 5.30346 0.662688 5.39162C-0.0579425 5.50136 -0.247105 6.45403 0.376831 6.83178C0.878459 7.13548 0.878459 7.86453 0.376831 8.16821Z" />
                                         </svg>
-                                        Consequat congue sem. In convallis purus ut.
+                                        43 Grade – Ideal for residential buildings and RCC work
                                     </li>
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" width={15} height={15} viewBox="0 0 15 15">
                                             <path d="M0.376831 8.16821C-0.247095 8.54593 -0.0579659 9.49862 0.662688 9.60837C1.24211 9.69666 1.52052 10.3701 1.17304 10.8431C0.740845 11.4312 1.27942 12.2389 1.98713 12.0639C2.55609 11.9231 3.07065 12.4387 2.9302 13.0088C2.75556 13.718 3.56158 14.2577 4.14855 13.8246C4.62054 13.4764 5.29275 13.7554 5.38073 14.336C5.49024 15.0581 6.44099 15.2476 6.81798 14.6224C7.12107 14.1198 7.84864 14.1198 8.15171 14.6224C8.52867 15.2476 9.47943 15.0581 9.58896 14.336C9.67707 13.7554 10.3492 13.4764 10.8211 13.8246C11.4081 14.2577 12.2142 13.718 12.0395 13.0088C11.899 12.4387 12.4136 11.9231 12.9826 12.0639C13.6903 12.2389 14.2289 11.4312 13.7967 10.8431C13.4492 10.3701 13.7276 9.69653 14.307 9.60837C15.0276 9.49864 15.2168 8.54597 14.5929 8.16821C14.0912 7.86452 14.0912 7.13547 14.5929 6.83178C15.2168 6.45407 15.0277 5.50138 14.307 5.39162C13.7276 5.30334 13.4492 4.62989 13.7967 4.15695C14.2289 3.56879 13.6903 2.76112 12.9826 2.93613C12.4136 3.07687 11.8991 2.5613 12.0395 1.99115C12.2141 1.28199 11.4081 0.742345 10.8211 1.17541C10.3492 1.52356 9.67695 1.2446 9.58896 0.664029C9.47945 -0.0580599 8.5287 -0.247606 8.15171 0.377594C7.84863 0.880237 7.12106 0.880237 6.81798 0.377594C6.44103 -0.247596 5.49027 -0.0580833 5.38073 0.664029C5.29263 1.24462 4.62054 1.5236 4.14855 1.17541C3.56158 0.742345 2.75554 1.28201 2.9302 1.99115C3.07065 2.56126 2.55612 3.07686 1.98713 2.93613C1.2794 2.76113 0.740845 3.56879 1.17304 4.15695C1.52049 4.62989 1.24209 5.30346 0.662688 5.39162C-0.0579425 5.50136 -0.247105 6.45403 0.376831 6.83178C0.878459 7.13548 0.878459 7.86453 0.376831 8.16821Z" />
                                         </svg>
-                                        Vitae efficitur risus molestie. Donec laoreet.
+                                        53 Grade – Best for high-rise and heavy-load structures
                                     </li>
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" width={15} height={15} viewBox="0 0 15 15">
                                             <path d="M0.376831 8.16821C-0.247095 8.54593 -0.0579659 9.49862 0.662688 9.60837C1.24211 9.69666 1.52052 10.3701 1.17304 10.8431C0.740845 11.4312 1.27942 12.2389 1.98713 12.0639C2.55609 11.9231 3.07065 12.4387 2.9302 13.0088C2.75556 13.718 3.56158 14.2577 4.14855 13.8246C4.62054 13.4764 5.29275 13.7554 5.38073 14.336C5.49024 15.0581 6.44099 15.2476 6.81798 14.6224C7.12107 14.1198 7.84864 14.1198 8.15171 14.6224C8.52867 15.2476 9.47943 15.0581 9.58896 14.336C9.67707 13.7554 10.3492 13.4764 10.8211 13.8246C11.4081 14.2577 12.2142 13.718 12.0395 13.0088C11.899 12.4387 12.4136 11.9231 12.9826 12.0639C13.6903 12.2389 14.2289 11.4312 13.7967 10.8431C13.4492 10.3701 13.7276 9.69653 14.307 9.60837C15.0276 9.49864 15.2168 8.54597 14.5929 8.16821C14.0912 7.86452 14.0912 7.13547 14.5929 6.83178C15.2168 6.45407 15.0277 5.50138 14.307 5.39162C13.7276 5.30334 13.4492 4.62989 13.7967 4.15695C14.2289 3.56879 13.6903 2.76112 12.9826 2.93613C12.4136 3.07687 11.8991 2.5613 12.0395 1.99115C12.2141 1.28199 11.4081 0.742345 10.8211 1.17541C10.3492 1.52356 9.67695 1.2446 9.58896 0.664029C9.47945 -0.0580599 8.5287 -0.247606 8.15171 0.377594C7.84863 0.880237 7.12106 0.880237 6.81798 0.377594C6.44103 -0.247596 5.49027 -0.0580833 5.38073 0.664029C5.29263 1.24462 4.62054 1.5236 4.14855 1.17541C3.56158 0.742345 2.75554 1.28201 2.9302 1.99115C3.07065 2.56126 2.55612 3.07686 1.98713 2.93613C1.2794 2.76113 0.740845 3.56879 1.17304 4.15695C1.52049 4.62989 1.24209 5.30346 0.662688 5.39162C-0.0579425 5.50136 -0.247105 6.45403 0.376831 6.83178C0.878459 7.13548 0.878459 7.86453 0.376831 8.16821Z" />
                                         </svg>
-                                        Est vel feugiat dapibus. Quisque velit ullamcorp.
+                                        	Consider load-bearing requirements
                                     </li>
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" width={15} height={15} viewBox="0 0 15 15">
                                             <path d="M0.376831 8.16821C-0.247095 8.54593 -0.0579659 9.49862 0.662688 9.60837C1.24211 9.69666 1.52052 10.3701 1.17304 10.8431C0.740845 11.4312 1.27942 12.2389 1.98713 12.0639C2.55609 11.9231 3.07065 12.4387 2.9302 13.0088C2.75556 13.718 3.56158 14.2577 4.14855 13.8246C4.62054 13.4764 5.29275 13.7554 5.38073 14.336C5.49024 15.0581 6.44099 15.2476 6.81798 14.6224C7.12107 14.1198 7.84864 14.1198 8.15171 14.6224C8.52867 15.2476 9.47943 15.0581 9.58896 14.336C9.67707 13.7554 10.3492 13.4764 10.8211 13.8246C11.4081 14.2577 12.2142 13.718 12.0395 13.0088C11.899 12.4387 12.4136 11.9231 12.9826 12.0639C13.6903 12.2389 14.2289 11.4312 13.7967 10.8431C13.4492 10.3701 13.7276 9.69653 14.307 9.60837C15.0276 9.49864 15.2168 8.54597 14.5929 8.16821C14.0912 7.86452 14.0912 7.13547 14.5929 6.83178C15.2168 6.45407 15.0277 5.50138 14.307 5.39162C13.7276 5.30334 13.4492 4.62989 13.7967 4.15695C14.2289 3.56879 13.6903 2.76112 12.9826 2.93613C12.4136 3.07687 11.8991 2.5613 12.0395 1.99115C12.2141 1.28199 11.4081 0.742345 10.8211 1.17541C10.3492 1.52356 9.67695 1.2446 9.58896 0.664029C9.47945 -0.0580599 8.5287 -0.247606 8.15171 0.377594C7.84863 0.880237 7.12106 0.880237 6.81798 0.377594C6.44103 -0.247596 5.49027 -0.0580833 5.38073 0.664029C5.29263 1.24462 4.62054 1.5236 4.14855 1.17541C3.56158 0.742345 2.75554 1.28201 2.9302 1.99115C3.07065 2.56126 2.55612 3.07686 1.98713 2.93613C1.2794 2.76113 0.740845 3.56879 1.17304 4.15695C1.52049 4.62989 1.24209 5.30346 0.662688 5.39162C-0.0579425 5.50136 -0.247105 6.45403 0.376831 6.83178C0.878459 7.13548 0.878459 7.86453 0.376831 8.16821Z" />
                                         </svg>
-                                        Pharetra vitae, varius in dui. Cras et aliquam.
+                                        Plan based on project budget
                                     </li>
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" width={15} height={15} viewBox="0 0 15 15">
                                             <path d="M0.376831 8.16821C-0.247095 8.54593 -0.0579659 9.49862 0.662688 9.60837C1.24211 9.69666 1.52052 10.3701 1.17304 10.8431C0.740845 11.4312 1.27942 12.2389 1.98713 12.0639C2.55609 11.9231 3.07065 12.4387 2.9302 13.0088C2.75556 13.718 3.56158 14.2577 4.14855 13.8246C4.62054 13.4764 5.29275 13.7554 5.38073 14.336C5.49024 15.0581 6.44099 15.2476 6.81798 14.6224C7.12107 14.1198 7.84864 14.1198 8.15171 14.6224C8.52867 15.2476 9.47943 15.0581 9.58896 14.336C9.67707 13.7554 10.3492 13.4764 10.8211 13.8246C11.4081 14.2577 12.2142 13.718 12.0395 13.0088C11.899 12.4387 12.4136 11.9231 12.9826 12.0639C13.6903 12.2389 14.2289 11.4312 13.7967 10.8431C13.4492 10.3701 13.7276 9.69653 14.307 9.60837C15.0276 9.49864 15.2168 8.54597 14.5929 8.16821C14.0912 7.86452 14.0912 7.13547 14.5929 6.83178C15.2168 6.45407 15.0277 5.50138 14.307 5.39162C13.7276 5.30334 13.4492 4.62989 13.7967 4.15695C14.2289 3.56879 13.6903 2.76112 12.9826 2.93613C12.4136 3.07687 11.8991 2.5613 12.0395 1.99115C12.2141 1.28199 11.4081 0.742345 10.8211 1.17541C10.3492 1.52356 9.67695 1.2446 9.58896 0.664029C9.47945 -0.0580599 8.5287 -0.247606 8.15171 0.377594C7.84863 0.880237 7.12106 0.880237 6.81798 0.377594C6.44103 -0.247596 5.49027 -0.0580833 5.38073 0.664029C5.29263 1.24462 4.62054 1.5236 4.14855 1.17541C3.56158 0.742345 2.75554 1.28201 2.9302 1.99115C3.07065 2.56126 2.55612 3.07686 1.98713 2.93613C1.2794 2.76113 0.740845 3.56879 1.17304 4.15695C1.52049 4.62989 1.24209 5.30346 0.662688 5.39162C-0.0579425 5.50136 -0.247105 6.45403 0.376831 6.83178C0.878459 7.13548 0.878459 7.86453 0.376831 8.16821Z" />
                                         </svg>
-                                        Tortor eget vestibulum vestibulum, leo cursus.
+                                        	Ensure proper storage and curing
                                     </li>
                                 </ul>
                                 <span className="line-break" />
@@ -132,14 +132,14 @@ const page = () => {
                                 <span className="line-break" />
                                 <h3>Construction Results</h3>
                                 <span className="line-break" />
-                                <p>Urna Aenean onewaryzo eleifend vitae tellus a facilisis. Nunc posuere at augue eget porta. Ineiod tellus, dignissim fermentumara purus nec, consequat dapibus metus.Vivamus urna worlda mauri, faucibus at egestas quis, fermentum egetonav neque Duis pharetra lectus nec.</p>
+                                <p>Using the right cement grade ensures stronger structures, reduced cracks, better durability, and long-term cost savings. Smart material selection is the foundation of a successful construction project.</p>
                             </div>
                             <div className="tag-and-social-area">
-                                <ul className="tag-list">
+                                {/* <ul className="tag-list">
                                     <li><Link href="/blog"><span># </span>Artist</Link></li>
                                     <li><Link href="/blog"><span># </span>Portfolio</Link></li>
                                     <li><Link href="/blog"><span># </span>Crypto</Link></li>
-                                </ul>
+                                </ul> */}
                                 <div className="social-area">
                                     <h6>Share On:</h6>
                                     <ul className="social-link">
@@ -167,122 +167,73 @@ const page = () => {
                         </div>
                         <div className="col-lg-4">
                             <div className="blog-sidebar-area">
-                                <div className="single-widget mb-30">
-                                    <h5 className="widget-title">Search Here</h5>
-                                    <form>
-                                        <div className="search-box">
-                                            <input type="text" placeholder="Search Here..." />
-                                            <button type="submit"><i className="bx bx-search" /></button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div className="single-widget mb-30">
-                                    <h5 className="widget-title">Category</h5>
-                                    <ul className="category-list">
-                                        <li>
-                                            <Link href="/blog/sidebar">
-                                                <span>
-                                                    <svg width={12} height={12} viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0.0594069 0H12.0002V2.23531L2.25746 12.0001L0 9.76478L6.65357 3.17649L0.0594069 3.23532V0Z" />
-                                                        <path d="M12.0009 12.0002V4.4707L8.79297 7.6472V12.0002H12.0009Z" />
-                                                    </svg>
-                                                    Architecture
-                                                </span>
-                                                <span>(20)</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/blog/sidebar">
-                                                <span>
-                                                    <svg width={12} height={12} viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0.0594069 0H12.0002V2.23531L2.25746 12.0001L0 9.76478L6.65357 3.17649L0.0594069 3.23532V0Z" />
-                                                        <path d="M12.0009 12.0002V4.4707L8.79297 7.6472V12.0002H12.0009Z" />
-                                                    </svg>
-                                                    Renovation
-                                                </span>
-                                                <span>(15)</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/blog/sidebar">
-                                                <span>
-                                                    <svg width={12} height={12} viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0.0594069 0H12.0002V2.23531L2.25746 12.0001L0 9.76478L6.65357 3.17649L0.0594069 3.23532V0Z" />
-                                                        <path d="M12.0009 12.0002V4.4707L8.79297 7.6472V12.0002H12.0009Z" />
-                                                    </svg>
-                                                    Construction
-                                                </span>
-                                                <span>(25)</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/blog/sidebar">
-                                                <span>
-                                                    <svg width={12} height={12} viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0.0594069 0H12.0002V2.23531L2.25746 12.0001L0 9.76478L6.65357 3.17649L0.0594069 3.23532V0Z" />
-                                                        <path d="M12.0009 12.0002V4.4707L8.79297 7.6472V12.0002H12.0009Z" />
-                                                    </svg>
-                                                    Personal Architect
-                                                </span>
-                                                <span>(30)</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/blog/sidebar">
-                                                <span>
-                                                    <svg width={12} height={12} viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0.0594069 0H12.0002V2.23531L2.25746 12.0001L0 9.76478L6.65357 3.17649L0.0594069 3.23532V0Z" />
-                                                        <path d="M12.0009 12.0002V4.4707L8.79297 7.6472V12.0002H12.0009Z" />
-                                                    </svg>
-                                                    Woo-commerce Shop
-                                                </span>
-                                                <span>(32)</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/blog/sidebar">
-                                                <span>
-                                                    <svg width={12} height={12} viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0.0594069 0H12.0002V2.23531L2.25746 12.0001L0 9.76478L6.65357 3.17649L0.0594069 3.23532V0Z" />
-                                                        <path d="M12.0009 12.0002V4.4707L8.79297 7.6472V12.0002H12.0009Z" />
-                                                    </svg>
-                                                    Interior Design
-                                                </span>
-                                                <span>(35)</span>
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="single-widget mb-30">
-                                    <h5 className="widget-title">Popular Post </h5>
-                                    <div className="recent-post-widget mb-25">
-                                        <div className="recent-post-img">
-                                            <Link href="/blog/details"><Image width={100} height={100} src="/assets/img/innerpages/popular-post-img1.png" alt="" /></Link>
-                                        </div>
-                                        <div className="recent-post-content">
-                                            <Link href="/blog">20 January, 2025</Link>
-                                            <h6><Link href="/blog/details">Looking Inspiration Traveling The World.</Link></h6>
-                                        </div>
-                                    </div>
-                                    <div className="recent-post-widget mb-25">
-                                        <div className="recent-post-img">
-                                            <Link href="/blog/details"><Image width={100} height={100} src="/assets/img/innerpages/popular-post-img2.png" alt="" /></Link>
-                                        </div>
-                                        <div className="recent-post-content">
-                                            <Link href="/blog">12 January, 2025</Link>
-                                            <h6><Link href="/blog/details">Challenges Creating A Multi-brand System.</Link></h6>
-                                        </div>
-                                    </div>
-                                    <div className="recent-post-widget">
-                                        <div className="recent-post-img">
-                                            <Link href="/blog/details"><Image width={100} height={100} src="/assets/img/innerpages/popular-post-img3.png" alt="" /></Link>
-                                        </div>
-                                        <div className="recent-post-content">
-                                            <Link href="/blog">04 January, 2025</Link>
-                                            <h6><Link href="/blog/details">Decoding The Cloud And Deep Dive Creative.</Link></h6>
-                                        </div>
-                                    </div>
-                                </div>
+                               
+                                      <div className="single-widget mb-30">
+  <h5 className="widget-title">Popular Post</h5>
+
+  <div className="recent-post-widget mb-25">
+    <div className="recent-post-img">
+      <Link href="/blog/white-cement-paint">
+        <Image
+          width={100}
+          height={100}
+          src="/assets/new-images/blog/white-cement/b-1.png"
+          alt="White Cement & Paint"
+        />
+      </Link>
+    </div>
+    <div className="recent-post-content">
+      <Link href="/blog">15 August, 2025</Link>
+      <h6>
+        <Link href="/blog/white-cement">
+          Benefits of Using White Cement & Paint in Modern Construction
+        </Link>
+      </h6>
+    </div>
+  </div>
+
+  <div className="recent-post-widget mb-25">
+    <div className="recent-post-img">
+      <Link href="/blog/cement-grade">
+        <Image
+          width={100}
+          height={100}
+          src="/assets/new-images/blog/cement-grade/b-1.png"
+          alt="Right Cement Grade"
+        />
+      </Link>
+    </div>
+    <div className="recent-post-content">
+      <Link href="/blog">18 August, 2025</Link>
+      <h6>
+        <Link href="/blog/cement-grade">
+          How to Choose the Right Cement Grade for Your Construction Project
+        </Link>
+      </h6>
+    </div>
+  </div>
+
+  <div className="recent-post-widget">
+    <div className="recent-post-img">
+      <Link href="/blog/construction-mistakes">
+        <Image
+          width={100}
+          height={100}
+          src="/assets/new-images/blog/construction-mistakes/b-1.png"
+          alt="Construction Planning Mistakes"
+        />
+      </Link>
+    </div>
+    <div className="recent-post-content">
+      <Link href="/blog">20 August, 2025</Link>
+      <h6>
+        <Link href="/blog/construction-mistakes">
+          Common Mistakes to Avoid When Planning a Construction Project
+        </Link>
+      </h6>
+    </div>
+  </div>
+</div>
                                 <div className="single-widget">
                                     <h5 className="widget-title">New Tags</h5>
                                     <ul className="tag-list">
@@ -318,116 +269,7 @@ const page = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-lg-8">
-                            <div className="comment-area" id="scroll-section2">
-                                <div className="title">
-                                    <h3>Comments</h3>
-                                </div>
-                                <ul className="comment">
-                                    <li>
-                                        <div className="single-comment-area">
-                                            <div className="author-img">
-                                                <Image width={100} height={100}src="/assets/img/innerpages/blog-comment-author-01.png" alt="" />
-                                            </div>
-                                            <div className="comment-content">
-                                                <div className="author-name-date">
-                                                    <h4>Polard Girdet,</h4>
-                                                    <span>June 27, 2024</span>
-                                                </div>
-                                                <p>However, here are some well-regarded car dealerships known for their customer service, inventory, and overall reputation. It's always a good idea to research and read reviews specific.</p>
-                                                <div className="replay-btn">
-                                                    <div className="details-button">
-                                                        Reply
-                                                        <svg viewBox="0 0 13 20">
-                                                            <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="single-comment-area">
-                                            <div className="author-img">
-                                                <Image width={100} height={100} src="/assets/img/innerpages/blog-comment-author-02.png" alt="" />
-                                            </div>
-                                            <div className="comment-content">
-                                                <div className="author-name-date">
-                                                    <h4>Jacoline Juie,</h4>
-                                                    <span>June 28, 2024</span>
-                                                </div>
-                                                <p>However, here are some well-regarded car dealerships known for their customer service, inventory, and overall reputation. It's always a good idea to research and read reviews specific.</p>
-                                                <div className="replay-btn">
-                                                    <div className="details-button">
-                                                        Reply
-                                                        <svg viewBox="0 0 13 20">
-                                                            <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div className="contact-form-area">
-                                    <div className="title">
-                                        <h3>Leave A Comment</h3>
-                                    </div>
-                                    <div className="contact-form">
-                                        <form>
-                                            <div className="row">
-                                                <div className="col-md-12">
-                                                    <div className="form-inner mb-30">
-                                                        <label>Full Name *</label>
-                                                        <input type="text" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="form-inner mb-30">
-                                                        <label>Email*</label>
-                                                        <input type="email" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="form-inner mb-30">
-                                                        <label>Phone *</label>
-                                                        <input type="text" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="form-inner mb-30">
-                                                        <label>Subject *</label>
-                                                        <input type="text" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="form-inner mb-50">
-                                                        <label>Message *</label>
-                                                        <textarea defaultValue={""} />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="form-inner">
-                                                <button type="submit" className="primary-btn3 black-bg">
-                                                    <span>Submit Now
-                                                    </span>
-                                                    <span>Submit Now
-                                                    </span>
-                                                    <svg className="arrow" width={23} height={23} viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
-                                                        <g>
-                                                            <path d="M0.113861 0H22.9999V4.28425L4.32671 22.9997L0 18.7154L12.7524 6.08815L0.113861 6.20089V0Z" />
-                                                            <path d="M23 22.9996V8.56848L16.8516 14.6566V22.9996H23Z" />
-                                                        </g>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <FooterTop />

@@ -53,7 +53,7 @@ const HomepageBlogSection: React.FC = () => {
                                         <div className="blog-card">
                                             <div className="blog-img-wrap">
                                                 <Link className="blog-img" href="/blog/cement-grade">
-                                                    <img width={416} height={320} src="/assets/new-images/projects/project-1.jpg" alt="" />
+                                                    <img width={416} height={320} src="/assets/new-images/blog/cement-grade/b-1.png" alt="" />
                                                 </Link>
                                                 <div className="blog-meta">
                                                     <ul>
@@ -82,7 +82,7 @@ const HomepageBlogSection: React.FC = () => {
                                         <div className="blog-card">
                                             <div className="blog-img-wrap">
                                                 <Link className="blog-img" href="/blog/white-cement">
-                                                    <img width={416} height={320} src="/assets/new-images/projects/project-2.jpg" alt="" />
+                                                    <img width={416} height={320} src="/assets/new-images/blog/white-cement/b-1.png" alt="" />
                                                 </Link>
                                                 <div className="blog-meta">
                                                     <ul>
@@ -111,7 +111,7 @@ const HomepageBlogSection: React.FC = () => {
                                         <div className="blog-card">
                                             <div className="blog-img-wrap">
                                                 <Link className="blog-img" href="/blog/construction-mistakes">
-                                                    <img width={416} height={320} src="/assets/new-images/projects/project-3.jpg" alt="" />
+                                                    <img width={416} height={320} src="/assets/new-images/blog/construction-mistakes/b-1.png" alt="" />
                                                 </Link>
                                                 <div className="blog-meta">
                                                     <ul>

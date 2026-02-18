@@ -52,26 +52,14 @@ const ProductPage = () => {
 
    const companies = [
     {
-      logo: '/assets/new-images/products/chemicals-partens/constructionchemicals11.jpg',
-      logoAlt: 'LANXESS Logo',
-      companyName: 'LANXESS',
+      logo: '/assets/new-images/products/chemicals-partens/ULTRATECH-chem.jfif',
+      logoAlt: 'ULTRATECH Logo',
+      companyName: 'ULTRATECH',
       description:
-        'The company currently has about 15,400 employees in 33 countries and is represented at 60 production sites worldwide. The core business of LANXESS is the development, manufacturing and marketing of chemical intermediates, additives, specialty chemicals and plastics.',
+        'UltraTech Cement is India’s largest cement manufacturer and a part of the Aditya Birla Group. With state-of-the-art plants and a strong global presence, it delivers high-quality cement and building solutions for infrastructure and housing projects.',
     },
-    {
-      logo: '/assets/new-images/products/chemicals-partens/constructionchemicals22.jpg',
-      logoAlt: 'SIKA Logo',
-      companyName: 'SIKA',
-      description:
-        "Sika is a specialty chemicals company with a leading position in the development and production of systems and products for bonding, sealing, damping, reinforcing and protecting in the building sector and motor vehicle industry.",
-    },
-    {
-      logo: '/assets/new-images/products/chemicals-partens/bosch2.jpg',
-      logoAlt: 'BOSCH Logo',
-      companyName: 'BOSCH',
-      description:
-        "Operating across four business sectors – Mobility Solutions, Industrial Technology, Consumer Goods, and Energy and Building Technology – Bosch is uniquely positioned to offer customers a multitude of value-add, cross-sector solutions across a diversity of industry applications.",
-    },
+   
+    
    
     
   ];

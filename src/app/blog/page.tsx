@@ -20,7 +20,7 @@ const page = () => {
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
                                     <Link className="blog-img" href="/blog/cement-grade">
-                                        <Image width={416} height={230} src="/assets/new-images/projects/project-1.jpg" alt="" />
+                                        <Image width={416} height={230} src="/assets/new-images/blog/cement-grade/b-1.png" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>

@@ -50,53 +50,43 @@ const ProductPage = () => {
 
 
 
+const companies = [
+  {
+    logo: '/assets/new-images/products/sheet-pipies-partens/sheetpipe22.jpg',
+    logoAlt: 'TATA FRP Roofing Sheet Logo',
+    companyName: 'TATA FRP Roofing Sheet',
+    description:
+      'Tata FRP Roofing Sheets are durable, lightweight, and corrosion-resistant roofing solutions designed for industrial and residential use. They offer high strength, weather resistance, and long-lasting performance with minimal maintenance.',
+  },
+  {
+    logo: '/assets/new-images/products/sheet-pipies-partens/sheetpipe22.jpg',
+    logoAlt: 'TATA Durashine Logo',
+    companyName: 'TATA Durashine',
+    description:
+      'Tata Durashine, from Tata BlueScope Steel, offers premium color-coated roofing and cladding solutions. Known for durability, aesthetic appeal, and superior weather protection, it is ideal for modern industrial and commercial buildings.',
+  },
+  {
+    logo: '/assets/new-images/products/sheet-pipies-partens/sheetpipe11.jpg',
+    logoAlt: 'TATA Structura Z+ Logo',
+    companyName: 'TATA Structura Z+',
+    description:
+      'Tata Structura Z+ is a premium range of galvanized steel hollow sections from Tata Steel. With high zinc coating and superior strength, it ensures long-lasting structural performance, especially in corrosive environments.',
+  },
+  {
+    logo: '/assets/new-images/products/sheet-pipies-partens/JSW-pragathi-logo.png',
+    logoAlt: 'JSW Pragathi Logo',
+    companyName: 'JSW Pragathi',
+    description:
+      'JSW Pragathi is a high-quality color-coated steel roofing solution from JSW Steel. Engineered for strength and durability, it provides excellent corrosion resistance and aesthetic finish for industrial and residential structures.',
+  },
+  
+  
+  
+ 
+ 
+ 
 
-   const companies = [
-    {
-      logo: '/public/assets/new-images/products/sheet-pipies-partens/sheetpipe11.jpg',
-      logoAlt: '3 Wheeler Logo',
-      companyName: '3 Wheeler',
-      description:
-        'The company has a consolidated capacity* of 102.75 Million Tonnes Per Annum (MTPA) of grey cement. UltraTech Cement has 20 integrated plants, 1 clinkerisation plant, 26 grinding units and 7 bulk terminals. Its operations span across India, UAE, Bahrain, Bangladesh and Sri Lanka.',
-    },
-    {
-      logo: '/assets/new-images/products/log-vec/crane.jpg',
-      logoAlt: 'Crane Logo',
-      companyName: 'Crane',
-      description:
-        "As one of the foremost companies in the Indian cement and concrete industry, we at ACC are driven by the inherent need of providing products and solutions that will create the new economic,",
-    },
-    {
-      logo: '/assets/new-images/products/log-vec/hgv.jpg',
-      logoAlt: 'HGV Logo',
-      companyName: 'HGV',
-      description:
-        "Anjani Cement is a popular brand in south India for its quality and commitment to service. Starting with initial production capacity of 0.3 million tonnes per annum in 1999, the Company has now achieved a quantum shift in its production capacity to 1.2 million tonnes .",
-    },
-    {
-      logo: '/assets/new-images/products/log-vec/lgv.jpg',
-      logoAlt: 'LGV (16) Logo',
-      companyName: 'LGV (16)',
-      description:
-        "Vicat is a pioneer in cement manufacturing since its invention by Louis Vicat in 1817. Vicat Group, France is a global cement organisation with offices in 11 countries. It’s main business interests are Cement, Ready-Mixed Concrete, Concrete Product (Precast) and Aggregates.",
-    },
-    {
-      logo: '/assets/new-images/products/log-vec/taurus.jpg',
-      logoAlt: 'Taurus Logo',
-      companyName: 'Taurus',
-      description:
-        "Launched as a corollary to the magnificent success of Orient Gold 53 Grade Cement, Birla A1 Premium Cement has carved a niche in the market and is already among the best known brands in south-west India.",
-    },
-    {
-      logo: '/assets/new-images/products/log-vec/Trailer.jpg',
-      logoAlt: 'Trailer Logo',
-      companyName: 'Dalmia',
-      description:
-        "Apart from world-class cement manufacturing plants in India, what makes us unique as a cement manufacturer is our constant ability to innovate. On the key efficiency parameters, we rank right up there with the best of cement companies in the industry.",
-    },
-   
-    
-  ];
+]
   /* ---------------- AUTO SLIDER ---------------- */
 
   useEffect(() => {
