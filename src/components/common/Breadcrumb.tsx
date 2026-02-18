@@ -56,16 +56,30 @@ const Breadcrumb = ({
                     />
                 )}
             </div>
-            {image && (  // ✅ Only render if image is provided
-                <div className="breadcrumb-img">
-                    <Image
-                        width={1920}
-                        height={550}
-                        src={image}
-                        alt={imageAlt}
-                    />
-                </div>
-            )}
+           {image && (
+  <div
+    className="breadcrumb-img"
+    style={{
+      position: "relative",
+      width: "100%",
+      height: "550px",
+      overflow: "hidden"
+    }}
+  >
+    <Image
+      src={image}
+      alt={imageAlt}
+      fill
+      priority
+      style={{
+        objectFit: "cover",
+        objectPosition: "center"
+      }}
+    />
+  </div>
+)}
+
+        
         </div>
     )
 }

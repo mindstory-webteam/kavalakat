@@ -200,7 +200,7 @@ const ProductPage = () => {
                             </div>
                             <div className="col-lg-6">
                                 <div className="faq-content-area p-4">
-                                    <h2 className="mb-4">Steel Products</h2>
+                                    <h2 className="mb-4">Neyy Vedhyam </h2>
                                     
                                     <div className="faq-wrap">
                                         <div className="accordion" id="accordionExample">
