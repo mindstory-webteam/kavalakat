@@ -17,14 +17,14 @@ const Footer = () => {
                                 <p>Welcome to Kavalakat where innovation meet our passion in a journey that started dream.</p>
                             </div>
                             <div className="col-md-4 d-flex justify-content-md-end">
-
                             </div>
                         </div>
                     </div>
+
                     <div className="footer-menu-and-address-wrap">
                         <div className="row align-items-start">
 
-                            {/* ── Address ── */}
+                            {/* ── Address + Location ── */}
                             <div className="col-lg-3">
                                 <div className="footer-widget">
                                     <div className="address-area">
@@ -43,16 +43,16 @@ const Footer = () => {
                                 </div>
                             </div>
 
-                            {/* ── Nav Menus ── */}
-                            <div className="col-lg-9" style={{paddingTop:'50px'}}>
+                            {/* ── Nav columns ── */}
+                            <div className="col-lg-9">
                                 <div className="footer-menu">
                                     <div className="row gy-5">
 
-                                        {/* ── Column 1: About ── */}
+                                        {/* ── About ── */}
                                         <div className="col-md-3 col-sm-6 d-flex justify-content-lg-center">
                                             <div className="footer-widget">
                                                 <div className="widget-title">
-                                                    <h5>Links</h5>
+                                                    <h5>About</h5>
                                                 </div>
                                                 <div className="menu-container">
                                                     <ul className="widget-list">
@@ -133,7 +133,7 @@ const Footer = () => {
                                             </div>
                                         </div>
 
-                                        {/* ── Column 2: All Products ── */}
+                                        {/* ── All Products (Header Column 1) ── */}
                                         <div className="col-md-3 col-sm-6 d-flex justify-content-lg-center">
                                             <div className="footer-widget">
                                                 <div className="widget-title">
@@ -160,8 +160,8 @@ const Footer = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/product/sheet-pipes">
-                                                                Sheet Pipes
+                                                            <Link href="/product/roofing-solutions">
+                                                                Roofing Solutions
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -178,8 +178,8 @@ const Footer = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/product/abrasives-construction-chemicals">
-                                                                Abrasive Construction Chemicals
+                                                            <Link href="/product/construction-chemicals">
+                                                                Construction Chemicals
                                                                 <svg width={9} height={9} viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M0.0445549 0H9.00008V1.67647L1.69308 9L0 7.32353L4.99014 2.38235L0.0445549 2.42647V0Z" />
                                                                     <path d="M9.0002 8.9996V3.35254L6.59424 5.73489V8.9996H9.0002Z" />
@@ -191,7 +191,7 @@ const Footer = () => {
                                             </div>
                                         </div>
 
-                                        {/* ── Column 3: Hospitality + Logistics ── */}
+                                        {/* ── Hospitality (Header Column 2) + Logistics (Header Column 3) ── */}
                                         <div className="col-md-2 col-sm-6 d-flex justify-content-lg-center">
                                             <div className="footer-widget">
                                                 <div className="widget-title">
@@ -238,7 +238,7 @@ const Footer = () => {
                                             </div>
                                         </div>
 
-                                        {/* ── Column 4: Contact ── */}
+                                        {/* ── Contact info ── */}
                                         <div className="col-md-4 col-sm-6 d-flex justify-content-lg-end">
                                             <ul className="contact-area">
                                                 <li>
@@ -300,6 +300,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
             <div className="footer-bottom-wrap">
                 <div className="container">
                     <div className="footer-bottom">

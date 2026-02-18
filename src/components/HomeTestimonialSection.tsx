@@ -144,7 +144,7 @@ const HomeTestimonialSection: React.FC = () => {
                                                 <div className="testimonial-content">
                                                     <QuoteSVG />
                                                     <span>Excellent quality production!</span>
-                                                    <p>" Kavalakat Agencies has been a reliable supplier for our steel and cement requirements. Their product quality, timely delivery, and professional coordination made the procurement process smooth. Highly dependable for large-scale projects ".</p>
+                                                    <p>" Kavalakat  has been a reliable supplier for our steel and cement requirements. Their product quality, timely delivery, and professional coordination made the procurement process smooth. Highly dependable for large-scale projects ".</p>
                                                     <div className="author-and-social-area">
                                                         <div className="author-area">
                                                             <div className="author-img">
@@ -174,7 +174,7 @@ const HomeTestimonialSection: React.FC = () => {
                                                 <div className="testimonial-content">
                                                     <QuoteSVG />
                                                     <span>Best communication &amp; deliver</span>
-                                                    <p>" We sourced steel, cement, and white cement from Kavalakat Agencies and were impressed with their consistency and service standards. Transparent dealings and on-time delivery make them a trusted partner in construction.".</p>
+                                                    <p>" We sourced steel, cement, and white cement from Kavalakat  and were impressed with their consistency and service standards. Transparent dealings and on-time delivery make them a trusted partner in construction.".</p>
                                                     <div className="author-and-social-area">
                                                         <div className="author-area">
                                                             <div className="author-img">
@@ -204,7 +204,7 @@ const HomeTestimonialSection: React.FC = () => {
                                                 <div className="testimonial-content">
                                                     <QuoteSVG />
                                                     <span>Outstanding material quality!</span>
-                                                    <p>"Kavalakat Agencies supplied sheets and pipes for our project, and the quality met all required standards. Their team was responsive, documentation was clear, and deliveries were well-coordinated. A dependable supplier in Kerala.".</p>
+                                                    <p>"Kavalakat  supplied sheets and pipes for our project, and the quality met all required standards. Their team was responsive, documentation was clear, and deliveries were well-coordinated. A dependable supplier in Kerala.".</p>
                                                     <div className="author-and-social-area">
                                                         <div className="author-area">
                                                             <div className="author-img">
@@ -230,16 +230,16 @@ const HomeTestimonialSection: React.FC = () => {
                 <div className="counter-wrap">
                     <div className="row gy-sm-5 gy-4">
                         <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center divider">
-                            <Counter target={45} suffix="+" label="Green Spaces" />
+                            <Counter target={50} suffix="+ Years" label="Legacy in the Construction Industry" />
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center divider">
-                            <Counter target={15} label="Skilled Professionals" />
+                            <Counter target={245} suffix="+" label="Employees Across Kerala & Tamil Nadu" />
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-lg-center justify-content-md-end justify-content-center divider">
-                            <Counter target={5} label="Years of Experience" />
+                            <Counter target={440} suffix="+" label="Retail Network Across the State" />
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                            <Counter target={2} suffix="M" label="Square Meters" />
+                            <Counter target={15000} suffix="+ MT" label="Steel & Cement Volume Handled" />
                         </div>
                     </div>
                 </div>

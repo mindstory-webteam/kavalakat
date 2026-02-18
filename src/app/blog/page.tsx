@@ -7,8 +7,6 @@ import Breadcrumb from '@/components/common/Breadcrumb'
 import Image from 'next/image'
 
 const page = () => {
-
-     
     return (
         <>
             <InnerPageHeader />
@@ -16,211 +14,24 @@ const page = () => {
             <div className="blog-grid-page pt-120 mb-120" id="scroll-section">
                 <div className="container">
                     <div className="row gy-5 mb-70">
+
+                        {/* ✅ NEW CARD 1 */}
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
-                                    <Link className="blog-img" href="/blog/details">
+                                    <Link className="blog-img" href="/blog/cement-grade">
                                         <Image width={416} height={230} src="/assets/new-images/projects/project-1.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>
                                             <li><Link className="blog-date" href="/blog">10 August, 2025</Link></li>
-                                            <li><Link href="/blog">Industry</Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <h5><Link href="/blog/details">Revolutionizing Production Then Future of Factories.</Link></h5>
-                                    <Link href="/blog/details" className="read-btn">
-                                        <span>Read More</span>
-                                        <svg width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M7.23241 0.232893L14.3936 7.39408L13.053 8.73466L1.35388 8.74787L1.3406 6.05345L9.28207 6.0926L5.2921 2.17319L7.23241 0.232893Z" />
-                                                <path d="M7.19784 14.5909L11.7135 10.0753L7.88453 10.0564L5.27394 12.667L7.19784 14.5909Z" />
-                                            </g>
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div className="blog-card magnetic-item">
-                                <div className="blog-img-wrap">
-                                    <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/new-images/projects/project-2.jpg" alt="" />
-                                    </Link>
-                                    <div className="blog-meta">
-                                        <ul>
-                                            <li><Link className="blog-date" href="/blog">12 August, 2025</Link></li>
-                                            <li><Link href="/blog">Architecture</Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <h5><Link href="/blog/details">Factory Spotlight Technology Effici in Manufacturing.</Link></h5>
-                                    <Link href="/blog/details" className="read-btn">
-                                        <span>Read More</span>
-                                        <svg width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M7.23241 0.232893L14.3936 7.39408L13.053 8.73466L1.35388 8.74787L1.3406 6.05345L9.28207 6.0926L5.2921 2.17319L7.23241 0.232893Z" />
-                                                <path d="M7.19784 14.5909L11.7135 10.0753L7.88453 10.0564L5.27394 12.667L7.19784 14.5909Z" />
-                                            </g>
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div className="blog-card magnetic-item">
-                                <div className="blog-img-wrap">
-                                    <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/new-images/projects/project-3.jpg" alt="" />
-                                    </Link>
-                                    <div className="blog-meta">
-                                        <ul>
-                                            <li><Link className="blog-date" href="/blog">10 May, 2025</Link></li>
-                                            <li><Link href="/blog">Renovation</Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <h5><Link href="/blog/details">Pulse of Manufacturing Factories News &amp; Advances.</Link></h5>
-                                    <Link href="/blog/details" className="read-btn">
-                                        <span>Read More</span>
-                                        <svg width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M7.23241 0.232893L14.3936 7.39408L13.053 8.73466L1.35388 8.74787L1.3406 6.05345L9.28207 6.0926L5.2921 2.17319L7.23241 0.232893Z" />
-                                                <path d="M7.19784 14.5909L11.7135 10.0753L7.88453 10.0564L5.27394 12.667L7.19784 14.5909Z" />
-                                            </g>
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-                            <div className="blog-card magnetic-item">
-                                <div className="blog-img-wrap">
-                                    <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/new-images/projects/project-1.jpg" alt="" />
-                                    </Link>
-                                    <div className="blog-meta">
-                                        <ul>
-                                            <li><Link className="blog-date" href="/blog">15 August, 2025</Link></li>
-                                            <li><Link href="/blog">Industry</Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <h5><Link href="/blog/details">Technological Efficiency in the Factory.</Link></h5>
-                                    <Link href="/blog/details" className="read-btn">
-                                        <span>Read More</span>
-                                        <svg width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M7.23241 0.232893L14.3936 7.39408L13.053 8.73466L1.35388 8.74787L1.3406 6.05345L9.28207 6.0926L5.2921 2.17319L7.23241 0.232893Z" />
-                                                <path d="M7.19784 14.5909L11.7135 10.0753L7.88453 10.0564L5.27394 12.667L7.19784 14.5909Z" />
-                                            </g>
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-                            <div className="blog-card magnetic-item">
-                                <div className="blog-img-wrap">
-                                    <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/new-images/projects/project-2.jpg" alt="" />
-                                    </Link>
-                                    <div className="blog-meta">
-                                        <ul>
-                                            <li><Link className="blog-date" href="/blog">16 October, 2025</Link></li>
-                                            <li><Link href="/blog">Construction </Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <h5><Link href="/blog/details">Expert Opinions Revolutionizing Production industries.</Link></h5>
-                                    <Link href="/blog/details" className="read-btn">
-                                        <span>Read More</span>
-                                        <svg width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M7.23241 0.232893L14.3936 7.39408L13.053 8.73466L1.35388 8.74787L1.3406 6.05345L9.28207 6.0926L5.2921 2.17319L7.23241 0.232893Z" />
-                                                <path d="M7.19784 14.5909L11.7135 10.0753L7.88453 10.0564L5.27394 12.667L7.19784 14.5909Z" />
-                                            </g>
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div className="blog-card magnetic-item">
-                                <div className="blog-img-wrap">
-                                    <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/new-images/projects/project-3.jpg" alt="" />
-                                    </Link>
-                                    <div className="blog-meta">
-                                        <ul>
-                                            <li><Link className="blog-date" href="/blog">22 October, 2025</Link></li>
-                                            <li><Link href="/blog">Renovation</Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <h5><Link href="/blog/details">Revolutionizing Production Future of Industries &amp; Factories.</Link></h5>
-                                    <Link href="/blog/details" className="read-btn">
-                                        <span>Read More</span>
-                                        <svg width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M7.23241 0.232893L14.3936 7.39408L13.053 8.73466L1.35388 8.74787L1.3406 6.05345L9.28207 6.0926L5.2921 2.17319L7.23241 0.232893Z" />
-                                                <path d="M7.19784 14.5909L11.7135 10.0753L7.88453 10.0564L5.27394 12.667L7.19784 14.5909Z" />
-                                            </g>
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div className="blog-card magnetic-item">
-                                <div className="blog-img-wrap">
-                                    <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/new-images/projects/project-2.jpg" alt="" />
-                                    </Link>
-                                    <div className="blog-meta">
-                                        <ul>
-                                            <li><Link className="blog-date" href="/blog">10 August, 2025</Link></li>
-                                            <li><Link href="/blog">Industry</Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <h5><Link href="/blog/details">Why Institutional Level Bit Pricing Matters for Your Trades.</Link></h5>
-                                    <Link href="/blog/details" className="read-btn">
-                                        <span>Read More</span>
-                                        <svg width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M7.23241 0.232893L14.3936 7.39408L13.053 8.73466L1.35388 8.74787L1.3406 6.05345L9.28207 6.0926L5.2921 2.17319L7.23241 0.232893Z" />
-                                                <path d="M7.19784 14.5909L11.7135 10.0753L7.88453 10.0564L5.27394 12.667L7.19784 14.5909Z" />
-                                            </g>
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div className="blog-card magnetic-item">
-                                <div className="blog-img-wrap">
-                                    <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/new-images/projects/project-3.jpg" alt="" />
-                                    </Link>
-                                    <div className="blog-meta">
-                                        <ul>
-                                            <li><Link className="blog-date" href="/blog">13 August, 2025</Link></li>
                                             <li><Link href="/blog">Construction</Link></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="blog-content">
-                                    <h5><Link href="/blog/details">Revolutionizing Productions and Future of Factories.</Link></h5>
-                                    <Link href="/blog/details" className="read-btn">
+                                    <h5><Link href="/blog/cement-grade">How to Choose the Right Cement Grade for Your Construction Project.</Link></h5>
+                                    <Link href="/blog/cement-grade" className="read-btn">
                                         <span>Read More</span>
                                         <svg width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -232,22 +43,24 @@ const page = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
+
+                        {/* ✅ NEW CARD 2 */}
+                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div className="blog-card magnetic-item">
                                 <div className="blog-img-wrap">
-                                    <Link className="blog-img" href="/blog/details">
-                                        <Image width={416} height={230} src="/assets/new-images/projects/project-1.jpg" alt="" />
+                                    <Link className="blog-img" href="/blog/white-cement">
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-2.jpg" alt="" />
                                     </Link>
                                     <div className="blog-meta">
                                         <ul>
-                                            <li><Link className="blog-date" href="/blog">25 August, 2025</Link></li>
-                                            <li><Link href="/blog">Architecture</Link></li>
+                                            <li><Link className="blog-date" href="/blog">12 August, 2025</Link></li>
+                                            <li><Link href="/blog">Renovation</Link></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="blog-content">
-                                    <h5><Link href="/blog/details">Sustainable Metals Reducingm Environment Impact.</Link></h5>
-                                    <Link href="/blog/details" className="read-btn">
+                                    <h5><Link href="/blog/white-cement">Benefits of Using White Cement &amp; Paint in Modern Construction.</Link></h5>
+                                    <Link href="/blog/white-cement" className="read-btn">
                                         <span>Read More</span>
                                         <svg width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -259,7 +72,40 @@ const page = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {/* ✅ NEW CARD 3 */}
+                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div className="blog-card magnetic-item">
+                                <div className="blog-img-wrap">
+                                    <Link className="blog-img" href="/blog/construction-mistakes">
+                                        <Image width={416} height={230} src="/assets/new-images/projects/project-3.jpg" alt="" />
+                                    </Link>
+                                    <div className="blog-meta">
+                                        <ul>
+                                            <li><Link className="blog-date" href="/blog">10 May, 2025</Link></li>
+                                            <li><Link href="/blog">Industry</Link></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="blog-content">
+                                    <h5><Link href="/blog/construction-mistakes">Common Mistakes to Avoid When Planning a Construction Project.</Link></h5>
+                                    <Link href="/blog/construction-mistakes" className="read-btn">
+                                        <span>Read More</span>
+                                        <svg width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path d="M7.23241 0.232893L14.3936 7.39408L13.053 8.73466L1.35388 8.74787L1.3406 6.05345L9.28207 6.0926L5.2921 2.17319L7.23241 0.232893Z" />
+                                                <path d="M7.19784 14.5909L11.7135 10.0753L7.88453 10.0564L5.27394 12.667L7.19784 14.5909Z" />
+                                            </g>
+                                        </svg>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
                     </div>
+                    {/* pagination stays exactly the same */}
                     <div className="row wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="col-lg-12 d-flex justify-content-center">
                             <div className="innerpage-pagination-area">
@@ -271,15 +117,9 @@ const page = () => {
                                             </svg>
                                         </a>
                                     </li>
-                                    <li className="page-item active">
-                                        <a href="#">01</a>
-                                    </li>
-                                    <li className="page-item">
-                                        <a href="#">02</a>
-                                    </li>
-                                    <li className="page-item">
-                                        <a href="#">03</a>
-                                    </li>
+                                    <li className="page-item active"><a href="#">01</a></li>
+                                    <li className="page-item"><a href="#">02</a></li>
+                                    <li className="page-item"><a href="#">03</a></li>
                                     <li className="page-item paginations-button">
                                         <a href="#">
                                             <svg width={14} height={12} viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
@@ -293,9 +133,6 @@ const page = () => {
                     </div>
                 </div>
             </div>
-
-
-
             <FooterTop />
             <Footer1 />
         </>

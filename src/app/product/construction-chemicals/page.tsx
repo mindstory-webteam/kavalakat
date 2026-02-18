@@ -125,7 +125,7 @@ const ProductPage = () => {
         <>
             <InnerPageHeader />
           
-            <Breadcrumb title="Construction Chemicals Supplier" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-3.jpeg' />
+            <Breadcrumb title="Construction Chemicals" subtitle="Products Power Progress Explore Our Offer." image='/assets/new-images/bm/bm-3.jpeg' />
             
             <div className="product-details-top-area pt-120 mb-120" id="scroll-section">
                 <div className="container">
@@ -361,7 +361,7 @@ const ProductPage = () => {
       <div className="col-12">
         <div className="section-title-wrapper">
          
-          <h2 className="section-main-title">Trusted Steel Brands We Supply</h2>
+          <h2 className="section-main-title">Trusted Construction Chemicals Brands We Supply</h2>
         </div>
       </div>
     </div>

@@ -404,7 +404,7 @@ const ProductPage = () => {
       <div className="col-12">
         <div className="section-title-wrapper">
          
-          <h2 className="section-main-title">Trusted Steel Brands We Supply</h2>
+          <h2 className="section-main-title">Trusted Cement Brands We Supply</h2>
         </div>
       </div>
     </div>

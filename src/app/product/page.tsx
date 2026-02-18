@@ -98,7 +98,7 @@ const ProductPage = () => {
                                         </Link>
                                     </div>
                                     <div className="product-content">
-                                        <h4><Link href="/product/abrasives-construction-chemicals">Abrasives & Construction Chemicals</Link></h4>
+                                        <h4><Link href="/product/abrasives-construction-chemicals">Construction Chemicals</Link></h4>
                                         <p>Specialty products managed through controlled workflows to ensure safety, accuracy, and performance consistency.</p>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@ const ProductPage = () => {
                              <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
                                 <div className="product-card">
                                     <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/new-images/products/p-6.jpeg" alt="" />
+                                        <Image width={340} height={270} src="/assets/new-images/products/product-img.png" alt="" />
                                         <Link href="/services/alite-enclaves" className="arrow">
                                             <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />
@@ -145,7 +145,7 @@ const ProductPage = () => {
                              <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
                                 <div className="product-card">
                                     <div className="product-img">
-                                        <Image width={340} height={270} src="/assets/new-images/products/p-6.jpeg" alt="" />
+                                        <Image width={340} height={270} src="/assets/new-images/products/product-img-2.png" alt="" />
                                         <Link href="/services/neyy-vedyam" className="arrow">
                                             <svg width={18} height={19} viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.0891088 0.0541992H18V3.40711L3.38614 18.054L0 14.7011L9.98019 4.81886L0.0891088 4.90709V0.0541992Z" />

@@ -346,11 +346,15 @@ const Header: React.FC = () => {
                                 </Link>
                                 <i onClick={() => toggleMenu("blog")} className={`bi bi-${state.activeMenu === "blog" ? "dash" : "plus"} dropdown-icon`} />
                                 <ul className={`sub-menu ${state.activeMenu === "blog" ? "d-block" : ""}`}>
-                                    <li className={pathname === "/blog" ? "active" : ""}>
-                                        <Link href="/blog"><span>Blog</span></Link>
+                                    
+                                    <li className={pathname === "/blog/cement-grade" ? "active" : ""}>
+                                        <Link href="/blog/cement-grade"><span>Cement Grade</span></Link>
                                     </li>
-                                    <li className={pathname === "/blog/details" ? "active" : ""}>
-                                        <Link href="/blog/details"><span>Blog Details</span></Link>
+                                    <li className={pathname === "/blog/construction-mistakes" ? "active" : ""}>
+                                        <Link href="/blog/construction-mistakes"><span>Construction Mistakes</span></Link>
+                                    </li>
+                                    <li className={pathname === "/blog/white-cement" ? "active" : ""}>
+                                        <Link href="/blog/white-cement"><span>White Cement</span></Link>
                                     </li>
                                 </ul>
                             </li>

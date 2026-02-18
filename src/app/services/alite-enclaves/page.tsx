@@ -146,7 +146,7 @@ const ProductPage = () => {
         <>
             <InnerPageHeader />
           
-            <Breadcrumb title="Alite Enclaves" subtitle="Empowering Hospitality Projects With Trusted Materials" image='/assets/new-images/bm/bm-3.jpeg' />
+            <Breadcrumb title="Alite Enclaves" subtitle="Empowering Hospitality Projects With Trusted Materials" image='/assets/new-images/bm/bm-Alite-Enclaves.png' />
             
             <div className="product-details-top-area pt-120 mb-120" id="scroll-section">
                 <div className="container">

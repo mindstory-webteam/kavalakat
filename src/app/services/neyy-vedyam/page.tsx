@@ -146,7 +146,7 @@ const ProductPage = () => {
         <>
             <InnerPageHeader />
           
-            <Breadcrumb title="Neyy Vedhyam" subtitle="Premium Vegetarian Cuisine by the Kavalakat Group" image='/assets/new-images/bm/bm-3.jpeg' />
+            <Breadcrumb title="Neyy Vedhyam" subtitle="Premium Vegetarian Cuisine by the Kavalakat Group" image='/assets/new-images/bm/bm-neyy.png' />
             
             <div className="product-details-top-area pt-120 mb-120" id="scroll-section">
                 <div className="container">
