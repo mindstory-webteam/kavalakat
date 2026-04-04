@@ -3,8 +3,6 @@ import React, { useEffect, useReducer, useRef } from 'react'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-
-// Define the shape of the state
 interface State {
     activeMenu: string;
     activeSubMenu: string;
@@ -15,7 +13,6 @@ interface State {
     scrollY: number;
 }
 
-// Define the types for all possible actions
 type Action =
     | { type: "TOGGLE_MENU"; menu: string }
     | { type: "TOGGLE_SUB_MENU"; subMenu: string }
@@ -35,50 +32,31 @@ const initialState: State = {
     scrollY: 0,
 };
 
-// Type the reducer function
 function reducer(state: State, action: Action): State {
     switch (action.type) {
         case "TOGGLE_MENU":
             return {
                 ...state,
                 activeMenu: state.activeMenu === action.menu ? "" : action.menu,
-                activeSubMenu:
-                    state.activeMenu === action.menu ? state.activeSubMenu : "",
+                activeSubMenu: state.activeMenu === action.menu ? state.activeSubMenu : "",
             };
         case "TOGGLE_SUB_MENU":
-            return {
-                ...state,
-                activeSubMenu:
-                    state.activeSubMenu === action.subMenu ? "" : action.subMenu,
-            };
+            return { ...state, activeSubMenu: state.activeSubMenu === action.subMenu ? "" : action.subMenu };
         case "TOGGLE_SIDEBAR":
-            return {
-                ...state,
-                isSidebarOpen: !state.isSidebarOpen,
-            };
+            return { ...state, isSidebarOpen: !state.isSidebarOpen };
         case "setScrollY":
             return { ...state, scrollY: action.payload };
         case "TOGGLE_LEFT_SIDEBAR":
-            return {
-                ...state,
-                isLeftSidebarOpen: !state.isLeftSidebarOpen,
-            };
+            return { ...state, isLeftSidebarOpen: !state.isLeftSidebarOpen };
         case "TOGGLE_LANG":
-            return {
-                ...state,
-                isLang: !state.isLang,
-            };
+            return { ...state, isLang: !state.isLang };
         case "TOGGLE_RIGHTSIDEBAR":
-            return {
-                ...state,
-                isRightSidebar: !state.isRightSidebar,
-            };
+            return { ...state, isRightSidebar: !state.isRightSidebar };
         default:
             return state;
     }
 }
 
-// Type the functional component
 const Header: React.FC = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const headerRef = useRef<HTMLElement>(null);
@@ -86,54 +64,159 @@ const Header: React.FC = () => {
 
     const handleScroll = () => {
         if (typeof window !== 'undefined') {
-            const { scrollY } = window;
-            dispatch({ type: "setScrollY", payload: scrollY });
+            dispatch({ type: "setScrollY", payload: window.scrollY });
         }
     };
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener("scroll", handleScroll);
-            return () => {
-                window.removeEventListener("scroll", handleScroll);
-            };
+            return () => window.removeEventListener("scroll", handleScroll);
         }
     }, []);
 
-    const toggleMenu = (menu: string) => {
-        dispatch({ type: "TOGGLE_MENU", menu });
-    };
-
-    const toggleRightSidebar = () => {
-        dispatch({ type: "TOGGLE_RIGHTSIDEBAR" });
-    };
-
+    const toggleMenu = (menu: string) => dispatch({ type: "TOGGLE_MENU", menu });
+    const toggleRightSidebar = () => dispatch({ type: "TOGGLE_RIGHTSIDEBAR" });
     const toggleSidebar = () => {
         dispatch({ type: "TOGGLE_MENU", menu: "" });
         dispatch({ type: "TOGGLE_SUB_MENU", subMenu: "" });
         dispatch({ type: "TOGGLE_SIDEBAR" });
     };
 
-    // Path arrays for navigation
-    const aboutPaths: string[] = ['/about', '/our-process', '/our-clients', '/gallery'];
-    const isAboutActive: boolean = aboutPaths.some((path: string) => pathname.startsWith(path));
+    const aboutPaths = ['/about', '/our-process', '/our-clients', '/gallery', '/milestone', '/projects'];
+    const isAboutActive = aboutPaths.some(p => pathname.startsWith(p));
 
-    const productPaths: string[] = ['/product', '/product/cement', '/product/steel','/product/sheet-pipes', '/product/white-cement-paint', '/product/logistics', '/product/abrasives-construction-chemicals'];
-    const isProductActive: boolean = productPaths.some((path: string) => pathname.startsWith(path));
+    const portfolioPaths = [
+        '/product', '/product/cement', '/product/steel', '/product/roofing-solutions',
+        '/product/white-cement-paint', '/product/construction-chemicals',
+        '/distribution/client-a', '/distribution/client-b', '/distribution/client-c',
+        '/services/alite-enclaves', '/services/neyy-vedyam', '/services/kavalakat-group'
+    ];
+    const isPortfolioActive = portfolioPaths.some(p => pathname.startsWith(p));
 
-    const blogPaths: string[] = ['/blog', '/blog/details'];
-    const isBlogActive: boolean = blogPaths.some((path: string) => pathname.startsWith(path));
+    const blogPaths = ['/blog', '/blog/details'];
+    const isBlogActive = blogPaths.some(p => pathname.startsWith(p));
 
-    const contactPaths: string[] = ['/contact', '/career'];
-    const isContactActive: boolean = contactPaths.some((path: string) => pathname.startsWith(path));
+    const contactPaths = ['/contact', '/career'];
+    const isContactActive = contactPaths.some(p => pathname.startsWith(p));
+
+    const chevronSvg = (
+        <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" style={{ fill: '#ffffff' }}>
+            <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
+            <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
+        </svg>
+    );
 
     return (
         <>
+            <style>{`
+                /* ── Blue Header Override ── */
+                header.style-1 {
+                    background-color: #0057C8 !important;
+                }
+                header.style-1.sticky {
+                    background-color: #0057C8 !important;
+                    box-shadow: 0 4px 24px rgba(0,0,0,0.18) !important;
+                }
+                header.style-1.inner-page {
+                    background-color: #0057C8 !important;
+                    border-bottom: 1px solid rgba(255,255,255,0.15) !important;
+                }
+
+                /* Nav pill border */
+                header.style-1 .main-menu > ul {
+                    border-color: rgba(255,255,255,0.25) !important;
+                }
+
+                /* All top-level nav links → white */
+                header.style-1 .main-menu > ul > li > a {
+                    color: #ffffff !important;
+                }
+                header.style-1 .main-menu > ul > li > a svg {
+                    fill: #ffffff !important;
+                }
+
+                /* Active / hover pill → white bg, blue text */
+                header.style-1 .main-menu > ul > li:hover > a,
+                header.style-1 .main-menu > ul > li.active > a {
+                    background-color: #ffffff !important;
+                    color: #0057C8 !important;
+                }
+                header.style-1 .main-menu > ul > li:hover > a svg,
+                header.style-1 .main-menu > ul > li.active > a svg {
+                    fill: #0057C8 !important;
+                }
+
+                /* Contact area (phone) → white */
+                header.style-1 .contact-area .icon {
+                    background-color: rgba(255,255,255,0.15) !important;
+                }
+                header.style-1 .contact-area .icon svg {
+                    fill: #ffffff !important;
+                }
+                header.style-1 .contact-area .content span {
+                    color: rgba(255,255,255,0.75) !important;
+                }
+                header.style-1 .contact-area .content a {
+                    color: #ffffff !important;
+                }
+
+                /* Red divider → white */
+                header.style-1 .nav-right::before {
+                    background-color: rgba(255,255,255,0.4) !important;
+                }
+
+                /* GET IN TOUCH button → white bg, blue text */
+                header.style-1 .nav-right .right-sidebar-button {
+                    background-color: rgba(255,255,255,0.15) !important;
+                    border: 1px solid rgba(255,255,255,0.3) !important;
+                }
+                header.style-1 .nav-right .right-sidebar-button svg {
+                    fill: #ffffff !important;
+                }
+                header.style-1 .nav-right .right-sidebar-button span {
+                    color: #ffffff !important;
+                }
+                header.style-1 .nav-right .right-sidebar-button:hover {
+                    background-color: #ffffff !important;
+                }
+                header.style-1 .nav-right .right-sidebar-button:hover svg {
+                    fill: #0057C8 !important;
+                }
+                header.style-1 .nav-right .right-sidebar-button:hover span {
+                    color: #0057C8 !important;
+                }
+
+                /* Mobile hamburger → white */
+                header.style-1 .nav-right .mobile-menu-btn {
+                    border-color: rgba(255,255,255,0.35) !important;
+                }
+                header.style-1 .nav-right .mobile-menu-btn svg {
+                    fill: #ffffff !important;
+                }
+
+                /* Dropdown icon +/- → white */
+                header.style-1 .main-menu > ul > li .bi {
+                    color: #ffffff !important;
+                }
+
+                /* Mobile menu close btn → dark (panel is white) */
+                header.style-1 .mobile-logo-area .menu-close-btn i {
+                    color: #1a1a2e !important;
+                }
+
+                /* Sub-menu column title accent → blue */
+                header.style-1 .main-menu > ul > li ul.sub-menu.product-mega-submenu .column-title {
+                    border-bottom-color: #0057C8 !important;
+                }
+            `}</style>
+
+            {/* Right Sidebar */}
             <div className={`right-sidebar-menu ${state.isRightSidebar ? "show-right-menu" : ""}`}>
                 <div className="right-sidebar-menu-wrap">
                     <div className="sidebar-logo-area d-flex justify-content-between align-items-center">
                         <div className="sidebar-logo-wrap">
-                           <Link href="/"><img width={157} height={34} alt="image" src="/assets/new-images/logo-1.png" /></Link>
+                            <Link href="/"><img width={157} height={34} alt="image" src="/assets/new-images/logo/KavalakkatLogo-white.png" /></Link>
                         </div>
                         <div className="right-sidebar-close-btn" onClick={toggleRightSidebar}>
                             <i className="bi bi-x" />
@@ -142,7 +225,7 @@ const Header: React.FC = () => {
                     <div className="sidebar-content-wrap">
                         <div className="title-area">
                             <span>Get In Touch With Us</span>
-                            <h2>Connect with Matrik</h2>
+                            <h2>Connect with Kavalakkat</h2>
                             <p>Ready to take the first step towards unlocking opportunity realizing goals, and embracing innovation?</p>
                         </div>
                         <ul className="contact-area">
@@ -150,7 +233,7 @@ const Header: React.FC = () => {
                                 <div className="single-contact">
                                     <div className="icon">
                                         <svg width={33} height={33} viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M26.0808 20.4419C25.4052 19.7385 24.5903 19.3624 23.7267 19.3624C22.87 19.3624 22.0481 19.7315 21.3447 20.435L19.1438 22.6289C18.9627 22.5314 18.7816 22.4408 18.6075 22.3503C18.3568 22.2249 18.12 22.1065 17.918 21.9812C15.8564 20.6718 13.9828 18.9654 12.1859 16.7575C11.3153 15.6571 10.7302 14.7307 10.3054 13.7905C10.8765 13.2681 11.4058 12.7248 11.9212 12.2025C12.1162 12.0075 12.3113 11.8055 12.5063 11.6105C13.9689 10.1478 13.9689 8.25339 12.5063 6.79077L10.6049 4.88935C10.3889 4.67344 10.1661 4.45057 9.95713 4.22769C9.53923 3.79587 9.10045 3.35012 8.64773 2.93222C7.97214 2.26359 7.16421 1.90839 6.3145 1.90839C5.46478 1.90839 4.64293 2.26359 3.94644 2.93222C3.93947 2.93919 3.93947 2.93919 3.93251 2.94615L1.56445 5.33511C0.672947 6.22661 0.164512 7.31313 0.0530735 8.57377C-0.114084 10.6075 0.484896 12.502 0.944577 13.7417C2.07289 16.7854 3.75839 19.6061 6.27271 22.6289C9.32332 26.2715 12.9938 29.148 17.1867 31.1748C18.7886 31.934 20.9268 32.8324 23.3158 32.9857C23.462 32.9926 23.6152 32.9996 23.7545 32.9996C25.3634 32.9996 26.7146 32.4215 27.7733 31.2723C27.7802 31.2584 27.7942 31.2514 27.8011 31.2375C28.1633 30.7987 28.5812 30.4017 29.02 29.9768C29.3195 29.6913 29.6259 29.3918 29.9254 29.0784C30.6149 28.361 30.9771 27.5252 30.9771 26.6685C30.9771 25.8049 30.608 24.9761 29.9045 24.2796L26.0808 20.4419ZM28.5742 27.7759C28.5673 27.7759 28.5673 27.7829 28.5742 27.7759C28.3026 28.0685 28.024 28.3331 27.7245 28.6257C27.2718 29.0575 26.8121 29.5102 26.3803 30.0186C25.6768 30.7708 24.848 31.126 23.7615 31.126C23.657 31.126 23.5456 31.126 23.4411 31.1191C21.3726 30.9867 19.4503 30.1788 18.0085 29.4893C14.0664 27.5809 10.6049 24.8716 7.72837 21.4379C5.35334 18.5753 3.76535 15.9287 2.71366 13.087C2.06592 11.3528 1.82912 10.0016 1.93359 8.727C2.00324 7.91211 2.31666 7.23652 2.89474 6.65843L5.26976 4.28341C5.61104 3.96302 5.97322 3.7889 6.32843 3.7889C6.76721 3.7889 7.12242 4.05357 7.3453 4.27644C7.35226 4.28341 7.35923 4.29037 7.36619 4.29734C7.79105 4.69434 8.19501 5.10527 8.61987 5.54405C8.83578 5.76693 9.05866 5.9898 9.28153 6.21965L11.1829 8.12106C11.9212 8.85933 11.9212 9.54189 11.1829 10.2802C10.981 10.4822 10.7859 10.6841 10.584 10.8791C9.99891 11.4781 9.44173 12.0353 8.83578 12.5786C8.82185 12.5925 8.80792 12.5995 8.80096 12.6134C8.20198 13.2124 8.31342 13.7974 8.43878 14.1944C8.44575 14.2153 8.45271 14.2362 8.45968 14.2571C8.95418 15.4551 9.65067 16.5834 10.7093 17.9276L10.7163 17.9346C12.6386 20.3026 14.6654 22.1483 16.9011 23.5622C17.1867 23.7433 17.4792 23.8895 17.7578 24.0288C18.0085 24.1542 18.2453 24.2726 18.4473 24.398C18.4752 24.4119 18.503 24.4328 18.5309 24.4467C18.7677 24.5651 18.9906 24.6209 19.2204 24.6209C19.7985 24.6209 20.1607 24.2587 20.2791 24.1403L22.6611 21.7583C22.8979 21.5215 23.274 21.2359 23.7128 21.2359C24.1446 21.2359 24.4998 21.5075 24.7157 21.7444C24.7227 21.7513 24.7227 21.7513 24.7296 21.7583L28.5673 25.5959C29.2847 26.3064 29.2847 27.0377 28.5742 27.7759Z" />
+                                            <path d="M26.0808 20.4419C25.4052 19.7385 24.5903 19.3624 23.7267 19.3624C22.87 19.3624 22.0481 19.7315 21.3447 20.435L19.1438 22.6289C18.9627 22.5314 18.7816 22.4408 18.6075 22.3503C18.3568 22.2249 18.12 22.1065 17.918 21.9812C15.8564 20.6718 13.9828 18.9654 12.1859 16.7575C11.3153 15.6571 10.7302 14.7307 10.3054 13.7905C10.8765 13.2681 11.4058 12.7248 11.9212 12.2025C12.1162 12.0075 12.3113 11.8055 12.5063 11.6105C13.9689 10.1478 13.9689 8.25339 12.5063 6.79077L10.6049 4.88935C10.3889 4.67344 10.1661 4.45057 9.95713 4.22769C9.53923 3.79587 9.10045 3.35012 8.64773 2.93222C7.97214 2.26359 7.16421 1.90839 6.3145 1.90839C5.46478 1.90839 4.64293 2.26359 3.94644 2.93222C3.93947 2.93919 3.93947 2.93919 3.93251 2.94615L1.56445 5.33511C0.672947 6.22661 0.164512 7.31313 0.0530735 8.57377C-0.114084 10.6075 0.484896 12.502 0.944577 13.7417C2.07289 16.7854 3.75839 19.6061 6.27271 22.6289C9.32332 26.2715 12.9938 29.148 17.1867 31.1748C18.7886 31.934 20.9268 32.8324 23.3158 32.9857C23.462 32.9926 23.6152 32.9996 23.7545 32.9996C25.3634 32.9996 26.7146 32.4215 27.7733 31.2723C27.7802 31.2584 27.7942 31.2514 27.8011 31.2375C28.1633 30.7987 28.5812 30.4017 29.02 29.9768C29.3195 29.6913 29.6259 29.3918 29.9254 29.0784C30.6149 28.361 30.9771 27.5252 30.9771 26.6685C30.9771 25.8049 30.608 24.9761 29.9045 24.2796L26.0808 20.4419Z" />
                                             <path d="M17.8345 7.8506C19.6593 8.15705 21.3169 9.0207 22.6403 10.344C23.9636 11.6673 24.8203 13.325 25.1337 15.1498C25.2103 15.6095 25.6073 15.9299 26.06 15.9299C26.1157 15.9299 26.1645 15.9229 26.2202 15.9159C26.7356 15.8323 27.0769 15.3448 26.9933 14.8294C26.6172 12.6215 25.5725 10.6087 23.9775 9.01373C22.3826 7.41877 20.3697 6.37404 18.1618 5.99794C17.6464 5.91436 17.1659 6.25564 17.0753 6.76408C16.9848 7.27251 17.3191 7.76702 17.8345 7.8506Z" />
                                             <path d="M32.9619 14.557C32.3421 10.9213 30.6287 7.61301 27.996 4.98029C25.3633 2.34757 22.055 0.634209 18.4193 0.0143347C17.9108 -0.0762086 17.4303 0.272035 17.3397 0.780471C17.2562 1.29587 17.5974 1.77645 18.1128 1.86699C21.3585 2.41722 24.3185 3.95645 26.6727 6.30362C29.0268 8.65774 30.5591 11.6178 31.1093 14.8634C31.1859 15.3231 31.5829 15.6435 32.0356 15.6435C32.0913 15.6435 32.1401 15.6365 32.1958 15.6296C32.7042 15.553 33.0525 15.0654 32.9619 14.557Z" />
                                         </svg>
@@ -170,7 +253,7 @@ const Header: React.FC = () => {
                                         <svg width={35} height={35} viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M30.5966 7.4621C32.7313 10.243 34.0001 13.7234 34.0001 17.5C34.0001 26.6127 26.6128 34 17.5001 34C13.7331 34 10.261 32.7377 7.48364 30.6129" strokeMiterlimit={10} strokeLinecap="round" strokeLinejoin="round" />
                                             <path d="M7.99634 4.01017C10.683 2.11388 13.9614 0.999997 17.5 0.999997C21.2782 0.999997 24.7599 2.26989 27.5413 4.40617" strokeMiterlimit={10} strokeLinecap="round" strokeLinejoin="round" />
-                                            <path d="M4.38136 27.509C2.26004 24.7329 1 21.2636 1 17.5C1 14.0975 2.02984 10.9356 3.7948 8.30896" stroke="black" strokeMiterlimit={10} strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M4.38136 27.509C2.26004 24.7329 1 21.2636 1 17.5C1 14.0975 2.02984 10.9356 3.7948 8.30896" strokeMiterlimit={10} strokeLinecap="round" strokeLinejoin="round" />
                                             <path d="M22.375 25.1463C21.456 30.4092 19.6178 34 17.5 34C14.4624 34 12 26.6127 12 17.5C12 16.3514 12.0391 15.2302 12.1136 14.1477" strokeMiterlimit={10} strokeLinecap="round" strokeLinejoin="round" />
                                             <path d="M12.6199 9.88271C13.5372 4.60405 15.3783 1.00001 17.5 1.00001C20.5375 1.00001 23 8.38731 23 17.5C23 18.6491 22.9608 19.7708 22.8863 20.8537" strokeMiterlimit={10} strokeLinecap="round" strokeLinejoin="round" />
                                             <path d="M2.18506 23H20.5404" strokeMiterlimit={10} strokeLinecap="round" strokeLinejoin="round" />
@@ -185,7 +268,11 @@ const Header: React.FC = () => {
                                     </div>
                                     <div className="content">
                                         <span>Follow Us</span>
-                                        <h6><a href="https://www.facebook.com/">Facebook,</a> <a href="https://www.linkedin.com/">LinkedIn,</a> <a href="https://www.instagram.com/">Instagram,</a></h6>
+                                        <h6>
+                                            <a href="https://www.facebook.com/">Facebook,</a>{" "}
+                                            <a href="https://www.linkedin.com/">LinkedIn,</a>{" "}
+                                            <a href="https://www.instagram.com/">Instagram,</a>
+                                        </h6>
                                     </div>
                                 </div>
                                 <svg className="arrow" width={8} height={29} viewBox="0 0 8 29" xmlns="http://www.w3.org/2000/svg">
@@ -196,12 +283,12 @@ const Header: React.FC = () => {
                                 <div className="single-contact">
                                     <div className="icon">
                                         <svg width={33} height={32} viewBox="0 0 33 32" xmlns="http://www.w3.org/2000/svg">
-                                            <path fillRule="evenodd" clipRule="evenodd" d="M32.9896 1.18398C33.0176 0.995671 32.993 0.803292 32.9185 0.628097C32.844 0.452902 32.7225 0.301711 32.5675 0.191227C32.4126 0.0808885 32.2301 0.0155543 32.0404 0.00245033C31.8506 -0.0106536 31.6609 0.0289832 31.4923 0.116977L0.554753 16.2732C0.376749 16.3673 0.230082 16.5113 0.132753 16.6876C0.0354241 16.8638 -0.0083331 17.0646 0.00685184 17.2654C0.0220368 17.4662 0.0955032 17.6581 0.218235 17.8177C0.340966 17.9773 0.507624 18.0976 0.697753 18.1639L9.29838 21.1036L27.6148 5.44235L13.4413 22.5185L27.8554 27.4451C27.9984 27.4932 28.1502 27.5094 28.3002 27.4926C28.4501 27.4758 28.5946 27.4265 28.7235 27.348C28.8524 27.2696 28.9625 27.1639 29.0463 27.0384C29.1301 26.9129 29.1854 26.7706 29.2084 26.6215L32.9896 1.18398ZM28.2201 26.469C28.22 26.4693 28.2201 26.4688 28.2201 26.469L32.0005 1.03696C32.0014 1.03102 32.0006 1.02494 31.9982 1.0194M28.2201 26.469C28.2192 26.4738 28.2172 26.4792 28.2145 26.4833C28.2117 26.4876 28.2079 26.4912 28.2035 26.4939C28.1991 26.4965 28.1942 26.4982 28.189 26.4988C28.1842 26.4993 28.1793 26.4989 28.1746 26.4974C28.1744 26.4973 28.1749 26.4975 28.1746 26.4974L15.1369 22.0413L28.3842 6.08103L26.9649 4.68231L9.08205 19.9729L1.02672 17.2195C1.02644 17.2194 1.027 17.2196 1.02672 17.2195C1.02082 17.2173 1.01481 17.2131 1.01095 17.2081C1.00692 17.2029 1.0045 17.1966 1.004 17.19C1.0035 17.1834 1.00494 17.1768 1.00814 17.171C1.01122 17.1654 1.0158 17.1608 1.02135 17.1577C1.02113 17.1578 1.02157 17.1576 1.02135 17.1577L31.9549 1.00355C31.9548 1.00357 31.9549 1.00352 31.9549 1.00355C31.9599 1.00093 31.9658 0.999681 31.9715 1.00007M13.0319 30.5897C13.0321 30.5963 13.0342 30.6027 13.0381 30.6081C13.0421 30.6136 13.0478 30.6177 13.0543 30.6199C13.0608 30.622 13.0678 30.622 13.0744 30.6199C13.0807 30.6179 13.0862 30.6141 13.0902 30.6089C13.0901 30.6091 13.0904 30.6087 13.0902 30.6089L16.0115 26.6335L13.0319 25.6152V30.5897ZM12.0319 24.2166V30.5939C12.0329 30.8106 12.1021 31.0215 12.2297 31.1967C12.3573 31.3719 12.5368 31.5025 12.7427 31.5701C12.9487 31.6376 13.1707 31.6386 13.3772 31.573C13.5838 31.5073 13.7644 31.3784 13.8936 31.2044L17.624 26.1279L12.0319 24.2166Z" />
+                                            <path fillRule="evenodd" clipRule="evenodd" d="M32.9896 1.18398C33.0176 0.995671 32.993 0.803292 32.9185 0.628097C32.844 0.452902 32.7225 0.301711 32.5675 0.191227C32.4126 0.0808885 32.2301 0.0155543 32.0404 0.00245033C31.8506 -0.0106536 31.6609 0.0289832 31.4923 0.116977L0.554753 16.2732C0.376749 16.3673 0.230082 16.5113 0.132753 16.6876C0.0354241 16.8638 -0.0083331 17.0646 0.00685184 17.2654C0.0220368 17.4662 0.0955032 17.6581 0.218235 17.8177C0.340966 17.9773 0.507624 18.0976 0.697753 18.1639L9.29838 21.1036L27.6148 5.44235L13.4413 22.5185L27.8554 27.4451C27.9984 27.4932 28.1502 27.5094 28.3002 27.4926C28.4501 27.4758 28.5946 27.4265 28.7235 27.348C28.8524 27.2696 28.9625 27.1639 29.0463 27.0384C29.1301 26.9129 29.1854 26.7706 29.2084 26.6215L32.9896 1.18398Z" />
                                         </svg>
                                     </div>
                                     <div className="content">
                                         <span>SAY HELLO</span>
-                                        <h6><a href="mailto:info@example.com">info@kavalakat.com</a></h6>
+                                        <h6><a href="mailto:info@kavalakat.com">info@kavalakat.com</a></h6>
                                     </div>
                                 </div>
                             </li>
@@ -211,10 +298,6 @@ const Header: React.FC = () => {
                                 <span>Thrissur</span>
                                 <a href="#">H.O. IX/413/4, T.B. Road, S. T. Nagar, Thrissur, Kerala - 680 001</a>
                             </li>
-                            <li className="single-address">
-                                <span>Ernakulam</span>
-                                <a href="#">DOOR No.V/679-C3(IV 652), K.V.Varkey Memorial Bldg.First Floor(Near KSRTC), Angamaly-683572, Ernakulam</a>
-                            </li>
                         </ul>
                         <Link href="/contact" className="all-location-btn">View All Factory Location</Link>
                     </div>
@@ -223,169 +306,115 @@ const Header: React.FC = () => {
                     </div>
                 </div>
             </div>
-            
+
+            {/* Main Header */}
             <header ref={headerRef} className={`header-area style-1 ${state.scrollY > 20 ? "sticky" : ""}`}>
                 <div className="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
+
+                    {/* Logo */}
                     <div className="company-logo">
-                        <Link href="/"><img width={157} height={34} alt="image" className="img-fluid" src="/assets/new-images/logo-1.png" /></Link>
+                        <Link href="/">
+                            <img width={157} height={34} alt="Kavalakat Logo" className="img-fluid"
+                                src="/assets/new-images/logo/KavalakkatLogo-white.png" />
+                        </Link>
                     </div>
+
+                    {/* Main Nav */}
                     <div className={`main-menu ${state.isSidebarOpen ? "show-menu" : ""}`}>
                         <div className="mobile-logo-area d-lg-none d-flex align-items-center justify-content-between">
                             <Link href="/" className="mobile-logo-wrap">
-                                <img width={157} height={34} alt="image" className="img-fluid" src="/assets/new-images/logo-1.png" />
+                                <img width={157} height={34} alt="image" className="img-fluid"
+                                    src="/assets/new-images/logo/KavalakkatLogo-white.png" />
                             </Link>
                             <div className="menu-close-btn" onClick={toggleSidebar}>
                                 <i className="bi bi-x" />
                             </div>
                         </div>
-                        
+
                         <ul className="menu-list">
-                            {/* Home - Single Menu */}
+
+                            {/* Home */}
                             <li className={pathname === "/" ? "active" : ""}>
                                 <Link href="/">Home</Link>
                             </li>
 
-                            {/* About - Dropdown with Our Strengths, Clients, Gallery */}
+                            {/* About */}
                             <li className={`menu-item-has-children ${isAboutActive ? "active" : ""}`}>
-                                <Link href="#" className="drop-down">
-                                    About
-                                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
-                                        <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
-                                    </svg>
-                                </Link>
+                                <Link href="#" className="drop-down">About {chevronSvg}</Link>
                                 <i onClick={() => toggleMenu("about")} className={`bi bi-${state.activeMenu === "about" ? "dash" : "plus"} dropdown-icon`} />
                                 <ul className={`sub-menu ${state.activeMenu === "about" ? "d-block" : ""}`}>
-                                    <li className={pathname === "/about" ? "active" : ""}>
-                                        <Link href="/about"><span>About</span></Link>
-                                    </li>
-                                    <li className={pathname === "/our-process" ? "active" : ""}>
-                                        <Link href="/our-process"><span>Our Strengths</span></Link>
-                                    </li>
-                                    <li className={pathname === "/milestone" ? "active" : ""}>
-                                        <Link href="/milestone"><span>Milestones</span></Link>
-                                    </li>
-                                    <li className={pathname === "/projects" ? "active" : ""}>
-                                        <Link href="/projects"><span>Projects</span></Link>
-                                    </li>
-                                    <li className={pathname === "/gallery" ? "active" : ""}>
-                                        <Link href="/gallery"><span>Gallery</span></Link>
-                                    </li>
+                                    <li className={pathname === "/about" ? "active" : ""}><Link href="/about"><span>About</span></Link></li>
+                                    <li className={pathname === "/our-process" ? "active" : ""}><Link href="/our-process"><span>Our Strengths</span></Link></li>
+                                    <li className={pathname === "/milestone" ? "active" : ""}><Link href="/milestone"><span>Milestones</span></Link></li>
+                                    <li className={pathname === "/projects" ? "active" : ""}><Link href="/projects"><span>Projects</span></Link></li>
+                                    <li className={pathname === "/gallery" ? "active" : ""}><Link href="/gallery"><span>Gallery</span></Link></li>
                                 </ul>
                             </li>
 
-                            {/* Products - Dropdown with Three Column Layout - REORDERED */}
-                            <li className={`menu-item-has-children ${isProductActive ? "active" : ""}`}>
-                                <Link href="/product" className="drop-down">
-                                    Solutions
-                                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
-                                        <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
-                                    </svg>
-                                </Link>
-                                <i onClick={() => toggleMenu("products")} className={`bi bi-${state.activeMenu === "products" ? "dash" : "plus"} dropdown-icon`} />
-                                <ul className={`sub-menu product-mega-submenu ${state.activeMenu === "products" ? "d-block" : ""}`}>
-                                    {/* Column 1: All Products - FIRST */}
+                            {/* Portfolio */}
+                            <li className={`menu-item-has-children ${isPortfolioActive ? "active" : ""}`}>
+                                <Link href="/product" className="drop-down">Portfolio {chevronSvg}</Link>
+                                <i onClick={() => toggleMenu("portfolio")} className={`bi bi-${state.activeMenu === "portfolio" ? "dash" : "plus"} dropdown-icon`} />
+                                <ul className={`sub-menu product-mega-submenu ${state.activeMenu === "portfolio" ? "d-block" : ""}`}>
                                     <li className="product-column">
-                                        <div className="column-title">ALL PRODUCTS</div>
+                                        <div className="column-title">TRADING</div>
                                         <ul className="column-items">
-                                           
-
-                                                                                        <li className={pathname === "/product/cement" ? "active" : ""}>
-                                                <Link href="/product/cement"><span>Cement</span></Link>
-                                            </li>
-                                            <li className={pathname === "/product/steel" ? "active" : ""}>
-                                                <Link href="/product/steel"><span>Steels</span></Link>
-                                            </li>
-                                            <li className={pathname === "/product/roofing-solutions" ? "active" : ""}>
-                                                <Link href="/product/roofing-solutions"><span>Roofing Solutions</span></Link>
-                                            </li>
-                                            <li className={pathname === "/product/white-cement-paint" ? "active" : ""}>
-                                                <Link href="/product/white-cement-paint"><span>White Cement Paint</span></Link>
-                                            </li>
-                                            <li className={pathname === "/product/construction-chemicals" ? "active" : ""}>
-                                                <Link href="/product/construction-chemicals"><span> Construction Chemicals</span></Link>
-                                            </li>
+                                            <li className={pathname === "/product/cement" ? "active" : ""}><Link href="/product/cement"><span>Cement</span></Link></li>
+                                            <li className={pathname === "/product/steel" ? "active" : ""}><Link href="/product/steel"><span>Steels</span></Link></li>
+                                            <li className={pathname === "/product/roofing-solutions" ? "active" : ""}><Link href="/product/roofing-solutions"><span>Roofing Solutions</span></Link></li>
+                                            <li className={pathname === "/product/white-cement-paint" ? "active" : ""}><Link href="/product/white-cement-paint"><span>White Cement Paint</span></Link></li>
+                                            <li className={pathname === "/product/construction-chemicals" ? "active" : ""}><Link href="/product/construction-chemicals"><span>Construction Chemicals</span></Link></li>
                                         </ul>
                                     </li>
-                                    
-                                    {/* Column 2: Hospitality Products - SECOND */}
                                     <li className="product-column">
-                                        <div className="column-title">HOSPITALITY</div>
+                                        <div className="column-title">DISTRIBUTION</div>
                                         <ul className="column-items">
-                                             <li className={pathname === "/services/alite-enclaves" ? "active" : ""}>
-                                                <Link href="/services/alite-enclaves"><span>Alite Enclaves</span></Link>
-                                            </li>
-                                            <li className={pathname === "/services/neyy-vedyam" ? "active" : ""}>
-                                                <Link href="/services/neyy-vedyam"><span>Neey Vedhyam</span></Link>
-                                            </li>
-
+                                            <li className={pathname === "/distribution/ultratech" ? "active" : ""}><Link href="/distribution/ultratech"><span>UltraTech</span></Link></li>
+                                            <li className={pathname === "/distribution/jk-cement" ? "active" : ""}><Link href="/distribution/jk-cement"><span>JK Cement</span></Link></li>
+                                            <li className={pathname === "/distribution/tata-steel" ? "active" : ""}><Link href="/distribution/tata-steel"><span>Tata Steel</span></Link></li>
+                                            <li className={pathname === "/distribution/jsw-steel" ? "active" : ""}><Link href="/distribution/jsw-steel"><span>JSW Steel</span></Link></li>
+                                            <li className={pathname === "/distribution/asian-paints" ? "active" : ""}><Link href="/distribution/asian-paints"><span>Asian Paints</span></Link></li>
                                         </ul>
                                     </li>
-                                    
-                                    {/* Column 3: Logistics - THIRD */}
                                     <li className="product-column">
-                                        <div className="column-title">LOGISTICS</div>
+                                        <div className="column-title">SERVICES</div>
                                         <ul className="column-items">
-                                            <li className={pathname === "/services/kavalakat-group" ? "active" : ""}>
-                                                <Link href="/services/kavalakat-group"><span>Kavalakat Group</span></Link>
-                                            </li>
+                                            <li className={pathname === "/services/kavalakat-group" ? "active" : ""}><Link href="/services/kavalakat-group"><span>Kavalakat Group</span></Link></li>
+                                            <li className={pathname === "/services/alite-enclaves" ? "active" : ""}><Link href="/services/alite-enclaves"><span>Alite Enclaves</span></Link></li>
+                                            <li className={pathname === "/services/neyy-vedyam" ? "active" : ""}><Link href="/services/neyy-vedyam"><span>Neey Vedhyam</span></Link></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
 
-                            {/* Blog - Dropdown */}
+                            {/* Blog */}
                             <li className={`menu-item-has-children ${isBlogActive ? "active" : ""}`}>
-                                <Link href="/blog" className="drop-down">
-                                    Blog
-                                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
-                                        <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
-                                    </svg>
-                                </Link>
+                                <Link href="/blog" className="drop-down">Blog {chevronSvg}</Link>
                                 <i onClick={() => toggleMenu("blog")} className={`bi bi-${state.activeMenu === "blog" ? "dash" : "plus"} dropdown-icon`} />
                                 <ul className={`sub-menu ${state.activeMenu === "blog" ? "d-block" : ""}`}>
-                                    
-                                    <li className={pathname === "/blog/cement-grade" ? "active" : ""}>
-                                        <Link href="/blog/cement-grade"><span>Cement Grade</span></Link>
-                                    </li>
-                                    <li className={pathname === "/blog/construction-mistakes" ? "active" : ""}>
-                                        <Link href="/blog/construction-mistakes"><span>Construction Mistakes</span></Link>
-                                    </li>
-                                    <li className={pathname === "/blog/white-cement" ? "active" : ""}>
-                                        <Link href="/blog/white-cement"><span>White Cement</span></Link>
-                                    </li>
+                                    <li className={pathname === "/blog/cement-grade" ? "active" : ""}><Link href="/blog/cement-grade"><span>Cement Grade</span></Link></li>
+                                    <li className={pathname === "/blog/construction-mistakes" ? "active" : ""}><Link href="/blog/construction-mistakes"><span>Construction Mistakes</span></Link></li>
+                                    <li className={pathname === "/blog/white-cement" ? "active" : ""}><Link href="/blog/white-cement"><span>White Cement</span></Link></li>
                                 </ul>
                             </li>
 
-                            {/* Contact - Dropdown with Careers */}
+                            {/* Contact */}
                             <li className={`menu-item-has-children ${isContactActive ? "active" : ""}`}>
-                                <Link href="/contact" className="drop-down">
-                                    Contact
-                                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
-                                        <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
-                                    </svg>
-                                </Link>
+                                <Link href="/contact" className="drop-down">Contact {chevronSvg}</Link>
                                 <i onClick={() => toggleMenu("contact")} className={`bi bi-${state.activeMenu === "contact" ? "dash" : "plus"} dropdown-icon`} />
                                 <ul className={`sub-menu ${state.activeMenu === "contact" ? "d-block" : ""}`}>
-                                    <li className={pathname === "/contact" ? "active" : ""}>
-                                     <Link href="/contact"><span> Contact</span></Link>
-                                    </li>
-                                    <li className={pathname === "/career" ? "active" : ""}>
-                                     <Link href="/career"><span> Careers</span></Link>
-                                    </li>
+                                    <li className={pathname === "/contact" ? "active" : ""}><Link href="/contact"><span>Contact</span></Link></li>
+                                    <li className={pathname === "/career" ? "active" : ""}><Link href="/career"><span>Careers</span></Link></li>
                                 </ul>
                             </li>
+
                         </ul>
-                        
+
+                        {/* Mobile contact */}
                         <div className="contact-area d-lg-none d-flex">
                             <div className="icon">
                                 <svg width={22} height={22} viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.4233 16.9723L16.9701 14.0025C16.4049 13.6286 15.6474 13.7516 15.2296 14.2851L13.9324 15.953C13.8518 16.0593 13.7355 16.133 13.6049 16.1605C13.4743 16.1879 13.3382 16.1674 13.2215 16.1026L12.9748 15.9666C12.1568 15.5207 11.139 14.9656 9.08843 12.9143C7.03782 10.863 6.48163 9.84441 6.03578 9.02794L5.90048 8.78119C5.8348 8.66457 5.81347 8.52814 5.84042 8.39704C5.86736 8.26593 5.94077 8.14897 6.04712 8.06771L7.71384 6.77093C8.24713 6.35309 8.37031 5.59578 7.9969 5.03048L5.02713 0.577286C4.64443 0.00163523 3.87664 -0.171172 3.28419 0.184969L1.42202 1.30357C0.836918 1.64754 0.407665 2.20464 0.224235 2.85811C-0.446327 5.30138 0.0581298 9.51809 6.26973 15.7304C11.2109 20.6712 14.8894 21.9999 17.4178 21.9999C17.9997 22.0024 18.5792 21.9267 19.141 21.7748C19.7946 21.5916 20.3517 21.1623 20.6955 20.5771L21.8152 18.716C22.1719 18.1234 21.9992 17.3552 21.4233 16.9723ZM21.1835 18.3398L20.0663 20.202C19.8194 20.6244 19.4187 20.935 18.9481 21.0687C16.6925 21.688 12.7519 21.175 6.78849 15.2117C0.825106 9.24827 0.312228 5.308 0.931488 3.05209C1.06539 2.58083 1.37635 2.17961 1.7993 1.93237L3.66147 0.815229C3.91853 0.660553 4.25177 0.735528 4.41783 0.985329L6.03106 3.40733L7.38507 5.43814C7.54722 5.68334 7.49394 6.01198 7.26262 6.19343L5.59552 7.49021C5.08818 7.87814 4.9433 8.58007 5.25566 9.13716L5.38804 9.37768C5.85662 10.2371 6.43918 11.3062 8.56606 13.4327C10.6929 15.5592 11.7617 16.1418 12.6207 16.6104L12.8616 16.7431C13.4186 17.0554 14.1206 16.9106 14.5085 16.4032L15.8053 14.7361C15.9868 14.5049 16.3153 14.4517 16.5606 14.6137L21.0134 17.5834C21.2634 17.7494 21.3384 18.0828 21.1835 18.3398ZM12.4659 3.66805C15.9066 3.67187 18.6949 6.4602 18.6988 9.90091C18.6988 10.1034 18.8629 10.2675 19.0654 10.2675C19.2679 10.2675 19.432 10.1034 19.432 9.90091C19.4278 6.05538 16.3114 2.93901 12.4659 2.9348C12.2634 2.9348 12.0993 3.09893 12.0993 3.30142C12.0993 3.50392 12.2634 3.66805 12.4659 3.66805Z" />
-                                    <path d="M12.4653 5.86759C14.6916 5.87021 16.4957 7.67433 16.4983 9.90062C16.4983 9.99786 16.5369 10.0911 16.6057 10.1599C16.6744 10.2286 16.7677 10.2672 16.8649 10.2672C16.9622 10.2672 17.0554 10.2286 17.1242 10.1599C17.1929 10.0911 17.2315 9.99786 17.2315 9.90062C17.2285 7.26951 15.0963 5.13735 12.4653 5.13434C12.2628 5.13434 12.0986 5.29847 12.0986 5.50096C12.0986 5.70346 12.2628 5.86759 12.4653 5.86759Z" />
-                                    <path d="M12.4653 8.06735C13.4772 8.06856 14.2972 8.8886 14.2985 9.90056C14.2985 9.9978 14.3371 10.091 14.4058 10.1598C14.4746 10.2286 14.5679 10.2672 14.6651 10.2672C14.7623 10.2672 14.8556 10.2286 14.9243 10.1598C14.9931 10.091 15.0317 9.9978 15.0317 9.90056C15.0301 8.48382 13.882 7.3357 12.4653 7.33411C12.2628 7.33411 12.0986 7.49823 12.0986 7.70073C12.0986 7.90323 12.2628 8.06735 12.4653 8.06735Z" />
+                                    <path d="M21.4233 16.9723L16.9701 14.0025C16.4049 13.6286 15.6474 13.7516 15.2296 14.2851L13.9324 15.953C13.8518 16.0593 13.7355 16.133 13.6049 16.1605C13.4743 16.1879 13.3382 16.1674 13.2215 16.1026L12.9748 15.9666C12.1568 15.5207 11.139 14.9656 9.08843 12.9143C7.03782 10.863 6.48163 9.84441 6.03578 9.02794L5.90048 8.78119C5.8348 8.66457 5.81347 8.52814 5.84042 8.39704C5.86736 8.26593 5.94077 8.14897 6.04712 8.06771L7.71384 6.77093C8.24713 6.35309 8.37031 5.59578 7.9969 5.03048L5.02713 0.577286C4.64443 0.00163523 3.87664 -0.171172 3.28419 0.184969L1.42202 1.30357C0.836918 1.64754 0.407665 2.20464 0.224235 2.85811C-0.446327 5.30138 0.0581298 9.51809 6.26973 15.7304C11.2109 20.6712 14.8894 21.9999 17.4178 21.9999C17.9997 22.0024 18.5792 21.9267 19.141 21.7748C19.7946 21.5916 20.3517 21.1623 20.6955 20.5771L21.8152 18.716C22.1719 18.1234 21.9992 17.3552 21.4233 16.9723Z" />
                                 </svg>
                             </div>
                             <div className="content">
@@ -394,14 +423,14 @@ const Header: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    
+
+                    {/* Nav Right */}
                     <div className="nav-right">
+                        {/* Desktop phone */}
                         <div className="contact-area d-lg-flex d-none">
                             <div className="icon">
                                 <svg width={22} height={22} viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.4233 16.9723L16.9701 14.0025C16.4049 13.6286 15.6474 13.7516 15.2296 14.2851L13.9324 15.953C13.8518 16.0593 13.7355 16.133 13.6049 16.1605C13.4743 16.1879 13.3382 16.1674 13.2215 16.1026L12.9748 15.9666C12.1568 15.5207 11.139 14.9656 9.08843 12.9143C7.03782 10.863 6.48163 9.84441 6.03578 9.02794L5.90048 8.78119C5.8348 8.66457 5.81347 8.52814 5.84042 8.39704C5.86736 8.26593 5.94077 8.14897 6.04712 8.06771L7.71384 6.77093C8.24713 6.35309 8.37031 5.59578 7.9969 5.03048L5.02713 0.577286C4.64443 0.00163523 3.87664 -0.171172 3.28419 0.184969L1.42202 1.30357C0.836918 1.64754 0.407665 2.20464 0.224235 2.85811C-0.446327 5.30138 0.0581298 9.51809 6.26973 15.7304C11.2109 20.6712 14.8894 21.9999 17.4178 21.9999C17.9997 22.0024 18.5792 21.9267 19.141 21.7748C19.7946 21.5916 20.3517 21.1623 20.6955 20.5771L21.8152 18.716C22.1719 18.1234 21.9992 17.3552 21.4233 16.9723ZM21.1835 18.3398L20.0663 20.202C19.8194 20.6244 19.4187 20.935 18.9481 21.0687C16.6925 21.688 12.7519 21.175 6.78849 15.2117C0.825106 9.24827 0.312228 5.308 0.931488 3.05209C1.06539 2.58083 1.37635 2.17961 1.7993 1.93237L3.66147 0.815229C3.91853 0.660553 4.25177 0.735528 4.41783 0.985329L6.03106 3.40733L7.38507 5.43814C7.54722 5.68334 7.49394 6.01198 7.26262 6.19343L5.59552 7.49021C5.08818 7.87814 4.9433 8.58007 5.25566 9.13716L5.38804 9.37768C5.85662 10.2371 6.43918 11.3062 8.56606 13.4327C10.6929 15.5592 11.7617 16.1418 12.6207 16.6104L12.8616 16.7431C13.4186 17.0554 14.1206 16.9106 14.5085 16.4032L15.8053 14.7361C15.9868 14.5049 16.3153 14.4517 16.5606 14.6137L21.0134 17.5834C21.2634 17.7494 21.3384 18.0828 21.1835 18.3398ZM12.4659 3.66805C15.9066 3.67187 18.6949 6.4602 18.6988 9.90091C18.6988 10.1034 18.8629 10.2675 19.0654 10.2675C19.2679 10.2675 19.432 10.1034 19.432 9.90091C19.4278 6.05538 16.3114 2.93901 12.4659 2.9348C12.2634 2.9348 12.0993 3.09893 12.0993 3.30142C12.0993 3.50392 12.2634 3.66805 12.4659 3.66805Z" />
-                                    <path d="M12.4653 5.86759C14.6916 5.87021 16.4957 7.67433 16.4983 9.90062C16.4983 9.99786 16.5369 10.0911 16.6057 10.1599C16.6744 10.2286 16.7677 10.2672 16.8649 10.2672C16.9622 10.2672 17.0554 10.2286 17.1242 10.1599C17.1929 10.0911 17.2315 9.99786 17.2315 9.90062C17.2285 7.26951 15.0963 5.13735 12.4653 5.13434C12.2628 5.13434 12.0986 5.29847 12.0986 5.50096C12.0986 5.70346 12.2628 5.86759 12.4653 5.86759Z" />
-                                    <path d="M12.4653 8.06735C13.4772 8.06856 14.2972 8.8886 14.2985 9.90056C14.2985 9.9978 14.3371 10.091 14.4058 10.1598C14.4746 10.2286 14.5679 10.2672 14.6651 10.2672C14.7623 10.2672 14.8556 10.2286 14.9243 10.1598C14.9931 10.091 15.0317 9.9978 15.0317 9.90056C15.0301 8.48382 13.882 7.3357 12.4653 7.33411C12.2628 7.33411 12.0986 7.49823 12.0986 7.70073C12.0986 7.90323 12.2628 8.06735 12.4653 8.06735Z" />
+                                    <path d="M21.4233 16.9723L16.9701 14.0025C16.4049 13.6286 15.6474 13.7516 15.2296 14.2851L13.9324 15.953C13.8518 16.0593 13.7355 16.133 13.6049 16.1605C13.4743 16.1879 13.3382 16.1674 13.2215 16.1026L12.9748 15.9666C12.1568 15.5207 11.139 14.9656 9.08843 12.9143C7.03782 10.863 6.48163 9.84441 6.03578 9.02794L5.90048 8.78119C5.8348 8.66457 5.81347 8.52814 5.84042 8.39704C5.86736 8.26593 5.94077 8.14897 6.04712 8.06771L7.71384 6.77093C8.24713 6.35309 8.37031 5.59578 7.9969 5.03048L5.02713 0.577286C4.64443 0.00163523 3.87664 -0.171172 3.28419 0.184969L1.42202 1.30357C0.836918 1.64754 0.407665 2.20464 0.224235 2.85811C-0.446327 5.30138 0.0581298 9.51809 6.26973 15.7304C11.2109 20.6712 14.8894 21.9999 17.4178 21.9999C17.9997 22.0024 18.5792 21.9267 19.141 21.7748C19.7946 21.5916 20.3517 21.1623 20.6955 20.5771L21.8152 18.716C22.1719 18.1234 21.9992 17.3552 21.4233 16.9723Z" />
                                 </svg>
                             </div>
                             <div className="content">
@@ -409,6 +438,8 @@ const Header: React.FC = () => {
                                 <a href="tel:0487 244 0380">0487 244 0380</a>
                             </div>
                         </div>
+
+                        {/* GET IN TOUCH */}
                         <div className="right-sidebar-button" onClick={toggleRightSidebar}>
                             <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="11.2" height="1.4" rx="0.699998" />
@@ -417,6 +448,8 @@ const Header: React.FC = () => {
                             </svg>
                             <span>GET IN TOUCH</span>
                         </div>
+
+                        {/* Mobile hamburger */}
                         <div className="sidebar-button mobile-menu-btn" onClick={toggleSidebar}>
                             <svg width={20} height={20} viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.29608 0.0658336C0.609639 0.31147 0.139209 0.899069 0.0432028 1.63598C-0.0144009 2.09353 -0.0144009 5.4939 0.0432028 5.95146C0.129608 6.59686 0.489632 7.11703 1.07047 7.42046L1.36329 7.57458H3.83545H6.30761L6.59563 7.42046C6.96525 7.2278 7.25807 6.93401 7.45008 6.56314L7.60369 6.27416V3.79372V1.31328L7.45008 1.02429C7.25807 0.653433 6.96525 0.359633 6.59563 0.166978L6.30761 0.0128531L3.90745 0.00322056C1.83372 -0.00641251 1.4785 0.00322056 1.29608 0.0658336ZM6.2356 0.802741C6.52842 0.956866 6.65803 1.08209 6.79244 1.34699L6.90765 1.57336V3.80817V6.03816L6.74924 6.29824C6.53322 6.66429 6.2068 6.85694 5.74117 6.90029C5.54916 6.91956 4.55549 6.92437 3.52343 6.91474L1.65131 6.90029L1.41129 6.77025C1.12807 6.62094 1.00807 6.49571 0.854455 6.20191L0.739248 5.98518V3.79372V1.60226L0.854455 1.38552C1.05607 0.995397 1.33929 0.778659 1.74731 0.706413C1.85292 0.687148 2.85618 0.677515 3.97946 0.677515L6.01959 0.687148L6.2356 0.802741Z" />
@@ -429,7 +462,7 @@ const Header: React.FC = () => {
                 </div>
             </header>
         </>
-    )
+    );
 }
 
-export default Header
+export default Header;

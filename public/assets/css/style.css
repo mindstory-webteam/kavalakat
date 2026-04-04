@@ -2206,7 +2206,7 @@ header.style-1 {
   width: 100%;
   z-index: 999;
   transition: all 0.8s ease-out 0s;
-  background-color: transparent;
+  background-color: #0160b2;
   padding: 25px 90px;
 }
 @media (max-width: 1699px) {
@@ -2245,7 +2245,7 @@ header.style-1.sticky {
   left: 0;
   width: 100%;
   box-sizing: border-box;
-  background-color: var(--white-color);
+  background-color: #0160b2;
   box-shadow: 5px 3px 40px rgba(0, 72, 88, 0.1);
   z-index: 999;
   animation: smooth-header 0.65s linear;
@@ -2498,7 +2498,7 @@ header.style-1 .main-menu > ul > li.position-inherit {
   }
 }
 header.style-1 .main-menu > ul > li > a {
-  color: var(--title-color);
+  color: #fff;
   display: block;
   letter-spacing: 0.4px;
   padding: 10px 22px;
@@ -2914,14 +2914,14 @@ header.style-1 .main-menu > ul > li:hover .dropdown-icon2 {
   color: var(--primary-color1);
 }
 header.style-1 .main-menu > ul > li:hover.menu-item-has-children > a::before {
-  color: var(--title-color);
+  color: #ffff;
 }
 header.style-1 .main-menu > ul > li.active > a {
-  background-color: var(--primary-color1);
-  color: var(--white-color);
+  background-color: var(--white-color);
+  color: var(--primary-color1);
 }
 header.style-1 .main-menu > ul > li.active > a svg {
-  fill: var(--white-color);
+  fill: var(--primary-color1);
 }
 header.style-1 .main-menu > ul > li.active .dropdown-icon2 {
   color: var(--primary-color1);
