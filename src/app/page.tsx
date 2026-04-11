@@ -34,6 +34,7 @@ export default function Home() {
         apiEndpoint="/api/chat"
         brandColor="#6366f1"
         brandName="AI Assistant"
+        brochureUrl="/Kavalakat.pdf"   
       />
     </>
   );
