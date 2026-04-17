@@ -19,7 +19,7 @@ const Banner = () => {
             button1Link: "/product",
             button2Text: "Let's Discuss",
             button2Link: "/contact",
-            image: "/assets/new-images/home-banner/banner-4.jpeg" // Add your image path
+            image: "/assets/new-images/home-banner/banner-4.jpeg"
         },
         {
             id: 2,
@@ -28,7 +28,7 @@ const Banner = () => {
             button1Link: "/product",
             button2Text: "Get Quote",
             button2Link: "/contact",
-            image: "/assets/new-images/home-banner/banner-5.jpeg" // Add your image path
+            image: "/assets/new-images/home-banner/banner-5.jpeg"
         },
         {
             id: 3,
@@ -37,7 +37,7 @@ const Banner = () => {
             button1Link: "/gallery",
             button2Text: "Contact Us",
             button2Link: "/contact",
-            image: "/assets/new-images/home-banner/banner-3.jpeg" // Add your image path
+            image: "/assets/new-images/home-banner/banner-3.jpeg"
         }
     ];
 
@@ -48,7 +48,7 @@ const Banner = () => {
                 setCurrentSlide((prev) => (prev + 1) % slides.length);
                 setTimeout(() => setIsAnimating(false), 600);
             }
-        }, 5000); // Auto-slide every 5 seconds
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [currentSlide, isAnimating]);
@@ -64,7 +64,8 @@ const Banner = () => {
     return (
         <>
             <div className="home1-banner-section mb-60">
-                <div className="container-fluid">
+                {/* ← changed: replaced container-fluid with a plain full-width div */}
+                <div style={{ width: '100%', padding: 0 }}>
                     <div className="banner-wrapper">
                         {/* Background Images */}
                         <div className="banner-images-container">
@@ -153,7 +154,6 @@ const Banner = () => {
                     overflow: hidden;
                 }
 
-                /* Background Images Container */
                 .banner-images-container {
                     position: absolute;
                     top: 0;
@@ -186,7 +186,7 @@ const Banner = () => {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: rgba(0, 0, 0, 0.4); /* Adjust overlay darkness */
+                    background: rgba(0, 0, 0, 0.4);
                     z-index: 1;
                 }
 
@@ -262,7 +262,6 @@ const Banner = () => {
                     }
                 }
 
-                /* Navigation Lines at Bottom */
                 .carousel-nav-lines {
                     display: flex;
                     gap: 12px;
@@ -318,7 +317,6 @@ const Banner = () => {
                     }
                 }
 
-                /* Responsive */
                 @media (max-width: 768px) {
                     .carousel-nav-lines {
                         bottom: 20px;
