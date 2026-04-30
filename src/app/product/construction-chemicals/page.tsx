@@ -121,8 +121,12 @@ const ProductPage = () => {
                         <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="details-content">
                                 <h2>Kavalakat Construction Chemicals Supplier in Kerala</h2>
-                                <p>Supplying a comprehensive range of abrasives and construction chemical products, Kavalakat  caters to the needs of builders, contractors, and industrial users across Kerala. Their construction chemical lineup includes specialty products from reputed manufacturers like Sika and LANXESS, known for solutions that bond, seal, reinforce, and protect structural elements in concrete and masonry work.</p>
-                                <p>Alongside this, the abrasives segment supports material finishing, surface preparation, and cutting/grinding applications essential in fabrication and construction tasks. With decades of experience in building materials supply and strong partnerships with industry partners, Kavalakat  delivers quality  construction chemicals with competitive pricing, dependable availability, and professional service.</p>
+                                <p style={{textAlign:"justify"}}>Through Ultratech's Building Products Division, we distribute a comprehensive range of
+construction chemicals and abrasives — including waterproofing compounds, tile adhesives,
+wall putties, and power tools — serving contractors and builders across Thrissur and beyond.
+
+</p>
+                                {/* <p>Alongside this, the abrasives segment supports material finishing, surface preparation, and cutting/grinding applications essential in fabrication and construction tasks. With decades of experience in building materials supply and strong partnerships with industry partners, Kavalakat  delivers quality  construction chemicals with competitive pricing, dependable availability, and professional service.</p> */}
                             </div>
                         </div>
                         <div className="col-lg-4 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">

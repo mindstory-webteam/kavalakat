@@ -145,8 +145,8 @@ const companies = [
                         <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="details-content">
                                 <h2>Kerala’s Trusted Roofing Solutions Supplier</h2>
-                                <p>Supplying a quality range of sheets and pipes, Kavalakat meets diverse construction and industrial requirements with trusted materials sourced from leading manufacturers. Their sheet and pipe offerings include premium products such as Tata Structura Z+ galvanized steel tubes, known for high corrosion resistance and strength, and Tata Durashine sheet solutions that combine global expertise with durable performance. </p>
-                                <p>They also offer quality pipes and structural components from brands like APL Apollo, ensuring long-lasting support for roofing, structural framing, and fluid conveyance applications. Backed by decades of experience in the building materials sector, Kavalakat stands out for reliable supply, competitive pricing, and professional service across central Kerala. </p>
+                                <p style={{textAlign:"justify"}}>Supplying a quality range of sheets and pipes, Kavalakat meets diverse construction and industrial requirements with trusted materials sourced from leading manufacturers. Their sheet and pipe offerings include premium products such as Tata Structura Z+ galvanized steel tubes, known for high corrosion resistance and strength, and Tata Durashine sheet solutions that combine global expertise with durable performance. </p>
+                                <p style={{textAlign:"justify"}}>They also offer quality pipes and structural components from brands like APL Apollo, ensuring long-lasting support for roofing, structural framing, and fluid conveyance applications. Backed by decades of experience in the building materials sector, Kavalakat stands out for reliable supply, competitive pricing, and professional service across central Kerala. </p>
                             </div>
                         </div>
                         <div className="col-lg-4 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -198,13 +198,9 @@ const companies = [
                                                     id: 'collapseFour',
                                                     title: ' Wide Range of Applications',
                                                     content: 'Offers sheet and pipe solutions suitable for roofing, structural frameworks, drainage, water supply, and industrial installations.'
-                                                },
+                                                }
                                                 
-                                                {
-                                                    id: 'collapseFive',
-                                                    title: ' Competitive Pricing & Reliable Supply',
-                                                    content: 'Provides premium materials at competitive prices with consistent availability, timely delivery, and professional customer support.'
-                                                }       
+                   
                                             ].map((item, index) => (
                                                 <div className="accordion-item mb-3 animated-accordion" key={item.id}>
                                                     <h2 className="accordion-header">

@@ -127,8 +127,16 @@ const ProductPage = () => {
                         <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="details-content">
                                 <h2>Kavalakat White Cement & Paint Supplier in Kerala</h2>
-                                <p>Supplying premium white cement and paints, Kavalakat  offers superior finishing materials trusted by builders and contractors across Kerala. Their White Cement & Paint range includes renowned products such as Birla White Cement — part of the UltraTech Cement family, known for strength, brightness, and aesthetic appeal — ideal for smooth, high-quality surfaces in interior and exterior applications. </p>
-                                <p>For paint solutions, they feature AkzoNobel brands like Dulux, International, and Sikkens, recognized globally for rich colors, excellent coverage, durability, and protective coatings that enhance and protect walls.</p>
+                                <p style={{textAlign:"justify"}}>As C&F Agent for Birla Opus (Aditya Birla Group) covering Thrissur, Palakkad & Malappuram,
+and Distributor for Dulux Paints (AkzoNobel / JSW Group) in Thrissur and parts of Palakkad &
+Malappuram, Kavalakat brings the best decorative paint brands to Kerala's trade network.
+
+</p>
+                                <p style={{textAlign:"justify"}}>We are the exclusive Stockist of Birla White Cement & Putty in Thrissur — serving 300+ hardware
+and paint counters and handling 4,500 MT/month combined. We were the No.1 Birla White Dealer
+in Kerala for FY 2024–2025.
+
+</p>
                             </div>
                         </div>
                         <div className="col-lg-4 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">

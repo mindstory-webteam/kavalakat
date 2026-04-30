@@ -14,7 +14,7 @@ const Banner = () => {
     const slides = [
         {
             id: 1,
-            title: "Quality and reliability you can trust",
+            title: "Kerala's Most Trusted Construction Material Supplier — Since 1975",
             button1Text: "Start A Project",
             button1Link: "/product",
             button2Text: "Let's Discuss",
@@ -23,7 +23,7 @@ const Banner = () => {
         },
         {
             id: 2,
-            title: "Kerala's most trusted destination for construction materials",
+            title: "50 Years of Building Kerala's Infrastructure",
             button1Text: "Explore Services",
             button1Link: "/product",
             button2Text: "Get Quote",
@@ -32,7 +32,7 @@ const Banner = () => {
         },
         {
             id: 3,
-            title: "Authorized dealer for top Indian brands in Kerala",
+            title: "10,000+ MT of Steel. Every Month. Pan-Kerala.",
             button1Text: "Our Portfolio",
             button1Link: "/gallery",
             button2Text: "Contact Us",

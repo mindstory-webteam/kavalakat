@@ -9,6 +9,7 @@ import Image from 'next/image';
 import Breadcrumb from '@/components/common/Breadcrumb';
 
 import HomeProcessSection from '@/components/HomeProcessSection';
+import SalesNetworkSection from '@/components/SalesNetworkSection';
 
 
 const OurProcessPage:React.FC = () => {
@@ -18,7 +19,8 @@ const OurProcessPage:React.FC = () => {
             <InnerPageHeader />
             <Breadcrumb title="Our Process" subtitle="Our Process Flow Step From Concept To Execution" image='/assets/new-images/bm/bm-1.png' />
             <HomeProcessSection addClass="pt-120" />
-            <div className="our-process-page mb-120">
+            <SalesNetworkSection />
+            {/* <div className="our-process-page mb-120">
                 <div className="container">
                     <div className="process-wrapper">
                         <div className="single-process mb-40">
@@ -116,7 +118,7 @@ const OurProcessPage:React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
 

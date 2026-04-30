@@ -230,16 +230,16 @@ const HomeTestimonialSection: React.FC = () => {
                 <div className="counter-wrap">
                     <div className="row gy-sm-5 gy-4">
                         <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center divider">
-                            <Counter target={50} suffix="+ Years" label="Legacy in the Construction Industry" />
+                            <Counter target={50} suffix="+" label="Years of Experience" />
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center divider">
-                            <Counter target={245} suffix="+" label="Employees Across Kerala & Tamil Nadu" />
+                            <Counter target={245} suffix="+" label="Employees" />
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-lg-center justify-content-md-end justify-content-center divider">
-                            <Counter target={440} suffix="+" label="Retail Network Across the State" />
+                            <Counter target={770} suffix="+" label="Retail Partners" />
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                            <Counter target={15000} suffix="+ MT" label="Steel & Cement Volume Handled" />
+                            <Counter target={15000} suffix="+ MT" label="Steel / Month" />
                         </div>
                     </div>
                 </div>

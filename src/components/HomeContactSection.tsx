@@ -30,7 +30,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseOne'}
                                             aria-controls="collapseOne"
                                         >
-                                            01. Are your steel and cement products certified?
+                                            01. What construction materials does Kavalakat supply?
                                         </button>
                                     </h2>
                                     <div 
@@ -39,7 +39,9 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingOne"
                                     >
                                         <div className="accordion-body">
-                                            Yes, all our steel and cement products are ISI-certified and sourced from reputed Indian brands, meeting industry and quality standards.
+We supply TMT steel bars, MS structurals, cement (Ultratech, JSW, Chettinad Anjani), paints (Dulux)
+, white cement (Birla White), construction chemicals and more.
+
                                         </div>
                                     </div>
                                 </div>
@@ -52,7 +54,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseTwo'}
                                             aria-controls="collapseTwo"
                                         >
-                                            2. Do you provide logistics and on-time delivery?
+                                            2. Which districts does Kavalakat serve?
                                         </button>
                                     </h2>
                                     <div 
@@ -61,7 +63,8 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingTwo"
                                     >
                                         <div className="accordion-body">
-                                            Yes, we offer efficient logistics with crane-assisted loading and just-in-time delivery directly to your project site.
+We operate across all districts of Kerala from our branches in Thrissur, Palakkad, Ernakulam
+, Idukki, and Trivandrum ,kannur plus Coimbatore in Tamil Nadu, with capability to serve across south india
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +77,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseThree'}
                                             aria-controls="collapseThree"
                                         >
-                                            3. Can I get multiple construction materials from one place?
+                                            3. Are you an authorized dealer for SAIL TMT?
                                         </button>
                                     </h2>
                                     <div 
@@ -83,7 +86,9 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingThree"
                                     >
                                         <div className="accordion-body">
-                                            Absolutely. Kavalakat  is a one-stop solution for steel, cement, white cement, sheets, pipes, abrasives, and construction chemicals.
+Yes. We are the exclusive authorized distributor of SAIL SEQR TMT Rebars for the Thrissur-to-
+Trivandrum corridor, appointed directly by Steel Authority of India Ltd.
+
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +101,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseFour'}
                                             aria-controls="collapseFour"
                                         >
-                                           4. Why should I choose Kavalakat ?
+                                           4. How much steel does Kavalakat handle monthly?
                                         </button>
                                     </h2>
                                     <div 
@@ -105,7 +110,10 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingFour"
                                     >
                                         <div className="accordion-body">
-                                            With over four decades of industry experience, certified products, transparent pricing, and dependable service, we are a trusted construction material supplier in Kerala.
+We handle over 10000+  MT of steel per month  including ~5,000–5,500 MT of Vizag TMT, 
+(1500 + Sail)
+~2000 MT of Shyam Steel, and ~2,000 – 2,500 MT of MS Structurals.
+
                                         </div>
                                     </div>
                                 </div>
@@ -118,7 +126,7 @@ const HomeContactSection = () => {
                                             aria-expanded={openAccordion === 'collapseFive'}
                                             aria-controls="collapseFive"
                                         >
-                                            5. How can I place an order with Kavalakat ?
+                                            5. How do I place an order?
                                         </button>
                                     </h2>
                                     <div 
@@ -127,7 +135,10 @@ const HomeContactSection = () => {
                                         aria-labelledby="headingFive"
                                     >
                                         <div className="accordion-body">
-You can place orders by contacting our team directly or visiting our nearest office for product consultation and quick processing.                                        </div>
+Call us at 0487 244 0380 or email info@kavalakat.com. You can also visit our nearest branch
+for product consultation and pricing.
+
+                                     </div>
                                     </div>
                                 </div>
                             </div>

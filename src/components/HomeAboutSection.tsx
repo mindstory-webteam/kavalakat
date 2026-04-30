@@ -37,7 +37,7 @@ const HomePageAboutSection: React.FC<HomePageAboutSectionProps>= ({ pt = "" }) =
                                                 </svg>
                                             </div>
                                         </a>
-                                        <div className="content">
+                                        <div className="content" style={{textAlign:"justify"}}>
                                             <p>
 For over 40 years, Kavalakat has been powering Kerala’s construction industry with premium materials, reliable delivery, and unwavering commitment to quality. We don’t just supply materials — we build lasting partnerships and stronger foundations for every project.</p>
                                         </div>
@@ -65,7 +65,20 @@ For over 40 years, Kavalakat has been powering Kerala’s construction industry 
                     <div className="row gy-md-5 gy-4">
                         <div className="col-lg-5 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="about-content">
-                                <p>Kavalakat group of companies is a leading supplier of construction materials in the state of Kerala. Established in 1975, we have over 40 years of experience servicing the construction industry and are the preferred channel partners for major Indian brands of steel and cement with offices in Thrissur, Palakkad and Ernakulum districts. Over the years the groups’ portfolio has been expanded to incorporate construction materials like white cement, putty, sheet, pipe and paint. With our un-paralleled service, on-time delivery and competitive prices we have established ourselves as an ideal ally for major builders and contractors across the state.</p>
+                                <p style={{ textAlign: "justify" }}>Established in 1975 by the Kavalakat family of Kandassankadavu, Thrissur. Kavalakat Group
+has grown over five decades into Kerala's most comprehensive construction material
+distribution company. What began as a cement trading venture by Mr K J Francis has
+evolved — under the leadership of Mr K F Jose and his son Mr Francis Jose — into a
+multi-division enterprise handling steel, cement, paints, white cement, construction
+chemicals, logistics, and hospitality.
+
+</p>
+<br />
+<p style={{ textAlign: "justify" }}>
+    Headquartered in S.T. Nagar, Thrissur, we operate branches across Palakkad, Ernakulam,
+Idukki, Trivandrum, and Coimbatore, serving a network of 770+ retailers and supplying
+directly to major infrastructure projects across Kerala.
+</p>
                                 {/* <ul>
                                     <li>
                                         <h6>WHO WE ARE</h6>

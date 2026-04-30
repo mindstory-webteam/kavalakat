@@ -157,8 +157,20 @@ const ProductPage = () => {
                         <div className="col-lg-8 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="details-content">
                                 <h2>Kavalakat Reliable Steel Supplier in Kerala</h2>
-                                <p>Supplying high-quality steel products to builders, contractors, and construction professionals across Kerala, Kavalakat offers a strong portfolio of trusted steel brands suited for residential, commercial, and infrastructure projects. As highlighted on their steel page, the company deals with leading manufacturers such as Vizag, Tulsyan, Tata, SAIL, Kairali TMT, and JSW, ensuring strength, durability, and compliance with industry standards. </p>
-                                <p>With decades of experience in the building materials sector, Kavalakat is known for reliable supply, timely delivery, competitive pricing, and customer-focused service. Their commitment to quality steel solutions helps ensure long-lasting and structurally sound construction outcomes for projects of all scales.</p>
+                                <p style={{textAlign:"justify"}}>Kavalakat is Kerala's premier steel distribution company, handling over 10,000 MT of steel every
+month. We are the exclusive authorized distributor of SAIL SEQR TMT Rebars for South Kerala
+(Thrissur to Trivandrum), the all-Kerala distributor of RINL Vizag TMT (~5,000–5,500 MT/month)
+and Shyam Steel Flexi-Strong TMT (~2,000 MT/month).
+
+ </p>
+                                <p style={{textAlign:"justify"}}>We also deal in MS Structurals (SAIL Structurals, JSPL Structurals, TATA Structura), MS Angle,
+MS Flat, MS Channels, MS Square, HR Plates, Polish Rods, and TATA TISCON/DURASHINE rebars.
+
+
+Our de-coiling units in Thrissur (Kuttanellur) and Palakkad (Ozhalappathy) process Vizag TMT
+rebars for dealers and direct project supply.
+
+</p>
                             </div>
                         </div>
                         <div className="col-lg-4 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
