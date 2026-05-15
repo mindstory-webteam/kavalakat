@@ -2,7 +2,10 @@
 // Kavalakat — Centralized API Utility (TypeScript)
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "https://kavalakat-api.onrender.com/api";
+ process.env.NEXT_PUBLIC_REACT_APP_API_URL ||
+  process.env.NEXT_PUBLIC_API_URL ||
+  "https://kavalakat-api.onrender.com/api"
+).replace(/\/API\//gi, "/api/").replace(/\/$/, "");
 
 // ─────────────────────────────────────────────────────────────────────────────
 // TypeScript Interfaces
