@@ -78,7 +78,7 @@ const InnerPageHeader: React.FC = () => {
     dispatch({ type: "TOGGLE_SIDEBAR" });
   };
 
-  const aboutPaths = ['/about', '/our-process', '/our-clients', '/gallery', '/milestone', '/projects'];
+  const aboutPaths = ['/about', '/our-strengths', '/our-clients', '/gallery', '/milestone', '/projects'];
   const isAboutActive = aboutPaths.some((p) => pathname.startsWith(p));
 
   const portfolioPaths = [
@@ -333,7 +333,7 @@ const InnerPageHeader: React.FC = () => {
                 <i onClick={() => toggleMenu("about")} className={`bi bi-${state.activeMenu === "about" ? "dash" : "plus"} dropdown-icon`} />
                 <ul className={`sub-menu ${state.activeMenu === "about" ? "d-block" : ""}`}>
                   <li className={pathname === "/about" ? "active" : ""}><Link href="/about"><span>About</span></Link></li>
-                  <li className={pathname === "/our-process" ? "active" : ""}><Link href="/our-process"><span>Our Strengths</span></Link></li>
+                  <li className={pathname === "/our-strengths" ? "active" : ""}><Link href="/our-strengths"><span>Our Strengths</span></Link></li>
                   <li className={pathname === "/milestone" ? "active" : ""}><Link href="/milestone"><span>Milestones</span></Link></li>
                   <li className={pathname === "/projects" ? "active" : ""}><Link href="/projects"><span>Projects</span></Link></li>
                   <li className={pathname === "/gallery" ? "active" : ""}><Link href="/gallery"><span>Gallery</span></Link></li>

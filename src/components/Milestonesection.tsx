@@ -1,220 +1,138 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
+// ── Types ─────────────────────────────────────────────────────────────────────
+
 interface Milestone {
+  id: number;
   year: string;
   title: string;
   description: string;
-  image: string;
-  tags: string[];
+  image?: string;
+  image_url?: string;
+  tags?: string;
+  tags_list?: string[];
+  order?: number;
 }
 
-const milestones: Milestone[] = [
-  {
-    year: "1976",
-    title: "The Beginning",
-    description:
-      "Established \"Kavalakat Traders\" for cement trading at Puttenpeedika, Thrissur — the founding chapter of a legacy built on trust.",
-    image: "/assets/new-images/projects/project-1.jpg",
-    tags: ["Cement", "Thrissur"],
-  },
-  {
-    year: "1985",
-    title: "Expanding Reach",
-    description:
-      "Opened a cement trading shop at Kandassankadavu, Thrissur, deepening our presence in the region.",
-    image: "/assets/new-images/projects/project-2.jpg",
-    tags: ["Cement", "Retail"],
-  },
-  {
-    year: "1989",
-    title: "Into Steel",
-    description:
-      "Established \"Kavalakat Agencies\" to trade in Iron and Steel products, marking our entry into the steel sector.",
-    image: "/assets/new-images/projects/project-3.jpg",
-    tags: ["Steel", "Iron"],
-  },
-  {
-    year: "1994",
-    title: "Wholesale Steel Hub",
-    description:
-      "Mr. K F Jose opened a Wholesale and Retail outlet of \"Kavalakat Agencies\" in Thrissur Town, trading in TMT Bars, MS Angle, MS Flat, MS Channels, MS Square, MS Rounds and more.",
-    image: "/assets/new-images/projects/project-1.jpg",
-    tags: ["TMT Bars", "Wholesale"],
-  },
-  {
-    year: "1998",
-    title: "Into Palakkad",
-    description:
-      "Established \"Kavalakat Associates\" at Mannapullikkavu in Palakkad district to deal in cement, broadening our geographic footprint.",
-    image: "/assets/new-images/projects/project-2.jpg",
-    tags: ["Cement", "Palakkad"],
-  },
-  {
-    year: "2010",
-    title: "New Leadership",
-    description:
-      "Mr. K F Jose takes over as Chairman of Kavalakat Group, steering the company toward accelerated growth.",
-    image: "/assets/new-images/projects/project-3.jpg",
-    tags: ["Leadership", "Group"],
-  },
-  {
-    year: "2011",
-    title: "Ernakulam Branch",
-    description:
-      "Opened a branch of \"Kavalakat Traders\" at Angamaly in Ernakulam District, extending our network across central Kerala.",
-    image: "/assets/new-images/projects/project-1.jpg",
-    tags: ["Ernakulam", "Expansion"],
-  },
-  {
-    year: "2012",
-    title: "Pigment Blending Unit",
-    description:
-      "Commissioned a blending unit for pigments at Ozhalappathy in Palakkad District, producing pigments in lighter shades of black and grey.",
-    image: "/assets/new-images/projects/project-2.jpg",
-    tags: ["Pigments", "Manufacturing"],
-  },
-  {
-    year: "2013",
-    title: "De-Coiling Operations",
-    description:
-      "Started a de-coiling unit in Kuttanellur, Thrissur under \"Kavalakat Agencies\" along NH-47 Bye Pass. Now home to 3 de-coiling machines for Vizag TMT rebars.",
-    image: "/assets/new-images/projects/project-3.jpg",
-    tags: ["De-Coiling", "TMT"],
-  },
-  {
-    year: "2017",
-    title: "Dulux Paints Distributor",
-    description:
-      "Appointed as the Distributor of Akzo Nobel (Dulux) Paints in Thrissur and parts of Palakkad and Malappuram districts.",
-    image: "/assets/new-images/projects/project-1.jpg",
-    tags: ["Paints", "Dulux"],
-  },
-  {
-    year: "2018",
-    title: "Next Generation Joins",
-    description:
-      "Mr Francis Jose S/O K F Jose joins the family business, bringing fresh energy and vision to Kavalakat Group.",
-    image: "/assets/new-images/projects/project-2.jpg",
-    tags: ["Family", "Legacy"],
-  },
-  {
-    year: "2018",
-    title: "Kumily Branch & Chettinad",
-    description:
-      "Opened a branch of \"Kavalakat Traders\" at Kumily in Idukki District after being appointed as Distributor of Chettinad Anjani cement for Thrissur and Idukki.",
-    image: "/assets/new-images/projects/project-3.jpg",
-    tags: ["Idukki", "Cement"],
-  },
-  {
-    year: "2019",
-    title: "Kavalakat Metals — Logistics",
-    description:
-      "Established \"Kavalakat Metals\", a Logistics firm registered to better serve the steel and cement industry. Presently transporting JSW Cement, Penna Cement and Bharathi Cement.",
-    image: "/assets/new-images/projects/project-1.jpg",
-    tags: ["Logistics", "Transport"],
-  },
-  {
-    year: "2020",
-    title: "Kamachi TMT Distributor",
-    description:
-      "Appointed as the distributor of Kamachi TMT for Thrissur, Palakkad, Calicut and Malappuram Districts.",
-    image: "/assets/new-images/projects/project-2.jpg",
-    tags: ["Kamachi", "TMT"],
-  },
-  {
-    year: "2021",
-    title: "Coimbatore Expansion",
-    description:
-      "Opened a branch of \"Kavalakat Agencies\" at Coimbatore District in Tamil Nadu, stepping beyond Kerala's borders.",
-    image: "/assets/new-images/projects/project-3.jpg",
-    tags: ["Tamil Nadu", "Expansion"],
-  },
-  {
-    year: "2021",
-    title: "Palakkad Steel Yard",
-    description:
-      "Started a Steel Yard and De-coiling unit in Ozhalappathy, Palakkad under \"Kavalakat Agencies\" — wholesale trading of TMT, MS Angle, MS Flats, MS Square, MS Rounds, HR Plates and Polish Rods.",
-    image: "/assets/new-images/projects/project-1.jpg",
-    tags: ["Steel Yard", "Palakkad"],
-  },
-  {
-    year: "2022",
-    title: "Ultratech C&F Partner",
-    description:
-      "Appointed as the C&F of Ultratech Building Products Division in Thrissur, reinforcing our position as a premier channel partner.",
-    image: "/assets/new-images/projects/project-2.jpg",
-    tags: ["Ultratech", "C&F"],
-  },
-  {
-    year: "2022",
-    title: "Trivandrum Branch",
-    description:
-      "Opened a branch of \"Kavalakat Agencies\" in Trivandrum District, completing a full-state presence in Kerala.",
-    image: "/assets/new-images/projects/project-3.jpg",
-    tags: ["Trivandrum", "Kerala"],
-  },
-  {
-    year: "2022",
-    title: "KAVALAKAT TMT Brand",
-    description:
-      "Introduced our own brand of TMT steel bars — \"KAVALAKAT TMT\" — in the Kerala market, a proud milestone in our manufacturing journey.",
-    image: "/assets/new-images/projects/project-1.jpg",
-    tags: ["Own Brand", "TMT"],
-  },
-  {
-    year: "2022",
-    title: "Alite Enclaves — Hospitality",
-    description:
-      "Launched our Hospitality division, \"Alite Enclaves\", offering Independent Villas and Flats for Daily and Short Stay rentals — presently hosting about 31 units.",
-    image: "/assets/new-images/projects/project-2.jpg",
-    tags: ["Hospitality", "Villas"],
-  },
-  {
-    year: "2023",
-    title: "SHYAM STEEL — State Distributor",
-    description:
-      "Appointed as the Distributor of \"SHYAM STEEL INDUSTRIES\" for the entire state of Kerala.",
-    image: "/assets/new-images/projects/project-3.jpg",
-    tags: ["Shyam Steel", "Kerala"],
-  },
-  {
-    year: "2024",
-    title: "Birla Opus C&F Agent",
-    description:
-      "Appointed C&F Agent for \"Birla Opus\" Paint Division of Aditya Birla Group for Thrissur, Palakkad and Malappuram.",
-    image: "/assets/new-images/projects/project-1.jpg",
-    tags: ["Birla Opus", "Paints"],
-  },
-  {
-    year: "2024",
-    title: "SAIL SEQR TMT — Exclusive Distributor",
-    description:
-      "Appointed exclusive Authorized Distributor of Steel Authority of India Ltd for \"SAIL SEQR TMT Rebars\" covering areas from Thrissur to Trivandrum districts.",
-    image: "/assets/new-images/projects/project-2.jpg",
-    tags: ["SAIL", "Exclusive"],
-  },
-  {
-    year: "2025",
-    title: "Neyy Vedyam — Fine Dining",
-    description:
-      "Venturing into the F&B sector, we opened \"Neyy Vedyam\" — a 72-seater Fine Dine Pure Vegetarian restaurant in Thrissur, celebrating Kerala's culinary heritage.",
-    image: "/assets/new-images/projects/project-3.jpg",
-    tags: ["F&B", "Restaurant"],
-  },
-];
+// ── API ───────────────────────────────────────────────────────────────────────
+
+const API_BASE =
+  (process.env.NEXT_PUBLIC_API_URL ?? "https://kavalakat-api.onrender.com/api").replace(/\/$/, "");
+
+const FALLBACK_IMAGE = "/assets/new-images/projects/project-1.jpg";
+
+async function fetchMilestones(): Promise<Milestone[]> {
+  try {
+    const res = await fetch(`${API_BASE}/milestones/`, {
+      headers: { "Content-Type": "application/json" },
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      console.warn(`[API] /milestones/ returned ${res.status}`);
+      return [];
+    }
+
+    const json = await res.json();
+    console.log("[API] /milestones/", json);
+
+    // Handle { data: [...] } envelope
+    if (json && !Array.isArray(json) && "data" in json) return json.data as Milestone[];
+    // Handle { results: [...] } DRF pagination envelope
+    if (json && !Array.isArray(json) && "results" in json) return json.results as Milestone[];
+    // Bare array
+    if (Array.isArray(json)) return json as Milestone[];
+
+    return [];
+  } catch (err) {
+    console.error("[API] Failed to fetch /milestones/:", err);
+    return [];
+  }
+}
+
+/** Resolve image: prefer image_url, fall back to image, then static fallback */
+function resolveImage(m: Milestone, index: number): string {
+  if (m.image_url && m.image_url.trim()) return m.image_url.trim();
+  if (m.image    && m.image.trim())     return m.image.trim();
+  // cycle through a few local fallbacks if needed
+  const locals = [
+    "/assets/new-images/projects/project-1.jpg",
+    "/assets/new-images/projects/project-2.jpg",
+    "/assets/new-images/projects/project-3.jpg",
+  ];
+  return locals[index % locals.length];
+}
+
+/** Resolve tags: prefer tags_list array, fall back to splitting the tags string */
+function resolveTags(m: Milestone): string[] {
+  if (Array.isArray(m.tags_list) && m.tags_list.length > 0) return m.tags_list;
+  if (typeof m.tags === "string" && m.tags.trim()) {
+    return m.tags.split(",").map((t) => t.trim()).filter(Boolean);
+  }
+  return [];
+}
+
+// ── Skeleton ──────────────────────────────────────────────────────────────────
+
+const SkeletonRow: React.FC<{ index: number }> = ({ index }) => (
+  <div className="mil-row mil-in" style={{ opacity: 1 }}>
+    <div className="mil-node-col">
+      <div className="mil-node" style={{ border: "2px solid #d0dff0" }} />
+      <div className="skeleton" style={{ width: 52, height: 22, borderRadius: 20, marginTop: 10 }} />
+    </div>
+    <div className="mil-dash" />
+    <div className="mil-card-col">
+      <div className="mil-card" style={{ marginRight: index % 2 === 0 ? 30 : 0, marginLeft: index % 2 !== 0 ? 30 : 0 }}>
+        <div className="skeleton" style={{ width: "100%", aspectRatio: "16/10" }} />
+      </div>
+    </div>
+    <div className="mil-body-col" style={{ padding: "0 16px" }}>
+      <div className="skeleton" style={{ height: 26, width: "60%", marginBottom: 14, borderRadius: 4 }} />
+      <div className="skeleton" style={{ height: 14, width: "100%", marginBottom: 8, borderRadius: 4 }} />
+      <div className="skeleton" style={{ height: 14, width: "85%",  marginBottom: 8, borderRadius: 4 }} />
+      <div className="skeleton" style={{ height: 14, width: "70%",  marginBottom: 16, borderRadius: 4 }} />
+      <div style={{ display: "flex", gap: 8 }}>
+        <div className="skeleton" style={{ height: 24, width: 64, borderRadius: 20 }} />
+        <div className="skeleton" style={{ height: 24, width: 80, borderRadius: 20 }} />
+      </div>
+    </div>
+  </div>
+);
+
+// ── Component ─────────────────────────────────────────────────────────────────
 
 const MilestoneSection: React.FC = () => {
   const wrapRef = useRef<HTMLDivElement>(null);
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const [loading, setLoading]       = useState(true);
 
+  // ── Fetch milestones ──
   useEffect(() => {
+    let cancelled = false;
+    fetchMilestones().then((data) => {
+      if (!cancelled) {
+        // Sort by order if present, otherwise by year
+        const sorted = [...data].sort((a, b) => {
+          if (a.order !== undefined && b.order !== undefined) return a.order - b.order;
+          return Number(a.year) - Number(b.year);
+        });
+        setMilestones(sorted);
+        setLoading(false);
+      }
+    });
+    return () => { cancelled = true; };
+  }, []);
+
+  // ── Intersection observer for scroll animations ──
+  useEffect(() => {
+    if (loading) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("mil-in");
-          }
+          if (entry.isIntersecting) entry.target.classList.add("mil-in");
         });
       },
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
@@ -223,14 +141,13 @@ const MilestoneSection: React.FC = () => {
     const rows = wrapRef.current?.querySelectorAll(".mil-row");
     rows?.forEach((r) => observer.observe(r));
     return () => observer.disconnect();
-  }, []);
+  }, [loading, milestones]);
 
   return (
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
 
-        /* ── CSS variables (from your root) ── */
         .mil-section {
           --font-manrope: "Manrope", sans-serif;
           --font-dmsans:  "DM Sans",  sans-serif;
@@ -242,7 +159,6 @@ const MilestoneSection: React.FC = () => {
           --borders-color:     #eee;
         }
 
-        /* ── Section ── */
         .mil-section {
           background: #f8f9fc;
           padding: 100px 0 120px;
@@ -260,7 +176,7 @@ const MilestoneSection: React.FC = () => {
           pointer-events: none;
         }
 
-        /* ── Header ── */
+        /* Header */
         .mil-hdr {
           text-align: center;
           margin-bottom: 80px;
@@ -301,7 +217,7 @@ const MilestoneSection: React.FC = () => {
           line-height: 1.78;
         }
 
-        /* ── Spine container ── */
+        /* Spine */
         .mil-wrap {
           position: relative;
           max-width: 1160px;
@@ -323,7 +239,7 @@ const MilestoneSection: React.FC = () => {
           );
         }
 
-        /* ── Row ── */
+        /* Row */
         .mil-row {
           display: grid;
           grid-template-columns: 1fr 88px 1fr;
@@ -339,7 +255,7 @@ const MilestoneSection: React.FC = () => {
         .mil-row:nth-child(even) .mil-body-col { grid-column: 1; grid-row: 1; }
         .mil-node-col { grid-column: 2; grid-row: 1; }
 
-        /* ── Centre node ── */
+        /* Node */
         .mil-node-col {
           display: flex;
           flex-direction: column;
@@ -385,7 +301,6 @@ const MilestoneSection: React.FC = () => {
         }
         .mil-row.mil-in .mil-node-num { opacity: 1; }
 
-        /* year pill */
         .mil-year {
           margin-top: 10px;
           font-family: var(--font-manrope);
@@ -404,7 +319,7 @@ const MilestoneSection: React.FC = () => {
         }
         .mil-row.mil-in .mil-year { opacity: 1; transform: translateY(0) scale(1); }
 
-        /* dashed connector */
+        /* Dashed connector */
         .mil-dash {
           position: absolute;
           top: 26px; height: 1px;
@@ -421,7 +336,7 @@ const MilestoneSection: React.FC = () => {
         .mil-row:nth-child(even) .mil-dash { right: calc(50% + 44px); }
         .mil-row.mil-in .mil-dash { width: calc(50% - 80px); }
 
-        /* ── Image card ── */
+        /* Image card */
         .mil-card-col { position: relative; }
         .mil-card {
           position: relative;
@@ -455,7 +370,6 @@ const MilestoneSection: React.FC = () => {
         }
         .mil-card:hover::before { opacity: 1; }
 
-        /* year stamp on image */
         .mil-stamp {
           position: absolute;
           top: 16px; z-index: 2;
@@ -475,7 +389,6 @@ const MilestoneSection: React.FC = () => {
         .mil-row:nth-child(even) .mil-stamp { right: 16px; }
         .mil-row.mil-in .mil-stamp { opacity: 1; transform: translateY(0); }
 
-        /* bottom sweep bar */
         .mil-card::after {
           content: '';
           position: absolute;
@@ -489,7 +402,7 @@ const MilestoneSection: React.FC = () => {
         }
         .mil-row.mil-in .mil-card::after { transform: scaleX(1); }
 
-        /* ── Text body ── */
+        /* Text body */
         .mil-body-col { padding: 0 16px; }
         .mil-row:nth-child(even) .mil-body-col { text-align: right; }
 
@@ -510,12 +423,8 @@ const MilestoneSection: React.FC = () => {
           margin: 0 0 18px;
         }
 
-        /* chips */
-        .mil-chips {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 7px;
-        }
+        /* Chips */
+        .mil-chips { display: flex; flex-wrap: wrap; gap: 7px; }
         .mil-row:nth-child(even) .mil-chips { justify-content: flex-end; }
         .mil-chip {
           font-family: var(--font-manrope);
@@ -537,9 +446,7 @@ const MilestoneSection: React.FC = () => {
           border-color: var(--primary-color1);
         }
 
-        /* ══════════════════
-           SCROLL ANIMATIONS
-        ══════════════════ */
+        /* Scroll animations */
         .mil-row:nth-child(odd) .mil-card-col {
           opacity: 0; transform: translateX(-72px);
           transition: opacity 0.85s cubic-bezier(0.16,1,0.3,1), transform 0.85s cubic-bezier(0.16,1,0.3,1);
@@ -564,19 +471,14 @@ const MilestoneSection: React.FC = () => {
         .mil-row.mil-in .mil-body-col { opacity: 1; transform: translateX(0); }
         .mil-row.mil-in .mil-node-col  { opacity: 1; transform: translateY(0); }
 
-        /* ── Footer ── */
+        /* Footer */
         .mil-footer {
           text-align: center;
           margin-top: 80px;
           padding-top: 52px;
           border-top: 1px solid var(--borders-color);
         }
-        .mil-footer p {
-          font-family: var(--font-dmsans);
-          font-size: 15px;
-          color: var(--text-color);
-          margin: 0;
-        }
+        .mil-footer p { font-family: var(--font-dmsans); font-size: 15px; color: var(--text-color); margin: 0; }
         .mil-footer a {
           font-weight: 600;
           color: var(--primary-color1);
@@ -587,7 +489,28 @@ const MilestoneSection: React.FC = () => {
         }
         .mil-footer a:hover { color: #0146a0; border-color: var(--primary-color1); }
 
-        /* ── Responsive ── */
+        /* Skeleton shimmer */
+        .skeleton {
+          background: linear-gradient(90deg, #ececec 25%, #e0e0e0 50%, #ececec 75%);
+          background-size: 200% 100%;
+          animation: shimmer 1.4s infinite;
+          display: block;
+        }
+        @keyframes shimmer {
+          0%   { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+
+        /* Empty state */
+        .mil-empty {
+          text-align: center;
+          padding: 60px 20px;
+          color: var(--text-color);
+          font-family: var(--font-dmsans);
+          font-size: 15px;
+        }
+
+        /* Responsive */
         @media (max-width: 900px) {
           .mil-row {
             grid-template-columns: 1fr;
@@ -637,12 +560,10 @@ const MilestoneSection: React.FC = () => {
             data-wow-delay="200ms"
             data-wow-duration="1500ms"
           >
-            <h2>
-              Efficient Production Workflow
-            </h2>
+            <h2>Our <span>Journey</span></h2>
             <p>
-              Our step-by-step process ensures every order is handled with
-              precision, quality, and on-time delivery from yard to site.
+              From a single cement shop in 1976 to a multi-sector group — every
+              milestone is a chapter in a story built on trust.
             </p>
           </div>
         </div>
@@ -650,48 +571,59 @@ const MilestoneSection: React.FC = () => {
         <div className="mil-wrap" ref={wrapRef}>
           <div className="mil-line" />
 
-          {milestones.map((m, i) => (
-            <div className="mil-row" key={i}>
-
-              {/* Centre node */}
-              <div className="mil-node-col">
-                <div className="mil-node">
-                  <span className="mil-node-num">{String(i + 1).padStart(2, "0")}</span>
-                </div>
-                <div className="mil-year">{m.year}</div>
-              </div>
-
-              {/* Dashed connector */}
-              <div className="mil-dash" />
-
-              {/* Image */}
-              <div className="mil-card-col">
-                <div className="mil-card">
-                  <img src={m.image} alt={m.title} />
-                  <div className="mil-stamp">{m.year}</div>
-                </div>
-              </div>
-
-              {/* Text */}
-              <div className="mil-body-col">
-                <h3>{m.title}</h3>
-                <p>{m.description}</p>
-                <div className="mil-chips">
-                  {m.tags.map((tag, j) => (
-                    <span className="mil-chip" key={j}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-
-            </div>
+          {/* ── Loading skeletons ── */}
+          {loading && Array.from({ length: 4 }).map((_, i) => (
+            <SkeletonRow key={i} index={i} />
           ))}
 
-          {/* <div className="mil-footer">
-            <p>
-              Any Doubt Question &amp;{" "}
-              <Link href="/contact">Contact</Link> With Us Any Time!
-            </p>
-          </div> */}
+          {/* ── Empty state ── */}
+          {!loading && milestones.length === 0 && (
+            <div className="mil-empty">No milestones found.</div>
+          )}
+
+          {/* ── API data ── */}
+          {!loading && milestones.map((m, i) => {
+            const tags  = resolveTags(m);
+            const image = resolveImage(m, i);
+
+            return (
+              <div className="mil-row" key={m.id}>
+
+                {/* Centre node */}
+                <div className="mil-node-col">
+                  <div className="mil-node">
+                    <span className="mil-node-num">{String(i + 1).padStart(2, "0")}</span>
+                  </div>
+                  <div className="mil-year">{m.year}</div>
+                </div>
+
+                {/* Dashed connector */}
+                <div className="mil-dash" />
+
+                {/* Image */}
+                <div className="mil-card-col">
+                  <div className="mil-card">
+                    <img src={image} alt={m.title} />
+                    <div className="mil-stamp">{m.year}</div>
+                  </div>
+                </div>
+
+                {/* Text */}
+                <div className="mil-body-col">
+                  <h3>{m.title}</h3>
+                  <p>{m.description}</p>
+                  {tags.length > 0 && (
+                    <div className="mil-chips">
+                      {tags.map((tag, j) => (
+                        <span className="mil-chip" key={j}>{tag}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

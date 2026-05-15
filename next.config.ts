@@ -2,10 +2,8 @@ import type { NextConfig } from "next";
 
 const config: NextConfig = {
   reactStrictMode: true,
-  // No output: 'export' - this enables full Next.js features
-  
+
   images: {
-    // Image optimization is now enabled!
     remotePatterns: [
       {
         protocol: 'https',
@@ -14,6 +12,10 @@ const config: NextConfig = {
       {
         protocol: 'https',
         hostname: 'cornflowerblue-eland-784005.hostingersite.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'kavalakat-api.onrender.com',  // ← Render API images
       },
     ],
     dangerouslyAllowSVG: true,
