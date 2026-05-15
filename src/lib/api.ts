@@ -1,6 +1,5 @@
 // lib/api.ts
 // Kavalakat — Centralized API Utility (TypeScript)
-// Replace lib/api.js with this file entirely.
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_API_URL || "https://kavalakat-api.onrender.com/api";
@@ -193,26 +192,21 @@ export interface PortfolioItem {
   is_featured: boolean;
   is_active: boolean;
   order: number;
-  // Section 1 — Hero Banner
   hero_title: string;
   banner_image: string;
   banner_image_url: string;
-  // Section 2 — About
   about_title: string;
   about_description: string;
   about_image: string;
   about_image_url: string;
-  // Section 3 — Features
   features_title: string;
   features_image: string;
   features_image_url: string;
   features_json: string;
   features: PortfolioFeature[];
-  // Section 4 — Brands
   brands_heading: string;
   brands_json: string;
   brands: PortfolioBrand[];
-  // Section 5 — Testimonials
   testimonials_json: string;
   testimonials: PortfolioTestimonial[];
 }
@@ -295,6 +289,7 @@ export interface AllPublicData {
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Core Fetcher
+// Unwraps { success: true, data: ... } envelope automatically
 // ─────────────────────────────────────────────────────────────────────────────
 
 async function apiFetch<T = unknown>(
@@ -304,6 +299,7 @@ async function apiFetch<T = unknown>(
 ): Promise<T> {
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
+    Accept: "application/json",
     ...(token ? { Authorization: `Bearer ${token}` } : {}),
     ...(options.headers as Record<string, string>),
   };
@@ -321,17 +317,56 @@ async function apiFetch<T = unknown>(
   }
 
   if (response.status === 204) return null as T;
-  return response.json() as Promise<T>;
+
+  const json = await response.json();
+
+  if (
+    json !== null &&
+    typeof json === "object" &&
+    !Array.isArray(json) &&
+    "success" in json &&
+    "data" in json
+  ) {
+    return json.data as T;
+  }
+
+  return json as T;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Helper Utilities
+// parseContact — maps raw API data to Contact type, no fallbacks
 // ─────────────────────────────────────────────────────────────────────────────
 
-/**
- * Safely parse a JSON string into a typed array.
- * Accepts an already-parsed array too (API may return either).
- */
+export function parseContact(raw: unknown): Contact | null {
+  if (!raw) return null;
+  const info = Array.isArray(raw) ? raw[0] : (raw as Record<string, unknown>);
+  if (!info) return null;
+  const r = info as Record<string, unknown>;
+  return {
+    id:             (r.id             as number) ?? 0,
+    phone:          (r.phone          as string) ?? "",
+    alt_phone:      (r.alt_phone      as string) ?? "",
+    email:          (r.email          as string) ?? "",
+    alt_email:      (r.alt_email      as string) ?? "",
+    address:        (r.address        as string) ?? "",
+    city:           (r.city           as string) ?? "",
+    state:          (r.state          as string) ?? "",
+    pincode:        (r.pincode        as string) ?? "",
+    map_embed_url:  (r.map_embed_url  as string) ?? "",
+    whatsapp:       (r.whatsapp       as string) ?? "",
+    facebook:       (r.facebook       as string) ?? "",
+    instagram:      (r.instagram      as string) ?? "",
+    linkedin:       (r.linkedin       as string) ?? "",
+    youtube:        (r.youtube        as string) ?? "",
+    business_hours: (r.business_hours as string) ?? "",
+    updated_at:     (r.updated_at     as string) ?? "",
+  };
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Helpers
+// ─────────────────────────────────────────────────────────────────────────────
+
 export function safeParseJSON<T>(
   raw: string | T[] | null | undefined,
   fallback: T[] = []
@@ -346,22 +381,12 @@ export function safeParseJSON<T>(
   }
 }
 
-/**
- * Resolve an image URL — prepends base origin for relative paths.
- */
-export function getImageUrl(
-  url: string | undefined,
-  fallback: string
-): string {
+export function getImageUrl(url: string | undefined, fallback: string): string {
   if (!url || url.trim() === "") return fallback;
   if (url.startsWith("http")) return url;
   return `${BASE_URL.replace("/api", "")}${url}`;
 }
 
-/**
- * Convert a display name to a URL-safe slug.
- * "JSW Steel" → "jsw-steel"
- */
 export function nameToSlug(name: string): string {
   return name
     .toLowerCase()
@@ -370,90 +395,57 @@ export function nameToSlug(name: string): string {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Category Classification
-//
-// The admin may save items under any slug variation. This maps ALL known
-// slug/name combos to one of three buckets: trading | distribution | services
+// Portfolio Classification
 // ─────────────────────────────────────────────────────────────────────────────
 
-const TRADING_SLUGS = new Set([
-  "trading", "product", "products", "trade",
-]);
+const TRADING_SLUGS     = new Set(["trading", "product", "products", "trade"]);
+const DISTRIBUTION_SLUGS = new Set(["distribution", "distributions", "distribute"]);
+const SERVICES_SLUGS    = new Set(["services", "service", "hospitality"]);
 
-const DISTRIBUTION_SLUGS = new Set([
-  "distribution", "distributions", "distribute",
-]);
-
-const SERVICES_SLUGS = new Set([
-  "services", "service", "hospitality",
-]);
-
-// Name-level overrides — if category_slug is wrong in the DB,
-// we can still classify by the item name itself.
 const TRADING_NAMES = new Set([
   "cement", "steel", "steels", "roofing solutions", "roofing",
   "white cement & paint", "white cement paint", "construction chemicals",
   "abrasives construction chemicals", "hardware & tools", "hardware tools",
   "sheet & pipe", "sheet pipe",
 ]);
-
 const DISTRIBUTION_NAMES = new Set([
-  "ultratech", "jk cement", "tata steel", "jsw steel",
-  "asian paints", "berger paints",
+  "ultratech", "jk cement", "tata steel", "jsw steel", "asian paints", "berger paints",
 ]);
-
 const SERVICES_NAMES = new Set([
   "kavalakat group", "alite enclaves", "neyy vedyam", "neey vedhyam",
 ]);
 
 export type PortfolioSection = "trading" | "distribution" | "services" | "unknown";
 
-/**
- * Classify a portfolio item into trading / distribution / services.
- * Checks category_slug first, then category_name, then item name.
- */
 export function classifyPortfolioItem(item: PortfolioItem): PortfolioSection {
-  const slug = (item.category_slug || "").toLowerCase().trim();
+  const slug    = (item.category_slug || "").toLowerCase().trim();
   const catName = (item.category_name || "").toLowerCase().trim();
-  const name = (item.name || "").toLowerCase().trim();
+  const name    = (item.name          || "").toLowerCase().trim();
 
-  if (TRADING_SLUGS.has(slug) || TRADING_SLUGS.has(catName)) return "trading";
+  if (TRADING_SLUGS.has(slug)      || TRADING_SLUGS.has(catName))      return "trading";
   if (DISTRIBUTION_SLUGS.has(slug) || DISTRIBUTION_SLUGS.has(catName)) return "distribution";
-  if (SERVICES_SLUGS.has(slug) || SERVICES_SLUGS.has(catName)) return "services";
-
-  // Fall back to name matching
-  if (TRADING_NAMES.has(name)) return "trading";
+  if (SERVICES_SLUGS.has(slug)     || SERVICES_SLUGS.has(catName))     return "services";
+  if (TRADING_NAMES.has(name))      return "trading";
   if (DISTRIBUTION_NAMES.has(name)) return "distribution";
-  if (SERVICES_NAMES.has(name)) return "services";
-
+  if (SERVICES_NAMES.has(name))     return "services";
   return "unknown";
 }
 
-/**
- * Build the correct internal href for a portfolio item.
- */
 export function buildPortfolioHref(item: PortfolioItem): string {
-  const slug = nameToSlug(item.name);
+  const slug    = nameToSlug(item.name);
   const section = classifyPortfolioItem(item);
-  if (section === "trading") return `/product/${slug}`;
+  if (section === "trading")      return `/product/${slug}`;
   if (section === "distribution") return `/distribution/${slug}`;
-  if (section === "services") return `/services/${slug}`;
+  if (section === "services")     return `/services/${slug}`;
   return `/portfolio/${slug}`;
 }
 
-/**
- * Parse JSON fields (features / brands / testimonials) on a raw API item.
- */
 export function normalisePortfolioItem(item: PortfolioItem): PortfolioItem {
   return {
     ...item,
-    features: safeParseJSON<PortfolioFeature>(
-      item.features ?? item.features_json
-    ),
-    brands: safeParseJSON<PortfolioBrand>(item.brands ?? item.brands_json),
-    testimonials: safeParseJSON<PortfolioTestimonial>(
-      item.testimonials ?? item.testimonials_json
-    ),
+    features:     safeParseJSON<PortfolioFeature>(item.features     ?? item.features_json),
+    brands:       safeParseJSON<PortfolioBrand>(item.brands         ?? item.brands_json),
+    testimonials: safeParseJSON<PortfolioTestimonial>(item.testimonials ?? item.testimonials_json),
   };
 }
 
@@ -461,19 +453,14 @@ export function normalisePortfolioItem(item: PortfolioItem): PortfolioItem {
 // Auth
 // ─────────────────────────────────────────────────────────────────────────────
 
-export async function getAuthToken(
-  username: string,
-  password: string
-): Promise<AuthTokens> {
+export async function getAuthToken(username: string, password: string): Promise<AuthTokens> {
   return apiFetch<AuthTokens>("/auth/token/", {
     method: "POST",
     body: JSON.stringify({ username, password }),
   });
 }
 
-export async function refreshAuthToken(
-  refreshToken: string
-): Promise<{ access: string }> {
+export async function refreshAuthToken(refreshToken: string): Promise<{ access: string }> {
   return apiFetch<{ access: string }>("/auth/token/refresh/", {
     method: "POST",
     body: JSON.stringify({ refresh: refreshToken }),
@@ -488,7 +475,7 @@ export async function verifyAuthToken(token: string): Promise<unknown> {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Pages / About / Strengths / Milestones / Projects / Team / Gallery
+// Public Endpoints
 // ─────────────────────────────────────────────────────────────────────────────
 
 export async function getPages(): Promise<Page[]> {
@@ -524,15 +511,33 @@ export async function getGallery(): Promise<GalleryItem[]> {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Contact / Locations
+// Contact — returns null if fetch fails
 // ─────────────────────────────────────────────────────────────────────────────
 
-export async function getContact(): Promise<Contact> {
-  return apiFetch<Contact>("/contact/");
+export async function getContact(): Promise<Contact | null> {
+  try {
+    const raw = await apiFetch<Contact | Contact[]>("/contact/");
+    return parseContact(raw);
+  } catch {
+    return null;
+  }
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Locations — returns [] if fetch fails
+// ─────────────────────────────────────────────────────────────────────────────
+
 export async function getLocations(): Promise<SiteLocation[]> {
-  return apiFetch<SiteLocation[]>("/locations/");
+  try {
+    const raw = await apiFetch<unknown>("/locations/");
+    if (Array.isArray(raw)) return raw as SiteLocation[];
+    if (raw && typeof raw === "object" && "results" in (raw as object)) {
+      return ((raw as { results: SiteLocation[] }).results) ?? [];
+    }
+    return [];
+  } catch {
+    return [];
+  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -559,7 +564,7 @@ export async function submitEnquiry(data: EnquiryPayload): Promise<unknown> {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Portfolio — raw fetchers
+// Portfolio
 // ─────────────────────────────────────────────────────────────────────────────
 
 export async function getPortfolioPage(): Promise<PortfolioPageData> {
@@ -570,21 +575,12 @@ export async function getPortfolioCategories(): Promise<PortfolioCategory[]> {
   return apiFetch<PortfolioCategory[]>("/portfolio/categories/");
 }
 
-/**
- * Fetch all portfolio items from /portfolio/items/ or /portfolio/.
- * Normalises JSON fields automatically.
- */
 export async function getPortfolioItems(): Promise<PortfolioItem[]> {
-  // Try /portfolio/items/ first, fall back to /portfolio/
   let raw: PortfolioItem[] | { results: PortfolioItem[] };
   try {
-    raw = await apiFetch<PortfolioItem[] | { results: PortfolioItem[] }>(
-      "/portfolio/items/"
-    );
+    raw = await apiFetch<PortfolioItem[] | { results: PortfolioItem[] }>("/portfolio/items/");
   } catch {
-    raw = await apiFetch<PortfolioItem[] | { results: PortfolioItem[] }>(
-      "/portfolio/"
-    );
+    raw = await apiFetch<PortfolioItem[] | { results: PortfolioItem[] }>("/portfolio/");
   }
   const items = Array.isArray(raw) ? raw : (raw.results ?? []);
   return items.map(normalisePortfolioItem);
@@ -595,35 +591,22 @@ export async function getPortfolioItemById(id: number): Promise<PortfolioItem> {
   return normalisePortfolioItem(item);
 }
 
-/**
- * Find a portfolio item by display name, optionally filtering by section.
- * Uses classifyPortfolioItem so it works even if category_slug is wrong in DB.
- */
 export async function getPortfolioItemByName(
   name: string,
   sections?: PortfolioSection[]
 ): Promise<PortfolioItem | null> {
-  const items = await getPortfolioItems();
+  const items  = await getPortfolioItems();
   const target = name.toLowerCase().trim();
-
-  const match = items.find((item) => {
+  const match  = items.find((item) => {
     const nameMatch = item.name.toLowerCase().trim() === target;
     if (!nameMatch) return false;
     if (!sections || sections.length === 0) return true;
     return sections.includes(classifyPortfolioItem(item));
   });
-
   return match ?? null;
 }
 
-/**
- * Master split function.
- * 1. Tries /portfolio/page/ (dedicated endpoint, fastest)
- * 2. Falls back to /portfolio/items/ and splits by classifyPortfolioItem()
- *    — this handles ANY category slug the admin sets.
- */
 export async function getPortfolioSplit(): Promise<PortfolioPageData> {
-  // ── Attempt 1: dedicated page endpoint ──────────────────────────────────
   try {
     const page = await getPortfolioPage();
     if (page && (page.trading?.length || page.distribution?.length || page.services?.length)) {
@@ -637,11 +620,8 @@ export async function getPortfolioSplit(): Promise<PortfolioPageData> {
     // fall through
   }
 
-  // ── Attempt 2: flat items list with smart classification ─────────────────
-  const items = await getPortfolioItems();
-  const active = items
-    .filter((i) => i.is_active)
-    .sort((a, b) => a.order - b.order);
+  const items  = await getPortfolioItems();
+  const active = items.filter((i) => i.is_active).sort((a, b) => a.order - b.order);
 
   const trading:      PortfolioItem[] = [];
   const distribution: PortfolioItem[] = [];
@@ -649,10 +629,9 @@ export async function getPortfolioSplit(): Promise<PortfolioPageData> {
 
   for (const item of active) {
     const section = classifyPortfolioItem(item);
-    if (section === "trading")      trading.push(item);
+    if (section === "trading")           trading.push(item);
     else if (section === "distribution") distribution.push(item);
     else if (section === "services")     services.push(item);
-    // "unknown" items are silently skipped
   }
 
   return { trading, distribution, services };
@@ -662,9 +641,7 @@ export async function getPortfolioSplit(): Promise<PortfolioPageData> {
 // Blog
 // ─────────────────────────────────────────────────────────────────────────────
 
-export async function getBlogPosts(
-  params: Record<string, string> = {}
-): Promise<BlogPost[]> {
+export async function getBlogPosts(params: Record<string, string> = {}): Promise<BlogPost[]> {
   const query = new URLSearchParams(params).toString();
   return apiFetch<BlogPost[]>(`/blog/${query ? `?${query}` : ""}`);
 }
@@ -678,18 +655,11 @@ export async function getBlogCategories(): Promise<BlogCategory[]> {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// AI  (protected)
+// AI (protected)
 // ─────────────────────────────────────────────────────────────────────────────
 
-export async function generateAIBlog(
-  payload: AIBlogPayload,
-  token: string
-): Promise<unknown> {
-  return apiFetch(
-    "/ai/generate-blog/",
-    { method: "POST", body: JSON.stringify(payload) },
-    token
-  );
+export async function generateAIBlog(payload: AIBlogPayload, token: string): Promise<unknown> {
+  return apiFetch("/ai/generate-blog/", { method: "POST", body: JSON.stringify(payload) }, token);
 }
 
 export async function getAILogs(token: string): Promise<AILog[]> {
@@ -697,7 +667,7 @@ export async function getAILogs(token: string): Promise<AILog[]> {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// fetchAllPublicData — runs every public endpoint in parallel
+// fetchAllPublicData
 // ─────────────────────────────────────────────────────────────────────────────
 
 export async function fetchAllPublicData(): Promise<AllPublicData> {
