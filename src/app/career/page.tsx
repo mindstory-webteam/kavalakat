@@ -3,7 +3,7 @@
 import FooterTop from '@/components/FooterTop'
 import InnerPageHeader from '@/components/InnerPageHeader'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Footer1 from '@/components/Footer'
 import Breadcrumb from '@/components/common/Breadcrumb'
 import Image from 'next/image'
@@ -16,6 +16,16 @@ interface Job {
     type: string
     posted: string
     description: string
+    requirements?: string
+    experience?: string
+    salary_range?: string
+    apply_url?: string
+    is_active?: boolean
+    deadline?: string
+    is_expired?: boolean
+    job_type?: string
+    created_at?: string
+    updated_at?: string
 }
 
 interface FormData {
@@ -36,36 +46,54 @@ const CareerPage = () => {
         coverLetter: '',
         resume: null
     })
+    const [jobListings, setJobListings] = useState<Job[]>([])
+    const [loadingJobs, setLoadingJobs] = useState<boolean>(true)
+    const [jobsError, setJobsError] = useState<string | null>(null)
 
-    const jobListings: Job[] = [
-        {
-            id: 1,
-            title: 'Senior Frontend Developer',
-            department: 'Engineering',
-            location: 'Remote',
-            type: 'Full-time',
-            posted: '5 Mar, 2025',
-            description: 'We are looking for an experienced Frontend Developer to join our dynamic team. You will be responsible for building responsive and interactive user interfaces using modern web technologies.'
-        },
-        {
-            id: 2,
-            title: 'UI/UX Designer',
-            department: 'Design',
-            location: 'New York, NY',
-            type: 'Full-time',
-            posted: '3 Mar, 2025',
-            description: 'Join our creative team as a UI/UX Designer. You will create beautiful and intuitive designs that enhance user experience across our digital products.'
-        },
-        {
-            id: 3,
-            title: 'Backend Developer',
-            department: 'Engineering',
-            location: 'San Francisco, CA',
-            type: 'Full-time',
-            posted: '1 Mar, 2025',
-            description: 'We need a talented Backend Developer to build and maintain robust server-side applications and APIs that power our platform.'
+    useEffect(() => {
+        const fetchJobs = async () => {
+            try {
+                setLoadingJobs(true)
+                setJobsError(null)
+                const response = await fetch(`${process.env.NEXT_PUBLIC_REACT_APP_API_URL || 'https://kavalakat-api.onrender.com/api'}/careers/`)
+                if (!response.ok) {
+                    throw new Error('Failed to fetch job listings')
+                }
+                const data = await response.json()
+                // Map API fields to local Job interface
+                // Response shape: { success: true, pagination: {...}, data: [...] }
+                const jobs = Array.isArray(data) ? data : (data.data ?? data.results ?? [])
+                const mapped: Job[] = jobs
+                    .filter((job: any) => job.is_active && !job.is_expired)
+                    .map((job: any) => ({
+                        id: job.id,
+                        title: job.title,
+                        department: job.department,
+                        location: job.location,
+                        type: job.job_type || job.type,
+                        posted: job.created_at ? new Date(job.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '',
+                        description: job.description,
+                        requirements: job.requirements,
+                        experience: job.experience,
+                        salary_range: job.salary_range,
+                        apply_url: job.apply_url,
+                        is_active: job.is_active,
+                        deadline: job.deadline,
+                        is_expired: job.is_expired,
+                        job_type: job.job_type,
+                        created_at: job.created_at,
+                        updated_at: job.updated_at,
+                    }))
+                setJobListings(mapped)
+            } catch (error: any) {
+                setJobsError('Unable to load job listings. Please try again later.')
+            } finally {
+                setLoadingJobs(false)
+            }
         }
-    ]
+
+        fetchJobs()
+    }, [])
 
     const handleApplyClick = (job: Job) => {
         setSelectedJob(job)
@@ -185,60 +213,74 @@ const CareerPage = () => {
 
                     {/* Job Listings */}
                     <div className="row gy-5">
-                        {jobListings.map((job) => (
-                            <div key={job.id} className="col-lg-12">
-                                <div className="job-card">
-                                    <div className="job-header">
-                                        <div className="job-info">
-                                            <h3>{job.title}</h3>
-                                            <ul className="job-meta">
-                                                <li>
-                                                    <svg width={16} height={16} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0Z" />
-                                                    </svg>
-                                                    {job.posted}
-                                                </li>
-                                                <li>
-                                                    <svg width={16} height={16} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0Z" />
-                                                    </svg>
-                                                    {job.location}
-                                                </li>
-                                                <li>
-                                                    <svg width={16} height={16} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0Z" />
-                                                    </svg>
-                                                    {job.type}
-                                                </li>
-                                                <li>
-                                                    <svg width={16} height={16} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0Z" />
-                                                    </svg>
-                                                    {job.department}
-                                                </li>
-                                            </ul>
+                        {loadingJobs ? (
+                            <div className="col-lg-12 text-center py-5">
+                                <p>Loading job listings...</p>
+                            </div>
+                        ) : jobsError ? (
+                            <div className="col-lg-12 text-center py-5">
+                                <p className="text-danger">{jobsError}</p>
+                            </div>
+                        ) : jobListings.length === 0 ? (
+                            <div className="col-lg-12 text-center py-5">
+                                <p>No open positions at this time. Please check back later.</p>
+                            </div>
+                        ) : (
+                            jobListings.map((job) => (
+                                <div key={job.id} className="col-lg-12">
+                                    <div className="job-card">
+                                        <div className="job-header">
+                                            <div className="job-info">
+                                                <h3>{job.title}</h3>
+                                                <ul className="job-meta">
+                                                    <li>
+                                                        <svg width={16} height={16} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0Z" />
+                                                        </svg>
+                                                        {job.posted}
+                                                    </li>
+                                                    <li>
+                                                        <svg width={16} height={16} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0Z" />
+                                                        </svg>
+                                                        {job.location}
+                                                    </li>
+                                                    <li>
+                                                        <svg width={16} height={16} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0Z" />
+                                                        </svg>
+                                                        {job.type}
+                                                    </li>
+                                                    <li>
+                                                        <svg width={16} height={16} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0Z" />
+                                                        </svg>
+                                                        {job.department}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <button 
+                                                onClick={() => handleApplyClick(job)}
+                                                className="apply-btn primary-btn3 black-bg"
+                                                type="button"
+                                            >
+                                                <span>Apply Now</span>
+                                                <span>Apply Now</span>
+                                                <svg className="arrow" width={23} height={23} viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M0.113861 0H22.9999V4.28425L4.32671 22.9997L0 18.7154L12.7524 6.08815L0.113861 6.20089V0Z" />
+                                                        <path d="M23 22.9996V8.56848L16.8516 14.6566V22.9996H23Z" />
+                                                    </g>
+                                                </svg>
+                                            </button>
                                         </div>
-                                        <button 
-                                            onClick={() => handleApplyClick(job)}
-                                            className="apply-btn primary-btn3 black-bg"
-                                            type="button"
-                                        >
-                                            <span>Apply Now</span>
-                                            <span>Apply Now</span>
-                                            <svg className="arrow" width={23} height={23} viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
-                                                <g>
-                                                    <path d="M0.113861 0H22.9999V4.28425L4.32671 22.9997L0 18.7154L12.7524 6.08815L0.113861 6.20089V0Z" />
-                                                    <path d="M23 22.9996V8.56848L16.8516 14.6566V22.9996H23Z" />
-                                                </g>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div className="job-description">
-                                        <p>{job.description}</p>
+                                        <div className="job-description">
+                                            <p>{job.description}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))
+                        )}
                     </div>
                 </div>
             </div>

@@ -18,8 +18,9 @@ interface AboutData {
 
 // ── API Base ──────────────────────────────────────────────────────────────────
 
-const API_BASE =
-  (process.env.NEXT_PUBLIC_API_URL ?? "https://kavalakat-api.onrender.com/api").replace(/\/$/, "");
+const API_BASE = (
+  process.env.NEXT_PUBLIC_REACT_APP_API_URL ?? "https://kavalakat-api.onrender.com/api"
+).replace(/\/$/, "");
 
 // ── Fetcher ───────────────────────────────────────────────────────────────────
 
@@ -36,19 +37,23 @@ async function fetchAbout(): Promise<AboutData | null> {
     }
 
     const json = await res.json();
-    console.log("[API] /about/", json);
 
-    // Handle { data: {...} } envelope
+    // Response shape: { success: true, data: { ...aboutFields } }
     if (json && typeof json === "object" && !Array.isArray(json) && "data" in json) {
       return json.data as AboutData;
     }
 
-    // Handle array response — take first item
+    // Fallback: plain object returned directly
+    if (json && typeof json === "object" && !Array.isArray(json)) {
+      return json as AboutData;
+    }
+
+    // Fallback: array — take first item
     if (Array.isArray(json) && json.length > 0) {
       return json[0] as AboutData;
     }
 
-    return json as AboutData;
+    return null;
   } catch (err) {
     console.error("[API] Failed to fetch /about/:", err);
     return null;
