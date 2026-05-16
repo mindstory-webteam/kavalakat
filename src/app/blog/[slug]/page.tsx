@@ -1,3 +1,4 @@
+// ✅ FILE PATH: src/app/blog/[slug]/page.tsx  (Blog DETAIL — single post)
 'use client'
 
 import FooterTop from '@/components/FooterTop'

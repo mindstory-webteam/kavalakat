@@ -1,3 +1,4 @@
+// ✅ FILE PATH: src/components/Header.tsx
 "use client"
 import React, { useEffect, useReducer, useRef, useState } from 'react'
 import Link from 'next/link'
@@ -11,6 +12,7 @@ const API = process.env.NEXT_PUBLIC_API_URL || "https://kavalakat-api.onrender.c
 
 interface NavItem   { name: string; href: string }
 interface NavGroups { trading: NavItem[]; distribution: NavItem[]; services: NavItem[] }
+interface BlogNavItem { title: string; slug: string }
 
 // ─── Unwrap { success: true, data: ... } envelope ────────────────────────────
 
@@ -52,15 +54,47 @@ function reducer(s: State, a: Action): State {
 const Header: React.FC = () => {
   const [state,       dispatch]       = useReducer(reducer, init)
   const [navItems,    setNavItems]    = useState<NavGroups>({ trading: [], distribution: [], services: [] })
+  const [blogNav,     setBlogNav]     = useState<BlogNavItem[]>([])
   const [contactInfo, setContactInfo] = useState<Contact | null>(null)
   const headerRef = useRef<HTMLElement>(null)
   const pathname  = usePathname() as string
 
-  // ── Fetch contact from lib/api (handles envelope unwrap automatically) ────
+  // ── Fetch contact ─────────────────────────────────────────────────────────
   useEffect(() => {
     getContact().then((data) => {
       if (data) setContactInfo(data)
     })
+  }, [])
+
+  // ── Fetch blog posts for nav ──────────────────────────────────────────────
+  useEffect(() => {
+    const loadBlog = async () => {
+      try {
+        const res = await fetch(`${API}/blog/?page_size=6&status=published`)
+        if (!res.ok) return
+        const json = await res.json()
+
+        // Handle { success, pagination, data } or plain array / { results }
+        let posts: any[] = []
+        if (json.success !== undefined) {
+          posts = json.data ?? []
+        } else if (Array.isArray(json)) {
+          posts = json
+        } else if (json.results) {
+          posts = json.results
+        }
+
+        const items: BlogNavItem[] = posts
+          .filter((p: any) => p.slug && p.title)
+          .slice(0, 6)
+          .map((p: any) => ({ title: p.title, slug: p.slug }))
+
+        setBlogNav(items)
+      } catch {
+        // silently ignore — submenu stays empty
+      }
+    }
+    loadBlog()
   }, [])
 
   // ── Fetch portfolio items for nav ─────────────────────────────────────────
@@ -392,14 +426,41 @@ const Header: React.FC = () => {
                 </ul>
               </li>
 
-              {/* Blog */}
+              {/* ── Blog — dynamic from API ── */}
               <li className={`menu-item-has-children ${isBlogActive ? "active" : ""}`}>
                 <Link href="/blog" className="drop-down">Blog {chevron}</Link>
-                <i onClick={() => dispatch({ type: "TOGGLE_MENU", menu: "blog" })} className={`bi bi-${state.activeMenu === "blog" ? "dash" : "plus"} dropdown-icon`} />
+                <i
+                  onClick={() => dispatch({ type: "TOGGLE_MENU", menu: "blog" })}
+                  className={`bi bi-${state.activeMenu === "blog" ? "dash" : "plus"} dropdown-icon`}
+                />
                 <ul className={`sub-menu ${state.activeMenu === "blog" ? "d-block" : ""}`}>
-                  <li className={pathname === "/blog/cement-grade"          ? "active" : ""}><Link href="/blog/cement-grade"><span>Cement Grade</span></Link></li>
-                  <li className={pathname === "/blog/construction-mistakes" ? "active" : ""}><Link href="/blog/construction-mistakes"><span>Construction Mistakes</span></Link></li>
-                  <li className={pathname === "/blog/white-cement"          ? "active" : ""}><Link href="/blog/white-cement"><span>White Cement</span></Link></li>
+
+                  {/* Always show "All Posts" at the top */}
+                  <li className={pathname === "/blog" ? "active" : ""}>
+                    <Link href="/blog"><span>All Posts</span></Link>
+                  </li>
+
+                  {/* Dynamic posts from API */}
+                  {blogNav.map((post) => {
+                    const href = `/blog/${post.slug}`
+                    // Truncate long titles in the nav
+                    const label = post.title.length > 40
+                      ? post.title.slice(0, 40).trimEnd() + "…"
+                      : post.title
+                    return (
+                      <li key={post.slug} className={pathname === href ? "active" : ""}>
+                        <Link href={href}><span>{label}</span></Link>
+                      </li>
+                    )
+                  })}
+
+                  {/* Skeleton placeholders while loading */}
+                  {blogNav.length === 0 && (
+                    <>
+                      <li style={{ opacity: 0.4, pointerEvents: "none" }}><Link href="#"><span>Loading…</span></Link></li>
+                    </>
+                  )}
+
                 </ul>
               </li>
 

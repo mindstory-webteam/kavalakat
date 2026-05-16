@@ -1,3 +1,4 @@
+// ✅ FILE PATH: src/app/blog/page.tsx  (Blog GRID — lists all posts)
 'use client'
 
 import FooterTop from '@/components/FooterTop'
