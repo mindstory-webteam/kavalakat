@@ -17,8 +17,8 @@ export default function Home() {
     <>
     <Header />
      
-    {/* <Banner />
-    <HomeAboutSection /> */}
+    <Banner />
+    <HomeAboutSection />
     <HomeServiceSection />
     <HomePageFeatureSection />
    
