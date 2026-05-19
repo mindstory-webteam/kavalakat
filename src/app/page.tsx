@@ -76,8 +76,8 @@ export default function ComingSoon() {
           --border:  #e5e0d8;
           --ink:     #181612;
           --navy:    #1c2540;
-          --orange:  #e8590c;
-          --orange2: #f07d35;
+          --orange:  #2b4cdd;
+          --orange2: #2b4cdd;
           --muted:   #8a8070;
           --light:   #fdf5ee;
         }
