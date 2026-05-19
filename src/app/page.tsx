@@ -90,14 +90,12 @@ export default function ComingSoon() {
           height: 100vh;
         }
 
-        /* ── grain ── */
         .grain {
           position: fixed; inset: 0;
           pointer-events: none; z-index: 100;
           opacity: 0.3; mix-blend-mode: multiply;
         }
 
-        /* ── layout ── */
         .page {
           position: relative;
           height: 100vh;
@@ -117,59 +115,21 @@ export default function ComingSoon() {
           z-index: 2;
         }
 
-        /* logo */
+        /* ── LOGO ── */
         .logo-wrap {
           display: flex;
           align-items: center;
-          gap: 0.9rem;
           opacity: ${mounted ? 1 : 0};
           transform: translateY(${mounted ? 0 : -12}px);
           transition: all 0.8s cubic-bezier(0.22,1,0.36,1);
         }
 
-        .logo-icon {
-          width: 42px; height: 42px;
-          background: var(--orange);
-          position: relative;
-          clip-path: polygon(0 0, 100% 0, 100% 72%, 50% 100%, 0 72%);
-          flex-shrink: 0;
-        }
-
-        .logo-icon::after {
-          content: 'K';
-          position: absolute;
-          inset: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-family: 'Oswald', sans-serif;
-          font-weight: 700;
-          font-size: 1.3rem;
-          color: #fff;
-          padding-bottom: 4px;
-        }
-
-        .logo-text {
-          display: flex;
-          flex-direction: column;
-          line-height: 1;
-        }
-
-        .logo-name {
-          font-family: 'Oswald', sans-serif;
-          font-weight: 600;
-          font-size: 1.35rem;
-          letter-spacing: 0.12em;
-          color: var(--navy);
-          text-transform: uppercase;
-        }
-
-        .logo-sub {
-          font-size: 0.5rem;
-          letter-spacing: 0.22em;
-          text-transform: uppercase;
-          color: var(--muted);
-          margin-top: 3px;
+        .logo-img {
+          /* The theme logo from kavalakat.com — coloured version */
+          height: 52px;
+          width: auto;
+          object-fit: contain;
+          object-position: left center;
         }
 
         /* hero text */
@@ -336,7 +296,6 @@ export default function ComingSoon() {
           overflow: hidden;
         }
 
-        /* diagonal stripe decoration */
         .right::before {
           content: '';
           position: absolute;
@@ -344,7 +303,6 @@ export default function ComingSoon() {
           width: 180px; height: 180px;
           background: linear-gradient(135deg, var(--orange) 0%, var(--orange2) 100%);
           opacity: 0.08;
-          border-radius: 0;
           transform: rotate(20deg);
         }
 
@@ -355,11 +313,9 @@ export default function ComingSoon() {
           width: 140px; height: 140px;
           background: var(--navy);
           opacity: 0.05;
-          border-radius: 0;
           transform: rotate(-15deg);
         }
 
-        /* countdown */
         .section-eyebrow {
           font-size: 0.55rem;
           letter-spacing: 0.3em;
@@ -426,7 +382,6 @@ export default function ComingSoon() {
           color: var(--muted);
         }
 
-        /* progress */
         .progress-wrap {
           width: 100%;
           max-width: 360px;
@@ -486,12 +441,7 @@ export default function ComingSoon() {
           color: var(--muted);
         }
 
-        .dot {
-          width: 6px; height: 6px;
-          border-radius: 50%;
-          flex-shrink: 0;
-        }
-
+        .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
         .dot.done    { background: var(--orange2); }
         .dot.active  { background: var(--orange); animation: pulse 1.5s ease-in-out infinite; }
         .dot.pending { background: var(--border); }
@@ -501,7 +451,6 @@ export default function ComingSoon() {
           50%     { opacity:0.4; transform:scale(0.6); }
         }
 
-        /* contact strip */
         .contact-strip {
           width: 100%;
           max-width: 360px;
@@ -513,11 +462,7 @@ export default function ComingSoon() {
           transition: opacity 0.9s 0.9s;
         }
 
-        .contact-item {
-          display: flex;
-          flex-direction: column;
-          gap: 0.2rem;
-        }
+        .contact-item { display: flex; flex-direction: column; gap: 0.2rem; }
 
         .contact-key {
           font-size: 0.48rem;
@@ -532,11 +477,7 @@ export default function ComingSoon() {
           letter-spacing: 0.04em;
         }
 
-        /* BG decoration */
-        .bg-deco {
-          position: fixed; inset: 0;
-          z-index: 0; pointer-events: none;
-        }
+        .bg-deco { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 
         .bg-blob-1 {
           position: absolute;
@@ -574,13 +515,13 @@ export default function ComingSoon() {
         {/* ── LEFT ── */}
         <div className="left">
 
-          {/* Logo */}
+          {/* Logo — using the coloured theme logo from kavalakat.com */}
           <div className="logo-wrap">
-            <div className="logo-icon" />
-            <div className="logo-text">
-              <span className="logo-name">Kavalakat</span>
-              <span className="logo-sub">Factory &amp; Industry</span>
-            </div>
+            <img
+              src="https://kavalakat.com/assets/new-images/logo/KavalakkatLogo-theme.png"
+              alt="Kavalakat"
+              className="logo-img"
+            />
           </div>
 
           {/* Hero */}
@@ -663,11 +604,11 @@ export default function ComingSoon() {
             </div>
             <div className="status-list">
               {[
-                { label: "Core architecture",    state: "done" },
-                { label: "Product catalogue",    state: "done" },
-                { label: "Dealer portal",        state: "done" },
-                { label: "Final QA & testing",   state: "active" },
-                { label: "Public launch",        state: "pending" },
+                { label: "Core architecture",  state: "done" },
+                { label: "Product catalogue",  state: "done" },
+                { label: "Dealer portal",      state: "done" },
+                { label: "Final QA & testing", state: "active" },
+                { label: "Public launch",      state: "pending" },
               ].map(({ label, state }) => (
                 <div key={label} className="status-row">
                   <span className={`dot ${state}`} />
