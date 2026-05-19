@@ -518,7 +518,7 @@ export default function ComingSoon() {
           {/* Logo — using the coloured theme logo from kavalakat.com */}
           <div className="logo-wrap">
             <img
-              src="https://kavalakat.com/assets/new-images/logo/KavalakkatLogo-theme.png"
+              src="/assets/new-images/logo/KavalakkatLogo-theme.png"
               alt="Kavalakat"
               className="logo-img"
             />
