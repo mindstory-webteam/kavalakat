@@ -82,12 +82,16 @@ export default function ComingSoon() {
           --light:   #fdf5ee;
         }
 
+        html, body {
+          width: 100%;
+          height: 100%;
+        }
+
         body {
           background: var(--white);
           color: var(--ink);
           font-family: 'IBM Plex Mono', monospace;
-          overflow: hidden;
-          height: 100vh;
+          overflow-x: hidden;
         }
 
         .grain {
@@ -96,12 +100,12 @@ export default function ComingSoon() {
           opacity: 0.3; mix-blend-mode: multiply;
         }
 
+        /* ── LAYOUT ── */
         .page {
           position: relative;
-          height: 100vh;
+          min-height: 100vh;
           display: grid;
           grid-template-columns: 55% 45%;
-          overflow: hidden;
         }
 
         /* ── LEFT ── */
@@ -113,6 +117,7 @@ export default function ComingSoon() {
           background: var(--white);
           border-right: 1px solid var(--border);
           z-index: 2;
+          min-height: 100vh;
         }
 
         /* ── LOGO ── */
@@ -125,11 +130,11 @@ export default function ComingSoon() {
         }
 
         .logo-img {
-          /* The theme logo from kavalakat.com — coloured version */
           height: 52px;
           width: auto;
           object-fit: contain;
           object-position: left center;
+          max-width: 200px;
         }
 
         /* hero text */
@@ -158,12 +163,13 @@ export default function ComingSoon() {
         .tag-bar {
           width: 28px; height: 2px;
           background: var(--orange);
+          flex-shrink: 0;
         }
 
         .headline {
           font-family: 'Oswald', sans-serif;
           font-weight: 700;
-          font-size: clamp(3rem, 5.5vw, 5.5rem);
+          font-size: clamp(2.4rem, 5.5vw, 5.5rem);
           line-height: 0.95;
           letter-spacing: 0.01em;
           text-transform: uppercase;
@@ -230,6 +236,7 @@ export default function ComingSoon() {
 
         .email-input {
           flex: 1;
+          min-width: 0;
           background: transparent;
           border: none; outline: none;
           padding: 0.8rem 1rem;
@@ -254,6 +261,7 @@ export default function ComingSoon() {
           cursor: pointer;
           transition: background 0.2s;
           white-space: nowrap;
+          flex-shrink: 0;
         }
 
         .notify-btn:hover { background: #c44a08; }
@@ -269,6 +277,7 @@ export default function ComingSoon() {
           display: flex;
           gap: 1.8rem;
           margin-top: 1.5rem;
+          flex-wrap: wrap;
         }
 
         .site-link {
@@ -294,6 +303,7 @@ export default function ComingSoon() {
           gap: 2.5rem;
           position: relative;
           overflow: hidden;
+          min-height: 100vh;
         }
 
         .right::before {
@@ -369,7 +379,7 @@ export default function ComingSoon() {
         .count-num {
           font-family: 'Oswald', sans-serif;
           font-weight: 700;
-          font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+          font-size: clamp(2rem, 4.5vw, 4.5rem);
           line-height: 1;
           color: var(--navy);
           font-variant-numeric: tabular-nums;
@@ -458,6 +468,7 @@ export default function ComingSoon() {
           padding-top: 1.2rem;
           display: flex;
           gap: 1.5rem;
+          flex-wrap: wrap;
           opacity: ${mounted ? 1 : 0};
           transition: opacity 0.9s 0.9s;
         }
@@ -495,11 +506,181 @@ export default function ComingSoon() {
           bottom: -120px; right: 30%;
         }
 
+        /* ── TABLET: 820px–1024px ── */
+        @media (max-width: 1024px) and (min-width: 821px) {
+          .left {
+            padding: 2.5rem 2.5rem;
+          }
+          .right {
+            padding: 2.5rem 1.8rem;
+            gap: 2rem;
+          }
+          .count-cell {
+            padding: 1.5rem 0.75rem;
+          }
+        }
+
+        /* ── MOBILE & SMALL TABLET: ≤820px ── */
         @media (max-width: 820px) {
-          .page { grid-template-columns: 1fr; grid-template-rows: auto auto; overflow-y: auto; }
-          .left { padding: 2rem; border-right: none; border-bottom: 1px solid var(--border); }
-          .right { padding: 2rem; }
-          body { overflow: auto; }
+          body { overflow-y: auto; overflow-x: hidden; }
+
+          .page {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            min-height: 100vh;
+            height: auto;
+          }
+
+          .left {
+            min-height: unset;
+            padding: 2rem 1.5rem;
+            border-right: none;
+            border-bottom: 1px solid var(--border);
+            gap: 2rem;
+          }
+
+          .right {
+            min-height: unset;
+            padding: 2rem 1.5rem;
+            gap: 2rem;
+          }
+
+          .logo-img {
+            height: 40px;
+          }
+
+          .headline {
+            font-size: clamp(2.6rem, 10vw, 4rem);
+          }
+
+          .subtext {
+            max-width: 100%;
+            font-size: 0.72rem;
+          }
+
+          .email-row {
+            max-width: 100%;
+          }
+
+          .countdown-grid {
+            max-width: 100%;
+          }
+
+          .count-cell {
+            padding: 1.5rem 0.5rem;
+          }
+
+          .progress-wrap {
+            max-width: 100%;
+          }
+
+          .contact-strip {
+            max-width: 100%;
+            gap: 1rem;
+          }
+        }
+
+        /* ── SMALL MOBILE: ≤480px ── */
+        @media (max-width: 480px) {
+          .left {
+            padding: 1.5rem 1.25rem;
+          }
+
+          .right {
+            padding: 1.5rem 1.25rem;
+            gap: 1.5rem;
+          }
+
+          .logo-img {
+            height: 34px;
+          }
+
+          .headline {
+            font-size: clamp(2.2rem, 12vw, 3rem);
+          }
+
+          .tag {
+            font-size: 0.52rem;
+          }
+
+          .subtext {
+            font-size: 0.68rem;
+            line-height: 1.75;
+          }
+
+          .notify-btn {
+            padding: 0.8rem 0.9rem;
+            font-size: 0.62rem;
+            letter-spacing: 0.1em;
+          }
+
+          .email-input {
+            font-size: 0.68rem;
+            padding: 0.8rem 0.75rem;
+          }
+
+          .count-num {
+            font-size: clamp(1.8rem, 9vw, 2.5rem);
+          }
+
+          .count-lbl {
+            font-size: 0.45rem;
+            letter-spacing: 0.2em;
+          }
+
+          .count-cell {
+            padding: 1.2rem 0.4rem;
+          }
+
+          .contact-strip {
+            flex-direction: column;
+            gap: 0.8rem;
+          }
+
+          .links-row {
+            gap: 1.2rem;
+          }
+
+          .site-link {
+            font-size: 0.52rem;
+          }
+        }
+
+        /* ── EXTRA SMALL: ≤360px ── */
+        @media (max-width: 360px) {
+          .left { padding: 1.25rem 1rem; }
+          .right { padding: 1.25rem 1rem; }
+
+          .headline {
+            font-size: clamp(2rem, 13vw, 2.6rem);
+          }
+
+          .email-row {
+            flex-direction: column;
+          }
+
+          .notify-btn {
+            width: 100%;
+            text-align: center;
+            padding: 0.75rem 1rem;
+          }
+        }
+
+        /* ── LARGE DESKTOP: ≥1440px ── */
+        @media (min-width: 1440px) {
+          .left {
+            padding: 4rem 5rem;
+          }
+          .right {
+            padding: 4rem 3.5rem;
+          }
+          .logo-img {
+            height: 60px;
+          }
+          .subtext {
+            font-size: 0.82rem;
+            max-width: 40ch;
+          }
         }
       `}</style>
 
@@ -515,7 +696,7 @@ export default function ComingSoon() {
         {/* ── LEFT ── */}
         <div className="left">
 
-          {/* Logo — using the coloured theme logo from kavalakat.com */}
+          {/* Logo */}
           <div className="logo-wrap">
             <img
               src="/assets/new-images/logo/KavalakkatLogo-theme.png"
