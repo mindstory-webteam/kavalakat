@@ -9,8 +9,6 @@ export default function ComingSoon() {
     minutes: 0,
     seconds: 0,
   });
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
   const [mounted, setMounted] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -55,11 +53,6 @@ export default function ComingSoon() {
     drawGrain();
     return () => cancelAnimationFrame(animId);
   }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) setSubmitted(true);
-  };
 
   const pad = (n: number) => String(n).padStart(2, "0");
 
@@ -210,86 +203,10 @@ export default function ComingSoon() {
           transition: all 0.9s 0.55s cubic-bezier(0.22,1,0.36,1);
         }
 
-        /* email */
-        .bottom {
-          opacity: ${mounted ? 1 : 0};
-          transform: translateY(${mounted ? 0 : 20}px);
-          transition: all 0.9s 0.65s cubic-bezier(0.22,1,0.36,1);
+        /* ── LEFT BOTTOM SPACER (replaces the email/links block) ── */
+        .bottom-spacer {
+          height: 1rem;
         }
-
-        .notify-label {
-          font-size: 0.55rem;
-          letter-spacing: 0.28em;
-          text-transform: uppercase;
-          color: var(--muted);
-          margin-bottom: 0.8rem;
-        }
-
-        .email-row {
-          display: flex;
-          max-width: 380px;
-          border: 1.5px solid var(--border);
-          transition: border-color 0.3s;
-        }
-
-        .email-row:focus-within { border-color: var(--orange); }
-
-        .email-input {
-          flex: 1;
-          min-width: 0;
-          background: transparent;
-          border: none; outline: none;
-          padding: 0.8rem 1rem;
-          font-family: 'IBM Plex Mono', monospace;
-          font-size: 0.72rem;
-          color: var(--ink);
-          letter-spacing: 0.04em;
-        }
-
-        .email-input::placeholder { color: var(--muted); }
-
-        .notify-btn {
-          background: var(--orange);
-          border: none;
-          color: #fff;
-          font-family: 'Oswald', sans-serif;
-          font-weight: 500;
-          font-size: 0.7rem;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-          padding: 0.8rem 1.4rem;
-          cursor: pointer;
-          transition: background 0.2s;
-          white-space: nowrap;
-          flex-shrink: 0;
-        }
-
-        .notify-btn:hover { background: #c44a08; }
-
-        .success-msg {
-          font-size: 0.68rem;
-          letter-spacing: 0.08em;
-          color: var(--orange);
-          padding: 0.8rem 0;
-        }
-
-        .links-row {
-          display: flex;
-          gap: 1.8rem;
-          margin-top: 1.5rem;
-          flex-wrap: wrap;
-        }
-
-        .site-link {
-          font-size: 0.55rem;
-          letter-spacing: 0.22em;
-          text-transform: uppercase;
-          color: var(--muted);
-          text-decoration: none;
-          transition: color 0.2s;
-        }
-
-        .site-link:hover { color: var(--orange); }
 
         /* ── RIGHT ── */
         .right {
@@ -558,10 +475,6 @@ export default function ComingSoon() {
             font-size: 0.72rem;
           }
 
-          .email-row {
-            max-width: 100%;
-          }
-
           .countdown-grid {
             max-width: 100%;
           }
@@ -608,17 +521,6 @@ export default function ComingSoon() {
             line-height: 1.75;
           }
 
-          .notify-btn {
-            padding: 0.8rem 0.9rem;
-            font-size: 0.62rem;
-            letter-spacing: 0.1em;
-          }
-
-          .email-input {
-            font-size: 0.68rem;
-            padding: 0.8rem 0.75rem;
-          }
-
           .count-num {
             font-size: clamp(1.8rem, 9vw, 2.5rem);
           }
@@ -636,14 +538,6 @@ export default function ComingSoon() {
             flex-direction: column;
             gap: 0.8rem;
           }
-
-          .links-row {
-            gap: 1.2rem;
-          }
-
-          .site-link {
-            font-size: 0.52rem;
-          }
         }
 
         /* ── EXTRA SMALL: ≤360px ── */
@@ -653,16 +547,6 @@ export default function ComingSoon() {
 
           .headline {
             font-size: clamp(2rem, 13vw, 2.6rem);
-          }
-
-          .email-row {
-            flex-direction: column;
-          }
-
-          .notify-btn {
-            width: 100%;
-            text-align: center;
-            padding: 0.75rem 1rem;
           }
         }
 
@@ -727,32 +611,8 @@ export default function ComingSoon() {
             </p>
           </div>
 
-          {/* Email + links */}
-          <div className="bottom">
-            <p className="notify-label">Notify me at launch</p>
-
-            {!submitted ? (
-              <form className="email-row" onSubmit={handleSubmit}>
-                <input
-                  className="email-input"
-                  type="email"
-                  placeholder="your@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <button className="notify-btn" type="submit">Notify me</button>
-              </form>
-            ) : (
-              <p className="success-msg">✓ &nbsp;You&apos;re on the list. We&apos;ll be in touch.</p>
-            )}
-
-            <div className="links-row">
-              <a href="https://kavalakat.com/contact" className="site-link">Contact</a>
-              <a href="https://kavalakat.com/product" className="site-link">Products</a>
-              <a href="https://kavalakat.com/about" className="site-link">About</a>
-            </div>
-          </div>
+          {/* Bottom spacer keeps logo pinned top, hero centered */}
+          <div className="bottom-spacer" />
 
         </div>
 
